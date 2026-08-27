@@ -57,6 +57,8 @@ En está versión del trabajo se realizaron los capítulos I a IV en su totalida
 
 Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-report.git)
 
+<div style="page-break-after: always;"></div>
+
 ## Contenido
 
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
