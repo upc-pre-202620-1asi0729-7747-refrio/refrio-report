@@ -60,7 +60,7 @@ Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-774
 <div style="page-break-after: always;"></div>
 
 ## Contenido
-
+- [Carátula](#universidad-peruana-de-ciencias-aplicadas)
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Contenido](#contenido)
