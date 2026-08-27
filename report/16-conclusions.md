@@ -1,5 +1,7 @@
 # Conclusiones
 
-## Conclusiones y recomendaciones
+## Conclusiones
+
+## Recomendaciones
 
 ## Video About-the-Team
