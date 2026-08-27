@@ -43,7 +43,7 @@ Proyecto <br>
 <div align="center">
 <div style="text-align: center;">
     <table style="margin: 0 auto; display: inline-table;">
-        <tr><th>Versión</th><th>Fecha</th><th>Autor</th><th>Descripción</th></tr>
+        <tr><th>Versión</th><th>Fecha</th><th>Autor</th><th>Descripción de modificación</th></tr>
         <tr><th>1</th><th>Fecha</th><th>Autor</th><th>Capítulo I, Capítulo 2, Capítulo 3, Capítulo 4</th></tr>
     </table>
 </div>
