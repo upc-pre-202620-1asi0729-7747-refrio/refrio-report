@@ -52,6 +52,8 @@ Proyecto <br>
 
 ## Project Report Collaboration Insights
 
+**Primera versión de trabajo**
+
 Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-report.git)
 
 ## Contenido
