@@ -1,6 +1,4 @@
 # Student Outcome
-
-<div align="center">
   
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
