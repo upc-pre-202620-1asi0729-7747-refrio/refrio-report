@@ -28,7 +28,16 @@ La relevancia de esta propuesta radica en que la implementación de un sistema d
 La sección Solution Profile describe la base estratégica de la solución tecnológica Refrio. A través de este perfil, se identifican las raíces del problema mediante un análisis riguroso y se aplica el marco de trabajo *Lean UX* para definir las hipótesis, suposiciones y el Canvas del producto. El objetivo principal es alinear el desarrollo de software con las necesidades de negocio y los dolores de los usuarios finales en el sector de la cadena de frío.
 
 ### 1.2.1. Antecedentes y problemática
+La cadena de suministro y la logística de frío representan uno de los mayores desafíos operativos para la distribución de alimentos perecibles en el mercado peruano. Para contextualizar y diagnosticar de forma precisa el impacto de estas deficiencias, se aplica a continuación la técnica de las 5 'W's y 2 'H's:
 
+*   **Who? (¿Quiénes experimentan el problema?):** Los principales afectados son las empresas distribuidoras locales de productos perecibles (como lácteos, embutidos y carnes), los comerciantes mayoristas y minoristas (minimarkets y bodegas), y los encargados de almacén que deben lidiar diariamente con la manipulación del inventario [4].
+*   **What? (¿Cuál es el problema?):** Existe una ineficiente gestión de inventarios perecibles, caracterizada por la baja visibilidad del stock en tiempo real, fallas térmicas no detectadas a tiempo en la cadena de frío y un control deficiente de las fechas de vencimiento.
+*   **Where? (¿Dónde ocurre el problema?):** Ocurre de manera crítica en los almacenes de almacenamiento temporal, durante el transporte logístico terrestre en los camiones frigoríficos y en las zonas de conservación de los puntos de venta final en el mercado nacional.
+*   **When? (¿Cuándo ocurre el problema?):** Se manifiesta de forma continua en las actividades diarias de recepción de mercadería, almacenamiento, distribución de despachos y auditoría de góndolas o vitrinas.
+*   **Why? (¿Por qué ocurre el problema?):** Se debe principalmente a que el control operativo todavía depende de procesos manuales tradicionales o herramientas desconectadas (como registros en papel o plantillas manuales en Excel). La falta de herramientas de automatización y de telemetría IoT integrada impide una reacción proactiva antes de que ocurra la pérdida del producto.
+*   **How? (¿Cómo se manifiesta el problema?):** Se evidencia en la generación de mermas severas por productos caducados, mermas por ruptura de frío en ruta que obligan a poner la mercadería en cuarentena, diferencias de inventario entre el stock registrado y el físico, y un incremento drástico en los costos operativos de distribución.
+*   **How Much? (¿Cuánto cuesta/impacta el problema?):** A nivel macroeconómico, este problema tiene un impacto devastador: cada año se pierden o desechan en el Perú aproximadamente 12.8 millones de toneladas de alimentos, lo que equivale al 47.76% de la producción total del país [10]. A nivel micro, se traduce en pérdidas de rentabilidad directa, quiebres de stock y un deterioro del rendimiento empresarial de las pymes locales.
+*   
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
