@@ -25,6 +25,8 @@ La relevancia de esta propuesta radica en que la implementación de un sistema d
 
 ## 1.2. Solution Profile
 
+La sección Solution Profile describe la base estratégica de la solución tecnológica Refrio. A través de este perfil, se identifican las raíces del problema mediante un análisis riguroso y se aplica el marco de trabajo *Lean UX* para definir las hipótesis, suposiciones y el Canvas del producto. El objetivo principal es alinear el desarrollo de software con las necesidades de negocio y los dolores de los usuarios finales en el sector de la cadena de frío.
+
 ### 1.2.1. Antecedentes y problemática
 
 ### 1.2.2. Lean UX Process
