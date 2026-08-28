@@ -22,6 +22,7 @@ El equipo multidisciplinario de la startup busca transformar la logística de fr
 | <img src="../assets/Rivas Méndez, Bernie Aarón - U20241F109 - Profile.PNG" alt="Foto" width="120"> | **Rivas Méndez, Bernie Aarón - U20241F109**<br>Soy un estudiante de la carrera de Ingeniería de Software y curso el 5to ciclo de la carrera. En cuanto a los trabajos me gusta revisar y que estén completos a la hora de entregarlos. En cuanto a la programación me gusta ser ordenado y que tenga lógica, por lo cual prefiero programar el BackEnd, pero también hago el FrontEnd.|
 | <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Saavedra Flores, Rodrigo Andree - U20241D811**<br>descripción |
 | <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Tello Lima, Jose Alejandro - U202421618**<br>descripción |
+
 ## 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problemática
