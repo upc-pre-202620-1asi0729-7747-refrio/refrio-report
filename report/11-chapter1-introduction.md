@@ -17,11 +17,11 @@ El equipo multidisciplinario de la startup busca transformar la logística de fr
 
 | Foto | Descripción |
 |:---:|:---|
-| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **nombre - U202XXXXX**<br>descripción |
-| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **nombre - U202XXXXX**<br>descripción |
-| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **nombre - U202XXXXX**<br>descripción |
-| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **nombre - U202XXXXX**<br>descripción |
-| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **nombre - U202XXXXX**<br>descripción |
+| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Alca Morán, César Alejandro - U20241F027**<br>descripción |
+| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Centeno León, Adriano Samir - U20241D920**<br>descripción |
+| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Rivas Méndez, Bernie Aarón - U20241F109**<br>descripción |
+| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Saavedra Flores, Rodrigo Andree - U20241D811**<br>descripción |
+| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Tello Lima, Jose Alejandro - U202421618**<br>descripción |
 ## 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problemática
