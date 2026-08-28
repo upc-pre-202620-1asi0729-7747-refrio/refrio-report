@@ -3,15 +3,15 @@
 ## 1.1. Startup Profile
 
 ### 1.1.1. Descripción de la Startup
-Refrio es una startup tecnológica peruana dedicada al diseño y desarrollo de soluciones digitales innovadoras para la gestión de inventario, monitoreo de temperatura y la distribución eficiente de productos perecibles. La empresa nace con la convicción de que la tecnología y el Internet de las Cosas (IoT) pueden ser herramientas clave para reducir pérdidas económicas, evitar el desperdicio de alimentos y asegurar la trazabilidad en la cadena de frío.
 
-Se trabaja bajo un enfoque centrado en el usuario para lograr una gestión de stock automatizada, predictiva y en tiempo real. Al integrar alertas inteligentes de vencimiento y telemetría de temperatura constante, Refrio ayuda a empresas distribuidoras y comerciantes locales a tomar decisiones logísticas informadas, optimizando la rotación del inventario mediante políticas FEFO (First Expired, First Out).
+Refrio es una startup tecnológica peruana dedicada al diseño y desarrollo de soluciones digitales innovadoras para la gestión de inventario, el monitoreo de temperatura y la distribución eficiente de productos perecibles. La empresa nace con la firme convicción de que la tecnología y el Internet de las Cosas (IoT) pueden convertirse en herramientas clave para reducir pérdidas económicas, evitar el desperdicio de alimentos y asegurar la trazabilidad en la cadena de frío. 
 
-El equipo multidisciplinario de la startup busca transformar la logística de frío en el mercado nacional, aportando valor a toda la cadena de suministro —desde los grandes distribuidores hasta las bodegas de barrio— para garantizar que los productos lleguen al consumidor final en óptimas condiciones de conservación.
+Este propósito responde a una problemática crítica en el contexto nacional: cada año se pierden o desechan en el Perú aproximadamente 12.8 millones de toneladas de alimentos, lo que equivale al 47.76% de la producción total del país. Para hacer frente a este desafío, Refrio trabaja bajo un enfoque centrado en el usuario para lograr una gestión de stock automatizada, predictiva y en tiempo real. Al integrar alertas inteligentes de vencimiento y telemetría de temperatura constante, la plataforma ayuda a empresas distribuidoras y comerciantes locales a optimizar la rotación del inventario mediante políticas FEFO (*First Expired, First Out*).
 
-**Misión:** Optimizar la gestión de inventarios y salvaguardar la cadena de frío de productos perecibles mediante soluciones tecnológicas eficientes, accesibles y confiables.
+La relevancia de esta propuesta radica en que la implementación de un sistema de gestión de almacenes digitalizado no solo permite reducir los costos operativos, sino que optimiza significativamente la organización y la eficiencia de todos los procesos logísticos implicados (Ñiquén & Ríos, 2024). Asimismo, una adecuada administración de las operaciones logísticas y de distribución es fundamental para mejorar el rendimiento empresarial global, reducir pérdidas y garantizar un servicio de alta calidad para el cliente (Heizer & Render, 2020).
 
-**Visión:** Ser la plataforma líder en el monitoreo inteligente de temperatura y distribución de productos perecibles a nivel nacional.
+*   **Misión:** Optimizar la gestión de inventarios y salvaguardar la cadena de frío de productos perecibles mediante soluciones tecnológicas eficientes, accesibles y confiables.
+*   **Visión:** Ser la plataforma líder en el monitoreo inteligente de temperatura y distribución de productos perecibles a nivel nacional.
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
