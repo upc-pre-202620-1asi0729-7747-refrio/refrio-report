@@ -28,16 +28,45 @@ La relevancia de esta propuesta radica en que la implementación de un sistema d
 La sección Solution Profile describe la base estratégica de la solución tecnológica Refrio. A través de este perfil, se identifican las raíces del problema mediante un análisis riguroso y se aplica el marco de trabajo *Lean UX* para definir las hipótesis, suposiciones y el Canvas del producto. El objetivo principal es alinear el desarrollo de software con las necesidades de negocio y los dolores de los usuarios finales en el sector de la cadena de frío.
 
 ### 1.2.1. Antecedentes y problemática
-La cadena de suministro y la logística de frío representan uno de los mayores desafíos operativos para la distribución de alimentos perecibles en el mercado peruano. Para contextualizar y diagnosticar de forma precisa el impacto de estas deficiencias, se aplica a continuación la técnica de las 5 'W's y 2 'H's:
+**Contexto y desarrollo de la problemática**
 
-*   **Who? (¿Quiénes experimentan el problema?):** Los principales afectados son las empresas distribuidoras locales de productos perecibles (como lácteos, embutidos y carnes), los comerciantes mayoristas y minoristas (minimarkets y bodegas), y los encargados de almacén que deben lidiar diariamente con la manipulación del inventario [4].
-*   **What? (¿Cuál es el problema?):** Existe una ineficiente gestión de inventarios perecibles, caracterizada por la baja visibilidad del stock en tiempo real, fallas térmicas no detectadas a tiempo en la cadena de frío y un control deficiente de las fechas de vencimiento.
-*   **Where? (¿Dónde ocurre el problema?):** Ocurre de manera crítica en los almacenes de almacenamiento temporal, durante el transporte logístico terrestre en los camiones frigoríficos y en las zonas de conservación de los puntos de venta final en el mercado nacional.
-*   **When? (¿Cuándo ocurre el problema?):** Se manifiesta de forma continua en las actividades diarias de recepción de mercadería, almacenamiento, distribución de despachos y auditoría de góndolas o vitrinas.
-*   **Why? (¿Por qué ocurre el problema?):** Se debe principalmente a que el control operativo todavía depende de procesos manuales tradicionales o herramientas desconectadas (como registros en papel o plantillas manuales en Excel). La falta de herramientas de automatización y de telemetría IoT integrada impide una reacción proactiva antes de que ocurra la pérdida del producto.
-*   **How? (¿Cómo se manifiesta el problema?):** Se evidencia en la generación de mermas severas por productos caducados, mermas por ruptura de frío en ruta que obligan a poner la mercadería en cuarentena, diferencias de inventario entre el stock registrado y el físico, y un incremento drástico en los costos operativos de distribución.
-*   **How Much? (¿Cuánto cuesta/impacta el problema?):** A nivel macroeconómico, este problema tiene un impacto devastador: cada año se pierden o desechan en el Perú aproximadamente 12.8 millones de toneladas de alimentos, lo que equivale al 47.76% de la producción total del país [10]. A nivel micro, se traduce en pérdidas de rentabilidad directa, quiebres de stock y un deterioro del rendimiento empresarial de las pymes locales.
-*   
+En los últimos años, el mercado de distribución de alimentos perecibles (como lácteos, carnes y embutidos) ha experimentado un crecimiento sostenido, lo que exige estándares cada vez más rigurosos para garantizar la inocuidad y calidad de los productos. Sin embargo, en el Perú, la cadena de suministro y la logística de frío enfrentan desafíos estructurales y operativos críticos. Históricamente, las pequeñas y medianas empresas (pymes) distribuidoras, así como los comercializadores mayoristas y minoristas, han gestionado sus operaciones basándose en procesos manuales, registros en papel o herramientas ofimáticas básicas (como hojas de cálculo desconectadas).
+
+Esta carencia de digitalización y automatización es el origen de una problemática central: la gestión ineficiente de los inventarios perecibles y la vulnerabilidad de la cadena de frío. Al no contar con visibilidad del stock en tiempo real ni telemetría que monitoree las condiciones ambientales, las empresas sufren de "puntos ciegos" durante el almacenamiento temporal y, sobre todo, durante el transporte terrestre. Las fluctuaciones térmicas no detectadas y la imposibilidad de aplicar rigurosamente políticas de rotación de inventario (como el método FEFO: First Expired, First Out) provocan el deterioro prematuro de la mercadería.  
+
+El impacto de estas deficiencias es severo en múltiples niveles. A nivel macroeconómico y social, el problema es alarmante: en el Perú se pierden o desechan anualmente alrededor de 12.8 millones de toneladas de alimentos, lo que equivale a casi el 47.76% de la producción total del país, siendo las fallas logísticas una de las causas principales. A nivel microeconómico, las empresas enfrentan mermas excesivas por productos caducados, quiebres de stock en los puntos de venta, un incremento drástico en los costos operativos (reposición, desecho, horas-hombre en auditorías manuales) y devoluciones constantes, lo que finalmente erosiona la rentabilidad del negocio y la confianza del consumidor final.  
+
+**Análisis de la problemática (Técnica 5W2H)**
+
+Para dimensionar, estructurar y abordar de manera sistémica este problema, se plantean las siguientes interrogantes bajo la metodología de las cinco W y dos H, las cuales servirán como guía para la formulación de la solución:  
+- **Who? (¿Quiénes?)**
+  - ¿Quiénes son los actores de la cadena de suministro directamente afectados por estas deficiencias logísticas?  
+  - ¿Quiénes son los responsables operativos (almacén, calidad, transporte) que deben lidiar con el descontrol del inventario? 
+  - ¿Quiénes asumen el costo final económico y de salud derivado de la merma y el deterioro de los alimentos?  
+- **What? (¿Qué?)**
+  - ¿Qué problema central impide una distribución eficiente de los productos perecibles?  
+  - ¿Qué deficiencias técnicas específicas provocan la pérdida de calidad de la mercadería?  
+  - ¿Qué impacto operativo directo genera la falta de integración entre el control de fechas de vencimiento y el monitoreo de temperatura?  
+- **Where? (¿Dónde?)**
+  - ¿Dónde se originan las principales rupturas de la cadena de frío durante el proceso de distribución?  
+  - ¿Dónde se evidencia el mayor descontrol y estancamiento del inventario físico?  
+  - ¿Dónde culmina y se hace visible el impacto negativo hacia el cliente final?  
+- **When? (¿Cuándo?)**
+  - ¿Cuándo ocurren con mayor probabilidad las anomalías y fluctuaciones térmicas no deseadas?  
+  - ¿Cuándo se suelen detectar las mermas o caducidades bajo el modelo de gestión actual?  
+  - ¿Cuándo colapsa la capacidad de respuesta de las empresas ante un quiebre de stock o entrega defectuosa?  
+- **Why? (¿Por qué?)**
+  - ¿Por qué el control logístico en este sector sigue siendo mayoritariamente reactivo en lugar de preventivo?  
+  - ¿Por qué resulta logísticamente insostenible aplicar una política FEFO sin herramientas digitales?  
+  - ¿Por qué las empresas no logran detectar a tiempo las variaciones de temperatura antes de que el producto se arruine?  
+- **How? (¿Cómo?)**
+  - ¿Cómo se manifiesta la ineficiencia operativa en las finanzas y rentabilidad de la empresa?  
+  - ¿Cómo afecta una ruptura térmica en ruta a los procesos posteriores de cuarentena y despacho?  
+  - ¿Cómo impacta la entrega de productos en mal estado en la relación y confianza con los socios comerciales?  
+- **How Much? (¿Cuánto?)**
+  - ¿Cuánto alimento se pierde anualmente a nivel nacional a causa de estas deficiencias en la cadena de suministro?  
+  - ¿Cuánto representa el sobrecosto operativo (devoluciones, mermas, horas-hombre) para las empresas distribuidoras?  
+  - ¿Cuánto tiempo se invierte (y desperdicia) actualmente en realizar auditorías físicas manuales y procesos de doble digitación?
 ### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
