@@ -15,6 +15,7 @@ El equipo multidisciplinario de la startup busca transformar la logística de fr
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
+<div style="text-align: center;">
 <table>
   <tr>
     <th style="text-align: center;">Foto</th>
@@ -30,6 +31,7 @@ El equipo multidisciplinario de la startup busca transformar la logística de fr
     </td>
   </tr>
 </table>
+</div>
 
 ## 1.2. Solution Profile
 
