@@ -1,5 +1,7 @@
 # Student Outcome
 
+<div align="center">
+  
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
 | **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | Jiménez Rosas, Arturo Eduardo<br>*AV1*<br>Morbi vel tortor id eros dictum venenatis id ut dui.<br>Mauris quis tellus sed nunc hendrerit vehicula ac id mauris. | Fusce cursus dolor et nulla suscipit, sit amet ullamcorper nibh vestibulum.<br>Nam ornare massa eu lobortis porttitor. |
