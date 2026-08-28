@@ -28,6 +28,22 @@ El equipo multidisciplinario de la startup busca transformar la logística de fr
       <strong>nombre - U202XXXXX</strong><br>
      descripción
     </td>
+    <td style="vertical-align: middle;">
+      <strong>nombre - U202XXXXX</strong><br>
+     descripción
+    </td>
+    <td style="vertical-align: middle;">
+      <strong>nombre - U202XXXXX</strong><br>
+     descripción
+    </td>
+    <td style="vertical-align: middle;">
+      <strong>nombre - U202XXXXX</strong><br>
+     descripción
+    </td>
+    <td style="vertical-align: middle;">
+      <strong>nombre - U202XXXXX</strong><br>
+     descripción
+    </td>
   </tr>
 </table>
 
