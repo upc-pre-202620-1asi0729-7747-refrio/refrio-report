@@ -66,7 +66,53 @@ Para dimensionar, estructurar y abordar de manera sistémica este problema, se a
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+The current state of **cold-chain management and perishable inventory tracking in Peru** has focused mainly on **manual verification processes, disconnected spreadsheets, and basic local thermometer checks**, primarily used by mid-size food distributors and small retail store owners (*bodegueros*). These actors still rely on periodic physical inspections and paper logs to monitor product temperatures and expiry dates, with no real-time visibility or automated alerting.
+
+What existing products and services fail to address is **an affordable, integrated solution that simultaneously combines real-time IoT-based temperature monitoring with intelligent expiry-date alerting and FEFO-based inventory rotation, designed specifically for the operational reality and budget constraints of Peruvian SMEs in the perishable food distribution sector**. Currently available alternatives are either too expensive and hardware-intensive for large enterprises, or too generic without specialization in perishable goods.
+
+Our product, **Refrio**, will address this gap by **offering a web platform that consolidates IoT-based temperature telemetry, automated near-expiry alerts, FEFO stock rotation logic, multi-location inventory dashboards, and exportable analytics reports into a single, intuitive and mobile-responsive interface, accessible without requiring specialized or proprietary hardware investment**.
+
+Our initial focus will be on **mid-size perishable goods distributors operating one or more refrigerated warehouses in Lima Metropolitana, and small retail store owners (*bodegueros*) who manage daily perishable stock without formal inventory systems, both characterized by low to moderate technology adoption and a high tolerance for direct economic pain caused by waste and cold-chain failure**.
+
+We will know we are successful when we see **a measurable reduction of at least 30% in product losses due to temperature breaches or expiry among active users, a daily active usage rate of 70% or above within 60 days of onboarding, and a Net Promoter Score (NPS) above 40 within the first 6 months of commercial operation**.
+
+
 #### 1.2.2.2. Lean UX Assumptions
+
+Las suposiciones representan las creencias fundamentales de nuestro equipo de desarrollo con respecto a la viabilidad comercial, las necesidades de los usuarios y las características tecnológicas de la plataforma **Refrio**. Estas declaraciones de creencia sirven como base directa para la posterior formulación de nuestras hipótesis de trabajo.
+
+**A. Business Assumptions**
+1. Creemos que existe un mercado viable y desatendido de empresas distribuidoras de alimentos perecibles de mediana escala en el Perú que están dispuestas a pagar una suscripción mensual recurrente por una plataforma integrada de monitoreo de temperatura y gestión de inventario.
+2. Creemos que el modelo de negocio *SaaS* (*Software as a Service*) con planes escalonados —básico, estándar y premium— es financieramente sostenible y permite atender simultáneamente a los dos segmentos objetivo con diferentes niveles de funcionalidad y precio.
+3. Creemos que la principal barrera de adopción tecnológica en el segmento de bodegas es el precio mensual: ofrecer un plan de entrada por debajo de S/ 60 al mes incrementará significativamente la tasa de conversión en este segmento.
+4. Creemos que la compatibilidad con sensores IoT (*Internet of Things*) de bajo costo ya disponibles en el mercado local —sin necesidad de hardware propietario— eliminará la barrera de inversión inicial y acelerará la adopción en el segmento de distribuidoras medianas.
+5. Creemos que alianzas estratégicas con gremios del sector alimentario peruano —como la Asociación de Bodegueros del Perú (ABP) y asociaciones de distribuidoras de alimentos— ampliarán el alcance comercial de **Refrio** y reducirán el costo de adquisición de clientes (*CAC*).
+
+**B. Business Outcome Assumptions**
+1. Creemos que lograremos 200 empresas o negocios suscritos —entre distribuidoras y bodegas— en los primeros 8 meses de operación comercial.
+2. Creemos que una tasa de retención mensual superior al 85% entre los usuarios activos validará la propuesta de valor de la plataforma y la satisfacción del cliente.
+3. Creemos que el costo de adquisición de clientes (*CAC*) disminuirá un 20% a partir del sexto mes de operación gracias al efecto de referidos orgánicos entre distribuidores del mismo rubro.
+4. Creemos que el ingreso mensual recurrente (*MRR*) superará los S/ 20,000 al finalizar el primer año de operación, sustentado en actualizaciones de plan (*upgrades*) motivadas por el valor percibido.
+
+**C. User Assumptions**
+1. Creemos que los usuarios primarios del Segmento 1 son jefes de almacén y supervisores logísticos de distribuidoras de alimentos perecibles, con edades entre 28 y 50 años, con educación técnica o universitaria en logística o administración, y con acceso a computadoras de escritorio y teléfonos inteligentes (*smartphones*) Android en su entorno laboral.
+2. Creemos que los usuarios primarios del Segmento 2 son propietarios o administradores de bodegas de barrio o puestos en mercados de abastos, con edades entre 30 y 60 años, con nivel educativo de secundaria o técnico básico, y que utilizan principalmente teléfonos inteligentes (*smartphones*) Android de gama media para todas sus actividades digitales.
+3. Creemos que ambos segmentos utilizan WhatsApp como canal principal de comunicación laboral y digital, lo que lo convierte en un canal crítico para el envío de notificaciones automáticas de la plataforma.
+4. Creemos que los usuarios del Segmento 1 tienen mayor tolerancia y disposición a adoptar tecnología si se les demuestra un retorno de inversión (*ROI*) claro, mientras que los usuarios del Segmento 2 necesitan una interfaz extremadamente simple, en español, con un proceso de inducción (*onboarding*) guiado y soporte constante.
+
+**D. User Outcome and Benefit Assumptions**
+1. Creemos que los supervisores de almacén del Segmento 1 desean recuperar al menos 2 horas diarias actualmente destinadas a la verificación manual de temperatura e inventario, para redirigirlas a tareas de mayor valor logístico.
+2. Creemos que los jefes logísticos del Segmento 1 desean obtener visibilidad en tiempo real del estado de su inventario y sus cámaras frigoríficas desde cualquier dispositivo, incluso fuera del horario laboral, para responder ante incidentes térmicos antes de que generen pérdidas económicas.
+3. Creemos que los propietarios de bodegas del Segmento 2 desean recibir alertas anticipadas —al menos 7 días antes del vencimiento— que les permitan aplicar estrategias de promoción o ajustar pedidos futuros, evitando el desecho físico de productos y recuperando entre S/ 100 y S/ 300 mensuales de pérdidas actuales.
+4. Creemos que ambos segmentos de usuarios valoran la generación automática de reportes de mermas porque les permite justificar pérdidas ante proveedores, clientes o gerencias con datos objetivos y auditables en lugar de estimaciones.
+
+**E. Feature Assumptions**
+1. Creemos que un **panel de control interactivo (*dashboard*) de monitoreo de temperatura en tiempo real** con alertas configurables por umbral reducirá los incidentes de ruptura de cadena de frío al permitir una respuesta preventiva e inmediata.
+2. Creemos que un **módulo de gestión de inventario con política FEFO** (*First Expired, First Out*) y alertas automáticas de vencimiento a los 15, 7 y 3 días permitirá a los usuarios reducir las mermas por caducidad en al menos un 35%.
+3. Creemos que un **módulo de reportes y analítica** con gráficos de rotación de stock, histórico de temperaturas y mermas por período facilitará la toma de decisiones logísticas y la negociación de reposición con proveedores.
+4. Creemos que una **funcionalidad de trazabilidad de lotes** vinculada a la cadena de distribución permitirá a las distribuidoras medianas cumplir con los requisitos de rastreabilidad exigidos por SENASA y DIGESA, abriendo así una ventaja competitiva de carácter regulatorio.
+5. Creemos que un **sistema de notificaciones multicanal** —notificaciones internas en la aplicación (*in-app*), correo electrónico y SMS— incrementará la tasa de respuesta ante alertas térmicas críticas hasta superar el 80% en menos de 15 minutos.
+6. Creemos que un **módulo de gestión de usuarios y roles** —administrador, supervisor y operario— facilitará la adopción en empresas con equipos de trabajo de múltiples personas, incrementando el ticket promedio mensual por cuenta corporativa.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
