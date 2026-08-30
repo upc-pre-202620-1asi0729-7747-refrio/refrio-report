@@ -116,8 +116,6 @@ Las suposiciones representan las creencias fundamentales de nuestro equipo de de
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-###### 1.2.2.3. Lean UX Hypothesis Statements
-
 A partir de las suposiciones de características (*Feature Assumptions*) definidas para la plataforma **Refrio**, se formulan los siguientes enunciados de hipótesis. Estas declaraciones siguen de forma estricta la estructura formal del proceso *Lean UX*: *"We believe we will achieve [business outcome] if [personas] attain [benefit/user outcome] with [feature or solution]"*.
 
 **Hypothesis 1 — Real-Time Temperature Monitoring Dashboard**
