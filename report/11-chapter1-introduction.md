@@ -116,6 +116,29 @@ Las suposiciones representan las creencias fundamentales de nuestro equipo de de
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+###### 1.2.2.3. Lean UX Hypothesis Statements
+
+A partir de las suposiciones de características (*Feature Assumptions*) definidas para la plataforma **Refrio**, se formulan los siguientes enunciados de hipótesis [3]. Estas declaraciones siguen de forma estricta la estructura formal del proceso *Lean UX*: *"We believe we will achieve [business outcome] if [personas] attain [benefit/user outcome] with [feature or solution]"* [1, 2].
+
+**Hypothesis 1 — Real-Time Temperature Monitoring Dashboard**
+We believe we will achieve **a reduction of at least 30% in cold-chain breach incidents reported by active distributor accounts** if **warehouse supervisors and logistics managers** attain **real-time visibility and configurable threshold alerts for all their refrigeration units, accessible from any device** with **a real-time temperature monitoring dashboard connected to IoT sensors, with color-coded status indicators and automatic alert generation** [3].
+
+**Hypothesis 2 — Inventory Management Module & FEFO Expiry Alerts**
+We believe we will achieve **a reduction of at least 35% in economic losses due to product expiry among active users within 3 months of onboarding** if **warehouse supervisors and bodega owners** attain **automated early warnings at 15, 7 and 3 days before expiry and a FEFO-sorted stock list that makes rotation decisions self-evident** with **an inventory management module that tracks batch-level expiry dates, enforces FEFO ordering, and sends multichannel near-expiry notifications** [4].
+
+**Hypothesis 3 — Analytics and Reporting Module**
+We believe we will achieve **an improvement of at least 40% in the speed of logistics decision-making, measured by the reduction of time from data collection to action** if **logistics managers and company administrators** attain **automated weekly and monthly consolidated reports on stock rotation, waste history and temperature averages per storage unit** with **an analytics and reporting module featuring interactive charts and one-click PDF/CSV export functionality** [5].
+
+**Hypothesis 4 — Batch Registration & Traceability Module**
+We believe we will achieve **that at least 80% of subscribed distributor companies comply with SENASA and DIGESA lot-traceability requirements without additional manual effort** if **logistics managers and quality supervisors** attain **full lot-level traceability from product reception to distribution, linked to supplier and client records within the platform** with **a batch registration and traceability module integrated into the standard inventory workflow, generating audit-ready traceability reports on demand** [6].
+
+**Hypothesis 5 — Multichannel Notification System**
+We believe we will achieve **a critical-alert response rate above 80% within 15 minutes of alert issuance** if **warehouse supervisors and store owners** attain **timely awareness of critical temperature and expiry events regardless of whether they are actively using the platform at the time of the alert** with **a multichannel notification system delivering simultaneous in-app, email and SMS alerts for all configurable critical events, with alert acknowledgment tracking** [7].
+
+**Hypothesis 6 — User and Role Management Module**
+We believe we will achieve **that at least 60% of subscribed company accounts have 3 or more active users within 90 days of registration** if **company administrators** attain **the ability to assign differentiated access permissions (administrator, supervisor, operator) and monitor individual activity and contribution within the platform** with **a user and role management module that supports multi-user collaboration within a single account, with invitation by email and audit logs per user** [8].
+
+
 #### 1.2.2.4. Lean UX Canvas
 
 ## 1.3. Segmentos objetivo
