@@ -18,7 +18,7 @@ La relevancia de esta propuesta radica en que la implementación de un sistema d
 
 | Foto | Descripción |
 |:---:|:---|
-| <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Alca Morán, César Alejandro - U20241F027**<br>descripción |
+| <img src="../assets/Alca Morán, César Alejandro - U20241F027 - Profile.jpg" alt="Foto" width="120"> | **Alca Morán, César Alejandro - U20241F027**<br>Soy estudiante de Ingeniería de Software. Aporto conocimientos en desarrollo web, programación y capacidad para trabajar en equipo. Me considero una persona responsable, proactiva y comprometida con el aprendizaje continuo y el crecimiento profesional.|
 | <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Centeno León, Adriano Samir - U20241D920**<br>descripción |
 | <img src="../assets/Rivas Méndez, Bernie Aarón - U20241F109 - Profile.PNG" alt="Foto" width="120"> | **Rivas Méndez, Bernie Aarón - U20241F109**<br>Soy un estudiante de la carrera de Ingeniería de Software y curso el 5to ciclo de la carrera. En cuanto a los trabajos me gusta revisar y que estén completos a la hora de entregarlos. En cuanto a la programación me gusta ser ordenado y que tenga lógica, por lo cual prefiero programar el BackEnd, pero también hago el FrontEnd.|
 | <img src="ruta/a/tu/imagen.jpg" alt="Foto" width="120"> | **Saavedra Flores, Rodrigo Andree - U20241D811**<br>descripción |
