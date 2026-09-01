@@ -2,9 +2,162 @@
 
 ## 2.1. Competidores
 
+En esta sección se identifican y describen los principales competidores de **Refrio** —tanto directos como indirectos—, es decir, aquellos que ofrecen productos digitales con modelos de negocio total o parcialmente similares en el mercado de gestión logística y cadena de frío para empresas de alimentos perecibles.
+
 ### 2.1.1. Análisis competitivo
 
+**¿Por qué llevar a cabo este análisis?** Entender el panorama competitivo es crucial para identificar oportunidades de diferenciación y áreas de mejora en la propuesta de valor de **Refrio**. Este análisis permite evaluar cómo los competidores abordan los problemas de gestión de inventario, distribución, y cómo se posicionan en términos de precio, funcionalidad y experiencia del usuario.
+
+<table border="1">
+<!-- Encabezado de Columnas -->
+<tr>
+<td colspan="2"> <b>Competidores</b> </td>
+<td>
+    <img src="../assets/Refrio_Logo.png" alt="Logo de Refrio" width="110">
+    <b>Refrio</b>
+</td>
+<td><img src="../assets/Optima_Logo.png" alt="Logo de Óptima ERP" width="110"><br>
+
+  <b>Competidor 1: Óptima ERP (Perú)</b>
+</td>
+<td>
+<img src="../assets/Sinapsys_Logo.jpg" alt="Logo de Sinapsys WMS" width="110"><br>
+
+<b>Competidor 2: Sinapsys WMS (Perú)</b></td>
+<td>
+
+<img src="../assets/Tive_Logo.png" alt="Logo de Tive" width="110">
+<br>
+<b>Competidor 3: Tive (EE.UU.)</b></td>
+</tr>
+
+<!-- Sección Perfil -->
+<tr>
+<td rowspan="2" style="vertical-align: middle; transform: rotate(-90deg);"><b>Perfil</b></td>
+<td>Overview</td>
+<td>Plataforma web SaaS peruana que integra monitoreo IoT de temperatura y gestión de inventario FEFO en un solo producto.</td>
+<td>ERP peruano orientado a pymes con módulo de inventario y facturación electrónica integrada a SUNAT.</td>
+<td>Software WMS (Warehouse Management System) con distribución en Latinoamérica. Cubre gestión de almacén, picking y despacho.</td>
+<td>Plataforma IoT global de monitoreo de temperatura y ubicación para cadena de suministro con alta precisión industrial.</td>
+</tr>
+<tr>
+<td>Ventaja competitiva</td>
+<td>Única solución que combina monitoreo IoT térmico + gestión FEFO + alertas multicanal en un solo producto accesible para el segmento PYME peruano.</td>
+<td>Integración nativa con SUNAT para facturación electrónica. Fuerte presencia en pymes limeñas con soporte local en español.</td>
+<td>Cobertura funcional amplia de operaciones de almacén (recepción, picking, despacho). Adaptable a múltiples sectores.</td>
+<td>Alta precisión en sensores de temperatura y geolocalización en tiempo real. Cobertura global con más de 150 países.</td>
+</tr>
+
+<!-- Sección Perfil de Marketing -->
+
+<tr>
+<td rowspan="2" style="vertical-align: middle; transform: rotate(-90deg);"><b>Perfil de Marketing</b></td>
+<td>Mercado objetivo</td>
+<td>Distribuidoras medianas de alimentos perecibles y bodegas/puestos de mercado en Lima Metropolitana y ciudades intermedias del Perú.</td>
+<td>Pymes peruanas de comercio, manufactura y distribución general que requieren control de inventario y facturación integrada.</td>
+<td>Empresas medianas y grandes de distribución y manufactura en Perú, Colombia, Chile y México.</td>
+<td>Empresas exportadoras, operadores logísticos y cadenas de supermercados globales que transportan bienes de alto valor o sensibles a temperatura.</td>
+</tr>
+<tr>
+<td>Estrategias de marketing</td>
+<td>Marketing digital en redes sociales, SEO orientado a términos de cadena de frío y bodegueros, alianzas con gremios sectoriales (ABP), ventas directas B2B a distribuidoras.</td>
+<td>Publicidad en Google Ads y ferias PYME, base de clientes referenciada por contadores y consultores tributarios.</td>
+<td>Fuerza de ventas directa B2B, participación en ferias de logística latinoamericanas (ExpoLogística Perú), canales de distribución con integradores locales.</td>
+<td>Presencia en LinkedIn y eventos globales de supply chain (LogiMed, Gartner Supply Chain). Ventas enterprise con ciclos largos.</td>
+</tr>
+
+<!-- Sección Perfil de Producto -->
+<tr>
+<td rowspan="3" style="vertical-align: middle; transform: rotate(-90deg);"><b>Perfil de Producto</b></td>
+<td>Productos & Servicios</td>
+<td>Dashboard de temperatura IoT en tiempo real, gestión de inventario FEFO con alertas de vencimiento multicanal, analítica exportable y trazabilidad de lotes.</td>
+<td>Módulos de contabilidad, facturación electrónica SUNAT, inventario básico, cuentas por cobrar/pagar, planillas, reportes financieros.</td>
+<td>Módulos de recepción de mercadería, gestión de ubicaciones, picking y embalaje, despacho, control de lotes y vencimientos (básico), integración con ERPs.</td>
+<td>Sensores físicos de temperatura y GPS con plataforma SaaS de trazabilidad térmica y de ubicación en tiempo real, alertas, reportes y API para integración.</td>
+</tr>
+<tr>
+<td>Precios & Costos</td>
+<td>Plan básico: S/ 59/mes. Plan estándar: S/ 129/mes. Plan premium: S/ 249/mes. Sin costo de hardware propietario (compatible con sensores IoT de mercado).</td>
+<td>Desde S/ 89/mes para plan básico de inventario + facturación. Módulos adicionales con costo extra.</td>
+<td>Desde USD 300/mes para instalación on-premise o SaaS. Implementación con costo adicional (USD 1,500–5,000).</td>
+<td>Desde USD 5 por sensor/mes + costo de los sensores físicos (USD 80–200 c/u). Orientado a contratos anuales enterprise.</td>
+</tr>
+<tr>
+<td>Canales de distribución (Web y/o Móvil)</td>
+<td>Web responsive y móvil. Acceso desde cualquier dispositivo con conexión a internet, sin instalación local.</td>
+<td>Web (escritorio). Aplicación de escritorio instalable. Solo compatible con Windows.</td>
+<td>Web y aplicación de escritorio. Requiere proceso de implementación con consultor certificado.</td>
+<td>Web, API REST y aplicación móvil iOS/Android. Hardware (sensores) entregado e instalado por técnicos certificados de Tive.</td>
+</tr>
+
+<!-- Sección Análisis SWOT -->
+<tr>
+<td rowspan="4" style="vertical-align: middle; transform: rotate(-90deg);"><b>Análisis SWOT</b></td>
+<td>Fortalezas</td>
+<td>Arquitectura web moderna en español, intuitiva y mobile-first con precios de entrada competitivos.</td>
+<td>Más de 10 años de presencia en el mercado peruano y una sólida integración con SUNAT.</td>
+<td>Cobertura funcional amplia del ciclo de almacén y presencia multipaís en Latinoamérica.</td>
+<td>Alta precisión y confibilidad de sensores industriales con un historial exitoso en cadena de frío farmacéutica.</td>
+</tr>
+<tr>
+<td>Debilidades</td>
+<td>Producto nuevo en fase de validación inicial frente a otras consolidadas. Dependencia a internet para el monitoreo en tiempo real.</td>
+<td>Sin módulo de monitoreo de temperatura. Interfaz desactualizada y experiencia de usuario poco intuitiva.</td>
+<td>Precio y complejidad de implementación fuera del alcance de pymes y bodegas. Sin monitoreo IoT de temperatura integrado.</td>
+<td>Sin módulo de gestión de inventario y presenta ciclos de ventas largos y orientados a clientes enterprise.</td>
+</tr>
+<tr>
+<td>Oportunidades</td>
+<td>Mercado PYME de perecibles amplio y desatendido, además de una creciente aceptación de pagos digitales entre bodegueros.</td>
+<td>Agregar un módulo básico de temperatura para diferenciarse en el mercado de alimentos.</td>
+<td>Incorporar un módulo IoT de monitoreo de temperatura para ampliar su propuesta de valor.</td>
+<td>Asociarse con distribuidores locales en Perú para reducir costos de hardware.</td>
+</tr>
+<tr>
+<td>Amenazas</td>
+<td>Resistencia cultural al cambio tecnológico en el segmento bodeguero e inestabilidad de conectividad a internet en zonas periféricas de Lima</td>
+<td>Plataformas más completas que integren facturación y temperatura en un solo producto.</td>
+<td> RPs globales como Odoo que ofrecen módulos de almacén a bajo costo.</td>
+<td>Nuevos actores con hardware de bajo costo y plataformas SaaS integradas</td>
+</tr>
+</table>
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+A partir del análisis competitivo, **Refrio** define las siguientes estrategias y tácticas preliminares para afrontar las fortalezas de sus competidores y aprovechar sus debilidades en el mercado peruano:
+
+**Frente a Óptima ERP**
+
+*Estrategia:* Diferenciación por especialización vertical y cobertura de necesidades no atendidas.
+
+Óptima ERP tiene presencia consolidada en el segmento pyme peruano, pero carece por completo de un módulo de monitoreo de temperatura y no está especializado en el sector de alimentos perecibles. **Refrio** aprovechará esta brecha posicionándose explícitamente como "la herramienta que Óptima no puede hacer": monitoreo térmico en tiempo real integrado con gestión de inventario FEFO.
+
+*Tácticas:*
+- Desarrollar materiales de ventas que cuantifiquen el costo mensual de no tener monitoreo de temperatura (pérdidas promedio de S/ 150–400/mes en bodegas y 12–20 % de facturación en distribuidoras), evidenciando el ROI de **Refrio** frente a ERPs genéricos.
+- Implementar una funcionalidad de importación de datos desde Excel para facilitar la migración de clientes que actualmente usan Óptima u hojas de cálculo, reduciendo la fricción del cambio.
+- Ofrecer un período de prueba gratuita de 30 días sin tarjeta de crédito para capturar usuarios que ya tienen Óptima pero necesitan complementar con gestión de perecibles.
+
+2. **Frente a Sinapsys WMS**
+
+*Estrategia:* Competir en accesibilidad económica y facilidad de adopción para el segmento PYME.
+
+Sinapsys WMS cubre funciones más amplias de almacén, pero su costo de implementación (desde USD 300/mes + USD 1,500–5,000 de implementación) lo pone fuera del alcance de las distribuidoras medianas y, en especial, de las bodegas. Su curva de aprendizaje alta y la necesidad de consultor certificado representan barreras de adopción que **Refrio** puede explotar.
+
+*Tácticas:*
+- Posicionar a **Refrio** como "el WMS que no necesita consultor": onboarding en menos de 30 minutos, con tutoriales en video en español y soporte vía WhatsApp.
+- Orientar las campañas de adquisición hacia distribuidoras medianas que hayan evaluado y descartado soluciones WMS por su costo o complejidad, ofreciendo la propuesta de valor esencial —FEFO + temperatura— a una fracción del precio.
+- Publicar casos de uso específicos en el sector lácteo, cárnico y de frutas/verduras para demostrar la especialización vertical que Sinapsys no tiene.
+
+**Frente a Tive**
+
+*Estrategia:* Aprovechar la brecha de precio y la orientación a pymes locales frente a una solución enterprise global.
+
+Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de negocio —hardware propietario costoso, precios en dólares y enfoque enterprise— lo hace completamente inaccesible para los segmentos objetivo de **Refrio**. Además, Tive no integra gestión de inventario ni alertas de vencimiento.
+
+*Tácticas:*
+- Comunicar activamente la ventaja de **Refrio** de ser compatible con sensores IoT de bajo costo ya disponibles en el mercado peruano (desde S/ 80–150 por sensor), eliminando la barrera del hardware propietario.
+- Desarrollar alianzas con proveedores locales de sensores IoT (Arduino-compatible, ESP32-based) para ofrecer kits de inicio a precios accesibles que el cliente pueda instalar por sí mismo siguiendo una guía en video.
+- Orientar la comunicación de marca hacia la identidad local: "Hecha en el Perú, para el negocio peruano", como contrapunto a una solución internacional que no conoce las particularidades del mercado nacional (temporadas de calor en Lima, informalidad del sector, preferencia por WhatsApp, etc.).
 
 ## 2.2. Entrevistas
 
