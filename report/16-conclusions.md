@@ -1,6 +1,6 @@
 # Conclusiones
 
-## Conclusiones
+## Conclusiones y recomendaciones
 
 ## Recomendaciones
 
