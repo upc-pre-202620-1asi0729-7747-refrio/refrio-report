@@ -137,7 +137,7 @@ A partir del análisis competitivo, **Refrio** define las siguientes estrategias
 - Implementar una funcionalidad de importación de datos desde Excel para facilitar la migración de clientes que actualmente usan Óptima u hojas de cálculo, reduciendo la fricción del cambio.
 - Ofrecer un período de prueba gratuita de 30 días sin tarjeta de crédito para capturar usuarios que ya tienen Óptima pero necesitan complementar con gestión de perecibles.
 
-2. **Frente a Sinapsys WMS**
+**Frente a Sinapsys WMS**
 
 *Estrategia:* Competir en accesibilidad económica y facilidad de adopción para el segmento PYME.
 
