@@ -22,7 +22,7 @@ Se utilizarán fuentes sans-serif (como Arial, Roboto y Montserrat) por su alta 
 
 | Arial | Roboto | Montserrat |
 |---|---|---|
-| <img src="../assets/Font_Arial.jpg" width="200"/> | <img src="../assets/Font_Roboto.jpg" width="200"/> | <img src="../assets/Font_Montserrat.png" width="200"/> |
+| <img src="../assets/Font_Arial.jpg" width="300"/> | <img src="../assets/Font_Roboto.png" width="300"/> | <img src="../assets/Font_Montserrat.png" width="300"/> |
 
 Componentes de interfaz:
 - Dashboards con gráficos: Integración de gráficos de líneas, barras e indicadores circulares para representar información operativa sobre el inventario y proyección de mermas de alimentos.  
