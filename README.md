@@ -12,7 +12,7 @@ NRC <br>
 
 ## **Informe del Trabajo Final**
 Docente <br>
-#### **Roble Fernández, Ivan**
+#### **Robles Fernández, Ivan**
 Equipo <br>
 #### **MadaGroup**
 Proyecto <br>
