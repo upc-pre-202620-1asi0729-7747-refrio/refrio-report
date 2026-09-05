@@ -72,19 +72,19 @@ En esta sección se detallan los requisitos del producto digital Refrio a travé
 
 ## 3.2. Impact Mapping
 
-En esta sección se presenta el Impact Mapping elaborado para el modelo de negocio digital de **Refrio**. Este artefacto nos permite alinear visualmente nuestros objetivos estratégicos de negocio con las necesidades de nuestros User Personas y los entregables de software, asegurando que cada funcionalidad construida (User Story) tenga un propósito claro y medible en la mitigación del desperdicio alimentario y la preservación de la cadena de frío en el Perú.
+En esta sección se presenta el Impact Mapping elaborado para el modelo de negocio digital de Refrio. Este artefacto nos permite alinear visualmente nuestros objetivos estratégicos de negocio con las necesidades de nuestros User Personas y los entregables de software, asegurando que cada funcionalidad construida (User Story) tenga un propósito claro y medible en la mitigación del desperdicio alimentario y la preservación de la cadena de frío en el Perú.
 
 ![Impact Map](../assets/ImpactMap.png)
 
 El Impact Mapping elaborado para Refrio ilustra de manera estratégica cómo las funcionalidades de nuestra plataforma tecnológica contribuyen directamente a alcanzar nuestros objetivos de reducción de mermas y adopción en el mercado. Para esta fase del proyecto, hemos definido dos objetivos SMART (Business Goals) enfocados tanto en la adopción empresarial B2B (distribuidoras medianas) como en la penetración en el comercio minorista B2C (bodegas y puestos de abasto).
 
 **Alineación del Business Goal 1 (Adopción B2B - Distribuidoras Medianas):**
-Nuestro primer objetivo de negocio busca lograr la suscripción activa de 40 empresas distribuidoras medianas de alimentos perecibles en el plazo de 12 meses en Lima Metropolitana y principales ciudades logísticas. Para alcanzar esta meta comercial, el actor fundamental es **Javier Mendoza** (Jefe de Almacén y Operaciones Frigoríficas).
+Nuestro primer objetivo de negocio busca lograr la suscripción activa de 40 empresas distribuidoras medianas de alimentos perecibles en el plazo de 12 meses en Lima Metropolitana y principales ciudades logísticas. Para alcanzar esta meta comercial, el actor fundamental es Javier Mendoza (Jefe de Almacén y Operaciones Frigoríficas).
 * En el caso de los supervisores y jefes de almacén, el impacto conductual que necesitamos generar es que abandonen el control manual en papel y las planillas de Excel desarticuladas, adoptando la telemetría continua para erradicar las mermas por ruptura térmica y optimizar la rotación de stock perecible.
 * Como startup de software, provocaremos este impacto implementando el *Módulo Web de Telemetría IoT en Tiempo Real, Alertas Críticas y Gestión de Inventario FEFO* (Deliverable). Este entregable se materializa en historias de usuario clave para vincular sensores a cámaras frigoríficas, ingestar y visualizar telemetría en vivo, recibir alertas automáticas por ruptura térmica y generar planes de picking según caducidad para auditorías de calidad (US12, US14, US18, US23, US29, US30, US35).
 
 **Alineación del Business Goal 2 (Alcance B2C / Minorista - Bodegas de Barrio):**
-El segundo objetivo tiene como meta alcanzar más de 350 bodegas comerciales y puestos de mercado de abastos activos que utilicen la versión móvil de Refrio en sus primeros 6 meses de operación. La persona representativa de este segmento es **Rosa Huamán** (Propietaria de Bodega Comercial).
+El segundo objetivo tiene como meta alcanzar más de 350 bodegas comerciales y puestos de mercado de abastos activos que utilicen la versión móvil de Refrio en sus primeros 6 meses de operación. La persona representativa de este segmento es Rosa Huamán (Propietaria de Bodega Comercial).
 * Para lograr este volumen de adopción, el impacto necesario es que la comerciante adquiera el hábito de registrar con facilidad las fechas de caducidad de sus productos de alta rotación y actúe de inmediato frente a las notificaciones preventivas, liquidando o rotando la mercadería antes de su descomposición.
 * El entregable provisto para viabilizar este comportamiento es la *Aplicación Móvil Ligera de Control de Caducidades, Detección de Desconexión y Sugerencias de Remate* (Deliverable). Este módulo se traduce en User Stories intuitivas diseñadas para registrar productos en pocos toques, recibir alarmas sonoras preventivas ante bajas de tensión eléctrica o alza de calor nocturno, y consultar un semáforo visual de frescura que guíe las ventas en mostrador (US07, US13, US22, US25, US31, US32, US39).
 
@@ -94,7 +94,7 @@ En conclusión, este mapa confirma que ninguna historia de usuario de Refrio ha 
 
 En esta sección se presenta el Product Backlog del proyecto Refrio, el cual consolida y prioriza todas las historias de usuario y tareas técnicas necesarias para construir la solución integral.
 
-El orden de los elementos ha sido rigurosamente determinado por el **valor para el negocio**, asegurando que los entregables con mayor impacto en la captación comercial y la funcionalidad *core* de resguardo de cadena de frío e inventario FEFO se desarrollen de manera prioritaria. Por consiguiente, las historias vinculadas con el portal web público (Landing Page) encabezan el backlog para iniciar el proceso de validación y captación desde el Sprint 1, mientras que los módulos analíticos avanzados, configuraciones secundarias y optimizaciones de exportación se abordan en los sprints posteriores.
+El orden de los elementos ha sido rigurosamente determinado por el valor para el negocio, asegurando que los entregables con mayor impacto en la captación comercial y la funcionalidad *core* de resguardo de cadena de frío e inventario FEFO se desarrollen de manera prioritaria. Por consiguiente, las historias vinculadas con el portal web público (Landing Page) encabezan el backlog para iniciar el proceso de validación y captación desde el Sprint 1, mientras que los módulos analíticos avanzados, configuraciones secundarias y optimizaciones de exportación se abordan en los sprints posteriores.
 
 | # Orden | User Story ID | Título | Story Points | Sprint Asignado | Status |
 |:---:|:---:|:---|:---:|:---:|:---:|
