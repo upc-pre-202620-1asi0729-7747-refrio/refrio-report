@@ -244,15 +244,204 @@ Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de 
 ### 2.2.3. Análisis de entrevistas
 
 ## 2.3. Needfinding
+Para llevar a cabo el proceso de needfinding en Refrio, se realizaron entrevistas en profundidad con actores clave pertenecientes a los segmentos objetivo, incluyendo jefes de almacén y supervisores logísticos de empresas distribuidoras medianas, así como propietarios y administradores de bodegas comerciales y puestos de mercado de abastos. Estas conversaciones se centraron en comprender sus dinámicas de trabajo diarias, sus métodos de control de inventario y sus principales frustraciones vinculadas con la ruptura imprevista de la cadena de frío, la caducidad no controlada de alimentos y las pérdidas económicas derivadas del descarte de productos perecibles.
+
+Gracias a esta exploración, se identificaron áreas críticas de mejora en el ecosistema logístico y comercial, tales como la dependencia de mediciones térmicas manuales no continuas, la falta de supervisión durante horarios no laborales, la ausencia de trazabilidad en la rotación de existencias y la limitada adopción de herramientas tecnológicas accesibles frente a soluciones ERP complejas y costosas. Asimismo, se evidenció una marcada brecha operativa entre el registro en papel o Excel y la toma de decisiones preventivas en tiempo real. Durante las entrevistas, surgieron patrones y necesidades recurrentes, como la urgencia de recibir alertas tempranas y automatizadas ante fallas de refrigeración y la necesidad de aplicar de forma sencilla políticas de rotación FEFO (First Expired, First Out). De esta manera, se consolidó una oportunidad clara para desarrollar Refrio, una plataforma digital de código abierto impulsada por telemetría IoT que resguarda la cadena de frío, optimiza la rotación de stock y reduce drásticamente las mermas de alimentos perecibles en el Perú.
 
 ### 2.3.1. User Personas
 
+**Segmento Objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas:**
+![User-Persona-1](../assets/UserPersona-1.png)
+
+<div style="page-break-after: always"></div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+![User-Persona-2](../assets/UserPersona-2.png)
+
+<div style="page-break-after: always"></div>
+
 ### 2.3.2. User Task Matrix
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; text-align: center; width: 100%;">
+  
+  <tr style="background-color:#f2f2f2;">
+    <th rowspan="2">Task</th>
+    <th colspan="2">Javier Mendoza (Jefe de Almacén y Logística)</th>
+    <th colspan="2">Rosa Huamán (Propietaria de Bodega)</th>
+  </tr>
+
+  <tr style="background-color:#f2f2f2;">
+    <th>Frequency</th>
+    <th>Importance</th>
+    <th>Frequency</th>
+    <th>Importance</th>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Monitorear temperatura de cámaras/vitrinas</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Registrar fecha de vencimiento y lote de productos</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Verificar rotación de inventario bajo criterio FEFO</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Detectar desviaciones térmicas fuera de horario laboral</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Revisar manualmente el estado físico de los equipos de frío</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Lanzar promociones o remates por caducidad cercana</td>
+    <td>Low</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Preparar pedidos o despachos para clientes/rutas</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Generar reportes de mermas y pérdidas económicas</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>Medium</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Justificar trazabilidad térmica ante clientes o auditorías</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>Low</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Coordinar mantenimiento de equipos de refrigeración</td>
+    <td>Low</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Separar y desechar mercadería deteriorada/vencida</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+  </tr>
+
+</table>
+
+<div style="page-break-after: always"></div>
 
 ### 2.3.3. User Journey Mapping
 
+**Segmento Objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas:**
+![User-JourneyMap-1](../assets/JourneyMap-1.png)
+
+<div style="page-break-after: always"></div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+![User-JourneyMap-2](../assets/JourneyMap-2.png)
+
+<div style="page-break-after: always"></div>
+
 ### 2.3.4. Empathy Mapping
 
+**Segmento Objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas:**
+![EmpathyMap-1](../assets/Empathymap-1.png)
+
+<div style="page-break-after: always"></div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+![EmpathyMap-2](../assets/Empathymap-2.png)
+
+<div style="page-break-after: always"></div>
+
 ## 2.4. Big Picture EventStorming
+En la sesión de Big Picture EventStorming, el equipo exploró de forma visual el panorama general del dominio de telemetría IoT para la cadena de frío y la gestión inteligente de inventarios perecibles de Refrio. Se identificaron los eventos significativos del ciclo de vida de un lote perecible y su monitoreo ambiental, desde la recepción e ingreso de la mercadería hasta el despacho bajo políticas FEFO y la prevención o reporte de mermas críticas. Asimismo, se integraron los sistemas externos que interactúan con la plataforma —como los nodos sensores IoT y las pasarelas de mensajería para alertas inmediatas— exponiendo los problemas operativos, dudas técnicas y oportunidades de automatización detectados durante la sesión. Esta primera aproximación permitió alinear el entendimiento del equipo y sentar las bases para el diseño detallado de la solución.
+
+**Primera fase: Eventos**
+![Big picture event storming](../assets/EventStorming.png)
+
+**Mapa general:**
+https://canva.link/65l1zwoqzdoajro
 
 ## 2.5. Ubiquitous Language
+- **Cold Chain (Cadena de Frío):** Conjunto logístico ininterrumpido de etapas de refrigeración o congelación controlada necesario para preservar la frescura, inocuidad y valor biológico de los productos perecibles desde su almacenamiento hasta su consumo.
+
+- **Perishable Batch (Lote Perecible):** Agrupación uniforme de mercancía perecible que comparte el mismo identificador de procedencia, fecha de producción y fecha crítica de caducidad.
+
+- **FEFO Policy - First Expired, First Out (Primero en Vencer, Primero en Salir):** Estrategia de gestión logística que prioriza la rotación y despacho del lote cuya fecha de caducidad es la más próxima, independientemente de su fecha de entrada al almacén.
+
+- **Thermal Telemetry (Telemetría Térmica):** Registro y transmisión periódica de métricas de temperatura y humedad ambiental capturadas por sensores electrónicos remotos.
+
+- **Thermal Threshold (Umbral Térmico):** Margen de temperatura (límite inferior y superior) en el que un producto perecible debe mantenerse para evitar su descomposición o pérdida de inocuidad.
+
+- **Cold Breach (Ruptura de Cadena de Frío):** Evento en el cual la temperatura ambiental supera o cae por debajo del umbral térmico durante un tiempo mayor al margen de tolerancia establecido.
+
+- **IoT Sensor Node (Nodo Sensor IoT):** Dispositivo microcontrolador de hardware abierto dotado de sensores térmicos y módulo de conexión inalámbrica (WiFi/LoRa/GSM) que envía lecturas al sistema.
+
+- **Storage Unit (Unidad de Almacenamiento):** Espacio físico cerrado acondicionado térmicamente para resguardar producto, abarcando cámaras frigoríficas industriales, visicoolers o congeladoras comerciales.
+
+- **Shrinkage / Merma:** Valor económico o volumen físico de alimentos perecibles descartados tras perder aptitud para el consumo debido a expiración o ruptura térmica.
+
+- **Critical Expiration Window (Ventana Crítica de Caducidad):** Intervalo de tiempo previo al vencimiento de un lote donde se disparan notificaciones de advertencia para remate, despacho prioritario o devolución al proveedor.
+
+- **Telemetry Ingestion (Ingesta de Telemetría):** Proceso del backend encargado de recibir, deserializar, validar y persistir el flujo de datos telemétricos provenientes de los brokers de mensajería IoT.
+
+- **Telemetry Loss (Pérdida de Comunicación Telemétrica):** Condición anómala generada por corte eléctrico o pérdida de conexión que impide al nodo sensor enviar lecturas a la plataforma.
+
+- **Thermal Deviation Event (Evento de Desviación Térmica):** Incidencia registrada cuando las mediciones telemétricas superan los parámetros de seguridad establecidos para una cámara o vitrina.
+
+- **Dispatch Order (Orden de Despacho):** Instrucción formal generada para extraer mercancía de la unidad de almacenamiento y prepararla para su transporte o entrega al cliente.
+
+- **Picking List (Lista de Picking):** Documento o vista digital que indica al operario las ubicaciones exactas y los lotes que deben extraerse primero según el algoritmo FEFO.
+
+- **Emergency Alert (Alerta de Emergencia):** Notificación automática de alta prioridad transmitida al smartphone del usuario (SMS, Push o WhatsApp) para advertir de una falla crítica inminente.
+
+- **Clearance Discount (Descuento de Liquidación):** Rebaja de precio sugerida o aplicada a un lote perecible próximo a caducar para acelerar su venta en el mostrador minorista antes de convertirse en merma.
+
+- **Warehouse Supervisor (Supervisor de Almacén):** Usuario del Segmento 1 con permisos para configurar umbrales, gestionar entradas de lotes multisede y auditar reportes ejecutivos.
+
+- **Retail Merchant (Comerciante Minorista):** Usuario del Segmento 2 (bodeguero o puesto de mercado) que utiliza la plataforma móvil para recibir alertas sencillas de temperatura y caducidad.
+
+- **MQTT Broker (Broker MQTT):** Intermediario de mensajería de código abierto liviano basado en el protocolo publish/subscribe, empleado para el transporte de telemetría de bajo consumo.
+
+- **Thermal Recovery Time (Tiempo de Recuperación Térmica):** Lapso que demora una unidad de almacenamiento en retornar a su rango térmico seguro luego de una apertura de puertas prolongada o falla eléctrica momentánea.
+
+- **Shelflife (Vida Útil en Anaquel):** Tiempo remanente garantizado en el que un producto perecible puede ser comercializado y consumido con seguridad tras salir del almacén de distribución.
