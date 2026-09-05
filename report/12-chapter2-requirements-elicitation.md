@@ -13,7 +13,7 @@ En esta sección se identifican y describen los principales competidores de **Re
 <tr>
 <td colspan="2"> <b>Competidores</b> </td>
 <td>
-    <img src="../assets/Refrio_Logo.png" alt="Logo de Refrio" width="110">
+    <img src="../assets/Logo_Refrio.png" alt="Logo de Refrio" width="110">
     <b>Refrio</b>
 </td>
 <td><img src="../assets/Optima_Logo.png" alt="Logo de Óptima ERP" width="110"><br>
