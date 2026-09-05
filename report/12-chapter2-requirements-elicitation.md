@@ -6,14 +6,21 @@ En esta sección se identifican y describen los principales competidores de **Re
 
 ### 2.1.1. Análisis competitivo
 
-**¿Por qué llevar a cabo este análisis?** Entender el panorama competitivo es crucial para identificar oportunidades de diferenciación y áreas de mejora en la propuesta de valor de **Refrio**. Este análisis permite evaluar cómo los competidores abordan los problemas de gestión de inventario, distribución, y cómo se posicionan en términos de precio, funcionalidad y experiencia del usuario.
-
 <table border="1">
+<!-- Encabezado Superior -->
+<tr>
+<th colspan="6"><b>Competitive Analysis Landscape</b></th>
+</tr>
+<tr>
+<td width="20%">¿Por qué llevar a cabo este análisis?</td>
+<td colspan="5"> Para identificar oportunidades de diferenciación y áreas de mejora en la propuesta de valor de Refrio. Este análisis permite evaluar cómo los competidores abordan los problemas de gestión de inventario, distribución, y cómo se posicionan en términos de precio, funcionalidad y experiencia del usuario.</td>
+</tr>
+
 <!-- Encabezado de Columnas -->
 <tr>
 <td colspan="2"> <b>Competidores</b> </td>
 <td>
-    <img src="../assets/Logo_Refrio.png" alt="Logo de Refrio" width="110">
+    <img src="../assets/Logo_Refrio.png" alt="Logo de Refrio" width="110"><br>
     <b>Refrio</b>
 </td>
 <td><img src="../assets/Optima_Logo.png" alt="Logo de Óptima ERP" width="110"><br>
