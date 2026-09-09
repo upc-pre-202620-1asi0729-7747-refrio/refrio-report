@@ -233,6 +233,8 @@ El Mock-up de alta fidelidad integra el isotipo de Refrio, la paleta de colores 
 
 ![Landing Mockup Mobile 9](../assets/LandingMM9.png)
 
+**Link de figma:** [Ver en Figma](https://www.figma.com/design/Lwm01etaYmdrIBXZvc4gdc/Landing-Page---Refrio?node-id=0-1&t=2zBsZuwWfCntnQbN-1)
+
 ## 4.4. Web Applications UX/UI Design
 
 ### 4.4.1. Web Applications Wireframes
