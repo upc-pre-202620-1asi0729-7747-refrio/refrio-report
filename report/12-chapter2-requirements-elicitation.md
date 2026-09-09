@@ -248,6 +248,41 @@ Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de 
 
 ### 2.2.2. Registro de entrevistas
 
+A continuación, se presenta el registro de las entrevistas realizadas a los representantes de cada segmento objetivo.
+
+---
+
+#### Entrevista 1: Segmento 1 - Empresas distribuidoras de productos perecibles
+
+#### Entrevista 2: Segmento 1
+
+#### Entrevista 3: Segmento 1
+
+#### Entrevista 1: Segmento 2 - Tiendas y bodegas con productos perecibles
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Ariel David León|
+| **Edad** | 27 años |
+| **Distrito** | Santa Anita, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQB-9wEiXfAhSqhKvU2FxflsAeR7HG2QEPgm4kakGn5XqGs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hJnrer |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 10:50 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/Entrevista_Ariel.png" width="400" alt="Logo AgroFlet"> |
+
+**Resumen de la entrevista:**
+
+El entrevistado es un joven administrador que gestiona la logística y ventas del negocio familiar de acopio y despacho de productos agrícolas (papa y zanahoria) hacia Lima. Es pragmático, nativo digital y actúa como el motor de modernización frente a la "vieja escuela" de su padre. Usa su smartphone (Xiaomi) como herramienta principal para coordinar vía WhatsApp y su laptop para tareas administrativas (Excel, SUNAT).
+
+Su objetivo principal es profesionalizar el negocio, ampliar su red de transportistas de confianza y garantizar la calidad de la carga al llegar a los mercados mayoristas. Su mayor frustración es la incertidumbre total y la falta de control una vez que el camión sale, lo que le ha causado pérdidas económicas directas (hasta 1,500 soles por carga malograda o "sudada" por demoras) y roces con sus compradores por retrasos no reportados a tiempo.
+
+Para adoptar una nueva plataforma digital (AgroFlet), exige que la interfaz sea extremadamente simple (casi como usar WhatsApp), que funcione con baja o nula señal en zonas altoandinas, y que envíe alertas automáticas de incidencias directamente a su celular. Muestra alta disposición a pagar, pero prefiere un modelo flexible de pago por viaje (10-15 soles) o una suscripción mensual muy baja (40-50 soles), sugiriendo además que la herramienta debe incentivar al chofer a usarla para asegurar su adopción.
+
+---
+
+#### Entrevista 2: Segmento 2
+
+#### Entrevista 3: Segmento 2
+
 ### 2.2.3. Análisis de entrevistas
 
 ## 2.3. Needfinding
