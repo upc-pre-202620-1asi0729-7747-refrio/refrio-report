@@ -254,9 +254,54 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 
 #### Entrevista 1: Segmento 1 - Empresas distribuidoras de productos perecibles
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | (Pendiente) |
+| **Edad** | (Pendiente) |
+| **Distrito** | (Pendiente) |
+| **Enlace al video (Microsoft Stream)** | (Pendiente) |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+
+**Resumen de la entrevista:**
+(Pendiente)
+
+
+---
+
 #### Entrevista 2: Segmento 1
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | (Pendiente) |
+| **Edad** | (Pendiente) |
+| **Distrito** | (Pendiente) |
+| **Enlace al video (Microsoft Stream)** | (Pendiente) |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+
+**Resumen de la entrevista:**
+(Pendiente)
+
+
+---
+
 #### Entrevista 3: Segmento 1
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | (Pendiente) |
+| **Edad** | (Pendiente) |
+| **Distrito** | (Pendiente) |
+| **Enlace al video (Microsoft Stream)** | (Pendiente) |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+
+**Resumen de la entrevista:**
+(Pendiente)
+
+
+---
 
 #### Entrevista 1: Segmento 2 - Tiendas y bodegas con productos perecibles
 
@@ -271,17 +316,47 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 
 **Resumen de la entrevista:**
 
-El entrevistado es un joven administrador que gestiona la logística y ventas del negocio familiar de acopio y despacho de productos agrícolas (papa y zanahoria) hacia Lima. Es pragmático, nativo digital y actúa como el motor de modernización frente a la "vieja escuela" de su padre. Usa su smartphone (Xiaomi) como herramienta principal para coordinar vía WhatsApp y su laptop para tareas administrativas (Excel, SUNAT).
+El entrevistado es un joven emprendedor de 27 años (Ariel David León) dueño de un pequeño almacén o tienda de abarrotes que abrió hace 9 meses. Trabaja principalmente solo (con ayuda ocasional de familiares porque también estudia) y comercializa productos perecibles como lácteos, fiambres, helados y bebidas, controlando su stock y las fechas de vencimiento de forma totalmente manual.
 
-Su objetivo principal es profesionalizar el negocio, ampliar su red de transportistas de confianza y garantizar la calidad de la carga al llegar a los mercados mayoristas. Su mayor frustración es la incertidumbre total y la falta de control una vez que el camión sale, lo que le ha causado pérdidas económicas directas (hasta 1,500 soles por carga malograda o "sudada" por demoras) y roces con sus compradores por retrasos no reportados a tiempo.
+Su objetivo principal es mantener su negocio abastecido, evitar la pérdida de ventas por falta de stock y no tener mermas económicas por productos caducados, gestionando las fechas de vencimiento a tiempo para vender los productos a menor precio o consumirlos él mismo.
 
-Para adoptar una nueva plataforma digital (AgroFlet), exige que la interfaz sea extremadamente simple (casi como usar WhatsApp), que funcione con baja o nula señal en zonas altoandinas, y que envíe alertas automáticas de incidencias directamente a su celular. Muestra alta disposición a pagar, pero prefiere un modelo flexible de pago por viaje (10-15 soles) o una suscripción mensual muy baja (40-50 soles), sugiriendo además que la herramienta debe incentivar al chofer a usarla para asegurar su adopción.
+Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la que pueda ingresar su stock fácilmente y que le brinde alertas automáticas cuando un producto esté próximo a vencerse o cuando le falte mercadería. Además, le interesa que la app le indique cuáles son los productos que más salen (mayor rotación) y que tenga un precio accesible y acorde a su negocio, estima que estaría dispuesto a pagar unos 10 dólares mensuales.
 
 ---
 
 #### Entrevista 2: Segmento 2
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | (Pendiente) |
+| **Edad** | (Pendiente) |
+| **Distrito** | (Pendiente) |
+| **Enlace al video (Microsoft Stream)** | (Pendiente) |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+
+**Resumen de la entrevista:**
+(Pendiente)
+
+
+---
+
 #### Entrevista 3: Segmento 2
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | (Pendiente) |
+| **Edad** | (Pendiente) |
+| **Distrito** | (Pendiente) |
+| **Enlace al video (Microsoft Stream)** | (Pendiente) |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+
+**Resumen de la entrevista:**
+(Pendiente)
+
+
+---
 
 ### 2.2.3. Análisis de entrevistas
 
