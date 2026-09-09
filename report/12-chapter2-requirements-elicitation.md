@@ -350,7 +350,7 @@ Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la
 | **Distrito** | Los Olivos, Lima |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQBSOjBc4PYZQ5k3o-JDBUPkASPPqvVAQuIS1XOXPAX-f6A?e=zayZWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 05:12 minutos |
-| **Evidencia fotográfica** | <p><img src="../assets/segmento2-entrevista3" width="400" alt="Logo AgroFlet" > </p> |
+| **Evidencia fotográfica** | <p><img src="../assets/segmento2-entrevista3.png" width="400" alt="Logo AgroFlet" > </p> |
 
 **Resumen de la entrevista:**
 El entrevistado, Diego, tiene 30 años y administra una bodega en el distrito de Los Olivos junto a su hermano desde hace 5 años. Comercializa principalmente productos perecibles como yogures, quesos, embutidos y verduras básicas. Su gestión de inventario es totalmente manual y empírica, confiando en su memoria ("a puro ojo") y en un cuaderno cuadriculado para anotar pedidos, sin usar ningún sistema digital.
