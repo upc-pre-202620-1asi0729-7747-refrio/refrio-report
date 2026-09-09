@@ -160,7 +160,78 @@ El Mock-up de alta fidelidad integra el isotipo de Refrio, la paleta de colores 
 
 **Landing Mockup Desktop 1**
 
-![Landing Mockup Desktop 1]()
+![Landing Mockup Desktop 1](../assets/LandingDM1.png)
+
+**Landing Mockup Desktop 2**
+
+![Landing Mockup Desktop 2](../assets/LandingDM2.png)
+
+**Landing Mockup Desktop 3**
+
+![Landing Mockup Desktop 3](../assets/LandingDM3.png)
+
+**Landing Mockup Desktop 4**
+
+![Landing Mockup Desktop 4](../assets/LandingDM4.png)
+
+**Landing Mockup Desktop 5**
+
+![Landing Mockup Desktop 5](../assets/LandingDM5.png)
+
+**Landing Mockup Desktop 6**
+
+![Landing Mockup Desktop 6](../assets/LandingDM6.png)
+
+**Landing Mockup Desktop 7**
+
+![Landing Mockup Desktop 7](../assets/LandingDM7.png)
+
+**Landing Mockup Desktop 8**
+
+![Landing Mockup Desktop 8](../assets/LandingDM8.png)
+
+**Landing Mockup Desktop 9**
+
+![Landing Mockup Desktop 9](../assets/LandingDM9.png)
+
+
+### Mockups Mobile de la Landing Page
+
+**Landing Mockup Mobile 1**
+
+![Landing Mockup Mobile 1](../assets/LandingMM1.png)
+
+**Landing Mockup Mobile 2**
+
+![Landing Mockup Mobile 2](../assets/LandingMM2.png)
+
+**Landing Mockup Mobile 3**
+
+![Landing Mockup Mobile 3](../assets/LandingMM3.png)
+
+**Landing Mockup Mobile 4**
+
+![Landing Mockup Mobile 4](../assets/LandingMM4.png)
+
+**Landing Mockup Mobile 5**
+
+![Landing Mockup Mobile 5](../assets/LandingMM5.png)
+
+**Landing Mockup Mobile 6**
+
+![Landing Mockup Mobile 6](../assets/LandingMM6.png)
+
+**Landing Mockup Mobile 7**
+
+![Landing Mockup Mobile 7](../assets/LandingMM7.png)
+
+**Landing Mockup Mobile 8**
+
+![Landing Mockup Mobile 8](../assets/LandingMM8.png)
+
+**Landing Mockup Mobile 9**
+
+![Landing Mockup Mobile 9](../assets/LandingMM9.png)
 
 ## 4.4. Web Applications UX/UI Design
 
