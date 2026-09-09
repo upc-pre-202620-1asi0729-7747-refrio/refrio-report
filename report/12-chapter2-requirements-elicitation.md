@@ -345,15 +345,19 @@ Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | (Pendiente) |
-| **Edad** | (Pendiente) |
-| **Distrito** | (Pendiente) |
-| **Enlace al video (Microsoft Stream)** | (Pendiente) |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Nombres y Apellidos** | Diego Lopez|
+| **Edad** | 30 años |
+| **Distrito** | Los Olivos, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQBSOjBc4PYZQ5k3o-JDBUPkASPPqvVAQuIS1XOXPAX-f6A?e=zayZWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 05:12 minutos |
 | **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
 
 **Resumen de la entrevista:**
-(Pendiente)
+El entrevistado, Diego, tiene 30 años y administra una bodega en el distrito de Los Olivos junto a su hermano desde hace 5 años. Comercializa principalmente productos perecibles como yogures, quesos, embutidos y verduras básicas. Su gestión de inventario es totalmente manual y empírica, confiando en su memoria ("a puro ojo") y en un cuaderno cuadriculado para anotar pedidos, sin usar ningún sistema digital.
+
+Su mayor frustración (pain point) es la pérdida de dinero por productos vencidos y la pérdida de ventas por quiebre de stock. Debido a la falta de un registro automatizado, el olvido de anotar salidas y el espacio reducido de su local, a menudo no detecta qué productos están próximos a vencer o se agotan sin que él se dé cuenta. Esto provoca que los clientes se impacienten y se vayan con la competencia, además de obligarlo a dar de baja mercadería mermada de forma quincenal.
+
+Para adoptar una herramienta digital, considera indispensable que funcione desde su celular, sea sumamente fácil de usar y le envíe alertas automáticas de vencimiento. Esto le permitiría lanzar promociones rápidas (como un 2x1) y recuperar su inversión. Está dispuesto a pagar una suscripción mensual de entre 20 y 30 soles, considerándolo un gasto manejable (similar a un servicio de streaming), siempre y cuando le garantice dejar de perder mercadería.
 
 
 ---
