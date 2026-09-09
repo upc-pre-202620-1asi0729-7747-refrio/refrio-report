@@ -312,7 +312,7 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 | **Distrito** | Santa Anita, Lima |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQB-9wEiXfAhSqhKvU2FxflsAeR7HG2QEPgm4kakGn5XqGs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hJnrer |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 10:50 minutos |
-| **Evidencia fotográfica** | <p><img src="../assets/Entrevista_Ariel.png" width="400" alt="Logo AgroFlet"> |
+| **Evidencia fotográfica** | <p><img src="../assets/Entrevista_Ariel.png" width="400" alt="Logo AgroFlet"> </p>|
 
 **Resumen de la entrevista:**
 
@@ -333,7 +333,7 @@ Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la
 | **Distrito** | Surco |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f109_upc_edu_pe/IQAHUZC56RCmQ5ElIDT_9MY1AeSTWPVy3Jfuk3xrlUmHYjY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=P85112 |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:12 minutos |
-| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+| **Evidencia fotográfica** | <p><img src="../assets/entrevista2-segemento2.png" width="400" alt="Logo AgroFlet"> </p> |
 
 **Resumen de la entrevista:**
 (Pendiente)
