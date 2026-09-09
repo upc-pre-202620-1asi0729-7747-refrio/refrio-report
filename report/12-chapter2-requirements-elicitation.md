@@ -333,7 +333,7 @@ Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la
 | **Distrito** | Surco |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f109_upc_edu_pe/IQAHUZC56RCmQ5ElIDT_9MY1AeSTWPVy3Jfuk3xrlUmHYjY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=P85112 |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:12 minutos |
-| **Evidencia fotográfica** | <p><img src="../assets/entrevista2-segemento2.png" width="400" alt="Logo AgroFlet"> </p> |
+| **Evidencia fotográfica** | <p><img src="../assets/entrevista2-segmento2.PNG" width="400" alt="Entrevista2-Segmento2"> </p> |
 
 **Resumen de la entrevista:**
 (Pendiente)
