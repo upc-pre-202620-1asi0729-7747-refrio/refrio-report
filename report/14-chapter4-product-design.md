@@ -72,7 +72,95 @@ De acuerdo con las dimensiones de **Refrio**, este se comunica de la siguiente m
 
 ### 4.3.1. Landing Page Wireframe
 
+El wireframe establece la estructura de la página de aterrizaje en escala de grises. Se prioriza la propuesta de valor en la sección Hero, seguida de los beneficios, planes de suscripción y un formulario de contacto. Elaborado utilizando Figma.
+
+### Wireframes Desktop de la Landing Page
+
+**Landing Wireframe Desktop 1**
+
+![Landing Wireframe Desktop 1](../assets/LandingDW1.png)
+
+**Landing Wireframe Desktop 2**
+
+![Landing Wireframe Desktop 2](../assets/LandingDW2.png)
+
+**Landing Wireframe Desktop 3**
+
+![Landing Wireframe Desktop 3](../assets/LandingDW3.png)
+
+**Landing Wireframe Desktop 4**
+
+![Landing Wireframe Desktop 4](../assets/LandingDW4.png)
+
+**Landing Wireframe Desktop 5**
+
+![Landing Wireframe Desktop 5](../assets/LandingDW5.png)
+
+**Landing Wireframe Desktop 6**
+
+![Landing Wireframe Desktop 6](../assets/LandingDW6.png)
+
+**Landing Wireframe Desktop 7**
+
+![Landing Wireframe Desktop 7](../assets/LandingDW7.png)
+
+**Landing Wireframe Desktop 8**
+
+![Landing Wireframe Desktop 8](../assets/LandingDW8.png)
+
+**Landing Wireframe Desktop 9**
+
+![Landing Wireframe Desktop 9](../assets/LandingDW9.png)
+
+### Wireframes Mobile de la Landing Page
+
+**Landing Wireframe Mobile 1**
+
+![Landing Wireframe Mobile 1](../assets/LandingMW1.png)
+
+**Landing Wireframe Mobile 2**
+
+![Landing Wireframe Mobile 2](../assets/LandingMW2.png)
+
+**Landing Wireframe Mobile 3**
+
+![Landing Wireframe Mobile 3](../assets/LandingMW3.png)
+
+**Landing Wireframe Mobile 4**
+
+![Landing Wireframe Mobile 4](../assets/LandingMW4.png)
+
+**Landing Wireframe Mobile 5**
+
+![Landing Wireframe Mobile 5](../assets/LandingMW5.png)
+
+**Landing Wireframe Mobile 6**
+
+![Landing Wireframe Mobile 6](../assets/LandingMW6.png)
+
+**Landing Wireframe Mobile 7**
+
+![Landing Wireframe Mobile 7](../assets/LandingMW7.png)
+
+**Landing Wireframe Mobile 8**
+
+![Landing Wireframe Mobile 8](../assets/LandingMW8.png)
+
+**Landing Wireframe Mobile 9**
+
+![Landing Wireframe Mobile 9](../assets/LandingMW9.png)
+
+**Link de figma:** [Ver en Figma](https://www.figma.com/design/Lwm01etaYmdrIBXZvc4gdc/Landing-Page---Refrio?node-id=0-1&t=2zBsZuwWfCntnQbN-1)
+
 ### 4.3.2. Landing Page Mock-up
+
+El Mock-up de alta fidelidad integra el isotipo de Refrio, la paleta de colores oficial y tipografía Roboto con Montserrat. Se evidencia la aplicación de atributos ARIA para accesibilidad (a11y) y selectores de idioma.
+
+### Mockups Desktop de la Landing Page
+
+**Landing Mockup Desktop 1**
+
+![Landing Mockup Desktop 1]()
 
 ## 4.4. Web Applications UX/UI Design
 
