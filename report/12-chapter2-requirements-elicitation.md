@@ -336,7 +336,10 @@ Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la
 | **Evidencia fotográfica** | <p><img src="../assets/entrevista2-segmento2.PNG" width="400" alt="Entrevista2-Segmento2"> </p> |
 
 **Resumen de la entrevista:**
-(Pendiente)
+
+En esta entrevista, Farit Alejandro Santoyo Espejo, de 33 años, detalla que gestiona desde hace 8 años una bodega de un solo local en el distrito de Santiago de Surco junto a su esposa y un ayudante a medio tiempo, comercializando lácteos, embutidos y verduras frescas. El control de su inventario es totalmente manual y se realiza "al ojo", anotando en cuadernos con lápiz y papel o confiando en la memoria. Como el inventario casi nunca está actualizado, casi todas las semanas sufren desabastecimiento de productos de alta rotación como pan, queso o leche evaporada.
+
+La revisión de fechas de vencimiento la efectúa producto por producto cada 15 días, pero la falta de tiempo y el espacio reducido del almacén dificultan esta labor. Además, comete el error habitual de colocar la mercadería nueva delante de la antigua en la refrigeradora, ocasionando que un par de veces al mes deba desechar yogures o quesos frescos vencidos. Esta mala gestión provoca que los clientes se impacienten y se vayan a la competencia, generando pérdidas de ventas y de confianza. Para resolver esta situación, requiere una aplicación móvil muy sencilla e intuitiva para el celular que le envíe alertas automáticas de vencimiento y lleve un control automático de stock para saber exactamente qué reponer. Estaría dispuesto a pagar una suscripción de entre 30 y 50 soles mensuales por esta solución, puesto que equivale al dinero que actualmente pierde al botar productos malogrados.
 
 
 ---
