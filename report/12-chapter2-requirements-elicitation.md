@@ -284,15 +284,19 @@ Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución 
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | (Pendiente) |
-| **Edad** | (Pendiente) |
-| **Distrito** | (Pendiente) |
-| **Enlace al video (Microsoft Stream)** | (Pendiente) |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
-| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+| **Nombres y Apellidos** | Andrea Villanueva |
+| **Edad** | 28 años |
+| **Distrito** | Ate, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f027_upc_edu_pe/IQAwkquCrpT4Q6ym8PEG1f0RASBYdPZfyQz5VHIqfmZAjqM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=lDgqag |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 10:22 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/interview-Andrea.png" width="400" alt="Logo AgroFlet"> </p> |
 
 **Resumen de la entrevista:**
-(Pendiente)
+La entrevistada es una joven profesional de 28 años (Andrea Villanueva), supervisora de almacén y cadena de frío en una distribuidora mediana de embutidos y lácteos ubicada en Ate (Lima). Cuenta con 5 años de experiencia, lidera un equipo de 8 operarios y controla sus cámaras y despachos de forma semimanual mediante hojas de cálculo en Excel y registros físicos en papel.
+
+Su objetivo principal es mantener la integridad de la cadena de frío, evitar devoluciones de clientes por fechas cortas y reducir las mermas por vencimiento mediante una rotación FEFO eficiente.
+
+Para adoptar la plataforma Refrio, exige alertas inmediatas al celular ante fallas térmicas imprevistas, una vista clara de inventario ordenada por caducidad y reportes de trazabilidad en PDF para auditorías, bajo la condición de que la solución demuestre un retorno de inversión claro frente a las pérdidas mensuales de entre S/ 6,000 y S/ 9,000 que registran actualmente.
 
 
 ---
