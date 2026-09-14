@@ -57,16 +57,97 @@ De acuerdo con las dimensiones de **Refrio**, este se comunica de la siguiente m
 ### 4.1.2. Web Style Guidelines
 
 ## 4.2. Information Architecture
+La arquitectura de la información de Refrio ha sido estructurada para optimizar el acceso, la organización y la visibilidad de los datos telemétricos e inventarios perecibles, delimitando los límites funcionales de los Bounded Contexts y adaptándose a la escala operativa de los planes de suscripción de la plataforma.
 
 ### 4.2.1. Organization Systems
+El sistema organiza la información mediante enfoques complementarios que responden a los límites del dominio:
+- Organización jerárquica:
+  - Un Dashboard central como punto de entrada y monitoreo en tiempo real.
+  - Módulos funcionales de primer nivel: Inventory, Shipments, Suppliers, Analytics y Alerts.
+- Organización por planes de suscripción (Subscription Plans):
+  - Plan Básico (S/ 59/mes - Para pequeñas operaciones / Bodegas): Orientado a la gestión ágil de hasta 3 congeladoras registradas, monitoreo básico, control de temperatura, reportes mensuales y alertas preventivas de vencimiento.
+  - Plan Profesional (S/ 129/mes - Para operaciones en crecimiento / Distribuidoras medianas): Incluye todas las prestaciones del plan básico, ampliando la capacidad hasta 25 unidades de frío, analítica avanzada con IA, registro masivo por lotes, telemetría de frío en tránsito y soporte prioritario 24/7.
+  - Plan Empresarial (S/ 249/mes - Para grandes flotas y corporativos): Incluye la totalidad del plan profesional, sumando módulos personalizados, SLA garantizado, gestor de cuenta dedicado y API de integración completa.
+- **Organización por procesos (Flujo del Perecible):**
+  - Recepción y registro de lote $\rightarrow$ Almacenamiento y telemetría  $\rightarrow$ Detección y notificación  $\rightarrow$ Despacho prioritario  $\rightarrow$ Auditoría.
+- **Organización por datos (Bounded Contexts Core):**
+  - Identidades y cuentas: Cuentas, usuarios, credenciales, RUC y sedes.
+  - Series temporales telemétricas: Temperatura, humedad, MAC, heartbeats y estado de conectividad.
+  - Inventario perecible: Lotes, fechas de caducidad y categorías.
+  - Incidencias y alertas: Brechas térmicas, reglas de escalamiento, incidentes y acuses de recibo.
+  - Trazabilidad: Reportes de frío y órdenes de despacho.
+  - Métricas e impacto: KPIs de merma evitada, capital ahorrado y eficiencia FEFO.
 
 ### 4.2.2. Labeling Systems
+El sistema implementa etiquetas estandarizadas y alineadas al menú de navegación de la plataforma y al lenguaje ubicuo:
+- **Dashboard:** Centro de control general de unidades de frío y estado operativo del sistema.
+- **Inventory:** Catálogo de productos, registro de lotes y fechas de caducidad.
+- **Shipments:** Gestión de despachos, control de rutas, órdenes de salida y telemetría en tránsito.
+- **Suppliers:** Registro de proveedores, lotes recibidos y trazabilidad de procedencia comercial.
+- **Analytics:** Indicadores clave de rendimiento, merma evitada y capital ahorrado.
+- **Alerts:** Centro de notificaciones, registro de incidentes térmicos, confirmación y reglas de escalamiento.
+- **Planes:** Selector de tarifas (Básico, Profesional y Empresarial) y gestión de suscripciones.
 
 ### 4.2.3. SEO Tags and Meta Tags
+Para optimizar el posicionamiento del portal público de captación y la verificación de certificados, se configuran las siguientes etiquetas:
+
+- `<title>`: Refrio - Plataforma IoT de monitoreo de temperatura e inventario FEFO  
+- `<meta name="description">`: Solución integral para resguardar la cadena de frío, monitorear unidades de refrigeración en tiempo real y telemetría IoT.  
+- `<meta name="keywords">`: refrio, monitoreo de frio iot, telemetria temperatura, gestion inventario fefo, cadena de frio peru, control mermas perecibles, camaras frigorificas  
+
+**Adicionalmente:**
+
+- **Uso de encabezados semánticos:**
+  - `<h1>`: Título principal de módulo o vista (ej. "Dashboard", "Planes de Suscripción").
+  - `<h2>`: Subsecciones funcionales (ej. "Unidades de Frío Activas", "Lotes Críticos").
+  - `<h3>`: Tarjetas de telemetría, métricas y detalles de lotes.
+
+- **Estructura de URLs:**
+  - `/dashboard`
+  - `/inventory`
+  - `/shipments`
+  - `/suppliers`
+  - `/analytics`
+  - `/alerts`
+  - `/planes`
 
 ### 4.2.4. Searching Systems
+El sistema provee mecanismos de búsqueda ágiles para localizar rápidamente activos, lotes y estados térmicos en operaciones de alta exigencia:
+
+- **Criterios de búsqueda directa:**
+  - Identificador único de lote.
+  - Código de barras o token QR del lote/pallet.
+  - Dirección física o identificador del nodo sensor IoT.
+  - Nombre o identificador de la unidad de frío.
+  - Razón social o RUC del proveedor.
+
+- **Filtros avanzados y segmentación:**
+  - Por ventana de caducidad: En fecha crítica, por vencer (3/5/7 días), vigente.
+  - Por estado térmico: Rango seguro, oscilación moderada, ruptura crítica.
+  - Por categoría de alimento: Lácteos, carnes, embutidos, masas refrigeradas.
+  - Por plan/sede: Filtro por almacén central, sede regional o unidad móvil en tránsito.
+
+- **Resultados en tiempo real:** Respuestas automáticas mediante endpoints reactivos para la mitigación inmediata de incidentes.
 
 ### 4.2.5. Navigation Systems
+La navegación de Refrio asegura transiciones fluidas entre la supervisión estratégica y la ejecución operativa en planta o mostrador:
+
+- **Menú de navegación principal (Sidebar):**
+  - Dashboard  
+  - Inventory  
+  - Shipments  
+  - Suppliers  
+  - Analytics  
+  - Alerts  
+
+- **Navegación contextual:**
+  - Acceso directo a la ficha del lote o unidad de frío al interactuar con una alerta en el centro de notificaciones.
+  - Salto directo desde el listado de inventario hacia la generación del plan de despacho con un clic.
+  - Visualización del certificado de frío asociado a una orden directamente desde el módulo de Shipments.
+
+- **Elementos de apoyo a la navegación:**
+  - Breadcrumbs: Indicadores de jerarquía (ej. Inventory > Batches > Lote LOT-2026-001).
+  - Botones de acción rápida: Accesos fijos para "Nuevo Lote", "Alertas" y "Cerrar sesión".
 
 ## 4.3. Landing Page UI Design
 
