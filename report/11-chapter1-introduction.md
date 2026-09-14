@@ -158,12 +158,12 @@ Enlace público del Lean UX Canvas: [Ver en Miro](https://miro.com/welcomeonboar
 
 ## 1.3. Segmentos objetivo
 
-**Refrio** dirige su propuesta de valor a dos segmentos objetivo claramente diferenciados dentro de la cadena de distribución de productos perecibles en el Perú. Ambos comparten el mismo dolor central —pérdidas económicas por ruptura de la cadena de frío y caducidad no controlada—, pero difieren en su escala operativa, perfil tecnológico y capacidad de inversión.
+**Refrio** dirige su propuesta de valor a dos segmentos objetivo claramente diferenciados dentro de la cadena de distribución de productos perecibles en el Perú. Ambos comparten el mismo dolor central, pérdidas económicas por ruptura de la cadena de frío y caducidad no controlada, pero difieren en su escala operativa, perfil tecnológico y capacidad de inversión.
 
 ---
 ### Segmento 1: Jefes de almacén y supervisores logísticos de distribuidoras medianas de alimentos perecibles
 
-*   **Descripción general:** Este segmento está conformado por los responsables operativos de la gestión logística en empresas distribuidoras medianas de alimentos perecibles —como lácteos, carnes, embutidos, frutas y verduras— que operan uno o más almacenes refrigerados y, en muchos casos, flotas de transporte frigorífico. Se ubican principalmente en Lima Metropolitana y ciudades intermedias con mercado logístico activo como Arequipa, Trujillo, Piura y Cusco.
+*   **Descripción general:** Este segmento está conformado por los responsables operativos de la gestión logística en empresas distribuidoras medianas de alimentos perecibles como lácteos, carnes, embutidos, frutas y verduras, que operan uno o más almacenes refrigerados y, en muchos casos, flotas de transporte frigorífico. Se ubican principalmente en Lima Metropolitana y ciudades intermedias con mercado logístico activo como Arequipa, Trujillo, Piura y Cusco.
 *   **Características demográficas:**
     *   **Edad:** Entre 28 y 50 años.
     *   **Género:** Predominantemente masculino (aproximadamente 65%), aunque la participación femenina crece en roles de supervisión logística.
@@ -171,7 +171,7 @@ Enlace público del Lean UX Canvas: [Ver en Miro](https://miro.com/welcomeonboar
     *   **Ubicación:** Lima Metropolitana (distritos industriales como Ate, San Juan de Lurigancho, Villa El Salvador y Lurín) y principales ciudades del interior del país.
 *   **Características conductuales y tecnológicas:**
     *   Utilizan *smartphones* Android de gama media-alta y computadoras de escritorio con Windows en el entorno laboral.
-    *   Su adopción tecnológica se concentra en *WhatsApp Business*, Gmail, Microsoft Excel y —en empresas más formalizadas— algún ERP básico o software de facturación electrónica vinculado a la SUNAT.
+    *   Su adopción tecnológica se concentra en *WhatsApp Business*, Gmail, Microsoft Excel y en empresas más formalizadas, algún ERP básico o software de facturación electrónica vinculado a la SUNAT.
     *   Están abiertos a adoptar nuevas tecnologías si perciben un retorno de inversión (*ROI*) claro, rápido y demostrable con datos objetivos.
     *   Las decisiones de compra de herramientas tecnológicas se toman en conjunto con la gerencia general o el área financiera, por lo que el ciclo de ventas requiere de una demostración de valor cuantificable.
 *   **Necesidades y dolores principales:**
@@ -185,20 +185,20 @@ Enlace público del Lean UX Canvas: [Ver en Miro](https://miro.com/welcomeonboar
 ---
 ### Segmento 2: Propietarios y administradores de bodegas y puestos en mercados de abastos
 
-*   **Descripción general:** Este segmento está compuesto por comerciantes minoristas propietarios de bodegas de barrio y puestos en mercados de abastos que comercializan productos perecibles —principalmente lácteos, embutidos, frutas, verduras y productos de panadería— y que cuentan con equipos de refrigeración básicos: refrigeradoras domésticas o comerciales de pequeña capacidad y, en algunos casos, congeladores de baja potencia. Su operación es mayoritariamente semi-formal o informal, con una parte de sus ventas realizadas mediante transacciones en efectivo.
+*   **Descripción general:** Este segmento está compuesto por comerciantes minoristas propietarios de bodegas de barrio y puestos en mercados de abastos que comercializan productos perecibles, principalmente lácteos, embutidos, frutas, verduras y productos de panadería, que cuentan con equipos de refrigeración básicos: refrigeradoras domésticas o comerciales de pequeña capacidad y, en algunos casos, congeladores de baja potencia. Su operación es mayoritariamente semi-formal o informal, con una parte de sus ventas realizadas mediante transacciones en efectivo.
 *   **Características demográficas:**
     *   **Edad:** Entre 30 y 60 años.
     *   **Género:** Equilibrado (aproximadamente 50% femenino y 50% masculino), con mayor proporción de mujeres propietarias en el subsegmento de puestos de mercado.
     *   **Nivel educativo:** Secundaria completa o técnico básico.
-    *   **Ubicación:** Lima Metropolitana —con especial concentración en los distritos de los conos norte, sur y este (Los Olivos, Comas, San Juan de Lurigancho, Villa El Salvador y Ate)— y ciudades intermedias del interior del país.
+    *   **Ubicación:** Lima Metropolitana, con especial concentración en los distritos de los conos norte, sur y este (Los Olivos, Comas, San Juan de Lurigancho, Villa El Salvador y Ate), y ciudades intermedias del interior del país.
 *   **Características conductuales y tecnológicas:**
     *   Utilizan principalmente *smartphones* Android de gama baja o media, con acceso a internet a través de datos móviles.
-    *   Su actividad digital se concentra en *WhatsApp* —herramienta principal de comunicación con proveedores y clientes—, Facebook —para difundir promociones del negocio— y aplicaciones de pagos digitales como Yape y Plin.
+    *   Su actividad digital se concentra en *WhatsApp*, herramienta principal de comunicación con proveedores y clientes; Facebook, para difundir promociones del negocio y aplicaciones de pagos digitales como Yape y Plin.
     *   Tienen baja experiencia con software de gestión empresarial, pero poseen una alta disposición a aprender si la herramienta es intuitiva, en español y resuelve un dolor económico concreto e inmediato.
     *   Las decisiones de inversión son unipersonales y están condicionadas por el costo mensual: priorizan opciones de bajo costo con una demostración de ahorro tangible.
 *   **Necesidades y dolores principales:**
     *   Pierden productos por vencimiento de manera recurrente porque no llevan un registro ordenado de fechas de caducidad y la revisión es enteramente manual y periódica.
-    *   No detectan a tiempo cuándo su refrigeradora deja de funcionar correctamente, lo que genera pérdidas inesperadas —especialmente durante la noche o los fines de semana.
+    *   No detectan a tiempo cuándo su refrigeradora deja de funcionar correctamente, lo que genera pérdidas inesperadas, especialmente durante la noche o los fines de semana.
     *   Necesitan una herramienta simple que les avise con anticipación cuándo un producto está próximo a vencer, para poder realizar descuentos o ajustar los pedidos antes de incurrir en pérdidas totales.
     *   Buscan visibilidad básica del stock disponible para mejorar sus decisiones de reposición y evitar el desabastecimiento de productos de alta rotación .
 *   **Datos de sustento logístico y estadístico:** En el caso del comercio minorista, Heizer y Render (2020) sostienen que una adecuada administración de las operaciones logísticas y de distribución es fundamental para mejorar el rendimiento empresarial global, reducir pérdidas y garantizar un servicio de alta calidad para el cliente. Esta teoría se vuelve indispensable al analizar los datos del INEI (2023), que registra más de 427,000 bodegas formales en el Perú, siendo Lima Metropolitana la región con mayor concentración (aproximadamente 130,000 establecimientos), de las cuales el 68% comercializa productos perecibles de forma regular. Según datos de la Asociación de Bodegueros del Perú (ABP, 2023), el 52% de sus asociados reporta pérdidas mensuales por vencimiento de productos perecibles superiores a S/ 200, pérdidas que en su totalidad se atribuyen a la falta de sistemas de control de fechas de caducidad. Frente a esta realidad, el Organismo Supervisor de Inversión Privada en Telecomunicaciones (OSIPTEL, 2023) reporta que la penetración de *smartphones* en Lima Metropolitana alcanza el 87%, con un uso activo de aplicaciones de mensajería y pagos digitales, lo que confirma la factibilidad de alcanzar a este segmento mediante la solución móvil de **Refrio**.
