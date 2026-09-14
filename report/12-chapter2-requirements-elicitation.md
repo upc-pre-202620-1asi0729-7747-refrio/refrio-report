@@ -314,7 +314,7 @@ Para adoptar la plataforma Refrio, exige alertas inmediatas al celular ante fall
 | **Nombres y Apellidos** | Carmen Lara |
 | **Edad** | 28 años |
 | **Distrito** | Ate, Lima |
-| **Enlace al video (Microsoft Stream)** | (Pendiente) |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQBGpNUpnoMLR7TSgF4M_dDuARLmdHLlSHPznFRrvc-88Mc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=afu6oR |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 07:51 minutos |
 | **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
 
