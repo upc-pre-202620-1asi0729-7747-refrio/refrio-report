@@ -259,7 +259,7 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 | **Nombres y Apellidos** | Jari Hassan Syeda                                                      |
 | **Edad** | 25 años                                                                |
 | **Distrito** | San Borja                                                              |
-| **Enlace al video (Microsoft Stream)** | [Entrevista grabada – Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQBkamDQs0E0QZzp6K8EqTrFAV0d2fOpyOxr_-1lkXrB5lg?e=Xat18F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)                              |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQBkamDQs0E0QZzp6K8EqTrFAV0d2fOpyOxr_-1lkXrB5lg?e=Xat18F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D                             |
 | **Timing de inicio y duración** | Inicio: 00:40 - Duración: 10:57 minutos                                |
 | **Evidencia fotográfica** | *<p><img src="../assets/evidencia.png" width="400" alt="Logo AgroFlet"> </p>*                               |
 
@@ -292,6 +292,7 @@ Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución 
 | **Evidencia fotográfica** | <p><img src="../assets/interview-Andrea.png" width="400" alt="Logo AgroFlet"> </p> |
 
 **Resumen de la entrevista:**
+
 La entrevistada es una joven profesional de 28 años (Andrea Villanueva), supervisora de almacén y cadena de frío en una distribuidora mediana de embutidos y lácteos ubicada en Ate (Lima). Cuenta con 5 años de experiencia, lidera un equipo de 8 operarios y controla sus cámaras y despachos de forma semimanual mediante hojas de cálculo en Excel y registros físicos en papel.
 
 Su objetivo principal es mantener la integridad de la cadena de frío, evitar devoluciones de clientes por fechas cortas y reducir las mermas por vencimiento mediante una rotación FEFO eficiente.
@@ -371,6 +372,7 @@ La revisión de fechas de vencimiento la efectúa producto por producto cada 15 
 | **Evidencia fotográfica** | <p><img src="../assets/segmento2-entrevista3.png" width="400" alt="Logo AgroFlet" > </p> |
 
 **Resumen de la entrevista:**
+
 El entrevistado, Diego, tiene 30 años y administra una bodega en el distrito de Los Olivos junto a su hermano desde hace 5 años. Comercializa principalmente productos perecibles como yogures, quesos, embutidos y verduras básicas. Su gestión de inventario es totalmente manual y empírica, confiando en su memoria ("a puro ojo") y en un cuaderno cuadriculado para anotar pedidos, sin usar ningún sistema digital.
 
 Su mayor frustración (pain point) es la pérdida de dinero por productos vencidos y la pérdida de ventas por quiebre de stock. Debido a la falta de un registro automatizado, el olvido de anotar salidas y el espacio reducido de su local, a menudo no detecta qué productos están próximos a vencer o se agotan sin que él se dé cuenta. Esto provoca que los clientes se impacienten y se vayan con la competencia, además de obligarlo a dar de baja mercadería mermada de forma quincenal.
