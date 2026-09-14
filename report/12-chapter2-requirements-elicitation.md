@@ -311,15 +311,19 @@ Para adoptar la plataforma Refrio, exige alertas inmediatas al celular ante fall
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | (Pendiente) |
-| **Edad** | (Pendiente) |
-| **Distrito** | (Pendiente) |
+| **Nombres y Apellidos** | Carmen Lara |
+| **Edad** | 28 años |
+| **Distrito** | Ate, Lima |
 | **Enlace al video (Microsoft Stream)** | (Pendiente) |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 07:51 minutos |
 | **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
 
 **Resumen de la entrevista:**
-(Pendiente)
+La entrevistada, Carmen, tiene 28 años y es supervisora logística y de almacén en una empresa del sector alimenticio ubicada en la zona industrial de Ate. Dirige a un equipo de 15 personas y se encarga de la distribución de productos perecibles como lácteos, embutidos y carnes empacadas. Su gestión diaria del inventario y la cadena de frío es sumamente manual, dependiendo del uso de un ERP muy básico, Excel, kardex impresos y rondas físicas con termómetros manuales cada tres o cuatro horas.
+
+Su mayor frustración (pain point) son las fuertes pérdidas económicas por mermas, que oscilan entre 4,000 y 6,000 soles mensuales. Esto ocurre por la dificultad de aplicar el método FEFO (lo primero que vence es lo primero que sale) sin un sistema automatizado, y por la falta de monitoreo remoto de sus cámaras de frío. Si un equipo falla de madrugada, recién se enteran al iniciar el turno (7:00 a.m.), lo que arruina la mercadería y provoca el rechazo directo de los supermercados.
+
+Para adoptar una nueva herramienta digital, considera indispensable recibir alertas automáticas (por WhatsApp o correo) ante anomalías en la temperatura, contar con un sistema que gestione el inventario aplicando FEFO sin depender de Excel, y poseer un módulo de reportes. Señala que la gerencia está dispuesta a invertir en la solución, siempre y cuando se demuestre con números que el software se paga solo al reducir las mermas. Además, resalta que la aplicación debe ser muy intuitiva para celulares Android y no generar estrés adicional a los operarios.
 
 
 ---
