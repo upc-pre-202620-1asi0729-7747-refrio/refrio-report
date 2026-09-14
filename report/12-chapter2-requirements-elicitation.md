@@ -168,7 +168,13 @@ Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de 
 
 ## 2.2. Entrevistas
 
+Se diseñó una investigación mediante entrevistas semiestructuradas a representantes de ambos segmentos. En el material recibido se registran tres entrevistas por segmento y existen tres resúmenes desarrollados en total.
+
 ### 2.2.1. Diseño de entrevistas
+
+El diseño de las guías de entrevista siguió las mejores prácticas para entrevistas de *needfinding* en diseño de experiencia de usuario (Portigal, 2013; Goodman et al., 2012). Las preguntas fueron formuladas en lenguaje abierto para evitar sesgar las respuestas del entrevistado, priorizando la descripción de comportamientos reales (*what people do*) sobre opiniones o intenciones abstractas (*what people say they would do*).
+
+---
 
 #### Segmento 1: Empresas distribuidoras de productos perecibles
 
@@ -245,12 +251,11 @@ Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de 
 21. ¿Qué funciones priorizarían: alertas de vencimiento, reportes de ventas o control automático de stock?
 22. ¿Cuánto estarían dispuestos a pagar mensualmente por una solución como Refrio?
 
+---
 
 ### 2.2.2. Registro de entrevistas
 
 A continuación, se presenta el registro de las entrevistas realizadas a los representantes de cada segmento objetivo.
-
----
 
 #### Entrevista 1: Segmento 1 - Empresas distribuidoras de productos perecibles
 
@@ -383,6 +388,8 @@ Para adoptar una herramienta digital, considera indispensable que funcione desde
 ---
 
 ### 2.2.3. Análisis de entrevistas
+
+El presente análisis sintetiza la información recopilada a partir de las entrevistas realizadas a los representantes de los segmentos objetivos de Refrio.
 
 ## 2.3. Needfinding
 Para llevar a cabo el proceso de needfinding en Refrio, se realizaron entrevistas en profundidad con actores clave pertenecientes a los segmentos objetivo, incluyendo jefes de almacén y supervisores logísticos de empresas distribuidoras medianas, así como propietarios y administradores de bodegas comerciales y puestos de mercado de abastos. Estas conversaciones se centraron en comprender sus dinámicas de trabajo diarias, sus métodos de control de inventario y sus principales frustraciones vinculadas con la ruptura imprevista de la cadena de frío, la caducidad no controlada de alimentos y las pérdidas económicas derivadas del descarte de productos perecibles.
