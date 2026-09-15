@@ -38,11 +38,11 @@ Accesibilidad:
 **c) Colors**<br>
 Inspirada en el logotipo, la paleta refleja limpieza, tecnología y conservación térmica.
 - Paleta de colores:
-  - Deep Navy (#163358): COMPLETAR EN BASE AL LANDING PAGE
-  - Cerulean Blue (#2379B6): COMPLETAR EN BASE AL LANDING PAGE
-  - Off-White (#FEFFFB): COMPLETAR EN BASE AL LANDING PAGE
-  - Glacier Blue (#57C4D7): COMPLETAR EN BASE AL LANDING PAGE
-  - Steel Blue (#2E6199): COMPLETAR EN BASE AL LANDING PAGE
+  - Deep Navy (#163358): Se utiliza para los títulos y resaltar algún elemento importante.
+  - Cerulean Blue (#2379B6): Para botones, enlaces y elementos interactivos.
+  - Off-White (#FEFFFB): Forma parte del fondo de la página en a lo largo de las secciones y para resaltar el título principal.
+  - Glacier Blue (#57C4D7): Se uso para resltar los iconos.
+  - Steel Blue (#2E6199): Complementa como fondo de la pagina en algunas secciones.
 
 <div align="center">
 <img src="../assets/Paleta_Colores_Refrio.jpeg" width="700"/>
@@ -379,9 +379,46 @@ El trabajo registrado en Figma comprende wireframes, mockups y represtaciones de
 
 ### 4.4.1. Web Applications Wireframes
 
+Los wireframes elaborados establecen la distribución estructural de los contenidos y controles de la aplicación Refrio. En el dashboard principal se diseñó una composición equilibrada donde el 50% del espacio superior se destina a la gráfica de tendencias de inventario y envíos junto con el desempeño térmico de los almacenes, y el 50% restante a la distribución de productos por categoría y la tabla de envíos recientes con sus lecturas de temperatura. Esta distribución cuenta con una adaptación responsiva para navegadores móviles, reorganizando los paneles en una columna fluida que conserva la información esencial, como alertas de caducidad FEFO y el estado de la cadena de frío, sin saturar la pantalla ni reducir excesivamente el tamaño de los elementos interactivos.
+
+![Login](../assets/Refrio%20-%20Login%20(Wireframe).png)
+![Register](../assets/Refrio%20-%20Registro%20(Wireframe).png)
+![Reset Password](../assets/Refrio%20-%20Reset%20Password%20Paso%201%20(Wireframe).png)
+![Reset Password Confirmation](../assets/Refrio%20-%20Reset%20Password%20Paso%202%20(Wireframe).png)
+![Plans](../assets/Refrio%20-%20Planes%20de%20Registro%20(Wireframe).png)
+![Dashboard Basic](../assets/Refrio%20-%20Dashboard%20Basic%20(Wireframe).png)
+![Dashboard Professional](../assets/Dashboard%20Professional%20Wireframe.png)
+![Inventory](../assets/Refrio%20-%20Inventory%20(Wireframe).png)
+![Shipments](../assets/Refrio%20-%20Shipments%20(Wireframe).png)
+![Suppliers](../assets/Refrio%20-%20Suppliers%20(Wireframe).png)
+![Analytics](../assets/Refrio%20-%20Analytics%20(Wireframe).png)
+![Alerts](../assets/Refrio%20-%20Alerts%20(Wireframe).png)
+![Order history](../assets/Refrio%20-%20Order%20History%20(Wireframe).png)
+![Clients](../assets/Refrio%20-%20Clients%20(Wireframe).png)
+![View Product](../assets/Refrio%20-%20View%20Product%20(Wireframe).png)
+![View Batch](../assets/Refrio%20-%20View%20Batch%20(Wireframe).png)
+![View Shipment Professional](../assets/Refrio%20-%20View%20Shipments%20Profesional%20(Wireframe).png)
+![Notification - Order](../assets/Refrio%20-%20Notification%20-_%20Pedido%20(Wireframe).png)
+![Settings Basic](../assets/Refrio%20-%20Perfil%20Básico%20(Wireframe).png)
+![Settings Professional](../assets/Refrio%20-%20Perfil%20Profesional%20(Wireframe).png)
+![Settings Plans](../assets/Refrio%20-%20Planes%20y%20Facturación%20(Wireframe).png)
+![QR Code](../assets/Refrio%20-%20My%20QR%20(Wireframe).png)
+![Add Batch](../assets/Refrio%20-%20Add%20Batch%20(Wireframe).png)
+![Add Product](../assets/Refrio%20-%20Add%20Product%20(Wireframe).png)
+![Edit Product](../assets/Refrio%20-%20Edit%20Product%20(Wireframe).png)
+![Create Shipment](../assets/Refrio%20-%20Create%20Shipment%20(Wireframe).png)
+![Add Supplier](../assets/Refrio%20-%20Add%20Supplier%20(Wireframe).png)
+![Add Client](../assets/Refrio%20-%20Add%20Client%20(Wireframe).png)
+
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 ### 4.4.3. Web Applications Mock-ups
+
+Los mockups desarrollan las interfaces de Refrio con mayor detalle visual, incorporando la organización de contenidos, los controles, los estados de las operaciones de frío y los elementos de navegación para la gestión de productos perecibles. El trabajo registrado incluye el dashboard segmentado (Control Tower y panel del comerciante), el inventario con control de caducidad FEFO, el seguimiento de despachos con telemetría en tiempo real y los modales conectados para el registro de productos y lotes.
+
+La propuesta toma como referencia un diseño basado en Material Design, compatible con la posterior implementación en Angular y Angular Material. Los mockups representan decisiones visuales y de experiencia de usuario.
+
+La diferenciación entre roles constituye un criterio central de revisión: la empresa distribuidora dispone de acciones avanzadas de despacho, gestión masiva de lotes y supervisión térmica de flotas, mientras que el bodeguero consulta de manera simplificada sus pedidos entrantes, el estado de frescura de la carga y las alertas de vencimiento para la rotación en mostrador.
 
 ![Log in](../assets/Landing%20page%20Login.png)
 ![Register](../assets/Landing%20page%20Register.png)
