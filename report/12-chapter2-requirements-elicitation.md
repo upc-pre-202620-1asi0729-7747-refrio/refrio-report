@@ -2,7 +2,7 @@
 
 ## 2.1. Competidores
 
-En esta sección se identifican y describen los principales competidores de **Refrio** —tanto directos como indirectos—, es decir, aquellos que ofrecen productos digitales con modelos de negocio total o parcialmente similares en el mercado de gestión logística y cadena de frío para empresas de alimentos perecibles.
+En esta sección se identifican y describen los principales competidores de Refrio tanto directos como indirectos, es decir, aquellos que ofrecen productos digitales con modelos de negocio total o parcialmente similares en el mercado de gestión logística y cadena de frío para empresas de alimentos perecibles.
 
 ### 2.1.1. Análisis competitivo
 
@@ -131,16 +131,16 @@ En esta sección se identifican y describen los principales competidores de **Re
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-A partir del análisis competitivo, **Refrio** define las siguientes estrategias y tácticas preliminares para afrontar las fortalezas de sus competidores y aprovechar sus debilidades en el mercado peruano:
+A partir del análisis competitivo, Refrio define las siguientes estrategias y tácticas preliminares para afrontar las fortalezas de sus competidores y aprovechar sus debilidades en el mercado peruano:
 
 **Frente a Óptima ERP**
 
 *Estrategia:* Diferenciación por especialización vertical y cobertura de necesidades no atendidas.
 
-Óptima ERP tiene presencia consolidada en el segmento pyme peruano, pero carece por completo de un módulo de monitoreo de temperatura y no está especializado en el sector de alimentos perecibles. **Refrio** aprovechará esta brecha posicionándose explícitamente como "la herramienta que Óptima no puede hacer": monitoreo térmico en tiempo real integrado con gestión de inventario FEFO.
+Óptima ERP tiene presencia consolidada en el segmento pyme peruano, pero carece por completo de un módulo de monitoreo de temperatura y no está especializado en el sector de alimentos perecibles. Refrio aprovechará esta brecha posicionándose explícitamente como "la herramienta que Óptima no puede hacer": monitoreo térmico en tiempo real integrado con gestión de inventario FEFO.
 
 *Tácticas:*
-- Desarrollar materiales de ventas que cuantifiquen el costo mensual de no tener monitoreo de temperatura (pérdidas promedio de S/ 150–400/mes en bodegas y 12–20 % de facturación en distribuidoras), evidenciando el ROI de **Refrio** frente a ERPs genéricos.
+- Desarrollar materiales de ventas que cuantifiquen el costo mensual de no tener monitoreo de temperatura (pérdidas promedio de S/ 150–400/mes en bodegas y 12–20 % de facturación en distribuidoras), evidenciando el ROI de Refrio frente a ERPs genéricos.
 - Implementar una funcionalidad de importación de datos desde Excel para facilitar la migración de clientes que actualmente usan Óptima u hojas de cálculo, reduciendo la fricción del cambio.
 - Ofrecer un período de prueba gratuita de 30 días sin tarjeta de crédito para capturar usuarios que ya tienen Óptima pero necesitan complementar con gestión de perecibles.
 
@@ -151,7 +151,7 @@ A partir del análisis competitivo, **Refrio** define las siguientes estrategias
 Sinapsys WMS cubre funciones más amplias de almacén, pero su costo de implementación (desde USD 300/mes + USD 1,500–5,000 de implementación) lo pone fuera del alcance de las distribuidoras medianas y, en especial, de las bodegas. Su curva de aprendizaje alta y la necesidad de consultor certificado representan barreras de adopción que **Refrio** puede explotar.
 
 *Tácticas:*
-- Posicionar a **Refrio** como "el WMS que no necesita consultor": onboarding en menos de 30 minutos, con tutoriales en video en español y soporte vía WhatsApp.
+- Posicionar a Refrio como "el WMS que no necesita consultor": onboarding en menos de 30 minutos, con tutoriales en video en español y soporte vía WhatsApp.
 - Orientar las campañas de adquisición hacia distribuidoras medianas que hayan evaluado y descartado soluciones WMS por su costo o complejidad, ofreciendo la propuesta de valor esencial —FEFO + temperatura— a una fracción del precio.
 - Publicar casos de uso específicos en el sector lácteo, cárnico y de frutas/verduras para demostrar la especialización vertical que Sinapsys no tiene.
 
@@ -159,10 +159,10 @@ Sinapsys WMS cubre funciones más amplias de almacén, pero su costo de implemen
 
 *Estrategia:* Aprovechar la brecha de precio y la orientación a pymes locales frente a una solución enterprise global.
 
-Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de negocio —hardware propietario costoso, precios en dólares y enfoque enterprise— lo hace completamente inaccesible para los segmentos objetivo de **Refrio**. Además, Tive no integra gestión de inventario ni alertas de vencimiento.
+Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de negocio —hardware propietario costoso, precios en dólares y enfoque enterprise— lo hace completamente inaccesible para los segmentos objetivo de Refrio. Además, Tive no integra gestión de inventario ni alertas de vencimiento.
 
 *Tácticas:*
-- Comunicar activamente la ventaja de **Refrio** de ser compatible con sensores IoT de bajo costo ya disponibles en el mercado peruano (desde S/ 80–150 por sensor), eliminando la barrera del hardware propietario.
+- Comunicar activamente la ventaja de Refrio de ser compatible con sensores IoT de bajo costo ya disponibles en el mercado peruano (desde S/ 80–150 por sensor), eliminando la barrera del hardware propietario.
 - Desarrollar alianzas con proveedores locales de sensores IoT (Arduino-compatible, ESP32-based) para ofrecer kits de inicio a precios accesibles que el cliente pueda instalar por sí mismo siguiendo una guía en video.
 - Orientar la comunicación de marca hacia la identidad local: "Hecha en el Perú, para el negocio peruano", como contrapunto a una solución internacional que no conoce las particularidades del mercado nacional (temporadas de calor en Lima, informalidad del sector, preferencia por WhatsApp, etc.).
 
@@ -272,7 +272,7 @@ A continuación, se presenta el registro de las entrevistas realizadas a los rep
 
 Jari Hassan es un profesional de 25 años que se desempeña como Jefe de Operaciones y Logística en una empresa del sector alimenticio con base en San Luis. Trabaja directamente con la distribución de productos perecibles, como lácteos, embutidos y carnes envasadas, por lo que conoce de cerca las exigencias que implica mantener la cadena de frío y el control del inventario en este tipo de operación.
 
-A partir de su experiencia, señala que uno de los principales problemas en su empresa es la **falta de visibilidad en tiempo real**, tanto del stock como de las condiciones de temperatura durante el transporte. Actualmente combinan un ERP tradicional con registros manuales en Excel, lo que genera desfases en la información, errores de inventario y pérdidas por productos vencidos o en mal estado. También menciona que, cuando ocurre una falla en ruta, muchas veces se enteran demasiado tarde y la mercadería termina en cuarentena o merma.
+A partir de su experiencia, señala que uno de los principales problemas en su empresa es la falta de visibilidad en tiempo real, tanto del stock como de las condiciones de temperatura durante el transporte. Actualmente combinan un ERP tradicional con registros manuales en Excel, lo que genera desfases en la información, errores de inventario y pérdidas por productos vencidos o en mal estado. También menciona que, cuando ocurre una falla en ruta, muchas veces se enteran demasiado tarde y la mercadería termina en cuarentena o merma.
 
 Jari considera que una solución digital sí podría aportar valor real a su operación, siempre que sea práctica, intuitiva y rápida de implementar. Para él, las funciones más importantes serían:
 
@@ -545,13 +545,13 @@ Gracias a esta exploración, se identificaron áreas críticas de mejora en el e
 <div style="page-break-after: always"></div>
 
 ## 2.4. Big Picture EventStorming
-En la sesión de Big Picture EventStorming, el equipo exploró de forma visual el panorama general del dominio de telemetría IoT para la cadena de frío y la gestión inteligente de inventarios perecibles de Refrio. Se identificaron los eventos significativos del ciclo de vida de un lote perecible y su monitoreo ambiental, desde la recepción e ingreso de la mercadería hasta el despacho bajo políticas FEFO y la prevención o reporte de mermas críticas. Asimismo, se integraron los sistemas externos que interactúan con la plataforma —como los nodos sensores IoT y las pasarelas de mensajería para alertas inmediatas— exponiendo los problemas operativos, dudas técnicas y oportunidades de automatización detectados durante la sesión. Esta primera aproximación permitió alinear el entendimiento del equipo y sentar las bases para el diseño detallado de la solución.
+En la sesión de Big Picture EventStorming, el equipo exploró de forma visual el panorama general del dominio de telemetría IoT para la cadena de frío y la gestión inteligente de inventarios perecibles de Refrio. Se identificaron los eventos significativos del ciclo de vida de un lote perecible y su monitoreo ambiental, desde la recepción e ingreso de la mercadería hasta el despacho bajo políticas FEFO y la prevención o reporte de mermas críticas. Asimismo, se integraron los sistemas externos que interactúan con la plataforma, como los nodos sensores IoT y las pasarelas de mensajería para alertas inmediatas, exponiendo los problemas operativos, dudas técnicas y oportunidades de automatización detectados durante la sesión. Esta primera aproximación permitió alinear el entendimiento del equipo y sentar las bases para el diseño detallado de la solución.
 
 **Primera fase: Eventos**
 ![Big picture event storming](../assets/EventStorming.png)
 
 **Mapa general:**
-https://canva.link/65l1zwoqzdoajro
+https://miro.com/app/board/uXjVHn63Wg4=/?share_link_id=209836750968
 
 ## 2.5. Ubiquitous Language
 - **Cold Chain (Cadena de Frío):** Conjunto logístico ininterrumpido de etapas de refrigeración o congelación controlada necesario para preservar la frescura, inocuidad y valor biológico de los productos perecibles desde su almacenamiento hasta su consumo.
