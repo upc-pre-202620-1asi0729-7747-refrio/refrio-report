@@ -455,13 +455,163 @@ La diferenciación entre roles constituye un criterio central de revisión: la e
 
 ## 4.6. Domain-Driven Software Architecture
 
+Refrio adopta el enfoque de Domain-Driven Design (DDD) con el propósito de alinear estrechamente la arquitectura de software con los desafíos operativos de la cadena de frío y el control de inventarios perecibles en el Perú. El sistema se organiza modularmente en 7 Bounded Contexts principales:
+
+| Bounded Context | Descripción |
+| :--- | :--- |
+| **BC 01: IAM (Identity & Access Management)** | Gestión integral de autenticación (JWT), control de accesos basado en roles (Supervisor, Operario, Minorista) y administración de sedes y planes de suscripción (Básico, Profesional y Empresarial). |
+| **BC 02: Storage & Device Telemetry Context** | Ingesta de alta frecuencia de series temporales de temperatura y humedad, monitoreo de heartbeats, calibración técnica (offsets) y control de cámaras frigoríficas, visicoolers y telemetría en tránsito. |
+| **BC 03: Inventory & FEFO Dispatch Context** | Núcleo de gestión de inventario perecible: catalogación, fechas de caducidad, auditoría nocturna de vencimientos y generación de planes de picking según la política First-Expired, First-Out. |
+| **BC 04: Alerting & Incident Management Context** | Evaluación de desviaciones térmicas y caducidades críticas contra umbrales seguros, despacho de notificaciones multicanal (WhatsApp, Push, SMS), escalamiento jerárquico y cierre justificado de incidentes. |
+| **BC 05: Cold Chain Traceability & Certification Context** | Consolidación del historial térmico continuo de lotes almacenados o despachados, generación de certificados de frío en PDF con firma digital, verificación pública vía QR y registro contable de mermas. |
+| **BC 06: Analytics & Business Impact Context** | Procesamiento analítico de mermas evitadas, capital salvado en soles, eficiencia de rotación FEFO, modelos de IA predictivos para fallas en compresores y exportación de datasets. |
+| **BC 07: Customer Acquisition & Public Portal Context** | Plataforma pública de captación comercial (Landing Page), tarificador de planes de suscripción, formularios para leads B2B y portal de verificación pública de certificados de frío. |
+
+---
+
 ### 4.6.1. Design-Level EventStorming
+A través de la sesión de EventStorming a nivel de diseño, se modelaron los comandos, agregados, políticas de negocio y eventos de dominio que integran los 7 Bounded Contexts, asegurando una arquitectura reactiva orientada a eventos para erradicar las mermas por ruptura térmica y falta de rotación oportuna.
+
+A continuación, se detalla la matriz de interdependencias e integración entre los módulos del sistema:
+
+| Origen (Evento) | Destino (Comando) | Descripción |
+| :--- | :--- | :--- |
+| **IAM:** SubscriptionPlanAssigned | **Storage & Telemetry:** Enforce Device Quotas | Configura los límites operativos según el plan contratado (hasta 3 congeladoras en Básico, hasta 25 en Pro, ilimitadas en Empresarial). |
+| **Storage & Telemetry:** ColdBreachDetected | **Alerting:** Trigger Thermal Breach Incident | La detección de temperaturas fuera del umbral seguro por más de 15 minutos inicializa un incidente crítico en el centro de alertas. |
+| **Storage & Telemetry:** SensorOfflineDetected | **Alerting:** Trigger Offline Emergency Protocol | La pérdida de comunicación telemétrica por más de 10 minutos activa la alerta por posible corte de suministro eléctrico. |
+| **Inventory & FEFO:** BatchCriticalExpirationDetected | **Alerting:** Broadcast Expiration Warning | La rutina nocturna de auditoría de caducidades dispara avisos preventivos a la app móvil y canales configurados. |
+| **Inventory & FEFO:** BatchDispatched | **Cold Chain Traceability:** Consolidate Thermal Journey | La confirmación de salida de un lote inicia la consolidación de toda su historia térmica registrada para la emisión de su certificado. |
+| **Alerting:** IncidentResolved | **Alerting:** Acknowledge Incident | Registra de forma obligatoria la causa y la acción correctiva realizada por el operario para detener el escalamiento automático. |
+| **Cold Chain Traceability:** ShrinkageLogged | **Analytics:** Ingest Operational Historical Data | Alimenta los modelos analíticos y paneles ejecutivos con los costos y kilogramos de productos dados de baja. |
+
+---
+
+#### Diagrama General — Event Storming Design Level
+
+El siguiente diagrama presenta la visión integral de los 7 Bounded Contexts del sistema Refrio, ilustrando el flujo cronológico de comandos, agregados, políticas y eventos de dominio, así como las líneas de integración desacopladas que conectan la telemetría IoT, la gestión FEFO y las alertas críticas.
+
+![Event Storming General](../assets/00-general-event-storming.png)
+
+---
+
+#### BC1 — IAM (Identity & Access Management)
+
+Este Bounded Context gestiona el ciclo de vida de las cuentas y credenciales corporativas. Los agregados Account, Session y Subscription procesan comandos como `RegisterCompany`, `LoginWithCredentials` y `SelectSubscriptionTier`, emitiendo eventos como `CompanyAccountRegistered`, `UserLoggedIn` y `SubscriptionPlanAssigned`. Aplica políticas estrictas de validación de formato de RUC (11 dígitos), unicidad de correo y asignación de cuotas según la tarifa seleccionada.
+
+![Event Storming IAM](../assets/01-iam-event-storming.png)
+
+---
+
+#### BC2 — Storage & Device Telemetry Context
+
+Administra los nodos sensores IoT, la ingesta de telemetría y el estado operativo de cámaras frigoríficas, visicoolers y transporte refrigerado. Los agregados ColdRoom, SensorNode y Telemetry procesan comandos como `PairSensorNode`, `CalibrateSensorOffset` e `IngestThermalMetricStream`, emitiendo eventos como `SensorNodePaired`, `ThermalMetricRecorded` y `SensorOfflineDetected`.
+
+![Event Storming Storage Telemetry](../assets/02-storage-telemetry-event-storming.png)
+
+##### Detalle de Procesamiento: Telemetría, Evaluación Térmica y Salud del Enlace
+A continuación se detalla la arquitectura de ingestión paralela del contexto, organizada en 3 carriles operativos donde se evalúan concurrentemente los rangos seguros de temperatura y humedad, la degradación de vida útil del perecible y el pulso de conectividad del hardware:
+
+![Event Storming Monitoring and Telemetry Detail](../assets/04-1-monitoring-telemetry-detail.png)
+
+---
+
+#### BC3 — Inventory & FEFO Dispatch Operations Context
+
+Núcleo operativo encargado de gestionar la vida útil de los productos perecibles[cite: 1]. Los agregados Batch, FoodCategory y PickingPlan procesan comandos como `RegisterBatchIntake`, `AuditExpirationWindows` y `GenerateFEFOPickingPlan`, emitiendo eventos clave como `BatchIntakeRecorded`, `BatchCriticalExpirationDetected` y `BatchDispatched`. El algoritmo FEFO asegura que las órdenes de picking prioricen automáticamente los lotes más antiguos antes de permitir la validación de salida.
+
+![Event Storming Inventory FEFO](../assets/03-inventory-fefo-event-storming.png)
+
+---
+
+#### BC4 — Incident, Alert & Audit Management Context
+
+Centraliza la respuesta operativa ante contingencias térmicas o riesgos de caducidad. Los agregados Incident, Notification y Escalation procesan comandos como `TriggerThermalBreachIncident`, `AcknowledgeIncident` y `EscalateUnresolvedAlert`. Al generarse `ColdBreachDetected`, despacha alertas urgentes vía WhatsApp Cloud API, Firebase Push y SMS, exigiendo el registro de una acción correctiva justificada para archivar el incidente.
+
+![Event Storming Incident Alert](../assets/04-incident-alert-event-storming.png)
+
+---
+
+#### BC5 — Cold Chain Traceability & Certification Context
+
+Garantiza la inalterabilidad de los registros de frío y formaliza las bajas técnicas. Los agregados Traceability, ColdCertificate y ShrinkageRecord procesan comandos como `ConsolidateThermalJourney`, `GenerateColdCertificate` y `RecordFormalShrinkage`, emitiendo eventos como `ThermalHistoryConsolidated`, `ColdCertificateGenerated` y `ShrinkageLogged`.
+
+![Event Storming Cold Chain Traceability](../assets/05-traceability-certification-event-storming.png)
+
+---
+
+#### BC6 — Analytics & Business Impact Context
+
+Procesa las métricas operativas y económicas para la toma de decisiones gerenciales. Los agregados Analytics, PredictionEngine y ExportJob procesan comandos como `AggregateBusinessMetrics`, `RunPredictiveCompressorModel` y `RequestDatasetExport`, emitiendo eventos como `BusinessMetricsCalculated` y `CompressorFailureRiskPredicted`.
+
+![Event Storming Analytics Impact](../assets/06-analytics-impact-event-storming.png)
+
+---
+
+#### BC7 — Customer Acquisition & Public Portal Context
+
+Gestiona el punto de contacto inicial con el mercado y la validación abierta de certificados. Los agregados Lead, PricingPlan y PublicVerification procesan comandos como `SubmitCommercialDemoForm`, `SelectPricingPlan` y `ScanCertificateQR`, emitiendo eventos como `LeadSubmitted` y `PublicCertificateVerified`.
+
+![Event Storming Customer Acquisition](../assets/07-customer-acquisition-event-storming.png)
+
+---
+
+Para visualizar el EventStorming original y navegar por el detalle de cada Bounded Context:
+[Visualizar EventStorming en Miro](https://miro.com/app/board/uXjVHn63Wg4=/?share_link_id=370048675014)
 
 ### 4.6.2. Software Architecture Context Level Diagram
 
+En esta sección se presenta el diagrama de contexto correspondiente al Nivel 1 del Modelo C4 para Refrio. El propósito de este nivel es ilustrar el sistema central en el centro de su ecosistema operativo, delimitando las fronteras del software e identificando claramente a los actores humanos y los sistemas externos con los cuales interactúa a través de protocolos seguros sobre la red.
+
+El ecosistema está liderado por dos perfiles de usuario fundamentales: el Supervisor Logístico (quien administra las cámaras frigoríficas, supervisa las existencias perecibles y programa los despachos bajo política FEFO en distribuidoras medianas) y la Comerciante Minorista (propietaria o administradora de bodega o puesto de mercado que gestiona la refrigeración comercial de vitrinas, controla fechas de caducidad y activa promociones de remate preventivo). Para garantizar la integridad ininterrumpida de la cadena de frío y una supervisión reactiva en tiempo real, Refrio se integra con cinco plataformas externas clave: MQTT Broker / IoT Gateway para la ingesta continua de series telemétricas (temperatura y humedad) transmitidas por nodos sensores (ESP32/DHT22); Firebase Cloud Messaging (FCM) para el despacho inmediato de notificaciones push en tiempo real ante eventos críticos; WhatsApp Cloud API para la transmisión directa de alertas urgentes de ruptura térmica al teléfono de los encargados; SendGrid para el envío de correos transaccionales, reportes periódicos y certificados de trazabilidad en PDF; y una Pasarela de Pagos (Payment Gateway) para la gestión y procesamiento recurrente de las suscripciones a los planes comerciales de la plataforma (Básico, Profesional y Empresarial).
+
+<p align="center">
+  <img src="../assets/SystemContext-Refrio.png" title="System Context Diagram - Refrio" width="1000">
+</p>
+<p align="center">
+  <em>Nota.</em> Diagrama de Contexto del Sistema elaborado con Structurizr aplicando el Modelo C4.
+</p>
+
+---
+
 ### 4.6.3. Software Architecture Container Level Diagrams
 
+A continuación, se detalla el diagrama de contenedores (Nivel 2 del Modelo C4), el cual realiza un acercamiento a la frontera del sistema Refrio para exponer sus unidades de ejecución y despliegue independientes, sus responsabilidades primarias y las decisiones tecnológicas seleccionadas para cada componente de software.
+
+La arquitectura de ejecución se descompone en contenedores especializados:
+1. **Web Application (Static Web Hosting / Web Server):** Responsable de servir el Landing Page corporativo con la presentación de la propuesta de valor, el catálogo de planes de suscripción y entregar los paquetes optimizados de la aplicación cliente hacia los navegadores web.
+2. **Single-Page Application (SPA):** Desarrollada con React y TypeScript, provee una interfaz de usuario reactiva para dashboards de telemetría térmica en vivo, administración del catálogo de lotes perecibles, planificación de despachos FEFO y reportes analíticos de merma en entornos de escritorio y estaciones de supervisión en andén.
+3. **Mobile Web App:** Versión adaptada en formato PWA para dispositivos móviles, optimizada para comerciantes de bodegas y operarios de almacén que requieren escanear rápidamente fechas de caducidad, visualizar el semáforo de frescura de stock y recibir alertas sonoras inmediatas.
+4. **Backend API:** Núcleo desarrollado en ASP.NET Core / Node.js bajo un diseño modular alineado a Domain-Driven Design (DDD), encargado de procesar peticiones RESTful protegidas mediante tokens JWT, ejecutar las políticas de rotación FEFO, evaluar reglas de infracción térmica y orquestar eventos de dominio.
+5. **Database:** Base de datos relacional y de series temporales sobre PostgreSQL / TimescaleDB, encargada de persistir de forma estructurada los registros de usuarios, empresas, unidades de almacenamiento frigorífico, existencias de lotes y el flujo masivo de mediciones telemétricas bajo garantías de integridad transaccional (ACID).
+
+<p align="center">
+  <img src="../assets/Containers-Refrio.png" title="Container Diagram - Refrio" width="1000">
+</p>
+<p align="center">
+  <em>Nota.</em> Diagrama de Contenedores elaborado con Structurizr aplicando el Modelo C4.
+</p>
+
+---
+
 ### 4.6.4. Software Architecture Component Level Diagrams
+
+Este diagrama de componentes (Nivel 3 del Modelo C4) descompone internamente el contenedor del Backend API, reflejando cómo se estructura la lógica del servidor a través de una arquitectura modular basada en los Bounded Contexts identificados durante las fases de needfinding y EventStorming.
+
+El diseño interno organiza la solución en módulos de dominio cohesivos y desacoplados:
+* **IAM Module (Identity & Access Management):** Procesa el registro de cuentas (diferenciando flujos fiscales con RUC para distribuidoras y altas ágiles para bodegas), autenticación con firma de tokens JWT, control de roles (Supervisor, Operario, Minorista) y verificación de cuotas operativas según el plan de suscripción contratado (Básico, Profesional o Empresarial).
+* **Storage & Telemetry Module:** Ingesta y procesa métricas telemétricas de temperatura y humedad en tiempo real, administra el emparejamiento y calibración técnica (offsets) de sensores IoT, monitorea el pulso de conectividad (heartbeat) y controla tanto cámaras fijas como unidades de frío en tránsito.
+* **Inventory & FEFO Module:** Administra el catálogo de alimentos perecibles, la vinculación con proveedores, el registro de lotes (Batches) y sus fechas críticas de expiración, ejecutando el algoritmo de priorización FEFO para emitir planes de picking sugeridos y guiar la rotación en mostrador o andén.
+* **Incident & Alert Module:** Evalúa las desviaciones térmicas y las ventanas críticas de caducidad contra políticas de tolerancia, coordina la difusión de alertas multicanal (WhatsApp, FCM, SMS), gestiona el escalamiento jerárquico automatizado y audita el cierre formal de incidentes con justificación obligatoria.
+* **Cold Chain Traceability Module:** Consolida el historial térmico inalterable de cada lote durante su permanencia en cámara o furgón de despacho, genera certificados de frío auditables en formato PDF con firma digital y expone la validación pública mediante códigos QR.
+* **Analytics & IA Module:** Calcula KPIs de negocio consolidados (soles ahorrados, volumen de merma evitada, porcentaje de reducción de desperdicio) y ejecuta modelos analíticos predictivos para anticipar fallas en compresores e identificar patrones de riesgo térmico.
+* **Shared Module:** Provee abstracciones transversales, bus interno de eventos de dominio, formateadores de datos, manejo global de excepciones y utilitarios comunes de persistencia y logging para todos los módulos del backend.
+
+<p align="center">
+  <img src="../assets/Components-Refrio.png" title="Component Diagram - Refrio Backend API" width="1000">
+</p>
+<p align="center">
+  <em>Nota.</em> Diagrama de Componentes del Backend API elaborado con Structurizr aplicando el Modelo C4 y Domain-Driven Design.
+</p>
 
 ## 4.7. Software Object-Oriented Design
 
