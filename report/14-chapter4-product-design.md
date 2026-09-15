@@ -12,7 +12,7 @@ Nuestro logo representa simbólicamente a Refrio. La letra "R" estilizada con un
 <img src="../assets/Logo_Refrio.png" width="700"/>
 </div>
 
-**b) Tipografía**<br>
+**b) Typography**<br>
 Se utilizarán fuentes sans-serif (como Arial, Roboto y Montserrat) por su alta legibilidad y modernidad.
 * Arial: Empleada como fuente complementaria y de respaldo universal por su claridad, neutralidad y óptima lectura en cualquier sistema operativo o navegador.
 
@@ -35,7 +35,7 @@ Diseño responsive:
 Accesibilidad:
 - Uso adecuado de contraste de colores: Cumplimiento de estándares de contraste entre fondos y textos para asegurar la legibilidad por parte de todo tipo de usuarios, incluidos adultos mayores.
 
-**c) Colores**<br>
+**c) Colors**<br>
 Inspirada en el logotipo, la paleta refleja limpieza, tecnología y conservación térmica.
 - Paleta de colores:
   - Deep Navy (#163358): COMPLETAR EN BASE AL LANDING PAGE
@@ -48,13 +48,68 @@ Inspirada en el logotipo, la paleta refleja limpieza, tecnología y conservació
 <img src="../assets/Paleta_Colores_Refrio.jpeg" width="700"/>
 </div>
 
-**d) Tono de comunicación**<br>
+**d) Spacing**<br>
+El sistema de espaciado de Refrio se basa en una cuadrícula de 4 píxeles, permitiendo mantener consistencia entre los diferentes componentes de la interfaz. A partir de esta unidad base se utilizan principalmente valores de 4, 8, 12, 16, 24 y 32 píxeles, dependiendo de la relación existente entre los elementos y del nivel de separación requerido.
+
+Los espacios de 4 px se emplean entre elementos estrechamente relacionados, como un icono y su etiqueta. Los 8 px permiten separar controles o elementos pertenecientes al mismo grupo, mientras que los 12 px se utilizan en componentes pequeños o separaciones internas frecuentes.
+
+Los 16 px se emplean principalmente como espaciado interno de tarjetas, formularios y grupos de información. Los 24 px permiten establecer una separación visual más clara entre componentes o subsecciones.
+
+La escala de espaciado utilizada en Refrio es:
+
+- 4 px: separación mínima.
+- 8 px: elementos relacionados.
+- 12 px: componentes pequeños.
+- 16 px: separación interna de componentes.
+- 24 px: tarjetas y secciones.
+
+Este sistema facilita la organización visual de información relacionada con operaciones logísticas, como tarjetas de envíos, formularios de registro, información del vehículo, conductor, incidencias y estados de transporte.
+
+Asimismo, permite evitar la saturación visual y mantener una experiencia predecible entre las distintas vistas de la plataforma, especialmente cuando el usuario necesita revisar una cantidad considerable de información operativa.
+
+**e) Iconography**<br>
+La iconografía de Refrio sigue un estilo simple, lineal, reconocible y consistente, orientado a facilitar la identificación rápida de las principales funciones de la plataforma. Los iconos funcionan como apoyo visual para elementos de navegación, acciones, formularios, estados y diferentes procesos relacionados con la logística y control de inventario.
+
+Se priorizan iconos de apariencia limpia, evitando ilustraciones excesivamente complejas que puedan aumentar la carga visual de la interfaz. Los iconos mantienen proporciones y estilos similares dentro de cada contexto de uso, contribuyendo a generar una experiencia visual uniforme.
+
+Entre los principales elementos representados mediante iconografía se encuentran:
+
+- Dashboard
+- Inventario
+- Orden de pedidos
+- Proveedores / Clientes
+- Notificaciones
+- Buscar
+- Análisis
+- Alertas
+- Configuración
+- Regresar
+- Salir
+- Perfil
+
+Los iconos asociados a acciones principales pueden utilizar los tonos azules de Refrio, mientras que los elementos secundarios emplean colores neutros. Los estados críticos pueden utilizar el Error Red (#D32F2F) y las advertencias el Accent Orange (#F39C12).
+
+Los iconos no reemplazan por completo al contenido textual en las operaciones importantes. Cuando una acción puede resultar ambigua, se acompaña de una etiqueta descriptiva, por ejemplo “Registrar envío”, “Notificaciones”, “Configuración” o “Ver detalles”.
+
+Este enfoque reduce la carga cognitiva del usuario y permite reconocer más rápidamente las acciones disponibles, especialmente en vistas que contienen múltiples operaciones, vehículos, conductores o notificaciones.
+
+![Icons](../assets/Iconos.png)
+
+**f) Tone of Communication and Applied Language**<br>
+El tono de comunicación de Refrio es claro, profesional, respetuoso, sereno y orientado a la acción, priorizando la precisión sobre la certeza absoluta. Dado que la plataforma es dirigida para un público no tan familiarizado con la tecnología, se evitan tecnicismos innecesarios y expresiones absolutas.
+
 De acuerdo con las dimensiones de **Refrio**, este se comunica de la siguiente manera:
 - Formal pero accesible: Evitando tecnicismos informáticos complejos, utilizando un lenguaje amigable para la gestión del hogar.
 - Serio y Entusiasta: Se toma muy en serio la reducción del desperdicio de alimentos y el ahorro económico, pero motiva al usuario celebrando sus logros de consumo responsable.
 - Respetuoso: Siempre enfocado en asistir al usuario sin juzgar sus hábitos previos de compra.
 
 ### 4.1.2. Web Style Guidelines
+
+En el diseño visual de Refrio se adopta una línea gráfica moderna, profesional y funcional, enfocada en la eficiencia operativa, el control de la cadena de frío y la claridad en la gestión de inventarios perecibles. La jerarquía visual se construye mediante el uso de tipografías legibles como Roboto, Inter y Montserrat, tamaños diferenciados y colores de alto contraste inspirados en su identidad corporativa (azul marino profundo #163358, azul cerúleo #2379B6 y celeste glaciar #57C4D7), complementados con alertas semánticas que permiten identificar al instante estados críticos de caducidad y variaciones térmicas.
+
+El uso de tarjetas (cards) con bordes suaves y elevaciones sutiles organiza la información de lotes, vitrinas y despachos de forma limpia, evitando sobrecargas cognitivas durante el seguimiento de productos y la rotación FEFO. Asimismo, los componentes mantienen una estricta consistencia en toda la plataforma, agilizando la navegación y reduciendo la curva de aprendizaje tanto para empresas distribuidoras como para comerciantes locales y bodegueros. Cada elemento de la interfaz responde a un propósito operativo directo, asegurando una experiencia rápida y confiable donde la frescura y la preservación de los alimentos son esenciales. 
+
+Por último, el diseño integra principios de arquitectura web responsiva, garantizando accesibilidad, legibilidad y un rendimiento óptimo en monitores de escritorio, tabletas y teléfonos móviles, tanto en la aplicación web como en el Landing Page.
 
 ## 4.2. Information Architecture
 La arquitectura de la información de Refrio ha sido estructurada para optimizar el acceso, la organización y la visibilidad de los datos telemétricos e inventarios perecibles, delimitando los límites funcionales de los Bounded Contexts y adaptándose a la escala operativa de los planes de suscripción de la plataforma.
@@ -318,11 +373,44 @@ El Mock-up de alta fidelidad integra el isotipo de Refrio, la paleta de colores 
 
 ## 4.4. Web Applications UX/UI Design
 
+El diseño de la aplicacion web de Refrio organiza las experiencias de los dos roles principales: Empresa distribuidora, encargado de gestionar los envíos, y bodeguero, responsable de la gestión de inventario y recepción de productos.
+
+El trabajo registrado en Figma comprende wireframes, mockups y represtaciones de flujos. Su relación con las historias de usuario permite revisar que las interfaces respondan a las tareas del negocio y que las acciones ofrecidas sean coherentes con el rol y el estado de cada operacion.
+
 ### 4.4.1. Web Applications Wireframes
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 ### 4.4.3. Web Applications Mock-ups
+
+![Log in](../assets/Landing%20page%20Login.png)
+![Register](../assets/Landing%20page%20Register.png)
+![Reset Password](../assets/Landing%20page%20reset%20your%20password%20-%201.png)
+![Reset Password Confirmation](../assets/Reset%20your%20password%20-%202.png)
+![Plans](../assets/Landing%20Register%20-_%20Plans.png)
+![Dashboard Basic](../assets/Dashboard%20Basic.png)
+![Dashboard Professional](../assets/Dashboard%20Profesional.png)
+![Inventory](../assets/Inventory.png)
+![Shipments](../assets/Shipments.png)
+![Suppliers](../assets/Suppliers.png)
+![Analytics](../assets/Analytics.png)
+![Alerts](../assets/Alerts.png)
+![Order history](../assets/Order_history.png)
+![Clients](../assets/Clients.png)
+![View Product](../assets/View%20Product.png)
+![View Batch](../assets/View%20Batch.png)
+![View Shipment Professional](../assets/View%20Shipments%20Profesional.png)
+![Notification - Order](../assets/Notification%20-_%20Pedido.png)
+![Settings Basic](../assets/Profile%20Basic.png)
+![Settings Professional](../assets/Profile%20Professional.png)
+![Settings Plans](../assets/Plans.png)
+![QR Code](../assets/My%20code.png)
+![Add Batch](../assets/Add%20Batch.png)
+![Add Product](../assets/Add%20Product.png)
+![Edit Product](../assets/Edit%20Product.png)
+![Create Shipment](../assets/Create%20Shipment.png)
+![Add Supplier](../assets/Add%20Supplier.png)
+![Add Client](../assets/Add%20Client.png)
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
