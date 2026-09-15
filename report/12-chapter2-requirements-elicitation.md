@@ -316,7 +316,7 @@ Para adoptar la plataforma Refrio, exige alertas inmediatas al celular ante fall
 | **Distrito** | Ate, Lima |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQBGpNUpnoMLR7TSgF4M_dDuARLmdHLlSHPznFRrvc-88Mc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=afu6oR |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 07:51 minutos |
-| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+| **Evidencia fotográfica** | <p><img src="../assets/entrevista3-segmento1.png" width="400" alt="Logo AgroFlet"> </p> |
 
 **Resumen de la entrevista:**
 La entrevistada, Carmen, tiene 28 años y es supervisora logística y de almacén en una empresa del sector alimenticio ubicada en la zona industrial de Ate. Dirige a un equipo de 15 personas y se encarga de la distribución de productos perecibles como lácteos, embutidos y carnes empacadas. Su gestión diaria del inventario y la cadena de frío es sumamente manual, dependiendo del uso de un ERP muy básico, Excel, kardex impresos y rondas físicas con termómetros manuales cada tres o cuatro horas.
