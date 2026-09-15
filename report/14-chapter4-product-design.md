@@ -422,9 +422,58 @@ El trabajo registrado en Figma comprende wireframes, mockups y represtaciones de
 
 ### 4.6.2. Software Architecture Context Level Diagram
 
+En esta sección se presenta el diagrama de contexto correspondiente al Nivel 1 del Modelo C4 para Refrio. El propósito de este nivel es ilustrar el sistema central en el centro de su ecosistema operativo, delimitando las fronteras del software e identificando claramente a los actores humanos y los sistemas externos con los cuales interactúa a través de protocolos seguros sobre la red.
+
+El ecosistema está liderado por dos perfiles de usuario fundamentales: el Supervisor Logístico (quien administra las cámaras frigoríficas, supervisa las existencias perecibles y programa los despachos bajo política FEFO en distribuidoras medianas) y la Comerciante Minorista (propietaria o administradora de bodega o puesto de mercado que gestiona la refrigeración comercial de vitrinas, controla fechas de caducidad y activa promociones de remate preventivo). Para garantizar la integridad ininterrumpida de la cadena de frío y una supervisión reactiva en tiempo real, Refrio se integra con cinco plataformas externas clave: MQTT Broker / IoT Gateway para la ingesta continua de series telemétricas (temperatura y humedad) transmitidas por nodos sensores (ESP32/DHT22); Firebase Cloud Messaging (FCM) para el despacho inmediato de notificaciones push en tiempo real ante eventos críticos; WhatsApp Cloud API para la transmisión directa de alertas urgentes de ruptura térmica al teléfono de los encargados; SendGrid para el envío de correos transaccionales, reportes periódicos y certificados de trazabilidad en PDF; y una Pasarela de Pagos (Payment Gateway) para la gestión y procesamiento recurrente de las suscripciones a los planes comerciales de la plataforma (Básico, Profesional y Empresarial).
+
+<p align="center">
+  <img src="../assets/SystemContext-Refrio.png" title="System Context Diagram - Refrio" width="1000">
+</p>
+<p align="center">
+  <em>Nota.</em> Diagrama de Contexto del Sistema elaborado con Structurizr aplicando el Modelo C4.
+</p>
+
+---
+
 ### 4.6.3. Software Architecture Container Level Diagrams
 
+A continuación, se detalla el diagrama de contenedores (Nivel 2 del Modelo C4), el cual realiza un acercamiento a la frontera del sistema Refrio para exponer sus unidades de ejecución y despliegue independientes, sus responsabilidades primarias y las decisiones tecnológicas seleccionadas para cada componente de software.
+
+La arquitectura de ejecución se descompone en contenedores especializados:
+1. **Web Application (Static Web Hosting / Web Server):** Responsable de servir el Landing Page corporativo con la presentación de la propuesta de valor, el catálogo de planes de suscripción y entregar los paquetes optimizados de la aplicación cliente hacia los navegadores web.
+2. **Single-Page Application (SPA):** Desarrollada con React y TypeScript, provee una interfaz de usuario reactiva para dashboards de telemetría térmica en vivo, administración del catálogo de lotes perecibles, planificación de despachos FEFO y reportes analíticos de merma en entornos de escritorio y estaciones de supervisión en andén.
+3. **Mobile Web App:** Versión adaptada en formato PWA para dispositivos móviles, optimizada para comerciantes de bodegas y operarios de almacén que requieren escanear rápidamente fechas de caducidad, visualizar el semáforo de frescura de stock y recibir alertas sonoras inmediatas.
+4. **Backend API:** Núcleo desarrollado en ASP.NET Core / Node.js bajo un diseño modular alineado a Domain-Driven Design (DDD), encargado de procesar peticiones RESTful protegidas mediante tokens JWT, ejecutar las políticas de rotación FEFO, evaluar reglas de infracción térmica y orquestar eventos de dominio.
+5. **Database:** Base de datos relacional y de series temporales sobre PostgreSQL / TimescaleDB, encargada de persistir de forma estructurada los registros de usuarios, empresas, unidades de almacenamiento frigorífico, existencias de lotes y el flujo masivo de mediciones telemétricas bajo garantías de integridad transaccional (ACID).
+
+<p align="center">
+  <img src="../assets/Containers-Refrio.png" title="Container Diagram - Refrio" width="1000">
+</p>
+<p align="center">
+  <em>Nota.</em> Diagrama de Contenedores elaborado con Structurizr aplicando el Modelo C4.
+</p>
+
+---
+
 ### 4.6.4. Software Architecture Component Level Diagrams
+
+Este diagrama de componentes (Nivel 3 del Modelo C4) descompone internamente el contenedor del Backend API, reflejando cómo se estructura la lógica del servidor a través de una arquitectura modular basada en los Bounded Contexts identificados durante las fases de needfinding y EventStorming.
+
+El diseño interno organiza la solución en módulos de dominio cohesivos y desacoplados:
+* **IAM Module (Identity & Access Management):** Procesa el registro de cuentas (diferenciando flujos fiscales con RUC para distribuidoras y altas ágiles para bodegas), autenticación con firma de tokens JWT, control de roles (Supervisor, Operario, Minorista) y verificación de cuotas operativas según el plan de suscripción contratado (Básico, Profesional o Empresarial).
+* **Storage & Telemetry Module:** Ingesta y procesa métricas telemétricas de temperatura y humedad en tiempo real, administra el emparejamiento y calibración técnica (offsets) de sensores IoT, monitorea el pulso de conectividad (heartbeat) y controla tanto cámaras fijas como unidades de frío en tránsito.
+* **Inventory & FEFO Module:** Administra el catálogo de alimentos perecibles, la vinculación con proveedores, el registro de lotes (Batches) y sus fechas críticas de expiración, ejecutando el algoritmo de priorización FEFO para emitir planes de picking sugeridos y guiar la rotación en mostrador o andén.
+* **Incident & Alert Module:** Evalúa las desviaciones térmicas y las ventanas críticas de caducidad contra políticas de tolerancia, coordina la difusión de alertas multicanal (WhatsApp, FCM, SMS), gestiona el escalamiento jerárquico automatizado y audita el cierre formal de incidentes con justificación obligatoria.
+* **Cold Chain Traceability Module:** Consolida el historial térmico inalterable de cada lote durante su permanencia en cámara o furgón de despacho, genera certificados de frío auditables en formato PDF con firma digital y expone la validación pública mediante códigos QR.
+* **Analytics & IA Module:** Calcula KPIs de negocio consolidados (soles ahorrados, volumen de merma evitada, porcentaje de reducción de desperdicio) y ejecuta modelos analíticos predictivos para anticipar fallas en compresores e identificar patrones de riesgo térmico.
+* **Shared Module:** Provee abstracciones transversales, bus interno de eventos de dominio, formateadores de datos, manejo global de excepciones y utilitarios comunes de persistencia y logging para todos los módulos del backend.
+
+<p align="center">
+  <img src="../assets/Components-Refrio.png" title="Component Diagram - Refrio Backend API" width="1000">
+</p>
+<p align="center">
+  <em>Nota.</em> Diagrama de Componentes del Backend API elaborado con Structurizr aplicando el Modelo C4 y Domain-Driven Design.
+</p>
 
 ## 4.7. Software Object-Oriented Design
 
