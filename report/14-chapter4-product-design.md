@@ -412,6 +412,12 @@ Los wireframes elaborados establecen la distribución estructural de los conteni
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
+Los wireflows organizan la secuencia de pantallas que recorre el usuario para alcanzar un objetivo. El registro de elaboración incluye estos artefactos, cuya revisión permite relacionar las acciones del usuario con los cambios representados en las interfaces.
+
+![Wireflow Diagram 1](../assets/Wireflow_diagram1.png)
+![Wireflow Diagram 2](../assets/Wireflow_diagram2.png)
+![Wireflow Diagram 3](../assets/Wireflow_diagram3.png)
+
 ### 4.4.3. Web Applications Mock-ups
 
 Los mockups desarrollan las interfaces de Refrio con mayor detalle visual, incorporando la organización de contenidos, los controles, los estados de las operaciones de frío y los elementos de navegación para la gestión de productos perecibles. El trabajo registrado incluye el dashboard segmentado (Control Tower y panel del comerciante), el inventario con control de caducidad FEFO, el seguimiento de despachos con telemetría en tiempo real y los modales conectados para el registro de productos y lotes.
@@ -450,6 +456,95 @@ La diferenciación entre roles constituye un criterio central de revisión: la e
 ![Add Client](../assets/Add%20Client.png)
 
 ### 4.4.4. Web Applications User Flow Diagrams
+
+### Happy Path 1 - Comerciante (Bodeguero) - Agregar a un nuevo proveedor 
+
+1. El comerciante ingresa a la aplicación web
+2. Se dirige a la sección de proveedores (Suppliers)
+
+3. El sistema muestra:
+    - Nombre de los proveedores existentes
+    - Categoría de productos que suministran
+    - Cantidad de pedidos realizados
+    - Los botones de acción: "Agregar proveedor" y "Escanear QR de proveedor"
+
+4. El comerciante hace clic en "Agregar proveedor"
+5. El sistema despliega un formulario para registrar un nuevo proveedor, solicitando:
+    - Código único del proveedor
+    - Espacio para escribir alguna observación adicional
+
+6. El comerciante completa los campos requeridos y hace clic en "Añadir proveedor"
+7. El sistema registra el nuevo proveedor y lo muestra en la lista de proveedores.
+
+![Happy Path 1](../assets/UserFlows1.png)
+
+### Happy Path 2 - Comerciante (Bodeguero) - Agregar un nuevo lote de producto
+
+1. El comerciante ingresa a la aplicación web
+2. Se dirige a la sección de inventario (Inventory)
+3. El sistema muestra:
+    - Lista de productos organizados por categoría
+    - Prodcuctos que expirarán pronto
+    - Todos los productos disponibles registrados en el inventario
+    - Botón de acción: "Agregar lote" y "Escanear QR de lote"
+
+4. El comerciante hace clic en "Agregar lote"
+5. El sistema despliega un formulario para registrar un nuevo lote, solicitando:
+    - Nombre del producto
+    - Código único del lote
+    - Cantidad
+    - Día de recepción
+    - Fecha de caducidad
+    - Proveedor
+
+6. El comerciante completa los campos requeridos y hace clic en "Añadir lote"
+7. El sistema registra el nuevo lote y lo muestra en la lista de inventario.
+8. El sistema lo redirige al producto con los otros lotes registrados.
+9. El comerciante ingresa al lote creado y puede visualizar toda la información.
+
+![Happy Path 2](../assets/UserFlows2.png)
+
+### Happy Path 3 - Empresa distribuidora - Registrar un nuevo envío
+
+1. La persona encargada de la logística en la empresa distribuidora ingresa a la aplicación web
+2. Se dirige a la sección de envíos (Shipments)
+3. El sistema muestra:
+    - Unas tarjetas con información resumida de cada envío
+    - Mapa con la ubicación de los envíos en tránsito
+    - Todos los envíos realizados, pendientes y en tránsito
+    - Botón de acción: "Crear nuevo envío" y "Ver todas las rutas"
+
+4. La persona encargada hace clic en "Crear nuevo envío"
+5. El sistema despliega un formulario para registrar un nuevo envío, solicitando:
+    - Nombre del producto
+    - Código único del lote
+    - Lugar de origen
+    - Lugar de destino
+    - Tempertura de transporte requerida
+    - Tiempo estimado de entrega
+
+6. La persona encargada completa los campos requeridos y hace clic en "Crear envío"
+7. El sistema registra el nuevo envío y lo muestra en la lista de envíos, actualizando el mapa con la nueva ruta.
+8. Ingresa al envío creado y puede visualizar toda la información del envío, incluyendo la temperatura de la carga, el conductor y el estado del envío,el detalle del producto y el progreso del envío en vivo.
+
+![Happy Path 3](../assets/UserFlows3.png)
+
+### Unhappy Path - Comerciante (Bodeguero) - Rechazar un lote de producto por alguna incidencia
+
+1. El comerciante se encuentra en su tienda y recibe una notificación de que un lote de producto ha llegado con una incidencia (por ejemplo, temperatura fuera del rango seguro).
+2. Entonces, el comerciante abre la aplicación web y se dirige a la sección de notificaciones o "Historial de pedidos".
+3. El sistema muestra los pedidos realizados anteriormente y el pedido con la incidencia resaltado con los datos de:
+    - Código del pedido
+    - Fecha/hora de entrega
+    - Mercadería
+    - Proveedor
+    - Monto 
+    - Estado del pedido
+4. El comerciante ingresa al detalle del pedido con la incidencia y presiona "¿El producto llegó caliente o con daño? Reportar incidencia / Rechazar carga".
+
+5. El sistema actualiza ese pedido como "Rechazado".
+
+![Unhappy Path](../assets/UserFlows4.png)
 
 ## 4.5. Web Applications Prototyping
 
