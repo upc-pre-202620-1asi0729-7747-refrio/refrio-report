@@ -396,7 +396,7 @@ Los wireframes elaborados establecen la distribución estructural de los conteni
 ![Order history](../assets/Refrio%20-%20Order%20History%20(Wireframe).png)
 ![Clients](../assets/Refrio%20-%20Clients%20(Wireframe).png)
 ![View Product](../assets/Refrio%20-%20View%20Product%20(Wireframe).png)
-![View Batch](../assets/Refrio%20-%20View%20Batch%20(Wireframe).png)
+![View Batch](../assets/Refrio%20-%20View%20batch%20(Wireframe).png)
 ![View Shipment Professional](../assets/Refrio%20-%20View%20Shipments%20Profesional%20(Wireframe).png)
 ![Notification - Order](../assets/Refrio%20-%20Notification%20-_%20Pedido%20(Wireframe).png)
 ![Settings Basic](../assets/Refrio%20-%20Perfil%20Básico%20(Wireframe).png)
@@ -547,6 +547,14 @@ La diferenciación entre roles constituye un criterio central de revisión: la e
 ![Unhappy Path](../assets/UserFlows4.png)
 
 ## 4.5. Web Applications Prototyping
+
+El prototipo interactivo de Refrio reúne las interfaces y conexiones de navegación para validar la experiencia de usuario antes de su desarrollo. El registro de trabajo incluye modales conectados y transiciones de estado que representan con fidelidad la navegación entre vistas, la apertura de formularios contextuales y la respuesta inmediata ante acciones operativas.
+
+Los flujos priorizados se orientan a la gestión de inventarios perecibles bajo política FEFO, el registro ágil de lotes, la consulta de telemetría de frío en tiempo real y la validación digital de recepciones por parte de distribuidores y comerciantes locales o bodegueros.
+
+![Image Prototyping](../assets/ImgPrototyping.png)
+
+Enlace de la grabación: [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQAuqpuK1WgrSLDpGkr5069iAeczX2Tym-ncmW4HSat6vsY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Zcczji)
 
 ## 4.6. Domain-Driven Software Architecture
 
