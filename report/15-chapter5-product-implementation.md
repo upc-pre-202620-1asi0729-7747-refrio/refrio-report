@@ -433,9 +433,3 @@ Durante el Sprint 1 se realizó el despliegue exitoso del Landing Page utilizand
 Durante este sprint, la colaboración técnica se gestionó íntegramente a través de la plataforma GitHub. Todo el trabajo individual se desarrolló en ramas de características (`feature/*`), las cuales fueron revisadas mediante Pull Requests (PRs) con aprobación cruzada antes de su integración a la rama `develop` y su posterior pase a `main`.
 
 ![Team Collaboration Sprint 1 - PRs and Insights](../assets/img/chapter-v/sprint-collaboration.png)
-
-#### 5.2.1.6. Services Documentation Evidence for Sprint Review
-
-#### 5.2.1.7. Software Deployment Evidence for Sprint Review
-
-#### 5.2.1.8. Team Collaboration Insights during Sprint
