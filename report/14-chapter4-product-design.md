@@ -766,3 +766,7 @@ Esta estructura se implementa de manera homogénea en los 8 módulos de la plata
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
+
+El diseño de base de datos de Refrio sigue una arquitectura relacional implementada en PostgreSQL a través de Entity Framework Core, organizada en torno a los Bounded Contexts definidos en la arquitectura DDD (IAM y Adquisición, Monitoreo y Almacenamiento IoT, Inventario FEFO y Trazabilidad, y Gestión de Alertas e Incidentes). Cada Bounded Context posee sus propias tablas, generadas a partir de sus Aggregate Roots mediante configuraciones explícitas de entidad que cada contexto registra.
+
+![Database diagram](../assets/Refrio-DB.png)
