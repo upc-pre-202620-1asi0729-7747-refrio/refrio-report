@@ -335,13 +335,104 @@ El despliegue continuo del sitio web de **Refrio** se gestiona a través de **Gi
 
 #### 5.2.1.1. Sprint Planning 1
 
+El Sprint 1 está dedicado exclusivamente a establecer la presencia digital de la startup mediante el diseño, desarrollo y despliegue de la primera versión del Landing Page de Refrio[cite: 1].
+
+| Campo | Detalle |
+|:------|:--------|
+| **Sprint #** | Sprint 1 |
+| **Date** | `2026-09-08` |
+| **Time** | `7:00 pm` |
+| **Location** | Reunión virtual por Discord / Google Meet |
+| **Prepared By** | `Alca Morán, César Alejandro` |
+| **Attendees** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro |
+| **Sprint 1 Goal** | Establecer la presencia digital de Refrio mediante el diseño, desarrollo y despliegue de la Landing Page. Comunicaremos claramente nuestra propuesta de valor: erradicar las pérdidas de alimentos perecibles en el Perú mediante el monitoreo telemétrico IoT en tiempo real de la cadena de frío y la gestión inteligente de inventario bajo la política FEFO (*First Expired, First Out*). El éxito se confirmará cuando los visitantes accedan al sitio web en vivo y comprendan la solución técnica, visualicen la comparativa de los planes de suscripción (Básico, Profesional y Empresarial) y puedan remitir solicitudes de demostración técnica corporativa. |
+| **Sprint 1 Velocity** | 18 Story Points |
+| **Sum of Story Points** | `11` |
+
+
 #### 5.2.1.2. Aspect Leaders and Collaborators
+
+Para este primer Sprint enfocado en el Landing Page y la configuración inicial de los repositorios y estándares de código abierto, la distribución de liderazgo (L) y colaboración (C) es la siguiente:
+
+| Team Member (Last Name, First Name) | GitHub Username | UI/UX Design (Figma) | Landing Page Layout (HTML/CSS) | Landing Page Interactivity (JS) | DevOps & Deployment |
+|:-----------------------------------:|:---------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| Alca Morán, César Alejandro | `almocesar-cell` | L | C | L | C |
+| Centeno León, Adriano Samir | `Adri11-dk` | C | L | C | C |
+| Rivas Méndez, Bernie Aarón | `Arivas3008` | C | L | L | C |
+| Saavedra Flores, Rodrigo Andree | `rodrigoxd67` | C | C | C | L |
+| Tello Lima, Jose Alejandro | `j4ndrow` | L | C | L | C |
+
+> **L** = Leader &nbsp;|&nbsp; **C** = Collaborator
+
 
 #### 5.2.1.3. Sprint Backlog 1
 
+El objetivo principal de este Sprint es contar con un sitio web estático desplegado que presente a Refrio, su propuesta de valor IoT, sus planes tarifarios y sus canales de contacto comercial
+
+| **Sprint 1** | **User Story** | | **Work-Item / Task** | | | | |
+|:--------:|---|---|---|---|---|---|---|
+| | **ID** | **Título** | **ID** | **Título** | **Descripción** | **Estimación (h)** | **Asignado a** | **Estado** |
+| | US01 | Visualización de Hero Section | T01 | Diseñar UI en Figma | Diseñar el Hero section con métricas de merma y llamadas a la acción (CTA). | 4 | Centeno, Adriano | Done |
+| | US01 | Visualización de Hero Section | T02 | Maquetar estructura base | Maquetar en HTML5 semántico y CSS3 responsive la cabecera, propuesta y valor visual. | 5 | Alca, César | Done |
+| | US02 | Visualización de Planes | T03 | Programar tarificador | Implementar tarjetas de planes (Básico, Pro, Empresarial) y selector mensual/anual con JS. | 4 | Rivas, Bernie | Done |
+| | US03 | Formulario de Contacto B2B | T04 | Maquetar y validar formulario | Construir formulario B2B con validación de campos obligatorios (RUC, correo corporativo). | 3 | Tello, Jose | Done |
+| | *Task* | Configurar Repositorios | T05 | Setup GitHub y CI/CD | Inicializar repositorio en GitHub, estructurar ramas y automatizar despliegue en GitHub Pages. | 2 | Saavedra, Rodrigo | Done |
+
+
 #### 5.2.1.4. Development Evidence for Sprint Review
 
+Durante el Sprint 1, el equipo se enfocó en establecer la base técnica de Refrio mediante estándares web modernos: HTML5 semántico para la accesibilidad y CSS3 estructurado bajo la metodología BEM y variables CSS personalizadas con la identidad de marca (azul corporativo, grises de soporte y blanco puro). La interactividad se desarrolló con JavaScript modular para manipular dinámicamente el catálogo de planes y la validación de formularios comerciales.
+
+| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
+|:----------:|:------:|:---------:|:--------------:|:-------------------:|:-------------------:|
+| `refrio/refrio-landing-page` | `main` | `a3c91d4` | `feat: add hero section and value prop` | `Implemented responsive hero section with main B2B CTA and live metrics` | `2026-09-12` |
+| `refrio/refrio-landing-page` | `develop` | `7e2b8f1` | `feat: add pricing tiers table` | `Created interactive pricing cards for Basic, Pro and Enterprise plans` | `2026-09-13` |
+| `refrio/refrio-landing-page` | `develop` | `4d18c9a` | `feat: add b2b contact form validation` | `Implemented corporate validation for RUC and business emails` | `2026-09-14` |
+| `refrio/refrio-landing-page` | `main` | `5c8e2a0` | `style: apply refrio brand palette` | `Standardized primary blue, clean grays and typography hierarchy` | `2026-09-15` |
+
+---
+
 #### 5.2.1.5. Execution Evidence for Sprint Review
+
+En este primer Sprint se completó el diseño y maquetación de la Landing Page pública de Refrio. La interfaz integra las secciones de "Hero", "Propuesta de Valor IoT & FEFO", "Planes de Suscripción (Básico S/ 59, Profesional S/ 129, Empresarial S/ 249)", "Casos de Éxito y Merma Evitada" y el "Formulario de Contacto B2B", siendo 100% responsiva para pantallas móviles y de escritorio.
+
+![Landing Page Desktop 1 - Hero Section](../assets/img/chapter-v/home-hero.png)
+![Landing Page Desktop 2 - Value Proposition](../assets/img/chapter-v/home-features.png)
+![Landing Page Desktop 3 - Pricing Plans](../assets/img/chapter-v/pricing-page.png)
+![Landing Page Desktop 4 - Impact and FEFO Logic](../assets/img/chapter-v/fefo-benefits.png)
+![Landing Page Desktop 5 - FAQ](../assets/img/chapter-v/faqs-page.png)
+![Landing Page Desktop 6 - Contact B2B Form](../assets/img/chapter-v/contact-page.png)
+![Landing Page Desktop 7 - Footer and Navigation](../assets/img/chapter-v/footer.png)
+
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+> *Para el Sprint 1, enfocado estrictamente en la implementación, estilizado y despliegue del Landing Page estático, esta sección no aplica. La documentación formal de los Web Services y endpoints de la API RESTful (controladores de telemetría IoT, inventario FEFO y autenticación JWT) mediante OpenAPI / Swagger se desarrollará e incorporará a partir de los sprints posteriores.*
+
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 1 se realizó el despliegue exitoso del Landing Page utilizando la plataforma GitHub Pages:
+1. Se creó el repositorio oficial `refrio-landing-page` dentro de la organización de GitHub del proyecto.
+2. Se configuró el flujo de trabajo local y remoto mediante Git utilizando la convención GitFlow (`main` y `develop`).
+3. Se instaló la herramienta y dependencia de empaquetado `gh-pages` para gestionar el pipeline de entrega continua.
+4. Se configuró el archivo `vite.config.js` estableciendo la propiedad `base: '/refrio-landing-page/'`.
+5. Se agregaron los scripts de automatización `"build": "vite build"` y `"deploy": "gh-pages -d dist"` en el archivo `package.json`.
+6. Se ejecutó la compilación de producción mediante el comando `npm run build`, optimizando assets CSS, HTML y bundles de JavaScript.
+7. Se ejecutó el despliegue automático hacia la rama de publicación con el comando `npm run deploy`.
+8. Se verificó la activación del servicio en GitHub ingresando a `Settings > Pages`.
+9. Se seleccionó la rama `gh-pages` como la fuente oficial de despliegue desde la raíz (`/root`).
+10. Se comprobó la disponibilidad pública y el rendimiento del sitio web en vivo accediendo a su URL pública generada.
+
+![Deployment Evidence 1 - GitHub Pages Settings](../assets/img/chapter-v/despliegue.png)
+![Deployment Evidence 2 - Live Production URL](../assets/img/chapter-v/despliegue-2.png)
+
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+Durante este sprint, la colaboración técnica se gestionó íntegramente a través de la plataforma GitHub. Todo el trabajo individual se desarrolló en ramas de características (`feature/*`), las cuales fueron revisadas mediante Pull Requests (PRs) con aprobación cruzada antes de su integración a la rama `develop` y su posterior pase a `main`.
+
+![Team Collaboration Sprint 1 - PRs and Insights](../assets/img/chapter-v/sprint-collaboration.png)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
