@@ -1,9 +1,3 @@
-# Capítulo V: Product Implementation, Validation & Deployment
-
-## 5.1. Software Configuration Management
-
-En esta parte se presentan las herramientas, decisiones y lineamientos que el equipo adoptó para mantener orden, trazabilidad y control durante el desarrollo de Refrio. Esto incluye la organización del entorno de trabajo, la documentación del proyecto, el manejo de versiones y el uso de recursos digitales que apoyaron cada etapa del proceso.
-
 ## 5.1.1. Software Development Environment Configuration
 
 Para el desarrollo de Refrio se utilizaron distintas herramientas, cada una con una función específica dentro del proyecto. Estas se organizan según las principales disciplinas de trabajo.
@@ -17,12 +11,11 @@ Para el desarrollo de Refrio se utilizaron distintas herramientas, cada una con 
 
 ### Project Management
 Esta disciplina permitió organizar tareas, distribuir responsabilidades y hacer seguimiento al avance del proyecto.
-
+*(Nota: Aquí puedes agregar herramientas como Jira usando la imagen Cap5_Logo_Jira.png)*
 
 
 ### Requirements Management
 Esta parte estuvo enfocada en documentar, estructurar y dar seguimiento a los requerimientos del proyecto, asegurando que respondan a las necesidades de los segmentos objetivo.
-
 
 
 ### Product UX/UI Design
@@ -30,40 +23,60 @@ En esta disciplina se trabajó el diseño de la experiencia de usuario y de la i
 
 1. **UXPressia**: Herramienta utilizada para elaborar User Personas, Empathy Maps y Customer Journey Maps de los segmentos objetivo del proyecto.
    Ruta de referencia: https://uxpressia.com/
-
+<p align="center">
+  <img src="assets/Cap5_Logo_UXPressia.png" alt="UXPressia" title="UXPressia" width="250">
+</p>
 
 2. **Figma**: Herramienta de diseño colaborativo utilizada para crear wireframes, mockups y propuestas visuales de Refrio.
    Ruta de referencia: https://www.figma.com/
-
+<p align="center">
+  <img src="assets/Cap5_Logo_Figma.png" alt="Figma" title="Figma" width="250">
+</p>
 
 3. **Miro**: Pizarra colaborativa empleada para ordenar ideas, analizar hallazgos y desarrollar dinámicas relacionadas con el proceso de diseño.
    Ruta de referencia: https://miro.com/
-
+<p align="center">
+  <img src="assets/Cap5_Logo_Miro.png" alt="Miro" title="Miro" width="250">
+</p>
 
 4. **Lucidchart**: Herramienta utilizada para la elaboración de diagramas, wireflows y representaciones visuales de la estructura de navegación del proyecto.
    Ruta de referencia: https://www.lucidchart.com/pages/es
-
+<p align="center">
+  <img src="assets/Cap5_Logo_Lucidchart.png" alt="Lucidchart" title="Lucidchart" width="250">
+</p>
 
 5. **Structurizr**: Herramienta empleada para representar de manera estructurada la arquitectura y organización de componentes del sistema.
    Ruta de referencia: https://structurizr.com/
+<p align="center">
+  <img src="assets/Cap5_Logo_Structurizr.png" alt="Structurizr" title="Structurizr" width="250">
+</p>
+
 
 ### Software Development
 Aquí se agrupan las herramientas utilizadas para editar archivos, organizar el proyecto y trabajar el contenido técnico y visual del reporte.
 
 1. **GitHub**: Plataforma utilizada para alojar el repositorio del proyecto, gestionar ramas por capítulo, registrar cambios y mantener el control de versiones del trabajo realizado en Refrio.
    Ruta de referencia: GitHub
+<p align="center">
+  <img src="assets/Cap5_Logo_GitHub.png" alt="GitHub" title="GitHub" width="250">
+</p>
 
 2. **WebStorm**: Entorno de desarrollo utilizado para editar archivos del proyecto, organizar carpetas, manejar recursos visuales y trabajar el contenido del reporte de Refrio.
    Ruta de descarga: https://www.jetbrains.com/webstorm/
+<p align="center">
+  <!-- Nota: En tu imagen salía el logo de VSCode, pero si usas WebStorm el nombre debería ser este -->
+  <img src="assets/Cap5_Logo_WebStorm.png" alt="WebStorm" title="WebStorm" width="250">
+</p>
 
 3. **HTML, CSS3 y JavaScript**: Tecnologías fundamentales utilizadas para la estructura, el estilo y la interacción de la Landing Page del proyecto Refrio.
    Referencias:
-
 - **HTML:** https://html.spec.whatwg.org/
-
 - **CSS3:** https://www.w3.org/Style/CSS/
-
 - **JavaScript:** https://developer.mozilla.org/es/docs/Web/JavaScript
+<p align="center">
+  <img src="assets/Cap5_Logo_HTML_CSS_JS.png" alt="HTML CSS JS" title="HTML CSS JS" width="250">
+</p>
+
 
 ### Software Testing
 Esta parte ayudó a revisar que los entregables y componentes trabajados mantuvieran coherencia y funcionaran correctamente dentro del proyecto.
@@ -72,12 +85,14 @@ Esta parte ayudó a revisar que los entregables y componentes trabajados mantuvi
   Ruta de referencia: No aplica, ya que se trató de una validación manual realizada por el equipo.
 
 
-
 ### Software Documentation
 La documentación permitió organizar y explicar el contenido del proyecto de manera clara, facilitando su comprensión y continuidad.
 
 * **Markdown**: Formato principal utilizado para redactar y estructurar el reporte por capítulos.
   Ruta de referencia: https://www.markdownguide.org/
+<p align="center">
+  <img src="assets/Cap5_Logo_Markdown.png" alt="Markdown" title="Markdown" width="250">
+</p>
 
 ## 5.1.2. Source Code Management
 
