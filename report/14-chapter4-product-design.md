@@ -717,8 +717,51 @@ El diseño interno organiza la solución en módulos de dominio cohesivos y desa
 </p>
 
 ## 4.7. Software Object-Oriented Design
+El diseño orientado a objetos de la plataforma **Refrio** aplica las buenas prácticas de la programación orientada a objetos (POO) y los principios SOLID, buscando alta cohesión y bajo acoplamiento entre los componentes del sistema. Con el propósito de asegurar una arquitectura mantenible y escalable para la gestión de productos perecibles y el control de la cadena de frío, el diseño se divide en dos perspectivas:
+
+1. **Diseño de Dominio del Backend (Tactical DDD):** Modela la lógica del negocio mediante un enfoque táctico de Diseño Guiado por el Dominio (*Domain-Driven Design*), delimitando las responsabilidades en *Bounded Contexts* (Contextos Delimitados). Cada contexto agrupa entidades del dominio, raíces agregadas (*Aggregate Roots*), objetos de valor (*Value Objects*), servicios y repositorios.
+2. **Diseño de Arquitectura del Frontend (Component-Based Architecture):** Modela la estructura interna de la aplicación web cliente bajo una arquitectura modular por capas, separando los componentes visuales de presentación, la persistencia y gestión reactiva de estado en memoria (*Stores*), los servicios de comunicación asíncrona con el API REST y los contratos de datos tipados (*DTOs*).
+
+---
 
 ### 4.7.1. Class Diagrams
+
+A continuación, se presentan los diagramas de clases correspondientes a la capa de Backend y a la aplicación web de Frontend.
+
+**Backend Class Diagram**
+
+Este diagrama representa el modelo de dominio del backend de **Refrio**, estructurado a través de los contextos delimitados que resuelven los procesos centrales del negocio.
+![Diagrama de Clases del Backend - Tactical DDD](../assets/backend-diagram.png)
+
+* **Bounded Context: Identity & Access Management (IAM):** Centraliza el registro de empresas distribuidoras y locales comerciales, autenticación de usuarios, gestión de tokens JWT y control de permisos mediante roles asignados.
+* **Bounded Context: Inventory & Perishables:** Modela el catálogo de productos perecibles, la configuración de umbrales de temperatura y stock mínimo, y el control de lotes con fechas de expiración para la aplicación estricta de la política FEFO (*First Expired, First Out*), así como el registro histórico de movimientos y mermas.
+* **Bounded Context: Suppliers & Replenishment:** Gestiona el directorio de proveedores y orquesta las órdenes de reposición que se disparan cuando el inventario alcanza niveles de stock bajo.
+* **Bounded Context: Shipments & Logistics:** Modela el ciclo de vida de los despachos hacia los locales comerciales, la asignación de flota vehicular y conductores, el registro de incidencias/rechazos de mercadería y la captura de la Prueba de Entrega Digital (POD).
+* **Bounded Context: Cold Chain Telemetry & Alerts:** Representa la ingesta de telemetría proveniente de dispositivos y sensores IoT instalados en los transportes (temperatura, humedad y coordenadas GPS), evaluando quiebres térmicos para generar alertas automáticas en tiempo real.
+
+**Frontend Class Diagram**
+
+Este diagrama detalla la arquitectura de software del cliente web de **Refrio**, desacoplando la interfaz visual de la capa de comunicación y persistencia reactiva.
+
+![Diagrama de Clases del Frontend](../assets/frontend-diagram.png)
+
+El diseño de la aplicación web se estructura mediante los siguientes estereotipos estándar:
+
+* `<<page>>` / `<<component>>`: Componentes visuales que renderizan las vistas y capturan las acciones del usuario.
+* `<<service>>`: Clases cliente que consumen los endpoints del API REST de Refrio mediante peticiones HTTP asíncronas.
+* `<<store>>`: Manejadores de estado reactivo que centralizan los datos en memoria compartidos entre componentes.
+* `<<view-model>>`: Modelos intermedios adaptados a los requerimientos específicos de visualización de cada pantalla.
+* `<<DTO>>`: Objetos de transferencia de datos (*Data Transfer Objects*) que tipan los payloads enviados y recibidos desde el backend.
+
+Esta estructura se implementa de manera homogénea en los 8 módulos de la plataforma:
+* **Auth:** Vistas y servicios de inicio de sesión, registro y recuperación de credenciales.
+* **Dashboard:** Consolidado de métricas operativas, mermas evitadas y estado de rutas activas.
+* **Inventory:** Control de catálogo, visualización de lotes ordenados por vencimiento y registro de stock.
+* **Shipments:** Programación de despachos, asignación de carga y seguimiento en mapa.
+* **Suppliers:** Directorio de proveedores y seguimiento de pedidos de reabastecimiento.
+* **Alerts:** Monitor de incidentes térmicos y pérdidas de señal de telemetría en tiempo real.
+* **Users & Roles:** Administración del personal de almacén, supervisores y transportistas.
+* **Settings:** Configuración del perfil de negocio y canales de notificación.
 
 ## 4.8. Database Design
 
