@@ -427,7 +427,7 @@ La propuesta toma como referencia un diseño basado en Material Design, compatib
 La diferenciación entre roles constituye un criterio central de revisión: la empresa distribuidora dispone de acciones avanzadas de despacho, gestión masiva de lotes y supervisión térmica de flotas, mientras que el bodeguero consulta de manera simplificada sus pedidos entrantes, el estado de frescura de la carga y las alertas de vencimiento para la rotación en mostrador.
 
 ![Log in](../assets/Landing%20page%20Login.png)
-![Register](../assets/Landing%20page%20Register.png)
+![Register](../assets/Landing%20page%20register.png)
 ![Reset Password](../assets/Landing%20page%20reset%20your%20password%20-%201.png)
 ![Reset Password Confirmation](../assets/Reset%20your%20password%20-%202.png)
 ![Plans](../assets/Landing%20Register%20-_%20Plans.png)
@@ -441,7 +441,7 @@ La diferenciación entre roles constituye un criterio central de revisión: la e
 ![Order history](../assets/Order_history.png)
 ![Clients](../assets/Clients.png)
 ![View Product](../assets/View%20Product.png)
-![View Batch](../assets/View%20Batch.png)
+![View Batch](../assets/View%20batch.png)
 ![View Shipment Professional](../assets/View%20Shipments%20Profesional.png)
 ![Notification - Order](../assets/Notification%20-_%20Pedido.png)
 ![Settings Basic](../assets/Profile%20Basic.png)
