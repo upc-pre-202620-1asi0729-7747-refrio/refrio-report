@@ -2,13 +2,20 @@
 
 ## 2.1. Competidores
 
-En esta sección se identifican y describen los principales competidores de **Refrio** —tanto directos como indirectos—, es decir, aquellos que ofrecen productos digitales con modelos de negocio total o parcialmente similares en el mercado de gestión logística y cadena de frío para empresas de alimentos perecibles.
+En esta sección se identifican y describen los principales competidores de Refrio tanto directos como indirectos, es decir, aquellos que ofrecen productos digitales con modelos de negocio total o parcialmente similares en el mercado de gestión logística y cadena de frío para empresas de alimentos perecibles.
 
 ### 2.1.1. Análisis competitivo
 
-**¿Por qué llevar a cabo este análisis?** Entender el panorama competitivo es crucial para identificar oportunidades de diferenciación y áreas de mejora en la propuesta de valor de **Refrio**. Este análisis permite evaluar cómo los competidores abordan los problemas de gestión de inventario, distribución, y cómo se posicionan en términos de precio, funcionalidad y experiencia del usuario.
-
 <table border="1">
+<!-- Encabezado Superior -->
+<tr>
+<th colspan="6"><b>Competitive Analysis Landscape</b></th>
+</tr>
+<tr>
+<td width="20%">¿Por qué llevar a cabo este análisis?</td>
+<td colspan="5"> Para identificar oportunidades de diferenciación y áreas de mejora en la propuesta de valor de Refrio. Este análisis permite evaluar cómo los competidores abordan los problemas de gestión de inventario, distribución, y cómo se posicionan en términos de precio, funcionalidad y experiencia del usuario.</td>
+</tr>
+
 <!-- Encabezado de Columnas -->
 <tr>
 <td colspan="2"> <b>Competidores</b> </td>
@@ -124,16 +131,16 @@ En esta sección se identifican y describen los principales competidores de **Re
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-A partir del análisis competitivo, **Refrio** define las siguientes estrategias y tácticas preliminares para afrontar las fortalezas de sus competidores y aprovechar sus debilidades en el mercado peruano:
+A partir del análisis competitivo, Refrio define las siguientes estrategias y tácticas preliminares para afrontar las fortalezas de sus competidores y aprovechar sus debilidades en el mercado peruano:
 
 **Frente a Óptima ERP**
 
 *Estrategia:* Diferenciación por especialización vertical y cobertura de necesidades no atendidas.
 
-Óptima ERP tiene presencia consolidada en el segmento pyme peruano, pero carece por completo de un módulo de monitoreo de temperatura y no está especializado en el sector de alimentos perecibles. **Refrio** aprovechará esta brecha posicionándose explícitamente como "la herramienta que Óptima no puede hacer": monitoreo térmico en tiempo real integrado con gestión de inventario FEFO.
+Óptima ERP tiene presencia consolidada en el segmento pyme peruano, pero carece por completo de un módulo de monitoreo de temperatura y no está especializado en el sector de alimentos perecibles. Refrio aprovechará esta brecha posicionándose explícitamente como "la herramienta que Óptima no puede hacer": monitoreo térmico en tiempo real integrado con gestión de inventario FEFO.
 
 *Tácticas:*
-- Desarrollar materiales de ventas que cuantifiquen el costo mensual de no tener monitoreo de temperatura (pérdidas promedio de S/ 150–400/mes en bodegas y 12–20 % de facturación en distribuidoras), evidenciando el ROI de **Refrio** frente a ERPs genéricos.
+- Desarrollar materiales de ventas que cuantifiquen el costo mensual de no tener monitoreo de temperatura (pérdidas promedio de S/ 150–400/mes en bodegas y 12–20 % de facturación en distribuidoras), evidenciando el ROI de Refrio frente a ERPs genéricos.
 - Implementar una funcionalidad de importación de datos desde Excel para facilitar la migración de clientes que actualmente usan Óptima u hojas de cálculo, reduciendo la fricción del cambio.
 - Ofrecer un período de prueba gratuita de 30 días sin tarjeta de crédito para capturar usuarios que ya tienen Óptima pero necesitan complementar con gestión de perecibles.
 
@@ -144,7 +151,7 @@ A partir del análisis competitivo, **Refrio** define las siguientes estrategias
 Sinapsys WMS cubre funciones más amplias de almacén, pero su costo de implementación (desde USD 300/mes + USD 1,500–5,000 de implementación) lo pone fuera del alcance de las distribuidoras medianas y, en especial, de las bodegas. Su curva de aprendizaje alta y la necesidad de consultor certificado representan barreras de adopción que **Refrio** puede explotar.
 
 *Tácticas:*
-- Posicionar a **Refrio** como "el WMS que no necesita consultor": onboarding en menos de 30 minutos, con tutoriales en video en español y soporte vía WhatsApp.
+- Posicionar a Refrio como "el WMS que no necesita consultor": onboarding en menos de 30 minutos, con tutoriales en video en español y soporte vía WhatsApp.
 - Orientar las campañas de adquisición hacia distribuidoras medianas que hayan evaluado y descartado soluciones WMS por su costo o complejidad, ofreciendo la propuesta de valor esencial —FEFO + temperatura— a una fracción del precio.
 - Publicar casos de uso específicos en el sector lácteo, cárnico y de frutas/verduras para demostrar la especialización vertical que Sinapsys no tiene.
 
@@ -152,16 +159,22 @@ Sinapsys WMS cubre funciones más amplias de almacén, pero su costo de implemen
 
 *Estrategia:* Aprovechar la brecha de precio y la orientación a pymes locales frente a una solución enterprise global.
 
-Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de negocio —hardware propietario costoso, precios en dólares y enfoque enterprise— lo hace completamente inaccesible para los segmentos objetivo de **Refrio**. Además, Tive no integra gestión de inventario ni alertas de vencimiento.
+Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de negocio —hardware propietario costoso, precios en dólares y enfoque enterprise— lo hace completamente inaccesible para los segmentos objetivo de Refrio. Además, Tive no integra gestión de inventario ni alertas de vencimiento.
 
 *Tácticas:*
-- Comunicar activamente la ventaja de **Refrio** de ser compatible con sensores IoT de bajo costo ya disponibles en el mercado peruano (desde S/ 80–150 por sensor), eliminando la barrera del hardware propietario.
+- Comunicar activamente la ventaja de Refrio de ser compatible con sensores IoT de bajo costo ya disponibles en el mercado peruano (desde S/ 80–150 por sensor), eliminando la barrera del hardware propietario.
 - Desarrollar alianzas con proveedores locales de sensores IoT (Arduino-compatible, ESP32-based) para ofrecer kits de inicio a precios accesibles que el cliente pueda instalar por sí mismo siguiendo una guía en video.
 - Orientar la comunicación de marca hacia la identidad local: "Hecha en el Perú, para el negocio peruano", como contrapunto a una solución internacional que no conoce las particularidades del mercado nacional (temporadas de calor en Lima, informalidad del sector, preferencia por WhatsApp, etc.).
 
 ## 2.2. Entrevistas
 
+Se diseñó una investigación mediante entrevistas semiestructuradas a representantes de ambos segmentos. En el material recibido se registran tres entrevistas por segmento y existen tres resúmenes desarrollados en total.
+
 ### 2.2.1. Diseño de entrevistas
+
+El diseño de las guías de entrevista siguió las mejores prácticas para entrevistas de *needfinding* en diseño de experiencia de usuario (Portigal, 2013; Goodman et al., 2012). Las preguntas fueron formuladas en lenguaje abierto para evitar sesgar las respuestas del entrevistado, priorizando la descripción de comportamientos reales (*what people do*) sobre opiniones o intenciones abstractas (*what people say they would do*).
+
+---
 
 #### Segmento 1: Empresas distribuidoras de productos perecibles
 
@@ -238,21 +251,370 @@ Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de 
 21. ¿Qué funciones priorizarían: alertas de vencimiento, reportes de ventas o control automático de stock?
 22. ¿Cuánto estarían dispuestos a pagar mensualmente por una solución como Refrio?
 
+---
 
 ### 2.2.2. Registro de entrevistas
 
+A continuación, se presenta el registro de las entrevistas realizadas a los representantes de cada segmento objetivo.
+
+#### Entrevista 1: Segmento 1 - Empresas distribuidoras de productos perecibles
+
+| Campo | Detalle                                                                |
+| :--- |:-----------------------------------------------------------------------|
+| **Nombres y Apellidos** | Jari Hassan Syeda                                                      |
+| **Edad** | 25 años                                                                |
+| **Distrito** | San Borja                                                              |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQBkamDQs0E0QZzp6K8EqTrFAV0d2fOpyOxr_-1lkXrB5lg?e=Xat18F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D                             |
+| **Timing de inicio y duración** | Inicio: 00:40 - Duración: 10:57 minutos                                |
+| **Evidencia fotográfica** | *<p><img src="../assets/evidencia.png" width="400" alt="Logo AgroFlet"> </p>*                               |
+
+**Resumen de la entrevista:**
+
+Jari Hassan es un profesional de 25 años que se desempeña como Jefe de Operaciones y Logística en una empresa del sector alimenticio con base en San Luis. Trabaja directamente con la distribución de productos perecibles, como lácteos, embutidos y carnes envasadas, por lo que conoce de cerca las exigencias que implica mantener la cadena de frío y el control del inventario en este tipo de operación.
+
+A partir de su experiencia, señala que uno de los principales problemas en su empresa es la falta de visibilidad en tiempo real, tanto del stock como de las condiciones de temperatura durante el transporte. Actualmente combinan un ERP tradicional con registros manuales en Excel, lo que genera desfases en la información, errores de inventario y pérdidas por productos vencidos o en mal estado. También menciona que, cuando ocurre una falla en ruta, muchas veces se enteran demasiado tarde y la mercadería termina en cuarentena o merma.
+
+Jari considera que una solución digital sí podría aportar valor real a su operación, siempre que sea práctica, intuitiva y rápida de implementar. Para él, las funciones más importantes serían:
+
+- Control de lotes con alertas de vencimiento
+- Trazabilidad de vehículos por GPS
+- Monitoreo térmico en vivo con notificaciones inmediatas
+
+Estas funcionalidades ayudarían a prevenir pérdidas, mejorar la distribución y tomar decisiones con mayor rapidez.
+
+
+---
+
+#### Entrevista 2: Segmento 1
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Andrea Villanueva |
+| **Edad** | 28 años |
+| **Distrito** | Ate, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f027_upc_edu_pe/IQAwkquCrpT4Q6ym8PEG1f0RASBYdPZfyQz5VHIqfmZAjqM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=lDgqag |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 10:22 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/interview-Andrea.png" width="400" alt="Logo AgroFlet"> </p> |
+
+**Resumen de la entrevista:**
+
+La entrevistada es una joven profesional de 28 años (Andrea Villanueva), supervisora de almacén y cadena de frío en una distribuidora mediana de embutidos y lácteos ubicada en Ate (Lima). Cuenta con 5 años de experiencia, lidera un equipo de 8 operarios y controla sus cámaras y despachos de forma semimanual mediante hojas de cálculo en Excel y registros físicos en papel.
+
+Su objetivo principal es mantener la integridad de la cadena de frío, evitar devoluciones de clientes por fechas cortas y reducir las mermas por vencimiento mediante una rotación FEFO eficiente.
+
+Para adoptar la plataforma Refrio, exige alertas inmediatas al celular ante fallas térmicas imprevistas, una vista clara de inventario ordenada por caducidad y reportes de trazabilidad en PDF para auditorías, bajo la condición de que la solución demuestre un retorno de inversión claro frente a las pérdidas mensuales de entre S/ 6,000 y S/ 9,000 que registran actualmente.
+
+
+---
+
+#### Entrevista 3: Segmento 1
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Carmen Lara |
+| **Edad** | 28 años |
+| **Distrito** | Ate, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQBGpNUpnoMLR7TSgF4M_dDuARLmdHLlSHPznFRrvc-88Mc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=afu6oR |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 07:51 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/entrevista3-segmento1.png" width="400" alt="Logo AgroFlet"> </p> |
+
+**Resumen de la entrevista:**
+
+La entrevistada, Carmen, tiene 28 años y es supervisora logística y de almacén en una empresa del sector alimenticio ubicada en la zona industrial de Ate. Dirige a un equipo de 15 personas y se encarga de la distribución de productos perecibles como lácteos, embutidos y carnes empacadas. Su gestión diaria del inventario y la cadena de frío es sumamente manual, dependiendo del uso de un ERP muy básico, Excel, kardex impresos y rondas físicas con termómetros manuales cada tres o cuatro horas.
+
+Su mayor frustración son las fuertes pérdidas económicas por mermas, que oscilan entre 4,000 y 6,000 soles mensuales. Esto ocurre por la dificultad de aplicar el método FEFO (lo primero que vence es lo primero que sale) sin un sistema automatizado, y por la falta de monitoreo remoto de sus cámaras de frío. Si un equipo falla de madrugada, recién se enteran al iniciar el turno (7:00 a.m.), lo que arruina la mercadería y provoca el rechazo directo de los supermercados.
+
+Para adoptar una nueva herramienta digital, considera indispensable recibir alertas automáticas (por WhatsApp o correo) ante anomalías en la temperatura, contar con un sistema que gestione el inventario aplicando FEFO sin depender de Excel, y poseer un módulo de reportes. Señala que la gerencia está dispuesta a invertir en la solución, siempre y cuando se demuestre con números que el software se paga solo al reducir las mermas. Además, resalta que la aplicación debe ser muy intuitiva para celulares Android y no generar estrés adicional a los operarios.
+
+
+---
+
+#### Entrevista 1: Segmento 2 - Tiendas y bodegas con productos perecibles
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Ariel David León|
+| **Edad** | 27 años |
+| **Distrito** | Santa Anita, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQB-9wEiXfAhSqhKvU2FxflsAeR7HG2QEPgm4kakGn5XqGs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hJnrer |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 10:50 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/Entrevista_Ariel.png" width="400" alt="Logo AgroFlet"> </p>|
+
+**Resumen de la entrevista:**
+
+El entrevistado es un joven emprendedor de 27 años (Ariel David León) dueño de un pequeño almacén o tienda de abarrotes que abrió hace 9 meses. Trabaja principalmente solo (con ayuda ocasional de familiares porque también estudia) y comercializa productos perecibles como lácteos, fiambres, helados y bebidas, controlando su stock y las fechas de vencimiento de forma totalmente manual.
+
+Su objetivo principal es mantener su negocio abastecido, evitar la pérdida de ventas por falta de stock y no tener mermas económicas por productos caducados, gestionando las fechas de vencimiento a tiempo para vender los productos a menor precio o consumirlos él mismo.
+
+Para adoptar una nueva plataforma digital (Refrío), exige una aplicación en la que pueda ingresar su stock fácilmente y que le brinde alertas automáticas cuando un producto esté próximo a vencerse o cuando le falte mercadería. Además, le interesa que la app le indique cuáles son los productos que más salen (mayor rotación) y que tenga un precio accesible y acorde a su negocio, estima que estaría dispuesto a pagar unos 10 dólares mensuales.
+
+---
+
+#### Entrevista 2: Segmento 2
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Farit Santoyo |
+| **Edad** | 33 |
+| **Distrito** | Surco |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f109_upc_edu_pe/IQAHUZC56RCmQ5ElIDT_9MY1AeSTWPVy3Jfuk3xrlUmHYjY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=P85112 |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:12 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/entrevista2-segmento2.PNG" width="400" alt="Entrevista2-Segmento2"> </p> |
+
+**Resumen de la entrevista:**
+
+En esta entrevista, Farit Alejandro Santoyo Espejo, de 33 años, detalla que gestiona desde hace 8 años una bodega de un solo local en el distrito de Santiago de Surco junto a su esposa y un ayudante a medio tiempo, comercializando lácteos, embutidos y verduras frescas. El control de su inventario es totalmente manual y se realiza "al ojo", anotando en cuadernos con lápiz y papel o confiando en la memoria. Como el inventario casi nunca está actualizado, casi todas las semanas sufren desabastecimiento de productos de alta rotación como pan, queso o leche evaporada.
+
+La revisión de fechas de vencimiento la efectúa producto por producto cada 15 días, pero la falta de tiempo y el espacio reducido del almacén dificultan esta labor. Además, comete el error habitual de colocar la mercadería nueva delante de la antigua en la refrigeradora, ocasionando que un par de veces al mes deba desechar yogures o quesos frescos vencidos. Esta mala gestión provoca que los clientes se impacienten y se vayan a la competencia, generando pérdidas de ventas y de confianza. Para resolver esta situación, requiere una aplicación móvil muy sencilla e intuitiva para el celular que le envíe alertas automáticas de vencimiento y lleve un control automático de stock para saber exactamente qué reponer. Estaría dispuesto a pagar una suscripción de entre 30 y 50 soles mensuales por esta solución, puesto que equivale al dinero que actualmente pierde al botar productos malogrados.
+
+
+---
+
+#### Entrevista 3: Segmento 2
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Diego Lopez|
+| **Edad** | 30 años |
+| **Distrito** | Los Olivos, Lima |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQBSOjBc4PYZQ5k3o-JDBUPkASPPqvVAQuIS1XOXPAX-f6A?e=zayZWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 05:12 minutos |
+| **Evidencia fotográfica** | <p><img src="../assets/segmento2-entrevista3.png" width="400" alt="Logo AgroFlet" > </p> |
+
+**Resumen de la entrevista:**
+
+El entrevistado, Diego, tiene 30 años y administra una bodega en el distrito de Los Olivos junto a su hermano desde hace 5 años. Comercializa principalmente productos perecibles como yogures, quesos, embutidos y verduras básicas. Su gestión de inventario es totalmente manual y empírica, confiando en su memoria ("a puro ojo") y en un cuaderno cuadriculado para anotar pedidos, sin usar ningún sistema digital.
+
+Su mayor frustración (pain point) es la pérdida de dinero por productos vencidos y la pérdida de ventas por quiebre de stock. Debido a la falta de un registro automatizado, el olvido de anotar salidas y el espacio reducido de su local, a menudo no detecta qué productos están próximos a vencer o se agotan sin que él se dé cuenta. Esto provoca que los clientes se impacienten y se vayan con la competencia, además de obligarlo a dar de baja mercadería mermada de forma quincenal.
+
+Para adoptar una herramienta digital, considera indispensable que funcione desde su celular, sea sumamente fácil de usar y le envíe alertas automáticas de vencimiento. Esto le permitiría lanzar promociones rápidas (como un 2x1) y recuperar su inversión. Está dispuesto a pagar una suscripción mensual de entre 20 y 30 soles, considerándolo un gasto manejable (similar a un servicio de streaming), siempre y cuando le garantice dejar de perder mercadería.
+
+
+---
+
 ### 2.2.3. Análisis de entrevistas
 
+El presente análisis sintetiza la información recopilada a partir de las entrevistas realizadas a los representantes de los segmentos objetivos de Refrio.
+
+**Análisis Primer Segmento: Supervisores de Operaciones y Empresas Distribuidoras:** En primer lugar, existe una severa desconexión operativa y falta de visibilidad en tiempo real sobre las condiciones de almacenamiento y transporte de los productos perecibles. Según se extrae de los testimonios recopilados, los responsables de operaciones y almacén gestionan sus procesos bajo una alta incertidumbre técnica, pues el 100% de los entrevistados depende de métodos manuales o semimanuales obsoletos, tales como hojas de cálculo en Excel, registros físicos en papel, kardex impresos o ERPs tradicionales muy básicos. Esta precariedad se agrava drásticamente en el control de frío, donde el 66.7% (2 de 3) efectúa rondas de inspección física con termómetros manuales cada tres o cuatro horas. En consecuencia, si ocurre una avería térmica en ruta o durante la madrugada en las cámaras de frío, el personal se entera horas después o recién al iniciar el turno matutino, imposibilitando cualquier acción inmediata.
+
+En segundo lugar, se evidencia un impacto financiero directo ocasionado por la imposibilidad de aplicar eficientemente la rotación FEFO (First Expired, First Out) y por las rupturas en la cadena de frío. La totalidad de los entrevistados reportó mermas y pérdidas económicas críticas debido a desfases en la información y productos descompuestos o vencidos. De manera puntual, el 66.7% de las empresas representadas (2 de 3) cuantificó pérdidas mensuales recurrentes que oscilan entre los S/ 4,000 y S/ 9,000. Este descontrol no solo deriva en mercadería que termina directamente en cuarentena o desechada, sino que genera fricciones comerciales severas, devoluciones por fechas de caducidad cortas y el rechazo inmediato de lotes completos por parte de supermercados y clientes mayoristas exigentes.
+
+En tercer lugar, se identifica una demanda transversal por automatización intuitiva liderada por profesionales jóvenes que buscan modernizar sus áreas sin sobrecargar al personal de planta. Aunque todos los entrevistados cuenta con un perfil técnico calificado de entre 25 y 28 años con personal a cargo (equipos de 8 a 15 operarios), advierten que los operarios de almacén y transporte requieren herramientas que no les generen estrés operativo. Por ello, exigen que Refrio cuente con alertas automáticas e inmediatas ante anomalías térmicas (vía móvil, WhatsApp o correo) y control digital de lotes con fechas de vencimiento. Asimismo, el 66.7% (2 de 3) considera indispensable la emisión de reportes de trazabilidad en PDF para sustentar auditorías sanitarias, mientras que el 33.3% (1 de 3) prioriza la trazabilidad de los furgones por GPS.
+
+En cuarto lugar, respecto a la viabilidad comercial y el retorno de inversión, existe una disposición unánime a adoptar la plataforma siempre que se demuestre con números claros su impacto económico positivo. Los entrevistados señalaron con firmeza que la gerencia y las jefaturas respaldarán la inversión bajo la condición explícita de comprobar que el costo del software se autofinancia mediante la reducción directa de las mermas que hoy sufren. En síntesis, este segmento requiere una plataforma práctica e intuitiva que sustituya los registros en papel, garantice la trazabilidad de la cadena de frío de punta a punta y evite el rechazo de mercadería mediante alertas.
+
+![Chart 1](../assets/GraficaSegmento1-Refrio.png)
+
+**Análisis Segundo Segmento: Comerciantes Minoristas y Dueños de Bodegas Locales:** En primer lugar, existe una gestión empírica y desorganizada del inventario que genera una pérdida constante de control sobre los productos perecibles. De acuerdo con las entrevistas, todos los comerciantes administran su mercadería de manera totalmente manual: controlan el stock «al ojo», confían en su memoria o anotan de forma esporádica en cuadernos con lápiz y papel, sin utilizar ningún sistema digital ni software de punto de venta. Esta dinámica se debe en gran medida a que son negocios atendidos de manera solitaria o con el apoyo reducido de un familiar, donde el comerciante debe encargarse en paralelo de la atención al público, el cobro y la reposición de mercadería crítica como lácteos, embutidos, helados y quesos frescos.
+
+En segundo lugar, se constata un doble impacto económico negativo: el dinero tirado a la basura por productos vencidos y las ventas frustradas por desabastecimiento. El 100% de los entrevistados (3 de 3) manifestó sufrir pérdidas recurrentes de capital al tener que desechar mercadería descompuesta de sus vitrinas, sumado al quiebre de stock no advertido en artículos de alta rotación. Asimismo, el 66.7% (2 de 3) reconoció cometer errores sistemáticos de rotación física debido al espacio reducido de sus locales y a la falta de tiempo, tales como colocar los productos nuevos delante de los antiguos dentro de las conservadoras. Esto provoca revisiones tardías de caducidad (cada 15 días o al momento de la descomposición), mermas periódicas de yogures y quesos, y el descontento de los clientes, quienes se impacientan y migran hacia la competencia ante la falta de frescura o stock.
+
+En tercer lugar, se identifica una necesidad urgente de simplificación tecnológica adaptada al ritmo de mostrador. A pesar de ser administradores jóvenes, carecen del tiempo para realizar configuraciones técnicas complejas o tipear datos minuciosos. Por esta razón, demandan que la solución funcione directamente de forma sumamente sencilla e intuitiva, requiriendo como funcionalidad indispensable el envío de alertas automáticas de vencimiento próximo. Este aviso temprano es valorado porque les brinda una ventana de acción para rematar la mercadería a menor precio o mediante promociones rápidas (como un 2x1) antes de que caduque, complementado por el interés en conocer qué productos tienen mayor salida para reponer con certeza.
+
+En cuarto lugar, respecto a la monetización y el modelo de negocio, existe una apertura total hacia el pago por suscripción mensual. El 100% de los bodegueros (3 de 3) está dispuesto a pagar una tarifa mensual de entre S/ 20 y S/ 50. Los comerciantes coinciden en que este costo es accesible y totalmente justificable, ya que equivale directamente al dinero que hoy pierden mes a mes tirando comida vencida. En síntesis, el bodeguero necesita una aplicación de bajo costo y mínimo esfuerzo operativo que cuide su capital, le avise cuándo rematar productos por vencer y le evite perder clientes por falta de stock.
+
+![Chart 2](../assets/GraficaSegmento2-Refrio.png)
+
 ## 2.3. Needfinding
+Para llevar a cabo el proceso de needfinding en Refrio, se realizaron entrevistas en profundidad con actores clave pertenecientes a los segmentos objetivo, incluyendo jefes de almacén y supervisores logísticos de empresas distribuidoras medianas, así como propietarios y administradores de bodegas comerciales y puestos de mercado de abastos. Estas conversaciones se centraron en comprender sus dinámicas de trabajo diarias, sus métodos de control de inventario y sus principales frustraciones vinculadas con la ruptura imprevista de la cadena de frío, la caducidad no controlada de alimentos y las pérdidas económicas derivadas del descarte de productos perecibles.
+
+Gracias a esta exploración, se identificaron áreas críticas de mejora en el ecosistema logístico y comercial, tales como la dependencia de mediciones térmicas manuales no continuas, la falta de supervisión durante horarios no laborales, la ausencia de trazabilidad en la rotación de existencias y la limitada adopción de herramientas tecnológicas accesibles frente a soluciones ERP complejas y costosas. Asimismo, se evidenció una marcada brecha operativa entre el registro en papel o Excel y la toma de decisiones preventivas en tiempo real. Durante las entrevistas, surgieron patrones y necesidades recurrentes, como la urgencia de recibir alertas tempranas y automatizadas ante fallas de refrigeración y la necesidad de aplicar de forma sencilla políticas de rotación FEFO (First Expired, First Out). De esta manera, se consolidó una oportunidad clara para desarrollar Refrio, una plataforma digital de código abierto impulsada por telemetría IoT que resguarda la cadena de frío, optimiza la rotación de stock y reduce drásticamente las mermas de alimentos perecibles en el Perú.
 
 ### 2.3.1. User Personas
 
+**Segmento Objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas:**
+![User-Persona-1](../assets/UserPersona-1.png)
+
+<div style="page-break-after: always"></div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+![User-Persona-2](../assets/UserPersona-2.png)
+
+<div style="page-break-after: always"></div>
+
 ### 2.3.2. User Task Matrix
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; text-align: center; width: 100%;">
+  
+  <tr style="background-color:#f2f2f2;">
+    <th rowspan="2">Task</th>
+    <th colspan="2">Javier Mendoza (Jefe de Almacén y Logística)</th>
+    <th colspan="2">Rosa Huamán (Propietaria de Bodega)</th>
+  </tr>
+
+  <tr style="background-color:#f2f2f2;">
+    <th>Frequency</th>
+    <th>Importance</th>
+    <th>Frequency</th>
+    <th>Importance</th>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Monitorear temperatura de cámaras/vitrinas</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Registrar fecha de vencimiento y lote de productos</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Verificar rotación de inventario bajo criterio FEFO</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Detectar desviaciones térmicas fuera de horario laboral</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Revisar manualmente el estado físico de los equipos de frío</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Lanzar promociones o remates por caducidad cercana</td>
+    <td>Low</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Preparar pedidos o despachos para clientes/rutas</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Generar reportes de mermas y pérdidas económicas</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>Medium</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Justificar trazabilidad térmica ante clientes o auditorías</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>Low</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Coordinar mantenimiento de equipos de refrigeración</td>
+    <td>Low</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>High</td>
+  </tr>
+
+  <tr>
+    <td style="text-align: left;">Separar y desechar mercadería deteriorada/vencida</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+  </tr>
+
+</table>
+
+<div style="page-break-after: always"></div>
 
 ### 2.3.3. User Journey Mapping
 
+**Segmento Objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas:**
+![User-JourneyMap-1](../assets/JourneyMap-1.png)
+
+<div style="page-break-after: always"></div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+![User-JourneyMap-2](../assets/JourneyMap-2.png)
+
+<div style="page-break-after: always"></div>
+
 ### 2.3.4. Empathy Mapping
 
+**Segmento Objetivo: Jefes de almacén y supervisores logísticos de distribuidoras medianas:**
+![EmpathyMap-1](../assets/Empathymap-1.png)
+
+<div style="page-break-after: always"></div>
+
+**Segmento Objetivo: Propietarios y administradores de bodegas y puestos en mercados de abastos:**
+![EmpathyMap-2](../assets/Empathymap-2.png)
+
+<div style="page-break-after: always"></div>
+
 ## 2.4. Big Picture EventStorming
+En la sesión de Big Picture EventStorming, el equipo exploró de forma visual el panorama general del dominio de telemetría IoT para la cadena de frío y la gestión inteligente de inventarios perecibles de Refrio. Se identificaron los eventos significativos del ciclo de vida de un lote perecible y su monitoreo ambiental, desde la recepción e ingreso de la mercadería hasta el despacho bajo políticas FEFO y la prevención o reporte de mermas críticas. Asimismo, se integraron los sistemas externos que interactúan con la plataforma, como los nodos sensores IoT y las pasarelas de mensajería para alertas inmediatas, exponiendo los problemas operativos, dudas técnicas y oportunidades de automatización detectados durante la sesión. Esta primera aproximación permitió alinear el entendimiento del equipo y sentar las bases para el diseño detallado de la solución.
+
+**Primera fase: Eventos**
+![Big picture event storming](../assets/EventStorming.png)
+
+**Mapa general:**
+https://miro.com/app/board/uXjVHn63Wg4=/?share_link_id=209836750968
 
 ## 2.5. Ubiquitous Language
+- **Cold Chain (Cadena de Frío):** Conjunto logístico ininterrumpido de etapas de refrigeración o congelación controlada necesario para preservar la frescura, inocuidad y valor biológico de los productos perecibles desde su almacenamiento hasta su consumo.
+
+- **Perishable Batch (Lote Perecible):** Agrupación uniforme de mercancía perecible que comparte el mismo identificador de procedencia, fecha de producción y fecha crítica de caducidad.
+
+- **FEFO Policy - First Expired, First Out (Primero en Vencer, Primero en Salir):** Estrategia de gestión logística que prioriza la rotación y despacho del lote cuya fecha de caducidad es la más próxima, independientemente de su fecha de entrada al almacén.
+
+- **Thermal Telemetry (Telemetría Térmica):** Registro y transmisión periódica de métricas de temperatura y humedad ambiental capturadas por sensores electrónicos remotos.
+
+- **Thermal Threshold (Umbral Térmico):** Margen de temperatura (límite inferior y superior) en el que un producto perecible debe mantenerse para evitar su descomposición o pérdida de inocuidad.
+
+- **Cold Breach (Ruptura de Cadena de Frío):** Evento en el cual la temperatura ambiental supera o cae por debajo del umbral térmico durante un tiempo mayor al margen de tolerancia establecido.
+
+- **IoT Sensor Node (Nodo Sensor IoT):** Dispositivo microcontrolador de hardware abierto dotado de sensores térmicos y módulo de conexión inalámbrica (WiFi/LoRa/GSM) que envía lecturas al sistema.
+
+- **Storage Unit (Unidad de Almacenamiento):** Espacio físico cerrado acondicionado térmicamente para resguardar producto, abarcando cámaras frigoríficas industriales, visicoolers o congeladoras comerciales.
+
+- **Shrinkage / Merma:** Valor económico o volumen físico de alimentos perecibles descartados tras perder aptitud para el consumo debido a expiración o ruptura térmica.
+
+- **Critical Expiration Window (Ventana Crítica de Caducidad):** Intervalo de tiempo previo al vencimiento de un lote donde se disparan notificaciones de advertencia para remate, despacho prioritario o devolución al proveedor.
+
+- **Telemetry Ingestion (Ingesta de Telemetría):** Proceso del backend encargado de recibir, deserializar, validar y persistir el flujo de datos telemétricos provenientes de los brokers de mensajería IoT.
+
+- **Telemetry Loss (Pérdida de Comunicación Telemétrica):** Condición anómala generada por corte eléctrico o pérdida de conexión que impide al nodo sensor enviar lecturas a la plataforma.
+
+- **Thermal Deviation Event (Evento de Desviación Térmica):** Incidencia registrada cuando las mediciones telemétricas superan los parámetros de seguridad establecidos para una cámara o vitrina.
+
+- **Dispatch Order (Orden de Despacho):** Instrucción formal generada para extraer mercancía de la unidad de almacenamiento y prepararla para su transporte o entrega al cliente.
+
+- **Picking List (Lista de Picking):** Documento o vista digital que indica al operario las ubicaciones exactas y los lotes que deben extraerse primero según el algoritmo FEFO.
+
+- **Emergency Alert (Alerta de Emergencia):** Notificación automática de alta prioridad transmitida al smartphone del usuario (SMS, Push o WhatsApp) para advertir de una falla crítica inminente.
+
+- **Clearance Discount (Descuento de Liquidación):** Rebaja de precio sugerida o aplicada a un lote perecible próximo a caducar para acelerar su venta en el mostrador minorista antes de convertirse en merma.
+
+- **Warehouse Supervisor (Supervisor de Almacén):** Usuario del Segmento 1 con permisos para configurar umbrales, gestionar entradas de lotes multisede y auditar reportes ejecutivos.
+
+- **Retail Merchant (Comerciante Minorista):** Usuario del Segmento 2 (bodeguero o puesto de mercado) que utiliza la plataforma móvil para recibir alertas sencillas de temperatura y caducidad.
+
+- **MQTT Broker (Broker MQTT):** Intermediario de mensajería de código abierto liviano basado en el protocolo publish/subscribe, empleado para el transporte de telemetría de bajo consumo.
+
+- **Thermal Recovery Time (Tiempo de Recuperación Térmica):** Lapso que demora una unidad de almacenamiento en retornar a su rango térmico seguro luego de una apertura de puertas prolongada o falla eléctrica momentánea.
+
+- **Shelflife (Vida Útil en Anaquel):** Tiempo remanente garantizado en el que un producto perecible puede ser comercializado y consumido con seguridad tras salir del almacén de distribución.
