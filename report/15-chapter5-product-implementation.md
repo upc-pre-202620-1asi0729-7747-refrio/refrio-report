@@ -424,8 +424,8 @@ Durante el Sprint 1 se realizó el despliegue exitoso del Landing Page utilizand
 9. Se seleccionó la rama `gh-pages` como la fuente oficial de despliegue desde la raíz (`/root`).
 10. Se comprobó la disponibilidad pública y el rendimiento del sitio web en vivo accediendo a su URL pública generada.
 
-![Deployment Evidence 1 - GitHub Pages Settings](../assets/img/chapter-v/despliegue.png)
-![Deployment Evidence 2 - Live Production URL](../assets/img/chapter-v/despliegue-2.png)
+![Deployment Evidence 1 - GitHub Pages Settings](../assets/despliegue.png)
+![Deployment Evidence 2 - Live Production URL](../assets/despliegue-2.png)
 
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
