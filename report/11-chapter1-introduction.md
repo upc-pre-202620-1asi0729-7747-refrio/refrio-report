@@ -4,7 +4,7 @@
 
 ### 1.1.1. Descripción de la Startup
 
-**Refrio** es una startup tecnológica peruana dedicada al diseño y desarrollo de soluciones digitales innovadoras para la gestión de inventario, el monitoreo de temperatura y la distribución eficiente de productos perecibles. La empresa nace con la firme convicción de que la tecnología y el Internet de las Cosas (IoT) pueden convertirse en herramientas clave para reducir pérdidas económicas, evitar el desperdicio de alimentos y asegurar la trazabilidad en la cadena de frío.
+Refrio es una startup tecnológica peruana dedicada al diseño y desarrollo de soluciones digitales innovadoras para la gestión de inventario, el monitoreo de temperatura y la distribución eficiente de productos perecibles. La empresa nace con la firme convicción de que la tecnología y el Internet de las Cosas (IoT) pueden convertirse en herramientas clave para reducir pérdidas económicas, evitar el desperdicio de alimentos y asegurar la trazabilidad en la cadena de frío.
 
 Este propósito responde a una problemática crítica en el contexto nacional: cada año se pierden o desechan en el Perú aproximadamente 12.8 millones de toneladas de alimentos, lo que equivale al 47.76% de la producción total del país (Ministerio de Desarrollo Agrario y Riego [MIDAGRI], 2022). Para hacer frente a este desafío, Refrio trabaja bajo un enfoque centrado en el usuario para lograr una gestión de stock automatizada, predictiva y en tiempo real. Al integrar alertas inteligentes de vencimiento y telemetría de temperatura constante, la plataforma ayuda a empresas distribuidoras y comerciantes locales a optimizar la rotación del inventario mediante políticas FEFO (*First Expired, First Out*).
 
