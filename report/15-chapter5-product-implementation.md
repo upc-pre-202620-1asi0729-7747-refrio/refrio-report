@@ -396,13 +396,13 @@ Durante el Sprint 1, el equipo se enfocó en establecer la base técnica de Refr
 
 En este primer Sprint se completó el diseño y maquetación de la Landing Page pública de Refrio. La interfaz integra las secciones de "Hero", "Propuesta de Valor IoT & FEFO", "Planes de Suscripción (Básico S/ 59, Profesional S/ 129, Empresarial S/ 249)", "Casos de Éxito y Merma Evitada" y el "Formulario de Contacto B2B", siendo 100% responsiva para pantallas móviles y de escritorio.
 
-![Landing Page Desktop 1 - Hero Section](../assets/img/chapter-v/home-hero.png)
-![Landing Page Desktop 2 - Value Proposition](../assets/img/chapter-v/home-features.png)
-![Landing Page Desktop 3 - Pricing Plans](../assets/img/chapter-v/pricing-page.png)
-![Landing Page Desktop 4 - Impact and FEFO Logic](../assets/img/chapter-v/fefo-benefits.png)
-![Landing Page Desktop 5 - FAQ](../assets/img/chapter-v/faqs-page.png)
-![Landing Page Desktop 6 - Contact B2B Form](../assets/img/chapter-v/contact-page.png)
-![Landing Page Desktop 7 - Footer and Navigation](../assets/img/chapter-v/footer.png)
+![Landing Page Desktop 1 - Hero Section](../assets/home-hero.png)
+![Landing Page Desktop 2 - Value Proposition](../assets/home-features.png)
+![Landing Page Desktop 3 - Pricing Plans](../assets/pricing-page.png)
+![Landing Page Desktop 4 - Impact and FEFO Logic](../assets/fefo-benefits.png)
+![Landing Page Desktop 5 - FAQ](../assets/faqs-page.png)
+![Landing Page Desktop 6 - Contact B2B Form](../assets/contact-page.png)
+![Landing Page Desktop 7 - Footer and Navigation](../assets/footer.png)
 
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
@@ -432,4 +432,4 @@ Durante el Sprint 1 se realizó el despliegue exitoso del Landing Page utilizand
 
 Durante este sprint, la colaboración técnica se gestionó íntegramente a través de la plataforma GitHub. Todo el trabajo individual se desarrolló en ramas de características (`feature/*`), las cuales fueron revisadas mediante Pull Requests (PRs) con aprobación cruzada antes de su integración a la rama `develop` y su posterior pase a `main`.
 
-![Team Collaboration Sprint 1 - PRs and Insights](../assets/img/chapter-v/sprint-collaboration.png)
+![Team Collaboration Sprint 1 - PRs and Insights](../assets/sprint-collaboration.png)
