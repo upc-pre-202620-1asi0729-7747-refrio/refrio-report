@@ -385,10 +385,10 @@ Durante el Sprint 1, el equipo se enfocó en establecer la base técnica de Refr
 
 | Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
 |:----------:|:------:|:---------:|:--------------:|:-------------------:|:-------------------:|
-| `refrio/refrio-landing-page` | `main` | `a3c91d4` | `feat: add hero section and value prop` | `Implemented responsive hero section with main B2B CTA and live metrics` | `2026-09-12` |
-| `refrio/refrio-landing-page` | `develop` | `7e2b8f1` | `feat: add pricing tiers table` | `Created interactive pricing cards for Basic, Pro and Enterprise plans` | `2026-09-13` |
-| `refrio/refrio-landing-page` | `develop` | `4d18c9a` | `feat: add b2b contact form validation` | `Implemented corporate validation for RUC and business emails` | `2026-09-14` |
-| `refrio/refrio-landing-page` | `main` | `5c8e2a0` | `style: apply refrio brand palette` | `Standardized primary blue, clean grays and typography hierarchy` | `2026-09-15` |
+| `refrio-website` | `feature/index` | `e052fb4` | `Add files via upload` | `-` | `2026-09-17` |
+| `refrio-website` | `feature/styles` | `f3124db` | `Complete Update styles.css` | `-` | `2026-09-17` |
+| `refrio-website` | `feature/translation` | `bd7d9ab` | `feat(translation): add JS translation code.js` | `-` | `2026-09-17` |
+| `refrio-website` | `main` | `9eb709b` | `Update website` | `-` | `2026-09-17` |
 
 ---
 
