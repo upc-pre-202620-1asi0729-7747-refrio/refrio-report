@@ -12,4 +12,3 @@ Para asegurar el exito comercial y operativo de la plataforma, se recomienda est
 
 Se sugiere tambien disenar tutoriales en video muy didacticos y un proceso de induccion guiado dirigido al segmento de bodegueros, ya que este grupo presenta una mayor resistencia cultural al cambio y necesita comprobar el ahorro economico de forma inmediata. Finalmente, conforme la plataforma adquiera una mayor base de clientes activos, se deberia evaluar la expansion de las funcionalidades del sistema para ofrecer reportes estadisticos mas avanzados, lo cual permitiria a los administradores anticipar de manera mucho mas precisa sus necesidades de compra frente a sus proveedores logisticos.
 
-## Video About-the-Team
