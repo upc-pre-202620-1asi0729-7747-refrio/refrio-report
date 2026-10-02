@@ -168,7 +168,7 @@ Tive ofrece alta precisión industrial en monitoreo térmico, pero su modelo de 
 
 ## 2.2. Entrevistas
 
-Se diseñó una investigación mediante entrevistas semiestructuradas a representantes de ambos segmentos. En el material recibido se registran tres entrevistas por segmento y existen tres resúmenes desarrollados en total.
+Se diseñó una investigación mediante entrevistas semiestructuradas a representantes de ambos segmentos. En el material recibido se registran tres entrevistas por segmento y existen seis resúmenes desarrollados en total.
 
 ### 2.2.1. Diseño de entrevistas
 
