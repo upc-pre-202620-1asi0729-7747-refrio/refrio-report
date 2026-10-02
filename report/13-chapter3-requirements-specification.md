@@ -76,25 +76,90 @@ En esta sección se presenta el Impact Mapping elaborado para el modelo de negoc
 
 ![Impact Map](../assets/ImpactMap.png)
 
-El Impact Mapping elaborado para Refrio ilustra de manera estratégica cómo las funcionalidades de nuestra plataforma tecnológica contribuyen directamente a alcanzar nuestros objetivos de reducción de mermas y adopción en el mercado. Para esta fase del proyecto, hemos definido dos objetivos SMART (Business Goals) enfocados tanto en la adopción empresarial B2B (distribuidoras medianas) como en la penetración en el comercio minorista B2C (bodegas y puestos de abasto).
+El Impact Mapping elaborado para Refrio ilustra de manera estratégica cómo las capacidades de nuestra plataforma tecnológica contribuyen de forma directa a alcanzar nuestros objetivos de reducción de mermas y adopción en el mercado[cite: 1]. Para garantizar una trazabilidad auditable y exhaustiva sobre la totalidad del backlog (50 elementos), la solución se estructura rigurosamente a partir de los dos Business Goals (BG) principales definidos para el proyecto:
 
-**Alineación del Business Goal 1 (Adopción B2B - Distribuidoras Medianas):**
-Nuestro primer objetivo de negocio busca lograr la suscripción activa de 40 empresas distribuidoras medianas de alimentos perecibles en el plazo de 12 meses en Lima Metropolitana y principales ciudades logísticas. Para alcanzar esta meta comercial, el actor fundamental es Javier Mendoza (Jefe de Almacén y Operaciones Frigoríficas).
-* En el caso de los supervisores y jefes de almacén, el impacto conductual que necesitamos generar es que abandonen el control manual en papel y las planillas de Excel desarticuladas, adoptando la telemetría continua para erradicar las mermas por ruptura térmica y optimizar la rotación de stock perecible.
-* Como startup de software, provocaremos este impacto implementando el *Módulo Web de Telemetría IoT en Tiempo Real, Alertas Críticas y Gestión de Inventario FEFO* (Deliverable). Este entregable se materializa en historias de usuario clave para vincular sensores a cámaras frigoríficas, ingestar y visualizar telemetría en vivo, recibir alertas automáticas por ruptura térmica y generar planes de picking según caducidad para auditorías de calidad (US12, US14, US18, US23, US29, US30, US35).
+**Alineación del Business Goal 1 (Adopción B2B - Distribuidoras Medianas):**  
+"Lograr la suscripción activa de 40 empresas distribuidoras medianas de alimentos perecibles a los planes corporativos de Refrio durante los primeros 12 meses de lanzamiento comercial en Lima Metropolitana".
+* **Persona:** Javier Mendoza (Jefe de Almacén y Operaciones Frigoríficas) y personal operativo de planta.
+* **Impact:** "Abandonar el registro térmico manual en papel/Excel y adoptar la telemetría continua para erradicar las mermas por ruptura térmica y optimizar la rotación de stock perecible".
+* **Deliverable:** "Módulo Web de Telemetría IoT en Tiempo Real, Alertas Críticas y Gestión de Inventario FEFO".
+* **Cobertura en el Backlog:** Este entregable corporativo engloba la captación B2B, la seguridad de accesos organizacionales con RUC, el emparejamiento y lectura telemétrica de cámaras frigoríficas, el motor de alertas con escalamiento jerárquico, la priorización FEFO con validación en andén, la certificación formal en PDF/QR, los paneles de ROI y toda la infraestructura backend/IoT requerida para sostener la operación en almacenes (US01, US02, US03, US04, US05, US06, US08, US09, US10, US11, US12, US14, US15, US16, US17, US18, US19, US20, US21, US23, US24, US26, US27, US28, US29, US30, US33, US34, US35, US36, US37, US38, US40, TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09)[cite: 1].
 
-**Alineación del Business Goal 2 (Alcance B2C / Minorista - Bodegas de Barrio):**
-El segundo objetivo tiene como meta alcanzar más de 350 bodegas comerciales y puestos de mercado de abastos activos que utilicen la versión móvil de Refrio en sus primeros 6 meses de operación. La persona representativa de este segmento es Rosa Huamán (Propietaria de Bodega Comercial).
-* Para lograr este volumen de adopción, el impacto necesario es que la comerciante adquiera el hábito de registrar con facilidad las fechas de caducidad de sus productos de alta rotación y actúe de inmediato frente a las notificaciones preventivas, liquidando o rotando la mercadería antes de su descomposición.
-* El entregable provisto para viabilizar este comportamiento es la *Aplicación Móvil Ligera de Control de Caducidades, Detección de Desconexión y Sugerencias de Remate* (Deliverable). Este módulo se traduce en User Stories intuitivas diseñadas para registrar productos en pocos toques, recibir alarmas sonoras preventivas ante bajas de tensión eléctrica o alza de calor nocturno, y consultar un semáforo visual de frescura que guíe las ventas en mostrador (US07, US13, US22, US25, US31, US32, US39).
+**Alineación del Business Goal 2 (Alcance B2C / Minorista - Bodegas y Mercados):**  
+"Alcanzar más de 350 bodegas comerciales y puestos de mercado activos que utilicen la versión móvil de Refrio para prevenir pérdidas por caducidad en sus primeros 6 meses de operación".
+* **Persona:** Rosa Huamán (Propietaria de Bodega Comercial / Minorista).
+* **Impact:** "Registrar las fechas de vencimiento de sus productos de alta rotación y responder a las notificaciones preventivas para liquidar o rotar el stock antes de que se malogre".
+* **Deliverable:** "Aplicación Móvil Ligera de Control de Caducidades, Detección de Desconexión y Sugerencias de Remate".
+* **Cobertura en el Backlog:** Este entregable minorista materializa el onboarding rápido por SMS, el registro óptico sin fricción de caducidades, la detección de apagones nocturnos en vitrinas comerciales, las alertas sonoras preventivas, el semáforo visual de frescura para exhibición en mostrador, las ofertas de remate rápido, el balance simplificado de ahorro y la auditoría programada de vencimientos (US07, US13, US22, US25, US31, US32, US39, TS10)[cite: 1].
 
-En conclusión, este mapa confirma que ninguna historia de usuario de Refrio ha sido concebida de forma aislada; cada requerimiento técnico y funcional constituye el soporte directo de una cadena de valor orientada a salvaguardar los alimentos perecibles, reducir costos operativos y asegurar el retorno de inversión para nuestros clientes y nuestra organización.
+---
+
+### Matriz de Trazabilidad Integral: Impact Mapping vs. Product Backlog (50 Elementos)
+
+La siguiente matriz documenta de forma auditable la contribución estratégica de cada elemento del backlog, demostrando su vinculación directa con el deliverable correspondiente, el cambio conductual/operativo esperado y su Business Goal de origen[cite: 1]:
+
+| Epic ID | Story ID | Título de la Historia | Deliverable del Impact Mapping | Impacto Conductual / Operativo | Business Goal Soportado |
+|:---|:---:|:---|:---|:---|:---:|
+| **EP01** | **US01** | Visualización de Hero Section | Módulo Web de Telemetría IoT y Gestión FEFO | Conocer la propuesta de valor e iniciar el flujo de suscripción corporativa | **BG1** |
+| **EP01** | **US02** | Visualización de Planes y Tarifas | Módulo Web de Telemetría IoT y Gestión FEFO | Validar que el retorno de inversión compense la suscripción B2B | **BG1** |
+| **EP01** | **US03** | Formulario de Demostración B2B | Módulo Web de Telemetría IoT y Gestión FEFO | Remitir datos fiscales (RUC) para solicitar un piloto técnico en almacén | **BG1** |
+| **EP01** | **US04** | Casos de Éxito y Ahorro | Módulo Web de Telemetría IoT y Gestión FEFO | Reducir la resistencia al cambio hacia herramientas de control digital | **BG1** |
+| **EP01** | **US05** | Acceso a Plataforma Web / Móvil | Módulo Web de Telemetría IoT y Gestión FEFO | Ingresar a la consola de turno evitando periodos ciegos de supervisión | **BG1** |
+| **EP02** | **US06** | Registro de Distribuidora Mediana | Módulo Web de Telemetría IoT y Gestión FEFO | Migrar la gestión física en papel a la administración centralizada | **BG1** |
+| **EP02** | **US07** | Registro de Comerciante Minorista | App Móvil Ligera de Caducidades y Remate | Habilitar el control preventivo en vitrinas en menos de 5 minutos | **BG2** |
+| **EP02** | **US08** | Inicio de Sesión Multi-rol | Módulo Web de Telemetría IoT y Gestión FEFO | Operar según atribuciones asegurando la trazabilidad de acciones | **BG1** |
+| **EP02** | **US09** | Recuperación de Contraseña | Módulo Web de Telemetría IoT y Gestión FEFO | Reanudar la supervisión de alertas evitando desatenciones operativas | **BG1** |
+| **EP02** | **US10** | Configuración de Perfil y Almacén | Módulo Web de Telemetría IoT y Gestión FEFO | Mapear la distribución geográfica de cámaras frigoríficas en sedes | **BG1** |
+| **EP03** | **US11** | Registro de Categoría de Alimento | Módulo Web de Telemetría IoT y Gestión FEFO | Parametrizar rangos biológicos y límites térmicos seguros de stock| **BG1** |
+| **EP03** | **US12** | Alta de Lote Perecible (Batch) | Módulo Web de Telemetría IoT y Gestión FEFO | Ingresar mercadería con control estricto de fechas de vencimiento | **BG1** |
+| **EP03** | **US13** | Escaneo Rápido de Caducidad | App Móvil Ligera de Caducidades y Remate | Sostener el hábito diario de ingreso de productos sin demoras en tienda | **BG2** |
+| **EP03** | **US14** | Asignación de Lote a Unidad | Módulo Web de Telemetría IoT y Gestión FEFO | Vincular lotes a sensores para monitoreo ambiental ininterrumpido| **BG1** |
+| **EP03** | **US15** | Parametrización de Ventana Crítica | Módulo Web de Telemetría IoT y Gestión FEFO | Anticipar la salida de lotes configurando alertas de proximidad| **BG1** |
+| **EP03** | **US16** | Ajuste Manual por Daño Físico | Módulo Web de Telemetría IoT y Gestión FEFO | Declarar bajas oportunas para mantener la veracidad del stock físico | **BG1** |
+| **EP04** | **US17** | Vinculación de Nodo Sensor IoT | Módulo Web de Telemetría IoT y Gestión FEFO | Enlazar cámaras con sensores IoT reemplazando termómetros manuales| **BG1** |
+| **EP04** | **US18** | Ingesta y Monitoreo Térmico en Vivo | Módulo Web de Telemetría IoT y Gestión FEFO | Monitorear temperatura en tiempo real para intervenir ante desvíos | **BG1** |
+| **EP04** | **US19** | Umbrales Térmicos por Cámara | Módulo Web de Telemetría IoT y Gestión FEFO | Configurar rangos específicos para refrigerados (4°C) o congelados (-18°C) | **BG1** |
+| **EP04** | **US20** | Historial Gráfico de Telemetría | Módulo Web de Telemetría IoT y Gestión FEFO | Analizar curvas de 24 horas y prevenir fallas nocturnas de ciclado | **BG1** |
+| **EP04** | **US21** | Calibración de Sensores Térmicos | Módulo Web de Telemetría IoT y Gestión FEFO | Aplicar compensación técnica (°C) garantizando lecturas certificadas | **BG1** |
+| **EP04** | **US22** | Detección de Desconexión Nocturna | App Móvil Ligera de Caducidades y Remate | Reaccionar de inmediato ante cortes eléctricos nocturnos en vitrinas | **BG2** |
+| **EP05** | **US23** | Alerta Crítica por Ruptura Térmica | Módulo Web de Telemetría IoT y Gestión FEFO | Activar protocolos de contingencia ante quiebres térmicos en cámara | **BG1** |
+| **EP05** | **US24** | Notificación de Lotes por Vencer | Módulo Web de Telemetría IoT y Gestión FEFO | Recibir reporte consolidado diario para priorizar la colocación de stock | **BG1** |
+| **EP05** | **US25** | Alerta Sonora en Móvil de Bodega | App Móvil Ligera de Caducidades y Remate | Escuchar alarmas preventivas para no olvidar rotar productos lácteos | **BG2** |
+| **EP05** | **US26** | Configuración de Canales (WhatsApp) | Módulo Web de Telemetría IoT y Gestión FEFO | Reducir el tiempo de respuesta operativa a menos de 10 minutos | **BG1** |
+| **EP05** | **US27** | Confirmación y Cierre de Alerta | Módulo Web de Telemetría IoT y Gestión FEFO | Registrar causa y acción correctiva para auditorías operativas| **BG1** |
+| **EP05** | **US28** | Escalamiento Automático de Alertas | Módulo Web de Telemetría IoT y Gestión FEFO | Escalar a gerencia contingencias térmicas desatendidas en 20 minutos | **BG1** |
+| **EP06** | **US29** | Inventario Ordenado por FEFO | Módulo Web de Telemetría IoT y Gestión FEFO | Despachar primero los lotes más antiguos erradicando mermas en andén | **BG1** |
+| **EP06** | **US30** | Generación de Picking Sugerido | Módulo Web de Telemetría IoT y Gestión FEFO | Extraer pallets de cámara siguiendo rutas optimizadas por caducidad| **BG1** |
+| **EP06** | **US31** | Semáforo Visual de Frescura | App Móvil Ligera de Caducidades y Remate | Ubicar al frente del mostrador los productos marcados en rojo | **BG2** |
+| **EP06** | **US32** | Registro de Oferta de Remate Rápido | App Móvil Ligera de Caducidades y Remate | Vender a menor precio mercadería por vencer antes de su descomposición | **BG2** |
+| **EP06** | **US33** | Validación de Despacho por Escaneo | Módulo Web de Telemetría IoT y Gestión FEFO | Bloquear la salida de pallets que no respeten la secuencia FEFO | **BG1** |
+| **EP07** | **US34** | Hoja de Ruta Térmica de Lote | Módulo Web de Telemetría IoT y Gestión FEFO | Certificar a los clientes mayoristas la continuidad de la cadena de frío | **BG1** |
+| **EP07** | **US35** | Exportación de Certificado en PDF | Módulo Web de Telemetría IoT y Gestión FEFO | Generar certificados con firma digital para adjuntar a guías de remisión | **BG1** |
+| **EP07** | **US36** | Consulta Pública de Frío vía QR | Módulo Web de Telemetría IoT y Gestión FEFO | Proveer transparencia y validación pública a receptores de mercadería| **BG1** |
+| **EP07** | **US37** | Registro Formal de Merma Justificada | Módulo Web de Telemetría IoT y Gestión FEFO | Clasificar causas de descarte para saneamiento y análisis preventivo| **BG1** |
+| **EP08** | **US38** | Dashboard Ejecutivo de Ahorro | Módulo Web de Telemetría IoT y Gestión FEFO | Monitorear el ROI y reducción de merma frente al histórico manual| **BG1** |
+| **EP08** | **US39** | Resumen de Ganancia para Bodegas | App Móvil Ligera de Caducidades y Remate | Visualizar soles salvados mensualmente para comprobar el beneficio | **BG2** |
+| **EP08** | **US40** | Exportación de Data Histórica | Módulo Web de Telemetría IoT y Gestión FEFO | Disponer de datasets estructurados para auditorías y modelado analítico | **BG1** |
+| **EP09** | **TS01** | Endpoint Autenticación JWT | Módulo Web de Telemetría IoT y Gestión FEFO | Habilitar sesiones seguras y control de accesos RBAC en la plataforma| **BG1 (Habilitador)** |
+| **EP09** | **TS02** | Endpoint Registro Unificado | Módulo Web de Telemetría IoT y Gestión FEFO | Procesar el alta de cuentas y validación fiscal automatizada | **BG1 (Habilitador)** |
+| **EP09** | **TS03** | Endpoints de Inventario de Lotes | Módulo Web de Telemetría IoT y Gestión FEFO | Persistir existencias físicas y estados de caducidad en base de datos | **BG1 (Habilitador)** |
+| **EP09** | **TS04** | Algoritmo y Endpoint Picking FEFO | Módulo Web de Telemetría IoT y Gestión FEFO | Ejecutar el motor de cálculo que determina la secuencia de extracción | **BG1 (Habilitador)** |
+| **EP09** | **TS05** | Ingesta Telemétrica MQTT / HTTP | Módulo Web de Telemetría IoT y Gestión FEFO | Ingestar series temporales de sensores IoT de alta frecuencia sin pérdida | **BG1 (Habilitador)** |
+| **EP09** | **TS06** | Pipeline Brecha Térmica | Módulo Web de Telemetría IoT y Gestión FEFO | Evaluar métricas telemétricas en segundo plano contra rangos seguros | **BG1 (Habilitador)** |
+| **EP09** | **TS07** | Servicio Notificaciones Multicanal | Módulo Web de Telemetría IoT y Gestión FEFO | Despachar eventos críticos a WhatsApp y canales push de los supervisores | **BG1 (Habilitador)** |
+| **EP09** | **TS08** | Endpoint Certificado QR Público | Módulo Web de Telemetría IoT y Gestión FEFO | Exponer servicios de consulta pública y resolución de certificados | **BG1 (Habilitador)** |
+| **EP09** | **TS09** | Endpoints de KPIs y Merma | Módulo Web de Telemetría IoT y Gestión FEFO | Calcular métricas agregadas de eficiencia y capital salvado | **BG1 (Habilitador)** |
+| **EP09** | **TS10** | Cron Job Auditoría Nocturna | App Móvil Ligera de Caducidades y Remate | Evaluar diariamente a medianoche los lotes que entran a ventana crítica | **BG2 (Habilitador)** |
+
+---
 
 ## 3.3. Product Backlog
 
-En esta sección se presenta el Product Backlog del proyecto Refrio, el cual consolida y prioriza todas las historias de usuario y tareas técnicas necesarias para construir la solución integral.
+## 3.3. Product Backlog
 
-El orden de los elementos ha sido rigurosamente determinado por el valor para el negocio, asegurando que los entregables con mayor impacto en la captación comercial y la funcionalidad *core* de resguardo de cadena de frío e inventario FEFO se desarrollen de manera prioritaria. Por consiguiente, las historias vinculadas con el portal web público (Landing Page) encabezan el backlog para iniciar el proceso de validación y captación desde el Sprint 1, mientras que los módulos analíticos avanzados, configuraciones secundarias y optimizaciones de exportación se abordan en los sprints posteriores.
+En esta sección se presenta el Product Backlog del proyecto Refrio, el cual consolida y prioriza todas las historias de usuario y tareas técnicas necesarias para construir la solución integral (completando los 50 elementos).
+
+El orden de los elementos ha sido rigurosamente determinado por el valor para el negocio y dependencias arquitectónicas, asegurando que los entregables con mayor impacto en la captación comercial y la funcionalidad *core* de resguardo de cadena de frío e inventario FEFO se desarrollen de manera prioritaria. Por consiguiente, las historias vinculadas con el portal web público (Landing Page) encabezan el backlog para iniciar el proceso de validación y captación desde el Sprint 1, mientras que los módulos analíticos avanzados, configuraciones secundarias y optimizaciones de exportación se abordan en los sprints posteriores.
 
 | # Orden | User Story ID | Título | Story Points | Sprint Asignado | Status |
 |:---:|:---:|:---|:---:|:---:|:---:|
@@ -146,6 +211,6 @@ El orden de los elementos ha sido rigurosamente determinado por el valor para el
 | 46 | US10 | Configuración de Perfil y Almacén | 3 | Sprint 9 | To Do |
 | 47 | US38 | Dashboard Ejecutivo de Mermas Evitadas | 5 | Sprint 10 | To Do |
 | 48 | US39 | Resumen Simplificado de Ganancia Ahorrada para Bodegas | 3 | Sprint 10 | To Do |
-| 49 | TS09 | Endpoints para Dashboards Analíticos y KPIs de Merma | 5 | Sprint 10 | To Do |
-| 50 | US40 | Exportación de Data Histórica en Excel/CSV | 8 | Sprint 10 | To Do |
+| 49 | US40 | Exportación de Data Histórica en Excel/CSV | 3 | Sprint 10 | To Do |
+| 50 | TS09 | Endpoints para Dashboards Analíticos y KPIs de Merma | 5 | Sprint 10 | To Do |
 ---
