@@ -76,27 +76,27 @@ En esta sección se presenta el Impact Mapping elaborado para el modelo de negoc
 
 ![Impact Map](../assets/ImpactMap.png)
 
-El Impact Mapping elaborado para Refrio ilustra de manera estratégica cómo las capacidades de nuestra plataforma tecnológica contribuyen de forma directa a alcanzar nuestros objetivos de reducción de mermas y adopción en el mercado[cite: 1]. Para garantizar una trazabilidad auditable y exhaustiva sobre la totalidad del backlog (50 elementos), la solución se estructura rigurosamente a partir de los dos Business Goals (BG) principales definidos para el proyecto:
+El Impact Mapping elaborado para Refrio ilustra de manera estratégica cómo las capacidades de nuestra plataforma tecnológica contribuyen de forma directa a alcanzar nuestros objetivos de reducción de mermas y adopción en el mercado. Para garantizar una trazabilidad auditable y exhaustiva sobre la totalidad del backlog , la solución se estructura rigurosamente a partir de los dos Business Goals (BG) principales definidos para el proyecto:
 
 **Alineación del Business Goal 1 (Adopción B2B - Distribuidoras Medianas):**  
 "Lograr la suscripción activa de 40 empresas distribuidoras medianas de alimentos perecibles a los planes corporativos de Refrio durante los primeros 12 meses de lanzamiento comercial en Lima Metropolitana".
 * **Persona:** Javier Mendoza (Jefe de Almacén y Operaciones Frigoríficas) y personal operativo de planta.
 * **Impact:** "Abandonar el registro térmico manual en papel/Excel y adoptar la telemetría continua para erradicar las mermas por ruptura térmica y optimizar la rotación de stock perecible".
 * **Deliverable:** "Módulo Web de Telemetría IoT en Tiempo Real, Alertas Críticas y Gestión de Inventario FEFO".
-* **Cobertura en el Backlog:** Este entregable corporativo engloba la captación B2B, la seguridad de accesos organizacionales con RUC, el emparejamiento y lectura telemétrica de cámaras frigoríficas, el motor de alertas con escalamiento jerárquico, la priorización FEFO con validación en andén, la certificación formal en PDF/QR, los paneles de ROI y toda la infraestructura backend/IoT requerida para sostener la operación en almacenes (US01, US02, US03, US04, US05, US06, US08, US09, US10, US11, US12, US14, US15, US16, US17, US18, US19, US20, US21, US23, US24, US26, US27, US28, US29, US30, US33, US34, US35, US36, US37, US38, US40, TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09)[cite: 1].
+* **Cobertura en el Backlog:** Este entregable corporativo engloba la captación B2B, la seguridad de accesos organizacionales con RUC, el emparejamiento y lectura telemétrica de cámaras frigoríficas, el motor de alertas con escalamiento jerárquico, la priorización FEFO con validación en andén, la certificación formal en PDF/QR, los paneles de ROI y toda la infraestructura backend/IoT requerida para sostener la operación en almacenes (US01, US02, US03, US04, US05, US06, US08, US09, US10, US11, US12, US14, US15, US16, US17, US18, US19, US20, US21, US23, US24, US26, US27, US28, US29, US30, US33, US34, US35, US36, US37, US38, US40, TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09).
 
 **Alineación del Business Goal 2 (Alcance B2C / Minorista - Bodegas y Mercados):**  
 "Alcanzar más de 350 bodegas comerciales y puestos de mercado activos que utilicen la versión móvil de Refrio para prevenir pérdidas por caducidad en sus primeros 6 meses de operación".
 * **Persona:** Rosa Huamán (Propietaria de Bodega Comercial / Minorista).
 * **Impact:** "Registrar las fechas de vencimiento de sus productos de alta rotación y responder a las notificaciones preventivas para liquidar o rotar el stock antes de que se malogre".
 * **Deliverable:** "Aplicación Móvil Ligera de Control de Caducidades, Detección de Desconexión y Sugerencias de Remate".
-* **Cobertura en el Backlog:** Este entregable minorista materializa el onboarding rápido por SMS, el registro óptico sin fricción de caducidades, la detección de apagones nocturnos en vitrinas comerciales, las alertas sonoras preventivas, el semáforo visual de frescura para exhibición en mostrador, las ofertas de remate rápido, el balance simplificado de ahorro y la auditoría programada de vencimientos (US07, US13, US22, US25, US31, US32, US39, TS10)[cite: 1].
+* **Cobertura en el Backlog:** Este entregable minorista materializa el onboarding rápido por SMS, el registro óptico sin fricción de caducidades, la detección de apagones nocturnos en vitrinas comerciales, las alertas sonoras preventivas, el semáforo visual de frescura para exhibición en mostrador, las ofertas de remate rápido, el balance simplificado de ahorro y la auditoría programada de vencimientos (US07, US13, US22, US25, US31, US32, US39, TS10).
 
 ---
 
-### Matriz de Trazabilidad Integral: Impact Mapping vs. Product Backlog (50 Elementos)
+### Matriz de Trazabilidad Integral: Impact Mapping vs. Product Backlog
 
-La siguiente matriz documenta de forma auditable la contribución estratégica de cada elemento del backlog, demostrando su vinculación directa con el deliverable correspondiente, el cambio conductual/operativo esperado y su Business Goal de origen[cite: 1]:
+La siguiente matriz documenta de forma auditable la contribución estratégica de cada elemento del backlog, demostrando su vinculación directa con el deliverable correspondiente, el cambio conductual/operativo esperado y su Business Goal de origen:
 
 | Epic ID | Story ID | Título de la Historia | Deliverable del Impact Mapping | Impacto Conductual / Operativo | Business Goal Soportado |
 |:---|:---:|:---|:---|:---|:---:|
