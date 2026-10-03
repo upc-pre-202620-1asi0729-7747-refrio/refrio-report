@@ -312,21 +312,21 @@ And the product should appear in the inventory list
 ```
 ### 5.1.4. Software Deployment Configuration
 
-El despliegue continuo del sitio web de **Refrio** se gestiona a través de **GitHub Pages**, garantizando alta disponibilidad, conexión segura vía HTTPS y actualización automática ante nuevos cambios. El procedimiento de configuración comprende los siguientes pasos:
+El despliegue continuo del sitio web de Refrio se gestiona a través de GitHub Pages, garantizando alta disponibilidad, conexión segura vía HTTPS y actualización automática ante nuevos cambios validados en el entorno de integración. El procedimiento de configuración comprende los siguientes pasos:
 
 1. **Selección del Entorno de Despliegue:**  
-   En el repositorio `refrio-website` de la organización `upc-pre-202620-1asi0729-7747-refrio`, se accede a la pestaña **Settings** y se selecciona el apartado **Pages** en el menú lateral de configuración.
+   En el repositorio `refrio-website` de la organización `upc-pre-202620-1asi0729-7747-refrio`, se accede a la pestaña **Settings** y se selecciona el apartado **Pages** en el menú lateral izquierdo.
 
 2. **Definición de la Fuente de Compilación (Build and deployment):**
-    * **Source:** Se configura en la opción `Deploy from a branch`.
-    * **Branch:** Se selecciona la rama de producción `main` con el directorio raíz (`/root`) para el servicio de los archivos estáticos (HTML5, CSS3, JavaScript).
+   * **Source:** Se selecciona la opción `Deploy from a branch`.
+   * **Branch:** Se define la rama `develop` con el directorio raíz (`/root`) como fuente activa de publicación para el servicio de los archivos estáticos (HTML5, CSS3, JavaScript).
 
 3. **Ejecución del Flujo Automatizado:**  
-   Al guardar los parámetros, GitHub dispara de forma automática el flujo de trabajo (`pages-build-deployment`) mediante GitHub Actions, compilando los recursos y desplegándolos en el entorno de producción.
+   Al registrar los parámetros, GitHub dispara de forma automática el flujo de trabajo (`pages build and deployment`) mediante GitHub Actions cada vez que se integra código a la rama seleccionada, compilando y sirviendo los assets estáticos.
 
 4. **Verificación y Enlace de Producción:**  
-   Se confirma el despliegue verificando la respuesta exitosa en el dominio público asignado con su respectivo certificado SSL/TLS activo:
-    * **URL de despliegue:** [[https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/][(https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/)](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website)](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website)
+   Se confirma el despliegue verificando la respuesta en el dominio público asignado y la activación automática de la directiva `Enforce HTTPS`:
+   * **URL de despliegue:** [https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/)
 
 
 ## 5.2. Landing Page, Services & Applications Implementation
@@ -421,17 +421,14 @@ En este primer Sprint se completó el diseño y maquetación de la Landing Page 
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 1 se realizó el despliegue exitoso del Landing Page utilizando la plataforma GitHub Pages:
-1. Se creó el repositorio oficial `refrio-landing-page` dentro de la organización de GitHub del proyecto.
-2. Se configuró el flujo de trabajo local y remoto mediante Git utilizando la convención GitFlow (`main` y `develop`).
-3. Se instaló la herramienta y dependencia de empaquetado `gh-pages` para gestionar el pipeline de entrega continua.
-4. Se configuró el archivo `vite.config.js` estableciendo la propiedad `base: '/refrio-landing-page/'`.
-5. Se agregaron los scripts de automatización `"build": "vite build"` y `"deploy": "gh-pages -d dist"` en el archivo `package.json`.
-6. Se ejecutó la compilación de producción mediante el comando `npm run build`, optimizando assets CSS, HTML y bundles de JavaScript.
-7. Se ejecutó el despliegue automático hacia la rama de publicación con el comando `npm run deploy`.
-8. Se verificó la activación del servicio en GitHub ingresando a `Settings > Pages`.
-9. Se seleccionó la rama `gh-pages` como la fuente oficial de despliegue desde la raíz (`/root`).
-10. Se comprobó la disponibilidad pública y el rendimiento del sitio web en vivo accediendo a su URL pública generada.
+Durante el Sprint 1 se completó el despliegue del Landing Page utilizando la infraestructura estática de GitHub Pages, siguiendo un flujo reproducible y validado sobre la rama de integración activa:
+
+1. Se consolidaron las características desarrolladas en las distintas ramas (`feature/*`) hacia la rama `develop` mediante Pull Requests revisados por el equipo.
+2. En el repositorio `refrio-website`, se ingresó a la sección `Settings > Pages`.
+3. En la sección Build and deployment, se configuró la opción `Deploy from a branch`, estableciendo la rama `develop` y la carpeta raíz (`/root`) como origen de publicación.
+4. El motor de GitHub Actions ejecutó automáticamente el workflow `pages build and deployment` tras la confirmación de cambios realizada por el responsable de integración (`ARivas3008`).
+5. Se verificó el estado activo del servicio (`Your site is live at...`) con la directiva `Enforce HTTPS` habilitada.
+6. Se auditó la carga en vivo del sitio web accediendo a la URL pública generada ([https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/)), validando la visualización del Hero section, la navegación responsive y la correcta resolución de estilos y assets.
 
 ![Deployment Evidence 1 - GitHub Pages Settings](../assets/despliegue.png)
 ![Deployment Evidence 2 - Live Production URL](../assets/despliegue-2.png)
