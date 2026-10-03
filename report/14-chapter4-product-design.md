@@ -620,7 +620,7 @@ A continuación se detalla la arquitectura de ingestión paralela del contexto, 
 
 #### BC3 — Inventory & FEFO Dispatch Operations Context
 
-Núcleo operativo encargado de gestionar la vida útil de los productos perecibles[cite: 1]. Los agregados Batch, FoodCategory y PickingPlan procesan comandos como `RegisterBatchIntake`, `AuditExpirationWindows` y `GenerateFEFOPickingPlan`, emitiendo eventos clave como `BatchIntakeRecorded`, `BatchCriticalExpirationDetected` y `BatchDispatched`. El algoritmo FEFO asegura que las órdenes de picking prioricen automáticamente los lotes más antiguos antes de permitir la validación de salida.
+Núcleo operativo encargado de gestionar la vida útil de los productos perecibles. Los agregados Batch, FoodCategory y PickingPlan procesan comandos como `RegisterBatchIntake`, `AuditExpirationWindows` y `GenerateFEFOPickingPlan`, emitiendo eventos clave como `BatchIntakeRecorded`, `BatchCriticalExpirationDetected` y `BatchDispatched`. El algoritmo FEFO asegura que las órdenes de picking prioricen automáticamente los lotes más antiguos antes de permitir la validación de salida.
 
 ![Event Storming Inventory FEFO](../assets/03-inventory-fefo-event-storming.png)
 
@@ -717,7 +717,7 @@ El diseño interno organiza la solución en módulos de dominio cohesivos y desa
 </p>
 
 ## 4.7. Software Object-Oriented Design
-El diseño orientado a objetos de la plataforma **Refrio** aplica las buenas prácticas de la programación orientada a objetos (POO) y los principios SOLID, buscando alta cohesión y bajo acoplamiento entre los componentes del sistema. Con el propósito de asegurar una arquitectura mantenible y escalable para la gestión de productos perecibles y el control de la cadena de frío, el diseño se divide en dos perspectivas:
+El diseño orientado a objetos de la plataforma Refrio aplica las buenas prácticas de la programación orientada a objetos (POO) y los principios SOLID, buscando alta cohesión y bajo acoplamiento entre los componentes del sistema. Con el propósito de asegurar una arquitectura mantenible y escalable para la gestión de productos perecibles y el control de la cadena de frío, el diseño se divide en dos perspectivas:
 
 1. **Diseño de Dominio del Backend (Tactical DDD):** Modela la lógica del negocio mediante un enfoque táctico de Diseño Guiado por el Dominio (*Domain-Driven Design*), delimitando las responsabilidades en *Bounded Contexts* (Contextos Delimitados). Cada contexto agrupa entidades del dominio, raíces agregadas (*Aggregate Roots*), objetos de valor (*Value Objects*), servicios y repositorios.
 2. **Diseño de Arquitectura del Frontend (Component-Based Architecture):** Modela la estructura interna de la aplicación web cliente bajo una arquitectura modular por capas, separando los componentes visuales de presentación, la persistencia y gestión reactiva de estado en memoria (*Stores*), los servicios de comunicación asíncrona con el API REST y los contratos de datos tipados (*DTOs*).
@@ -780,7 +780,7 @@ Esta estructura se implementa de manera homogénea en los 8 módulos de la plata
 
 El diseño de base de datos de Refrio sigue una arquitectura relacional implementada en PostgreSQL, gestionada a través de Entity Framework Core mediante un esquema modular alineado a Domain-Driven Design (DDD).
 
-Para garantizar la coherencia arquitectónica entre el diseño estratégico (Design-Level EventStorming de la sección), el diseño táctico  y el modelo de datos físico, cada tabla del esquema relacional deriva formalmente de las entidades y raíces de agregado (*Aggregate Roots*) correspondientes a los 7 Bounded Contexts del sistema:
+Para garantizar la coherencia arquitectónica entre el diseño estratégico (Design-Level EventStorming), el diseño táctico  y el modelo de datos físico, cada tabla del esquema relacional deriva formalmente de las entidades y raíces de agregado (*Aggregate Roots*) correspondientes a los 7 Bounded Contexts del sistema:
 
 | Bounded Context Estratégico | Módulo Táctico | Raíz de Agregado (*Aggregate Root*) | Tablas Relacionales (Database Model) | Descripción del Mapeo Relacional |
 | :--- | :--- | :--- | :--- | :--- |
