@@ -410,7 +410,6 @@ En este primer Sprint se completó el diseño y maquetación de la Landing Page 
 ![Landing Page Desktop 2 - Value Proposition](../assets/home-features.png)
 ![Landing Page Desktop 3 - Pricing Plans](../assets/pricing-page.png)
 ![Landing Page Desktop 4 - Impact and FEFO Logic](../assets/fefo-benefits.png)
-![Landing Page Desktop 5 - FAQ](../assets/faqs-page.png)
 ![Landing Page Desktop 6 - Contact B2B Form](../assets/contact-page.png)
 ![Landing Page Desktop 7 - Footer and Navigation](../assets/footer.png)
 
@@ -440,6 +439,16 @@ Durante el Sprint 1 se realizó el despliegue exitoso del Landing Page utilizand
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-Durante este sprint, la colaboración técnica se gestionó íntegramente a través de la plataforma GitHub. Todo el trabajo individual se desarrolló en ramas de características (`feature/*`), las cuales fueron revisadas mediante Pull Requests (PRs) con aprobación cruzada antes de su integración a la rama `develop` y su posterior pase a `main`.
+Durante el Sprint 1, la colaboración técnica se gestionó a través de GitHub implementando el modelo de trabajo GitFlow. Cada incremento fue desarrollado en ramas aisladas de características (`feature/*`), las cuales fueron integradas hacia la rama `develop` mediante Pull Requests (PRs) con revisión y aprobación cruzada entre los miembros del equipo, culminando en la consolidación hacia la rama de producción `main`.
+
+A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecutados y cerrados durante el ciclo:
+
+| PR ID | Título del Pull Request | Rama Origen | Rama Destino | Autor (Developer) | Revisor (Reviewer) | Tareas Vinculadas | Fecha de Cierre | Merge Commit |
+|:---:|:---|:---:|:---:|:---|:---|:---:|:---:|:---:|
+| **#1** | `Join index` | `feature/index` | `develop` | Centeno León, Adriano | Alca Morán, César | T02, T03, T04 | `2026-09-17` | `98b1e4c` |
+| **#2** | `Join styles` | `feature/styles` | `develop` | Centeno León, Adriano | Rivas Méndez, Bernie | T01 | `2026-09-17` | `f3124db` |
+| **#3** | `Join translation` | `feature/translation` | `develop` | Centeno León, Adriano | Tello Lima, Jose | T06 | `2026-09-17` | `bd7d9ab` |
+| **#4** | `Join terms-and-condition` | `feature/terms-and-conditions` | `develop` | Centeno León, Adriano | Saavedra Flores, Rodrigo | T05 | `2026-09-17` | `a3c91d4` |
+| **#5** | `Develop` (Release to Main) | `develop` | `main` | Centeno León, Adriano | Alca Morán, César | T07 (Release v1.0.0) | `2026-09-17` | `9eb709b` |
 
 ![Team Collaboration Sprint 1 - PRs and Insights](../assets/sprint-collaboration.png)
