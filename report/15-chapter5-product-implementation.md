@@ -335,7 +335,7 @@ El despliegue continuo del sitio web de **Refrio** se gestiona a través de **Gi
 
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint 1 está dedicado exclusivamente a establecer la presencia digital de la startup mediante el diseño, desarrollo y despliegue de la primera versión del Landing Page de Refrio[cite: 1].
+El Sprint 1 está dedicado exclusivamente a establecer la presencia digital de la startup mediante el diseño, desarrollo y despliegue de la primera versión del Landing Page de Refrio.
 
 | Campo | Detalle |
 |:------|:--------|
@@ -346,8 +346,10 @@ El Sprint 1 está dedicado exclusivamente a establecer la presencia digital de l
 | **Prepared By** | `Alca Morán, César Alejandro` |
 | **Attendees** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro |
 | **Sprint 1 Goal** | Establecer la presencia digital de Refrio mediante el diseño, desarrollo y despliegue de la Landing Page. Comunicaremos claramente nuestra propuesta de valor: erradicar las pérdidas de alimentos perecibles en el Perú mediante el monitoreo telemétrico IoT en tiempo real de la cadena de frío y la gestión inteligente de inventario bajo la política FEFO (*First Expired, First Out*). El éxito se confirmará cuando los visitantes accedan al sitio web en vivo y comprendan la solución técnica, visualicen la comparativa de los planes de suscripción (Básico, Profesional y Empresarial) y puedan remitir solicitudes de demostración técnica corporativa. |
-| **Sprint 1 Velocity** | 18 Story Points |
-| **Sum of Story Points** | `11` |
+| **Team Capacity** | 18 Story Points (Capacidad estimada inicial basada en disponibilidad horaria del equipo) |
+| **Committed Story Points** | 11 Story Points (Alcance planificado y priorizado para el Landing Page: US01, US02, US03 y tareas técnicas de setup) |
+| **Completed Story Points** | 11 Story Points (100% de los puntos comprometidos finalizados al cierre del sprint) |
+| **Historical Velocity** | N/A (Al ser el primer sprint, no existe histórico previo; este sprint establece la línea base empírica de velocidad inicial en 11 SP) |
 
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
