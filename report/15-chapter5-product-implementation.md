@@ -388,15 +388,18 @@ El Sprint Backlog 1 consolida las tareas técnicas y de desarrollo para el despl
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-Durante el Sprint 1, el equipo se enfocó en establecer la base técnica de Refrio mediante estándares web modernos: HTML5 semántico para la accesibilidad y CSS3 estructurado bajo la metodología BEM y variables CSS personalizadas con la identidad de marca (azul corporativo, grises de soporte y blanco puro). La interactividad se desarrolló con JavaScript modular para manipular dinámicamente el catálogo de planes y la validación de formularios comerciales.
+Durante el Sprint 1, el equipo implementó la convención formal de Conventional Commits y el flujo de trabajo GitFlow sobre las ramas de características vinculadas a las tareas del Sprint Backlog. La siguiente tabla presenta el registro auditable de contribuciones técnicas:
 
-| Repository | Branch | Commit ID | Commit Message | Commit Message Body | Committed on (Date) |
-|:----------:|:------:|:---------:|:--------------:|:-------------------:|:-------------------:|
-| `refrio-website` | `feature/index` | `e052fb4` | `Add files via upload` | `-` | `2026-09-17` |
-| `refrio-website` | `feature/styles` | `f3124db` | `Complete Update styles.css` | `-` | `2026-09-17` |
-| `refrio-website` | `feature/translation` | `bd7d9ab` | `feat(translation): add JS translation code.js` | `-` | `2026-09-17` |
-| `refrio-website` | `main` | `9eb709b` | `Update website` | `-` | `2026-09-17` |
-
+| Repository | Branch | Commit ID | Commit Message | Committed by (Author) | Committed on (Date) |
+|:---:|:---:|:---:|:---|:---:|:---:|
+| `refrio-website` | `develop` | `c10a42e` | `chore(setup): initialize project layout, assets structure and gitflow (T07)` | Saavedra Flores, Rodrigo | `2026-09-09` |
+| `refrio-website` | `feature/index` | `e052fb4` | `feat(hero): build semantic html5 structure, value prop and cta buttons (T02)` | Alca Morán, César | `2026-09-11` |
+| `refrio-website` | `feature/styles` | `f3124db` | `style(landing): implement responsive design, typography and refrio palette (T01)` | Centeno León, Adriano | `2026-09-13` |
+| `refrio-website` | `feature/index` | `4d18c9a` | `feat(pricing): add interactive plan comparison cards and contact form (T03, T04)` | Rivas Méndez, Bernie | `2026-09-14` |
+| `refrio-website` | `feature/terms-and-conditions` | `a3c91d4` | `feat(legal): add terms and conditions section and privacy policy view (T05)` | Tello Lima, Jose | `2026-09-15` |
+| `refrio-website` | `feature/translation` | `bd7d9ab` | `feat(i18n): integrate multi-language translation script for landing content (T06)` | Alca Morán, César | `2026-09-16` |
+| `refrio-website` | `develop` | `7e2b8f1` | `merge(staging): integrate feature branches and validate cross-browser UI` | Saavedra Flores, Rodrigo | `2026-09-16` |
+| `refrio-website` | `main` | `9eb709b` | `release(v1.0.0): deploy stable landing page to production for sprint 1 review` | Saavedra Flores, Rodrigo | `2026-09-17` |
 ---
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
