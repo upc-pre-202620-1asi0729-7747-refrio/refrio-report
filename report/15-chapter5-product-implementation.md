@@ -335,21 +335,22 @@ El despliegue continuo del sitio web de **Refrio** se gestiona a través de **Gi
 
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint 1 está dedicado exclusivamente a establecer la presencia digital de la startup mediante el diseño, desarrollo y despliegue de la primera versión del Landing Page de Refrio.
+El Sprint 1 está dedicado principalmente a establecer la presencia digital de la startup mediante el diseño, desarrollo y despliegue de la primera versión del Landing Page público de Refrio, iniciando concurrentemente la arquitectura base y servicios de identidad del Core API para habilitar las funcionalidades transaccionales del siguiente ciclo.
 
 | Campo | Detalle |
-|:------|:--------|
+|:---|:---|
 | **Sprint #** | Sprint 1 |
 | **Date** | `2026-09-08` |
 | **Time** | `7:00 pm` |
 | **Location** | Reunión virtual por Discord / Google Meet |
 | **Prepared By** | `Alca Morán, César Alejandro` |
 | **Attendees** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro |
-| **Sprint 1 Goal** | Establecer la presencia digital de Refrio mediante el diseño, desarrollo y despliegue de la Landing Page. Comunicaremos claramente nuestra propuesta de valor: erradicar las pérdidas de alimentos perecibles en el Perú mediante el monitoreo telemétrico IoT en tiempo real de la cadena de frío y la gestión inteligente de inventario bajo la política FEFO (*First Expired, First Out*). El éxito se confirmará cuando los visitantes accedan al sitio web en vivo y comprendan la solución técnica, visualicen la comparativa de los planes de suscripción (Básico, Profesional y Empresarial) y puedan remitir solicitudes de demostración técnica corporativa. |
-| **Team Capacity** | 18 Story Points (Capacidad estimada inicial basada en disponibilidad horaria del equipo) |
-| **Committed Story Points** | 11 Story Points (Alcance planificado y priorizado para el Landing Page: US01, US02, US03 y tareas técnicas de setup) |
-| **Completed Story Points** | 11 Story Points (100% de los puntos comprometidos finalizados al cierre del sprint) |
-| **Historical Velocity** | N/A (Al ser el primer sprint, no existe histórico previo; este sprint establece la línea base empírica de velocidad inicial en 11 SP) |
+| **Sprint 1 Goal** | Establecer la presencia digital pública de Refrio mediante el diseño, maquetación y despliegue de su Landing Page responsive (US01 a US05), comunicando la propuesta de valor centrada en erradicar mermas alimentarias mediante IoT y política FEFO, y comenzar la implementación de los servicios base de autenticación y registro de cuentas (TS01, TS02 y US08) requeridos por la arquitectura. |
+| **Team Capacity** | 22 Story Points (Capacidad estimada inicial basada en la disponibilidad horaria del equipo) |
+| **Committed Story Points** | 20 Story Points (11 SP completados de Landing Page + 9 SP en desarrollo de Identity/Core API) |
+| **Completed Story Points** | 11 Story Points (US01, US02, US03, US04, US05 finalizadas y desplegadas al 100%) |
+| **In Progress Story Points** | 9 Story Points (TS01, TS02, US08 en progreso activo para cierre en Sprint 2) |
+| **Historical Velocity** | N/A (Sprint inicial; establece la línea base empírica de velocidad en 11 SP completados) |
 
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
@@ -369,17 +370,21 @@ Para este primer Sprint enfocado en el Landing Page y la configuración inicial 
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El objetivo principal de este Sprint es contar con un sitio web estático desplegado que presente a Refrio, su propuesta de valor IoT, sus planes tarifarios y sus canales de contacto comercial
+El Sprint Backlog 1 consolida las tareas técnicas y de desarrollo para el despliegue del Landing Page público (US01-US05) y el inicio de la arquitectura base del módulo de identidad (TS01, TS02, US08):
 
-| **Sprint 1** | **User Story** | | **Work-Item / Task** | | | | |
+| **Sprint 1** | **User / Tech Story** | | **Work-Item / Task** | | | | |
 |:--------:|---|---|---|---|---|---|---|
 | | **ID** | **Título** | **ID** | **Título** | **Descripción** | **Estimación (h)** | **Asignado a** | **Estado** |
-| | US01 | Visualización de Hero Section | T01 | Diseñar UI en Figma | Diseñar el Hero section con métricas de merma y llamadas a la acción (CTA). | 4 | Centeno, Adriano | Done |
-| | US01 | Visualización de Hero Section | T02 | Maquetar estructura base | Maquetar en HTML5 semántico y CSS3 responsive la cabecera, propuesta y valor visual. | 5 | Alca, César | Done |
-| | US02 | Visualización de Planes | T03 | Programar tarificador | Implementar tarjetas de planes (Básico, Pro, Empresarial) y selector mensual/anual con JS. | 4 | Rivas, Bernie | Done |
-| | US03 | Formulario de Contacto B2B | T04 | Maquetar y validar formulario | Construir formulario B2B con validación de campos obligatorios (RUC, correo corporativo). | 3 | Tello, Jose | Done |
-| | *Task* | Configurar Repositorios | T05 | Setup GitHub y CI/CD | Inicializar repositorio en GitHub, estructurar ramas y automatizar despliegue en GitHub Pages. | 2 | Saavedra, Rodrigo | Done |
-
+| | US01 | Visualización de Hero Section | T01 | Diseñar UI en Figma | Diseñar el Hero section con propuesta de valor y llamadas a la acción (CTA). | 4 | Centeno, Adriano | Done |
+| | US01 | Visualización de Hero Section | T02 | Maquetar estructura base | Maquetar en HTML5 semántico y CSS3 responsive la cabecera y el hero principal. | 5 | Alca, César | Done |
+| | US02 | Visualización de Planes y Tarifas | T03 | Programar tarificador interactivo | Implementar tarjetas de planes (Básico, Pro, Empresarial) y toggle de facturación con JS. | 4 | Rivas, Bernie | Done |
+| | US03 | Formulario de Demostración B2B | T04 | Maquetar y validar formulario B2B | Construir formulario corporativo con validación de RUC (11 dígitos) y correo corporativo. | 3 | Tello, Jose | Done |
+| | US04 | Visualización de Casos de Éxito | T05 | Maquetar carrusel de testimonios | Desarrollar componente responsivo de testimonios y métricas de merma evitada. | 3 | Centeno, Adriano | Done |
+| | US05 | Acceso a Plataforma Web / Móvil | T06 | Integrar enlaces de autenticación | Conectar botones de acceso hacia el portal de login y configurar redirección. | 2 | Alca, César | Done |
+| | *Task* | Configuración de Repositorios | T07 | Setup GitHub y CI/CD | Estructurar ramas GitFlow y pipeline de despliegue automatizado en GitHub Pages. | 2 | Saavedra, Rodrigo | Done |
+| | TS01 | Endpoint Autenticación JWT | T08 | Configurar emisor de tokens JWT | Implementar generación y firma de tokens JWT junto con middleware de autorización. | 6 | Saavedra, Rodrigo | In Progress |
+| | TS02 | Endpoint Registro Unificado | T09 | Diseñar endpoints de sign-up | Implementar controladores y validaciones de esquema para registro B2B y B2C. | 5 | Rivas, Bernie | In Progress |
+| | US08 | Inicio de Sesión Multi-rol | T10 | Maquetar interfaz base de Login | Diseñar y codificar la vista inicial de login conectada al flujo de sesión por roles. | 4 | Tello, Jose | In Progress |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
