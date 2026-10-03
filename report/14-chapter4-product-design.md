@@ -732,7 +732,7 @@ A continuación, se presentan los diagramas de clases correspondientes a la capa
 
 Este diagrama representa el diseño táctico orientado a objetos (Tactical DDD) del backend de Refrio. Para responder a la cohesión transaccional y modularidad del monolito modular en ASP.NET Core, los 7 Bounded Contexts identificados en el nivel estratégico (Design-Level EventStorming de la sección 4.6) se consolidan operativamente en módulos de dominio específicos según la siguiente justificación de transformación arquitectónica:
 
-| Módulo Táctico (Class Diagram) | Bounded Contexts Estratégicos Consolidados (EventStorming 4.6) | Justificación de Diseño y Límites Transaccionales |
+| Módulo Táctico (Class Diagram) | Bounded Contexts Estratégicos Consolidados | Justificación de Diseño y Límites Transaccionales |
 | :--- | :--- | :--- |
 | **Identity & Access Management (IAM)** | `BC 01: IAM` | Mapeo directo 1:1. Resguarda credenciales, claims JWT, perfiles de negocio (RUC/teléfono) y políticas de autorización por roles. |
 | **Inventory & Perishables** | `BC 03: Inventory & FEFO Dispatch`<br>`BC 06: Analytics (parcial)` | Encapsula las entidades `Product`, `Batch` y los algoritmos de caducidad FEFO, computando a nivel de agregado el histórico de mermas directas por expiración. |
@@ -778,6 +778,20 @@ Esta estructura se implementa de manera homogénea en los 8 módulos de la plata
 
 ### 4.8.1. Database Diagrams
 
-El diseño de base de datos de Refrio sigue una arquitectura relacional implementada en PostgreSQL a través de Entity Framework Core, organizada en torno a los Bounded Contexts definidos en la arquitectura DDD (IAM y Adquisición, Monitoreo y Almacenamiento IoT, Inventario FEFO y Trazabilidad, y Gestión de Alertas e Incidentes). Cada Bounded Context posee sus propias tablas, generadas a partir de sus Aggregate Roots mediante configuraciones explícitas de entidad que cada contexto registra.
+El diseño de base de datos de Refrio sigue una arquitectura relacional implementada en PostgreSQL, gestionada a través de Entity Framework Core mediante un esquema modular alineado a Domain-Driven Design (DDD).
+
+Para garantizar la coherencia arquitectónica entre el diseño estratégico (Design-Level EventStorming de la sección), el diseño táctico  y el modelo de datos físico, cada tabla del esquema relacional deriva formalmente de las entidades y raíces de agregado (*Aggregate Roots*) correspondientes a los 7 Bounded Contexts del sistema:
+
+| Bounded Context Estratégico | Módulo Táctico | Raíz de Agregado (*Aggregate Root*) | Tablas Relacionales (Database Model) | Descripción del Mapeo Relacional |
+| :--- | :--- | :--- | :--- | :--- |
+| **BC 01: IAM (Identity & Access Management)** | Identity & Access Management (IAM) | `User`<br>`Client` | `Usuario`, `Rol`, `Usuario_Rol`, `Cliente`, `Suscripcion` | Gestiona credenciales, control de accesos RBAC, datos fiscales de clientes B2B (RUC) y vigencia de suscripciones SaaS. |
+| **BC 02: Storage & Device Telemetry Context** | Cold Chain Telemetry & Alerts | `StorageUnit`<br>`IoTDevice` | `Ubicacion`, `Almacen_Frio`, `Dispositivo_IoT`, `Telemetria`, `Mantenimiento` | Modela la jerarquía física de almacenamiento, los sensores IoT vinculados, el historial de mantenimiento y la serie temporal telemétrica de temperatura/humedad. |
+| **BC 03: Inventory & FEFO Dispatch Context** | Inventory & Perishables | `PerishableBatch`<br>`Product` | `Producto`, `Lote`, `Movimiento` | Centraliza el catálogo perecible, el control de inventario por lotes con fecha de expiración estricta y el kardex de movimientos de stock. |
+| **BC 04: Alerting & Incident Management Context** | Cold Chain Telemetry & Alerts | `ThermalRule`<br>`Incident` | `Regla_Alerta`, `Alerta_Generada`, `Incidente`, `Notificacion` | Parametriza umbrales térmicos admisibles, registra alertas automáticas ante quiebres de temperatura, incidentes y despacho de notificaciones. |
+| **BC 05: Cold Chain Traceability & Certification Context** | Shipments & Logistics | `TraceabilityRecord`<br>`Certificate` | `Trazabilidad`, `Certificacion` | Registra la cadena de custodia y cambios de ubicación del lote, consolidando la emisión de certificados de frío auditables. |
+| **BC 06: Analytics & Business Impact Context** | Analytics Engine | `AnalyticsReport` | `Reporte_Analitica` | Almacena proyecciones consolidadas de mermas evitadas, métricas de eficiencia FEFO y datasets estructurados en formato `jsonb`. |
+| **BC 07: Customer Acquisition & Public Portal Context** | Public Portal Gateway | *External Read Model* | *Consume vistas de `Suscripcion`, `Producto` y verificación de `Certificacion`* | Resuelve la captación mediante landing page y la consulta pública de certificados vía URL/QR sin requerir almacenamiento transaccional adicional. |
 
 ![Database diagram](../assets/Refrio-DB.png)
+
+A nivel de implementación física, el aislamiento y la integridad de los datos se gobiernan mediante claves primarias tipadas con identificadores únicos universales (`uuid`), seriales incrementales para registros de alta velocidad (`bigserial` en `Telemetria`), restricciones de integridad referencial (`FK`) entre agregados, y marcas de tiempo con soporte de zona horaria (`timestamptz`) para garantizar la auditabilidad y trazabilidad estricta de la cadena de frío.
