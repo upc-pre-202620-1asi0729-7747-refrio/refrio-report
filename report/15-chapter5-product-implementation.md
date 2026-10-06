@@ -495,7 +495,6 @@ Los líderes de cada aspecto son responsables de la arquitectura del módulo, la
 
 El objetivo principal de este Sprint es contar con la primera versión de la Refrio Web Application completamente desplegada, con los flujos de autenticación, inventario FEFO, dashboard de telemetría y gestión de alertas integrados contra una Fake API (json-server) desplegada en Railway. Adicionalmente, se actualiza el Landing Page para mejorar la consistencia de experiencia (CTA redirige a la Web App desplegada) y se corrigen los hallazgos de AV1.
 
-URL del Sprint Board (Trello): https://trello.com/b/refrio-sprint2 *(reemplazar con URL real del board)*
 
 | Sprint # | Sprint 2 | | | | | | |
 |---|---|---|---|---|---|---|---|
@@ -605,7 +604,7 @@ Durante el Sprint 2 se consolidó el despliegue de la Frontend Web Application y
 
 **URL de la Frontend Web Application desplegada:** [https://refrio-webapp.vercel.app/](https://refrio-webapp.vercel.app/)
 
-**URL de la Landing Page desplegada:** [https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/)
+**URL de la Landing Page desplegada:** [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git)
 
 ---
 
