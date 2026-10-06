@@ -453,7 +453,7 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 
 
 
-
+## 5.2.2.3. Sprint Backlog 2
 
 El objetivo principal de este Sprint es contar con la primera versión de la Refrio Web Application completamente desplegada, con los flujos de autenticación, inventario FEFO, dashboard de telemetría y gestión de alertas integrados contra una Fake API (json-server) desplegada en Railway. Adicionalmente, se actualiza el Landing Page para mejorar la consistencia de experiencia (CTA redirige a la Web App desplegada) y se corrigen los hallazgos de AV1.
 
@@ -482,6 +482,50 @@ URL del Sprint Board (Trello): https://trello.com/b/refrio-sprint2 *(reemplazar 
 | TS02 | Configuración y despliegue de Fake API (json-server) | T16 | Configurar db.json con datos seed y desplegar en Railway | Crear db.json con colecciones: users, companies, batches, products, coldRooms, telemetry, incidents, alerts. Datos seed realistas de Refrio (3 empresas, 15 lotes, 24h de telemetría, 4 incidentes). Desplegar json-server en Railway. Configurar CORS para el dominio de la Web App. | 4 | Tello, Jose | Done |
 | TS03 | Despliegue de la Web Application en Netlify/Vercel | T17 | Configurar build de producción y despliegue continuo de la Web App | ng build --configuration production. Conectar repositorio refrio-webapp a Netlify/Vercel. Configurar variable de entorno API_BASE_URL apuntando al json-server de Railway. Verificar despliegue y URL pública. | 3 | Tello, Jose | Done |
 | US01 | Visualización de Hero Section (Landing Page v2) | T18 | Actualizar CTA del Landing Page para redirigir a la Web App desplegada | Modificar href del botón "Ingresar" y "Solicitar Demo" en el Landing Page para apuntar a la URL pública de la Web Application desplegada. | 1 | Alca, César | Done |
+
+## 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con json-server** desplegada en Railway. Esta API simula el comportamiento del backend RESTful de Refrio, exponiendo los mismos contratos de endpoints que implementará el backend real en Spring Boot durante AV2. La documentación a continuación describe los endpoints consumidos por la Web Application en este sprint.
+
+**URL base de la Fake API:** `https://refrio-fake-api.up.railway.app` *(reemplazar con URL real de Railway)*
+
+**Repositorio Fake API:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-fake-api
+
+| Bounded Context | Endpoint | Verbo HTTP | Descripción | Parámetros | Ejemplo de Response |
+|---|---|---|---|---|---|
+| IAM | `/auth/login` | POST | Autenticación de usuario. Retorna token JWT simulado y datos del usuario. | Body: `{ email, password }` | `{ token: "eyJ...", user: { id, name, role, companyId } }` |
+| IAM | `/users/:id` | GET | Obtiene perfil del usuario autenticado. | Path: `id` | `{ id, name, email, phone, role, companyId }` |
+| IAM | `/users/:id` | PATCH | Actualiza datos del perfil de usuario. | Path: `id`, Body: `{ name?, phone?, password? }` | `{ id, name, email, phone, role }` |
+| IAM | `/companies` | POST | Registra nueva empresa distribuidora con RUC. | Body: `{ businessName, ruc, email, password, address }` | `{ id, businessName, ruc, email, plan: "basic" }` |
+| Inventory & FEFO | `/batches` | GET | Lista todos los lotes de inventario, ordenados por expirationDate ASC (FEFO). | Query: `?categoryId=`, `?q=` (search), `?status=` | `[{ id, productName, batchCode, quantity, unit, receptionDate, expirationDate, status, supplierId }]` |
+| Inventory & FEFO | `/batches` | POST | Registra nuevo lote de producto perecible. | Body: `{ productName, batchCode, quantity, unit, receptionDate, expirationDate, supplierId }` | `{ id, productName, batchCode, quantity, expirationDate, status: "active" }` |
+| Inventory & FEFO | `/batches/:id` | PATCH | Actualiza el estado de un lote (offer, discarded, dispatched). | Path: `id`, Body: `{ status }` | `{ id, status, updatedAt }` |
+| Storage & Telemetry | `/telemetry` | GET | Lista lecturas de telemetría. Soporta filtro por coldRoomId y rango de fechas. | Query: `?coldRoomId=`, `?timestamp_gte=`, `?timestamp_lte=`, `?_limit=12&_sort=timestamp&_order=desc` | `[{ id, coldRoomId, temperature, humidity, timestamp, status }]` |
+| Storage & Telemetry | `/coldRooms` | GET | Lista las cámaras frigoríficas registradas en la empresa. | Query: `?companyId=` | `[{ id, name, type, targetTempMin, targetTempMax, location }]` |
+| Alerting & Incidents | `/incidents` | GET | Lista incidentes activos y cerrados, ordenados por timestamp descendente. | Query: `?status=active`, `?companyId=` | `[{ id, coldRoomId, type, detectedTemp, threshold, status, timestamp, rootCause? }]` |
+| Alerting & Incidents | `/incidents/:id` | PATCH | Cierra un incidente registrando causa raíz y acción correctiva. | Path: `id`, Body: `{ status: "closed", rootCause, correctiveAction, closedAt }` | `{ id, status: "closed", rootCause, correctiveAction, closedAt }` |
+
+*Nota: La documentación formal con OpenAPI/Swagger se implementará en AV2 junto con el backend real en Spring Boot. En este sprint, la Fake API expone los mismos contratos de request/response que serán respetados por el backend real.*
+
+---
+
+## 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 se realizaron tres despliegues exitosos correspondientes a los productos del alcance:
+
+**1. Fake API (json-server) — Railway**
+
+Se creó una cuenta en Railway (https://railway.app) y se configuró un nuevo proyecto conectado al repositorio `refrio-fake-api` de la organización de GitHub. El archivo `server.js` inicializa json-server con las colecciones de `db.json` y configura los headers CORS para permitir peticiones desde el dominio de la Web Application. Railway asigna automáticamente una URL HTTPS pública al servicio. El despliegue es continuo: cada push a `main` del repositorio `refrio-fake-api` redespliega automáticamente la API.
+
+Pasos realizados:
+1. Se creó el repositorio `refrio-fake-api` en la organización de GitHub con `db.json`, `server.js` y `package.json`.
+2. En Railway: New Project → Deploy from GitHub repo → seleccionar `refrio-fake-api`.
+3. Se configuró la variable de entorno `PORT=3000` y el start command `node server.js`.
+4. Se verificó la disponibilidad de los endpoints en la URL pública asignada.
+5. Se actualizó `environment.prod.ts` en la Web App con la URL de Railway.
+
+**URL de la Fake API:** `https://refrio-fake-api.up.railway.app` *(reemplazar con URL real)*
+
 
 **Total Story Points comprometidos: 26 SP**
 **Total Story Points completados: [completar al cierre del sprint]**
