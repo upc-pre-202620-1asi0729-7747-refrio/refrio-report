@@ -449,3 +449,41 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 | **#5** | `Develop` (Release to Main) | `develop` | `main` | Centeno León, Adriano | Alca Morán, César | T07 (Release v1.0.0) | `2026-09-17` | `9eb709b` |
 
 ![Team Collaboration Sprint 1 - PRs and Insights](../assets/sprint-collaboration.png)
+
+
+
+
+
+
+El objetivo principal de este Sprint es contar con la primera versión de la Refrio Web Application completamente desplegada, con los flujos de autenticación, inventario FEFO, dashboard de telemetría y gestión de alertas integrados contra una Fake API (json-server) desplegada en Railway. Adicionalmente, se actualiza el Landing Page para mejorar la consistencia de experiencia (CTA redirige a la Web App desplegada) y se corrigen los hallazgos de AV1.
+
+URL del Sprint Board (Trello): https://trello.com/b/refrio-sprint2 *(reemplazar con URL real del board)*
+
+| Sprint # | Sprint 2 | | | | | | |
+|---|---|---|---|---|---|---|---|
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (h) | Assigned To | Status |
+|---|---|---|---|---|---|---|---|
+| US06 | Registro de Distribuidora Mediana | T01 | Crear componente RegisterCompanyComponent | Implementar formulario de registro B2B con campos: razón social, RUC (11 dígitos), correo corporativo, contraseña, dirección de almacén. Validaciones reactivas con Angular FormBuilder. | 4 | Alca, César | Done |
+| US06 | Registro de Distribuidora Mediana | T02 | Implementar endpoint POST /companies en json-server y servicio Angular | Configurar db.json con colección companies. Crear AuthService.registerCompany() que consume POST /companies. Manejo de errores (RUC duplicado). | 3 | Alca, César | Done |
+| US07 | Registro Simplificado de Bodega | T03 | Crear componente RegisterStoreComponent | Formulario simplificado para comerciantes: nombre del negocio, teléfono, correo, contraseña. Sin RUC obligatorio. | 3 | Alca, César | Done |
+| US08 | Inicio de sesión unificado | T04 | Crear componente LoginComponent con JWT simulado | Formulario de login (email + password). Llamada POST /auth/login al json-server. Almacenamiento de token JWT simulado en localStorage. Redirección según rol (supervisor/minorista). | 4 | Alca, César | Done |
+| US08 | Inicio de sesión unificado | T05 | Implementar AuthGuard y RoleGuard | Guards de Angular para proteger rutas de la app. Verificar token en localStorage. Redirigir a /login si no autenticado. | 2 | Alca, César | Done |
+| US09 | Gestión de perfil de usuario | T06 | Crear ProfileComponent con edición de datos | Vista de perfil con datos del usuario. Formulario de edición de nombre, teléfono y contraseña. Llamada PATCH /users/:id. | 3 | Centeno, Adriano | Done |
+| US13 | Registro de lote de perecible | T07 | Crear BatchRegisterComponent | Formulario de ingreso de lote: nombre del producto, código de lote, cantidad, unidad, fecha de recepción, fecha de caducidad, proveedor. Integración con POST /batches. | 5 | Centeno, Adriano | Done |
+| US14 | Listado de inventario con semáforo FEFO | T08 | Crear InventoryListComponent con semáforo de frescura | Tabla de lotes ordenada por fecha de caducidad (FEFO). Indicador de color: verde (>7 días), amarillo (3–7 días), rojo (<3 días). Filtro por categoría y búsqueda por nombre. | 5 | Centeno, Adriano | Done |
+| US15 | Auditoría nocturna de vencimientos | T09 | Crear ExpirationAuditComponent | Vista que lista lotes con caducidad crítica (<3 días). Muestra cantidad, producto, lote, días restantes. Botón para marcar como "en remate" o "descarte". | 3 | Centeno, Adriano | Done |
+| US16 | Dashboard de telemetría en tiempo real | T10 | Crear TelemetryDashboardComponent con polling al json-server | Vista de tarjetas por cámara frigorífica: temperatura actual, humedad, estado (OK/Alerta). Polling cada 30 segundos a GET /telemetry. Gráfica de líneas de las últimas 12 lecturas con ngx-charts. | 6 | Rivas, Bernie | Done |
+| US17 | Historial de temperatura por cámara | T11 | Crear ThermalHistoryComponent con filtro de fecha | Vista de historial de lecturas térmicas para una cámara seleccionada. Filtro por rango de fechas. Tabla y gráfica de líneas. Llamada GET /telemetry?coldRoomId=:id. | 4 | Rivas, Bernie | Done |
+| US19 | Alerta de ruptura de cadena de frío | T12 | Crear AlertsListComponent con indicador de severidad | Lista de incidentes activos con: cámara afectada, temperatura detectada, timestamp, estado (Activo/Cerrado). Íconos de severidad (crítico/warning). Llamada GET /incidents. | 4 | Saavedra, Rodrigo | Done |
+| US20 | Cierre de incidente con justificación | T13 | Implementar modal de cierre de incidente | Modal con campo de texto obligatorio para causa raíz y acción correctiva. Llamada PATCH /incidents/:id con status: "closed". Validación: no se puede cerrar sin descripción. | 3 | Saavedra, Rodrigo | Done |
+| US21 | Notificación push simulada de alerta | T14 | Implementar servicio de notificación in-app | NotificationService que genera toast/snackbar cuando el polling detecta una nueva alerta (temperatura > umbral). Usar Angular Material SnackBar. | 2 | Saavedra, Rodrigo | Done |
+| TS01 | Configuración del proyecto Angular y estructura de módulos | T15 | Inicializar proyecto Angular con lazy loading por módulo | Crear proyecto con Angular CLI. Estructura de módulos: AuthModule, InventoryModule, TelemetryModule, AlertsModule, SharedModule. Routing con lazy loading. Angular Material como biblioteca de UI. | 4 | Tello, Jose | Done |
+| TS02 | Configuración y despliegue de Fake API (json-server) | T16 | Configurar db.json con datos seed y desplegar en Railway | Crear db.json con colecciones: users, companies, batches, products, coldRooms, telemetry, incidents, alerts. Datos seed realistas de Refrio (3 empresas, 15 lotes, 24h de telemetría, 4 incidentes). Desplegar json-server en Railway. Configurar CORS para el dominio de la Web App. | 4 | Tello, Jose | Done |
+| TS03 | Despliegue de la Web Application en Netlify/Vercel | T17 | Configurar build de producción y despliegue continuo de la Web App | ng build --configuration production. Conectar repositorio refrio-webapp a Netlify/Vercel. Configurar variable de entorno API_BASE_URL apuntando al json-server de Railway. Verificar despliegue y URL pública. | 3 | Tello, Jose | Done |
+| US01 | Visualización de Hero Section (Landing Page v2) | T18 | Actualizar CTA del Landing Page para redirigir a la Web App desplegada | Modificar href del botón "Ingresar" y "Solicitar Demo" en el Landing Page para apuntar a la URL pública de la Web Application desplegada. | 1 | Alca, César | Done |
+
+**Total Story Points comprometidos: 26 SP**
+**Total Story Points completados: [completar al cierre del sprint]**
+
+---
