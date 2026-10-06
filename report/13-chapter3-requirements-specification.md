@@ -155,11 +155,11 @@ La siguiente matriz documenta de forma auditable la contribución estratégica d
 
 ## 3.3. Product Backlog
 
-## 3.3. Product Backlog
+En esta sección se presenta el Product Backlog del proyecto Refrio, el cual consolida y prioriza las 50 historias de usuario y tareas técnicas necesarias para construir la solución integral.
 
-En esta sección se presenta el Product Backlog del proyecto Refrio, el cual consolida y prioriza todas las historias de usuario y tareas técnicas necesarias para construir la solución integral (completando los 50 elementos).
+El orden de los elementos ha sido rigurosamente determinado por el valor para el negocio y sus dependencias arquitectónicas, asegurando que los entregables con mayor impacto en la captación comercial y la funcionalidad *core* de resguardo de cadena de frío e inventario FEFO se desarrollen de manera prioritaria. Por consiguiente, las historias vinculadas con el portal web público (Landing Page) encabezan el backlog para iniciar el proceso de validación y captación desde el Sprint 1, mientras que los módulos analíticos avanzados, configuraciones secundarias y optimizaciones de exportación se abordan en los sprints posteriores.
 
-El orden de los elementos ha sido rigurosamente determinado por el valor para el negocio y dependencias arquitectónicas, asegurando que los entregables con mayor impacto en la captación comercial y la funcionalidad *core* de resguardo de cadena de frío e inventario FEFO se desarrollen de manera prioritaria. Por consiguiente, las historias vinculadas con el portal web público (Landing Page) encabezan el backlog para iniciar el proceso de validación y captación desde el Sprint 1, mientras que los módulos analíticos avanzados, configuraciones secundarias y optimizaciones de exportación se abordan en los sprints posteriores.
+El esfuerzo total del proyecto equivale a 185 Story Points (SP), distribuidos de manera equilibrada a lo largo de un ciclo de 4 Sprints:
 
 | # Orden | User Story ID | Título | Story Points | Sprint Asignado | Status |
 |:---:|:---:|:---|:---:|:---:|:---:|
@@ -176,41 +176,42 @@ El orden de los elementos ha sido rigurosamente determinado por el valor para el
 | 11 | US12 | Alta de Lote Perecible (Batch) | 3 | Sprint 2 | To Do |
 | 12 | TS03 | Endpoint de Gestión de Inventario de Lotes | 3 | Sprint 2 | To Do |
 | 13 | US14 | Asignación de Lote a Unidad de Almacenamiento | 5 | Sprint 2 | To Do |
-| 14 | US11 | Registro de Categoría de Alimento | 2 | Sprint 3 | To Do |
-| 15 | US17 | Vinculación de Nodo Sensor IoT | 3 | Sprint 3 | To Do |
-| 16 | US15 | Parametrización de Ventana Crítica de Expiración | 2 | Sprint 3 | To Do |
-| 17 | US16 | Ajuste Manual de Inventario por Daño Físico | 2 | Sprint 3 | To Do |
-| 18 | TS05 | Ingesta Telemétrica vía Broker MQTT / HTTP Gateway | 5 | Sprint 3 | To Do |
-| 19 | US18 | Ingesta y Monitoreo de Temperatura en Vivo | 5 | Sprint 4 | To Do |
-| 20 | US19 | Configuración de Umbrales Térmicos por Cámara | 3 | Sprint 4 | To Do |
-| 21 | TS06 | Pipeline de Detección de Desviación Térmica (Cold Breach) | 5 | Sprint 4 | To Do |
-| 22 | US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | Sprint 4 | To Do |
-| 23 | TS07 | Servicio de Notificaciones Multicanal (WhatsApp, SMS, Push) | 5 | Sprint 4 | To Do |
-| 24 | US27 | Confirmación y Cierre de Alerta | 3 | Sprint 4 | To Do |
-| 25 | US29 | Visualización de Inventario Ordenado por FEFO | 3 | Sprint 5 | To Do |
-| 26 | TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | Sprint 5 | To Do |
-| 27 | US30 | Generación de Lista de Picking Sugerida | 5 | Sprint 5 | To Do |
-| 28 | US33 | Validación de Lote en Despacho mediante Escaneo | 5 | Sprint 5 | To Do |
-| 29 | US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | Sprint 5 | To Do |
-| 30 | US31 | Semáforo Visual de Frescura para Bodegas | 3 | Sprint 5 | To Do |
-| 31 | US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | Sprint 6 | To Do |
-| 32 | TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | Sprint 6 | To Do |
-| 33 | US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | Sprint 6 | To Do |
-| 34 | US35 | Exportación de Certificado de Frío en PDF | 5 | Sprint 6 | To Do |
-| 35 | TS10 | Microservicio / Rutina Cron de Auditoría Diaria de Caducidades | 3 | Sprint 6 | To Do |
-| 36 | US24 | Notificación de Lotes Próximos a Vencer | 3 | Sprint 7 | To Do |
-| 37 | US25 | Alerta Sonora en Teléfono Móvil de Bodega | 3 | Sprint 7 | To Do |
-| 38 | US32 | Registro de Oferta de Remate Rápido | 3 | Sprint 7 | To Do |
-| 39 | US22 | Detección de Desconexión Nocturna en Bodegas | 5 | Sprint 7 | To Do |
-| 40 | US26 | Configuración de Canales de Notificación | 3 | Sprint 8 | To Do |
-| 41 | US28 | Escalamiento Automático de Incidentes Térmicos | 5 | Sprint 8 | To Do |
-| 42 | US37 | Registro Formal de Merma Justificada | 3 | Sprint 8 | To Do |
-| 43 | US20 | Historial Gráfico de Telemetría | 5 | Sprint 8 | To Do |
-| 44 | US21 | Calibración de Sensores Térmicos | 3 | Sprint 9 | To Do |
-| 45 | US09 | Recuperación de Contraseña | 3 | Sprint 9 | To Do |
-| 46 | US10 | Configuración de Perfil y Almacén | 3 | Sprint 9 | To Do |
-| 47 | US38 | Dashboard Ejecutivo de Mermas Evitadas | 5 | Sprint 10 | To Do |
-| 48 | US39 | Resumen Simplificado de Ganancia Ahorrada para Bodegas | 3 | Sprint 10 | To Do |
-| 49 | US40 | Exportación de Data Histórica en Excel/CSV | 3 | Sprint 10 | To Do |
-| 50 | TS09 | Endpoints para Dashboards Analíticos y KPIs de Merma | 5 | Sprint 10 | To Do |
+| 14 | US11 | Registro de Categoría de Alimento | 2 | Sprint 2 | To Do |
+| 15 | US17 | Vinculación de Nodo Sensor IoT | 3 | Sprint 2 | To Do |
+| 16 | US15 | Parametrización de Ventana Crítica de Expiración | 2 | Sprint 2 | To Do |
+| 17 | US16 | Ajuste Manual de Inventario por Daño Físico | 2 | Sprint 2 | To Do |
+| 18 | TS05 | Ingesta Telemétrica vía Broker MQTT / HTTP Gateway | 5 | Sprint 2 | To Do |
+| 19 | US18 | Ingesta y Monitoreo de Temperatura en Vivo | 5 | Sprint 2 | To Do |
+| 20 | US19 | Configuración de Umbrales Térmicos por Cámara | 3 | Sprint 2 | To Do |
+| 21 | TS06 | Pipeline de Detección de Desviación Térmica (Cold Breach) | 5 | Sprint 2 | To Do |
+| 22 | US20 | Historial Gráfico de Telemetría | 5 | Sprint 2 | To Do |
+| 23 | US21 | Calibración de Sensores Térmicos | 3 | Sprint 2 | To Do |
+| 24 | US09 | Recuperación de Contraseña | 3 | Sprint 2 | To Do |
+| 25 | US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | Sprint 3 | To Do |
+| 26 | TS07 | Servicio de Notificaciones Multicanal (WhatsApp, SMS, Push) | 5 | Sprint 3 | To Do |
+| 27 | US27 | Confirmación y Cierre de Alerta | 3 | Sprint 3 | To Do |
+| 28 | US29 | Visualización de Inventario Ordenado por FEFO | 3 | Sprint 3 | To Do |
+| 29 | TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | Sprint 3 | To Do |
+| 30 | US30 | Generación de Lista de Picking Sugerida | 5 | Sprint 3 | To Do |
+| 31 | US33 | Validación de Lote en Despacho mediante Escaneo | 5 | Sprint 3 | To Do |
+| 32 | US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | Sprint 3 | To Do |
+| 33 | US31 | Semáforo Visual de Frescura para Bodegas | 3 | Sprint 3 | To Do |
+| 34 | US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | Sprint 3 | To Do |
+| 35 | TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | Sprint 3 | To Do |
+| 36 | US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | Sprint 3 | To Do |
+| 37 | US35 | Exportación de Certificado de Frío en PDF | 5 | Sprint 3 | To Do |
+| 38 | TS10 | Microservicio / Rutina Cron de Auditoría Diaria de Caducidades | 3 | Sprint 4 | To Do |
+| 39 | US24 | Notificación de Lotes Próximos a Vencer | 3 | Sprint 4 | To Do |
+| 40 | US25 | Alerta Sonora en Teléfono Móvil de Bodega | 3 | Sprint 4 | To Do |
+| 41 | US32 | Registro de Oferta de Remate Rápido | 3 | Sprint 4 | To Do |
+| 42 | US22 | Detección de Desconexión Nocturna en Bodegas | 5 | Sprint 4 | To Do |
+| 43 | US26 | Configuración de Canales de Notificación | 3 | Sprint 4 | To Do |
+| 44 | US28 | Escalamiento Automático de Incidentes Térmicos | 5 | Sprint 4 | To Do |
+| 45 | US37 | Registro Formal de Merma Justificada | 3 | Sprint 4 | To Do |
+| 46 | US10 | Configuración de Perfil y Almacén | 3 | Sprint 4 | To Do |
+| 47 | US38 | Dashboard Ejecutivo de Mermas Evitadas | 5 | Sprint 4 | To Do |
+| 48 | US39 | Resumen Simplificado de Ganancia Ahorrada para Bodegas | 3 | Sprint 4 | To Do |
+| 49 | US40 | Exportación de Data Histórica en Excel/CSV | 3 | Sprint 4 | To Do |
+| 50 | TS09 | Endpoints para Dashboards Analíticos y KPIs de Merma | 5 | Sprint 4 | To Do |
+
 ---
