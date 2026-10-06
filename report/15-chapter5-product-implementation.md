@@ -450,7 +450,47 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 
 ![Team Collaboration Sprint 1 - PRs and Insights](../assets/sprint-collaboration.png)
 
+# 5.2.2. Sprint 2
 
+## 5.2.2.1. Sprint Planning 2
+
+Durante el Sprint Planning 2, el equipo MadaGroup se reunió para definir el alcance de trabajo correspondiente a la entrega TB1. Con el Sprint 1 finalizado y el Landing Page desplegado, este sprint tiene como objetivo central implementar y desplegar la primera versión de la Frontend Web Application de Refrio integrada con una Fake API (json-server), cubriendo los flujos principales de ambos segmentos objetivo: autenticación, gestión de inventario FEFO, monitoreo de telemetría y alertas.
+
+La Velocity de este sprint se establece en base a los Story Points completados en el Sprint 1 (11 SP en 2 semanas con 5 integrantes). Para Sprint 2, con mayor disponibilidad y experiencia acumulada, el equipo estima una capacidad de 26 SP.
+
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 2 |
+| **Date** | 2026-09-22 |
+| **Time** | 7:00 PM |
+| **Location** | Reunión virtual por Discord / Google Meet |
+| **Prepared By** | Alca Morán, César Alejandro |
+| **Attendees (to planning meeting)** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro |
+| **Sprint 1 Review Summary** | El Sprint 1 entregó el Landing Page de Refrio completamente desplegado en GitHub Pages (https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/). Se implementaron: Hero Section con métricas de impacto, sección de planes de suscripción con toggle mensual/anual, formulario de contacto B2B con validación de RUC y correo corporativo, sección de casos de éxito y el botón CTA de acceso a la plataforma. El equipo completó 11 SP de los 11 comprometidos. Como feedback del docente, se identificaron oportunidades de mejora en la trazabilidad de commits (Conventional Commits), en la evidencia de PRs con aprobación cruzada, y en la consistencia entre los Bounded Contexts del EventStorming y el Class Diagram. |
+| **Sprint 1 Retrospective Summary** | El equipo valoró positivamente la comunicación constante por Discord y la distribución temprana de tareas por aspecto. Se identificó como oportunidad de mejora la estandarización de los mensajes de commit (algunos no siguieron Conventional Commits), la falta de commits individuales visibles para todos los integrantes y la necesidad de documentar el proceso de PR de forma más rigurosa. Para Sprint 2 se acuerda: revisar cada commit antes de hacer push, abrir PRs con descripción clara y asignar un revisor diferente al autor antes de mergear a develop. |
+| **Sprint 2 Goal** | Our focus is on delivering the first functional version of the Refrio Web Application for both target segments, connected to a Fake API that simulates the core backend. We believe it delivers a tangible demonstration of the platform's value — real-time cold chain monitoring, FEFO inventory management, and automated alerts — to logistics supervisors and retail store owners. This will be confirmed when both user personas can log in, navigate their respective dashboards, register inventory batches with expiration dates, view simulated temperature telemetry, and receive alert notifications, all through the deployed Angular frontend consuming the json-server Fake API. |
+| **Sprint 2 Velocity** | 11 SP (velocidad medida en Sprint 1) |
+| **Sum of Story Points** | 26 SP |
+
+---
+
+## 5.2.2.2. Aspect Leaders and Collaborators
+
+Para este Sprint 2, los aspectos de trabajo se organizan en torno a los cinco módulos funcionales principales de la Web Application y la infraestructura de la Fake API. La distribución de liderazgo y colaboración es la siguiente:
+
+| Team Member (Last Name, First Name) | GitHub Username | IAM & Auth Module (Login / Register) | Inventory & FEFO Module | Telemetry & Dashboard Module | Alerts & Notifications Module | Fake API (json-server) & Deployment |
+|---|---|---|---|---|---|---|
+| Alca Morán, César Alejandro | almocesar-cell | L | C | C | C | L |
+| Centeno León, Adriano Samir | Adri11-dk | C | L | C | C | C |
+| Rivas Méndez, Bernie Aarón | Arivas3008 | C | C | L | C | C |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | C | C | C | L | C |
+| Tello Lima, Jose Alejandro | j4ndrow | C | C | C | C | L |
+
+**L = Leader | C = Collaborator**
+
+Los líderes de cada aspecto son responsables de la arquitectura del módulo, la toma de decisiones técnicas dentro de su área y la revisión de los PRs de sus colaboradores. Todos los integrantes contribuyen en al menos dos aspectos por sprint, garantizando conocimiento transversal del sistema.
+
+---
 
 
 ## 5.2.2.3. Sprint Backlog 2
