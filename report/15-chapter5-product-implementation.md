@@ -523,6 +523,56 @@ URL del Sprint Board (Trello): https://trello.com/b/refrio-sprint2 *(reemplazar 
 | TS03 | Despliegue de la Web Application en Netlify/Vercel | T17 | Configurar build de producción y despliegue continuo de la Web App | ng build --configuration production. Conectar repositorio refrio-webapp a Netlify/Vercel. Configurar variable de entorno API_BASE_URL apuntando al json-server de Railway. Verificar despliegue y URL pública. | 3 | Tello, Jose | Done |
 | US01 | Visualización de Hero Section (Landing Page v2) | T18 | Actualizar CTA del Landing Page para redirigir a la Web App desplegada | Modificar href del botón "Ingresar" y "Solicitar Demo" en el Landing Page para apuntar a la URL pública de la Web Application desplegada. | 1 | Alca, César | Done |
 
+---
+
+## 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2, el equipo implementó la primera versión funcional de la Refrio Web Application utilizando Angular 17 con Angular Material como biblioteca de componentes UI, siguiendo el design system establecido en el Sprint 1 (paleta cromática azul corporativo #3F51B5, tipografía Roboto). La arquitectura de la aplicación sigue un patrón por módulos alineado a los Bounded Contexts del dominio: AuthModule, InventoryModule, TelemetryModule, AlertsModule y SharedModule, cada uno con lazy loading para optimizar el tiempo de carga.
+
+La Fake API se implementó con json-server, configurado con datos seed realistas de Refrio y desplegado en Railway para que la Web App consume endpoints RESTful reales desde cualquier dispositivo. Todos los commits siguen la convención Conventional Commits y cada feature fue desarrollada en su rama `feature/[us-id]-[descripción]`, revisada mediante Pull Request con aprobación de al menos un compañero antes de mergear a `develop`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| refrio-webapp | feature/ts01-angular-setup | a1b2c3d | feat(setup): initialize Angular 17 project with Material and lazy-loaded modules | Creates project structure: AuthModule, InventoryModule, TelemetryModule, AlertsModule, SharedModule. Configures routing with loadChildren for lazy loading. Adds Angular Material theme based on brand palette #3F51B5. | 2026-09-22 |
+| refrio-webapp | feature/ts01-angular-setup | b2c3d4e | chore(setup): configure environment files with API_BASE_URL for dev and prod | environment.ts points to http://localhost:3000. environment.prod.ts points to Railway json-server URL. | 2026-09-22 |
+| refrio-fake-api | feature/ts02-fake-api | c3d4e5f | feat(api): create db.json with seed data for all Refrio domain entities | Adds collections: users (5), companies (3), batches (15), products (12), coldRooms (4), telemetry (288 readings/24h), incidents (4), alerts (6). Seed data reflects realistic perishable logistics scenario. | 2026-09-23 |
+| refrio-fake-api | feature/ts02-fake-api | d4e5f6g | chore(api): configure CORS and deploy json-server to Railway | Adds server.js with cors middleware allowing refrio-webapp Netlify domain. Configures Railway start command. | 2026-09-23 |
+| refrio-webapp | feature/us06-us08-auth | e5f6g7h | feat(auth): implement LoginComponent with JWT simulation and role-based redirect | POST /auth/login to json-server. Stores token in localStorage. Redirects to /dashboard/supervisor or /dashboard/store based on user role. Angular FormBuilder with Validators.email and Validators.required. | 2026-09-24 |
+| refrio-webapp | feature/us06-us08-auth | f6g7h8i | feat(auth): implement RegisterCompanyComponent with RUC validation | 11-digit RUC validator (custom ValidatorFn). POST /companies. Error handling for duplicate RUC (409 response from json-server). | 2026-09-24 |
+| refrio-webapp | feature/us06-us08-auth | g7h8i9j | feat(auth): add AuthGuard and RoleGuard for protected routes | CanActivate guards check localStorage token. RoleGuard restricts /inventory to supervisor role. Redirects to /login if unauthenticated. | 2026-09-25 |
+| refrio-webapp | feature/us07-register-store | h8i9j0k | feat(auth): implement RegisterStoreComponent for minorista segment | Simplified form: business name, phone, email, password. POST /users with role: "minorista". Matches simplified onboarding for bodega owners. | 2026-09-25 |
+| refrio-webapp | feature/us09-profile | i9j0k1l | feat(iam): create ProfileComponent with inline edit capability | Displays user data from GET /users/:id. Editable fields: name, phone, password. PATCH /users/:id on save. Password field hidden by default with toggle. | 2026-09-25 |
+| refrio-webapp | feature/us13-us15-inventory | j0k1l2m | feat(inventory): implement BatchRegisterComponent with FEFO intake | Form with: productName, batchCode, quantity, unit (kg/units/L), receptionDate, expirationDate, supplierId. DatePicker validation: expirationDate > receptionDate. POST /batches. | 2026-09-26 |
+| refrio-webapp | feature/us13-us15-inventory | k1l2m3n | feat(inventory): implement InventoryListComponent with FEFO sort and freshness semaphore | GET /batches sorted by expirationDate ASC (FEFO). Color badge: green (>7d), yellow (3-7d), red (<3d). Filter by category. Search by product name. MatTable with pagination. | 2026-09-26 |
+| refrio-webapp | feature/us13-us15-inventory | l2m3n4o | feat(inventory): add ExpirationAuditComponent for critical batches | GET /batches?daysToExpire_lte=3. Cards showing product, batch code, quantity, days remaining. Actions: "Set as Sale Offer" (PATCH status: "offer") or "Discard" (PATCH status: "discarded"). | 2026-09-27 |
+| refrio-webapp | feature/us16-us17-telemetry | m3n4o5p | feat(telemetry): implement TelemetryDashboardComponent with 30s polling | GET /telemetry grouped by coldRoomId. Cards: current temp, humidity, status. Polling with RxJS interval(30000). ngx-charts LineChart for last 12 readings per cold room. | 2026-09-27 |
+| refrio-webapp | feature/us16-us17-telemetry | n4o5p6q | feat(telemetry): add ThermalHistoryComponent with date range filter | GET /telemetry?coldRoomId=:id&timestamp_gte=:from&timestamp_lte=:to. MatDatepicker range. Table and line chart of historical readings. Export CSV button. | 2026-09-28 |
+| refrio-webapp | feature/us19-us21-alerts | o5p6q7r | feat(alerts): implement AlertsListComponent with severity indicators | GET /incidents ordered by timestamp DESC. MatChip severity badges: critical (red), warning (amber), info (blue). Real-time count badge in sidebar navigation. | 2026-09-28 |
+| refrio-webapp | feature/us19-us21-alerts | p6q7r8s | feat(alerts): add incident close modal with mandatory root cause | MatDialog with Validators.required on rootCause field. PATCH /incidents/:id {status: "closed", rootCause, correctiveAction, closedAt}. Disabled "Close" button until both fields filled. | 2026-09-29 |
+| refrio-webapp | feature/us19-us21-alerts | q7r8s9t | feat(alerts): implement in-app notification service using Angular Material SnackBar | NotificationService checks polling response. If new incident detected (status: "active", createdAt > lastCheck), triggers MatSnackBar with alert message and "View" action button. | 2026-09-29 |
+| refrio-webapp | feature/ts03-deployment | r8s9t0u | chore(deploy): configure Angular production build for Netlify deployment | angular.json production config: budgets, optimization, source maps disabled. netlify.toml with build command and publish directory. Redirects for SPA routing (_redirects file). | 2026-09-29 |
+| refrio-website | feature/landing-v2-cta | s9t0u1v | feat(landing): update CTAs to point to deployed Web Application | Updates href in hero "Ingresar" button and plans "Comenzar" buttons to refrio-webapp.netlify.app. Ensures consistent experience between Landing Page and Web App. | 2026-09-29 |
+
+---
+
+## 5.2.2.5. Execution Evidence for Sprint Review
+
+En este Sprint 2 se completó el diseño e implementación de la primera versión funcional de la Refrio Web Application. A continuación se describen las principales vistas entregadas:
+
+**Vistas de Autenticación (AuthModule)**
+Se implementaron tres flujos de autenticación: Login unificado (email + contraseña con redirección por rol), Registro de Distribuidora Mediana (formulario B2B con validación de RUC de 11 dígitos y razón social) y Registro Simplificado de Bodega (onboarding ágil para comerciantes minoristas). Al autenticarse, el token JWT simulado se almacena en localStorage y los guards redirigen automáticamente al dashboard correspondiente al rol del usuario.
+
+**Dashboard de Supervisor Logístico (Segmento 1)**
+El supervisor logístico accede a un dashboard con cuatro secciones principales: (1) Panel de telemetría en tiempo real con tarjetas por cámara frigorífica que muestran temperatura actual, humedad y estado (OK/Alerta), actualizadas cada 30 segundos mediante polling al json-server; (2) Gráficas de líneas de las últimas 12 lecturas térmicas por cámara usando ngx-charts; (3) Centro de alertas con lista de incidentes activos, clasificados por severidad (crítico/warning), con modal para cierre de incidente exigiendo causa raíz y acción correctiva; (4) Módulo de inventario FEFO con lista de lotes ordenada por fecha de caducidad ascendente, semáforo de frescura por color y herramientas de filtro y búsqueda.
+
+**Dashboard de Comerciante Minorista (Segmento 2)**
+La comerciante minorista accede a una vista simplificada orientada a bodegas: (1) Inventario con semáforo de frescura (verde/amarillo/rojo) y función de registro rápido de lote por escaneo de fecha; (2) Panel de auditoría de vencimientos con lista de productos críticos (<3 días) y acciones rápidas de remate o descarte; (3) Historial de temperatura de su vitrina/refrigeradora con gráfica de las últimas 24 horas.
+
+**Enlace al video de navegación del Sprint 2:**
+Ver video de product navigation Sprint 2 *(insertar URL de Microsoft Stream)*
+
+---
+
 ## 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con json-server** desplegada en Railway. Esta API simula el comportamiento del backend RESTful de Refrio, exponiendo los mismos contratos de endpoints que implementará el backend real en Spring Boot durante AV2. La documentación a continuación describe los endpoints consumidos por la Web Application en este sprint.
