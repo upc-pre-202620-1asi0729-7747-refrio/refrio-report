@@ -484,7 +484,7 @@ Para este Sprint 2, los aspectos de trabajo se organizan en torno a los módulos
 | Rivas Méndez, Bernie Aarón | `Arivas3008` | C | C | C | L |
 | Saavedra Flores, Rodrigo Andree | `rodrigoxd67` | C | C | L | C |
 | Tello Lima, Jose Alejandro | `j4ndrow` | L | C | C | L |
-**L = Leader | C = Collaborator**
+**L = Leader  C = Collaborator**
 
 Los líderes de cada aspecto son responsables de la arquitectura del módulo, la toma de decisiones técnicas dentro de su área y la revisión de los PRs de sus colaboradores. Todos los integrantes contribuyen en al menos dos aspectos por sprint, garantizando conocimiento transversal del sistema.
 
