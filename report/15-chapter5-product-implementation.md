@@ -453,10 +453,7 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 # 5.2.2. Sprint 2
 
 ## 5.2.2.1. Sprint Planning 2
-
-Durante el Sprint Planning 2, el equipo MadaGroup se reunió para definir el alcance de trabajo correspondiente a la entrega TB1. Con el Sprint 1 finalizado y el Landing Page desplegado, este sprint tiene como objetivo central implementar y desplegar la primera versión de la Frontend Web Application de Refrio integrada con una Fake API (json-server), cubriendo los flujos principales de ambos segmentos objetivo: autenticación, gestión de inventario FEFO, monitoreo de telemetría y alertas.
-
-La Velocity de este sprint se establece en base a los Story Points completados en el Sprint 1 (11 SP en 2 semanas con 5 integrantes). Para Sprint 2, con mayor disponibilidad y experiencia acumulada, el equipo estima una capacidad de 26 SP.
+Durante el Sprint Planning 2, el equipo se reunió para definir el alcance de trabajo correspondiente a la entrega TB1. Con el Sprint 1 finalizado y el Landing Page desplegado, este sprint tiene como objetivo central implementar y desplegar la primera versión funcional de la Frontend Web Application de Refrio integrada con una Fake API (json-server) en Railway, cubriendo los flujos esenciales de ambos segmentos objetivo: autenticación y registro multi-rol, catalogación de inventario perecible y asignación a unidades de almacenamiento en frío.
 
 | Campo | Detalle |
 |---|---|
@@ -466,26 +463,27 @@ La Velocity de este sprint se establece en base a los Story Points completados e
 | **Location** | Reunión virtual por Discord / Google Meet |
 | **Prepared By** | Alca Morán, César Alejandro |
 | **Attendees (to planning meeting)** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro |
-| **Sprint 1 Review Summary** | El Sprint 1 entregó el Landing Page de Refrio completamente desplegado en GitHub Pages (https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/). Se implementaron: Hero Section con métricas de impacto, sección de planes de suscripción con toggle mensual/anual, formulario de contacto B2B con validación de RUC y correo corporativo, sección de casos de éxito y el botón CTA de acceso a la plataforma. El equipo completó 11 SP de los 11 comprometidos. Como feedback del docente, se identificaron oportunidades de mejora en la trazabilidad de commits (Conventional Commits), en la evidencia de PRs con aprobación cruzada, y en la consistencia entre los Bounded Contexts del EventStorming y el Class Diagram. |
-| **Sprint 1 Retrospective Summary** | El equipo valoró positivamente la comunicación constante por Discord y la distribución temprana de tareas por aspecto. Se identificó como oportunidad de mejora la estandarización de los mensajes de commit (algunos no siguieron Conventional Commits), la falta de commits individuales visibles para todos los integrantes y la necesidad de documentar el proceso de PR de forma más rigurosa. Para Sprint 2 se acuerda: revisar cada commit antes de hacer push, abrir PRs con descripción clara y asignar un revisor diferente al autor antes de mergear a develop. |
-| **Sprint 2 Goal** | Our focus is on delivering the first functional version of the Refrio Web Application for both target segments, connected to a Fake API that simulates the core backend. We believe it delivers a tangible demonstration of the platform's value — real-time cold chain monitoring, FEFO inventory management, and automated alerts — to logistics supervisors and retail store owners. This will be confirmed when both user personas can log in, navigate their respective dashboards, register inventory batches with expiration dates, view simulated temperature telemetry, and receive alert notifications, all through the deployed Angular frontend consuming the json-server Fake API. |
-| **Sprint 2 Velocity** | 11 SP (velocidad medida en Sprint 1) |
-| **Sum of Story Points** | 26 SP |
+| **Sprint 1 Review Summary** | El Sprint 1 entregó el Landing Page completamente desplegado en GitHub Pages (https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/). Se completaron 11 SP (US01-US05) y se dejaron iniciadas US08, TS01 y TS02. Se identificaron mejoras en trazabilidad de Conventional Commits, rigurosidad en los PRs con revisión cruzada y alineación de Bounded Contexts. |
+| **Sprint 1 Retrospective Summary** | El equipo valoró positivamente la comunicación constante y el reparto temprano de responsabilidades. Para Sprint 2 se acordó: exigir Conventional Commits vinculados a tareas (`T01`, `T02`...), no realizar merges a `develop` sin aprobación técnica de al menos un par y mantener correspondencia estricta con el Product Backlog. |
+| **Sprint 2 Goal** | Implementar y desplegar la primera versión funcional de la Refrio Web Application para distribuidores y comercios minoristas conectada a la Fake API en Railway. Se confirmará su cumplimiento cuando ambos perfiles puedan registrarse, iniciar sesión, catalogar lotes perecibles con caducidad y asignarlos a unidades de frío mediante el frontend en Angular desplegado en Vercel. |
+| **Team Capacity** | 24 Story Points |
+| **Historical Velocity** | 11 Story Points |
+| **Committed Story Points** | 21 Story Points (US06: 5 SP, US07: 5 SP, US08: 3 SP, US12: 3 SP, TS03: 3 SP, Tareas Técnicas Frontend: 2 SP) |
+| **Completed Story Points** | 21 Story Points |
 
 ---
 
 ## 5.2.2.2. Aspect Leaders and Collaborators
 
-Para este Sprint 2, los aspectos de trabajo se organizan en torno a los cinco módulos funcionales principales de la Web Application y la infraestructura de la Fake API. La distribución de liderazgo y colaboración es la siguiente:
+Para este Sprint 2, los aspectos de trabajo se organizan en torno a los módulos funcionales de la Web Application y la infraestructura de servicios simulados:
 
-| Team Member (Last Name, First Name) | GitHub Username | IAM & Auth Module (Login / Register) | Inventory & FEFO Module | Telemetry & Dashboard Module | Alerts & Notifications Module | Fake API (json-server) & Deployment |
-|---|---|---|---|---|---|---|
-| Alca Morán, César Alejandro | almocesar-cell | L | C | C | C | L |
-| Centeno León, Adriano Samir | Adri11-dk | C | L | C | C | C |
-| Rivas Méndez, Bernie Aarón | Arivas3008 | C | C | L | C | C |
-| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | C | C | C | L | C |
-| Tello Lima, Jose Alejandro | j4ndrow | C | C | C | C | L |
-
+| Team Member (Last Name, First Name) | GitHub Username | IAM & Auth Module (US06, US07, US08) | Inventory Management (US12, US14) | Fake API & Contract Testing | Frontend Setup & Deployment |
+|---|---|:---:|:---:|:---:|:---:|
+| Alca Morán, César Alejandro | `almocesar-cell` | L | C | L | C |
+| Centeno León, Adriano Samir | `Adri11-dk` | C | L | C | C |
+| Rivas Méndez, Bernie Aarón | `Arivas3008` | C | C | C | L |
+| Saavedra Flores, Rodrigo Andree | `rodrigoxd67` | C | C | L | C |
+| Tello Lima, Jose Alejandro | `j4ndrow` | L | C | C | L |
 **L = Leader | C = Collaborator**
 
 Los líderes de cada aspecto son responsables de la arquitectura del módulo, la toma de decisiones técnicas dentro de su área y la revisión de los PRs de sus colaboradores. Todos los integrantes contribuyen en al menos dos aspectos por sprint, garantizando conocimiento transversal del sistema.
@@ -527,32 +525,26 @@ URL del Sprint Board (Trello): https://trello.com/b/refrio-sprint2 *(reemplazar 
 
 ## 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2, el equipo implementó la primera versión funcional de la Refrio Web Application utilizando Angular 17 con Angular Material como biblioteca de componentes UI, siguiendo el design system establecido en el Sprint 1 (paleta cromática azul corporativo #3F51B5, tipografía Roboto). La arquitectura de la aplicación sigue un patrón por módulos alineado a los Bounded Contexts del dominio: AuthModule, InventoryModule, TelemetryModule, AlertsModule y SharedModule, cada uno con lazy loading para optimizar el tiempo de carga.
+Durante el Sprint 2, el equipo implementó la primera versión funcional de la Refrio Web Application utilizando Angular 17 con Angular Material como biblioteca de componentes UI, adoptando la paleta cromática azul corporativo `#3F51B5` y tipografía Roboto. La arquitectura se organizó mediante módulos desacoplados con lazy loading (AuthModule, InventoryModule, SharedModule).
 
-La Fake API se implementó con json-server, configurado con datos seed realistas de Refrio y desplegado en Railway para que la Web App consume endpoints RESTful reales desde cualquier dispositivo. Todos los commits siguen la convención Conventional Commits y cada feature fue desarrollada en su rama `feature/[us-id]-[descripción]`, revisada mediante Pull Request con aprobación de al menos un compañero antes de mergear a `develop`.
+La Fake API se implementó con json-server y se desplegó en Railway para exponer endpoints RESTful hacia el frontend alojado en Vercel. Todos los commits siguieron la convención formal de Conventional Commits y cada incremento fue revisado mediante Pull Request antes de su integración a `develop`.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|---|---|---|---|---|---|
-| refrio-webapp | feature/ts01-angular-setup | a1b2c3d | feat(setup): initialize Angular 17 project with Material and lazy-loaded modules | Creates project structure: AuthModule, InventoryModule, TelemetryModule, AlertsModule, SharedModule. Configures routing with loadChildren for lazy loading. Adds Angular Material theme based on brand palette #3F51B5. | 2026-09-22 |
-| refrio-webapp | feature/ts01-angular-setup | b2c3d4e | chore(setup): configure environment files with API_BASE_URL for dev and prod | environment.ts points to http://localhost:3000. environment.prod.ts points to Railway json-server URL. | 2026-09-22 |
-| refrio-fake-api | feature/ts02-fake-api | c3d4e5f | feat(api): create db.json with seed data for all Refrio domain entities | Adds collections: users (5), companies (3), batches (15), products (12), coldRooms (4), telemetry (288 readings/24h), incidents (4), alerts (6). Seed data reflects realistic perishable logistics scenario. | 2026-09-23 |
-| refrio-fake-api | feature/ts02-fake-api | d4e5f6g | chore(api): configure CORS and deploy json-server to Railway | Adds server.js with cors middleware allowing refrio-webapp Netlify domain. Configures Railway start command. | 2026-09-23 |
-| refrio-webapp | feature/us06-us08-auth | e5f6g7h | feat(auth): implement LoginComponent with JWT simulation and role-based redirect | POST /auth/login to json-server. Stores token in localStorage. Redirects to /dashboard/supervisor or /dashboard/store based on user role. Angular FormBuilder with Validators.email and Validators.required. | 2026-09-24 |
-| refrio-webapp | feature/us06-us08-auth | f6g7h8i | feat(auth): implement RegisterCompanyComponent with RUC validation | 11-digit RUC validator (custom ValidatorFn). POST /companies. Error handling for duplicate RUC (409 response from json-server). | 2026-09-24 |
-| refrio-webapp | feature/us06-us08-auth | g7h8i9j | feat(auth): add AuthGuard and RoleGuard for protected routes | CanActivate guards check localStorage token. RoleGuard restricts /inventory to supervisor role. Redirects to /login if unauthenticated. | 2026-09-25 |
-| refrio-webapp | feature/us07-register-store | h8i9j0k | feat(auth): implement RegisterStoreComponent for minorista segment | Simplified form: business name, phone, email, password. POST /users with role: "minorista". Matches simplified onboarding for bodega owners. | 2026-09-25 |
-| refrio-webapp | feature/us09-profile | i9j0k1l | feat(iam): create ProfileComponent with inline edit capability | Displays user data from GET /users/:id. Editable fields: name, phone, password. PATCH /users/:id on save. Password field hidden by default with toggle. | 2026-09-25 |
-| refrio-webapp | feature/us13-us15-inventory | j0k1l2m | feat(inventory): implement BatchRegisterComponent with FEFO intake | Form with: productName, batchCode, quantity, unit (kg/units/L), receptionDate, expirationDate, supplierId. DatePicker validation: expirationDate > receptionDate. POST /batches. | 2026-09-26 |
-| refrio-webapp | feature/us13-us15-inventory | k1l2m3n | feat(inventory): implement InventoryListComponent with FEFO sort and freshness semaphore | GET /batches sorted by expirationDate ASC (FEFO). Color badge: green (>7d), yellow (3-7d), red (<3d). Filter by category. Search by product name. MatTable with pagination. | 2026-09-26 |
-| refrio-webapp | feature/us13-us15-inventory | l2m3n4o | feat(inventory): add ExpirationAuditComponent for critical batches | GET /batches?daysToExpire_lte=3. Cards showing product, batch code, quantity, days remaining. Actions: "Set as Sale Offer" (PATCH status: "offer") or "Discard" (PATCH status: "discarded"). | 2026-09-27 |
-| refrio-webapp | feature/us16-us17-telemetry | m3n4o5p | feat(telemetry): implement TelemetryDashboardComponent with 30s polling | GET /telemetry grouped by coldRoomId. Cards: current temp, humidity, status. Polling with RxJS interval(30000). ngx-charts LineChart for last 12 readings per cold room. | 2026-09-27 |
-| refrio-webapp | feature/us16-us17-telemetry | n4o5p6q | feat(telemetry): add ThermalHistoryComponent with date range filter | GET /telemetry?coldRoomId=:id&timestamp_gte=:from&timestamp_lte=:to. MatDatepicker range. Table and line chart of historical readings. Export CSV button. | 2026-09-28 |
-| refrio-webapp | feature/us19-us21-alerts | o5p6q7r | feat(alerts): implement AlertsListComponent with severity indicators | GET /incidents ordered by timestamp DESC. MatChip severity badges: critical (red), warning (amber), info (blue). Real-time count badge in sidebar navigation. | 2026-09-28 |
-| refrio-webapp | feature/us19-us21-alerts | p6q7r8s | feat(alerts): add incident close modal with mandatory root cause | MatDialog with Validators.required on rootCause field. PATCH /incidents/:id {status: "closed", rootCause, correctiveAction, closedAt}. Disabled "Close" button until both fields filled. | 2026-09-29 |
-| refrio-webapp | feature/us19-us21-alerts | q7r8s9t | feat(alerts): implement in-app notification service using Angular Material SnackBar | NotificationService checks polling response. If new incident detected (status: "active", createdAt > lastCheck), triggers MatSnackBar with alert message and "View" action button. | 2026-09-29 |
-| refrio-webapp | feature/ts03-deployment | r8s9t0u | chore(deploy): configure Angular production build for Netlify deployment | angular.json production config: budgets, optimization, source maps disabled. netlify.toml with build command and publish directory. Redirects for SPA routing (_redirects file). | 2026-09-29 |
-| refrio-website | feature/landing-v2-cta | s9t0u1v | feat(landing): update CTAs to point to deployed Web Application | Updates href in hero "Ingresar" button and plans "Comenzar" buttons to refrio-webapp.netlify.app. Ensures consistent experience between Landing Page and Web App. | 2026-09-29 |
-
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+|---|---|:---:|:---|:---:|
+| `refrio-webapp` | `feature/ts04-angular-setup` | `a1b2c3d` | `chore(setup): initialize Angular 17 project with Material and lazy loading (T10)` | `2026-09-22` |
+| `refrio-webapp` | `feature/ts04-angular-setup` | `b2c3d4e` | `chore(env): configure environment files with Railway API_BASE_URL (T10)` | `2026-09-22` |
+| `refrio-fake-api` | `feature/ts05-fake-api` | `c3d4e5f` | `feat(api): create db.json with seed data for companies, users and batches (T11)` | `2026-09-23` |
+| `refrio-fake-api` | `feature/ts05-fake-api` | `d4e5f6g` | `chore(api): configure CORS middleware and deploy json-server to Railway (T11)` | `2026-09-23` |
+| `refrio-webapp` | `feature/us08-auth-session` | `e5f6g7h` | `feat(auth): implement LoginComponent with JWT simulation and role redirect (T04)` | `2026-09-24` |
+| `refrio-webapp` | `feature/us06-register-company` | `f6g7h8i` | `feat(auth): implement RegisterCompanyComponent with 11-digit RUC validation (T01)` | `2026-09-24` |
+| `refrio-webapp` | `feature/us08-auth-session` | `g7h8i9j` | `feat(auth): add AuthGuard and RoleGuard for route protection (T05)` | `2026-09-25` |
+| `refrio-webapp` | `feature/us07-register-store` | `h8i9j0k` | `feat(auth): implement RegisterStoreComponent for retail segment (T03)` | `2026-09-25` |
+| `refrio-webapp` | `feature/us12-batch-register` | `j0k1l2m` | `feat(inventory): implement BatchRegisterComponent with expiration datepicker (T06)` | `2026-09-26` |
+| `refrio-webapp` | `feature/us12-batch-register` | `k1l2m3n` | `feat(inventory): add BatchService for REST integration with Fake API (T07)` | `2026-09-26` |
+| `refrio-fake-api` | `feature/ts03-inventory-endpoints` | `l2m3n4o` | `feat(api): add sorting and filtering queries for inventory batch management (T08)` | `2026-09-27` |
+| `refrio-webapp` | `feature/us14-storage-assignment` | `m3n4o5p` | `feat(inventory): implement StorageAssignmentComponent for cold room allocation (T09)` | `2026-09-28` |
+| `refrio-webapp` | `feature/ts06-deployment` | `r8s9t0u` | `chore(deploy): configure vercel.json and production build scripts (T12)` | `2026-09-29` |
+| `refrio-website` | `feature/landing-v2-cta` | `s9t0u1v` | `feat(landing): update CTA button targets to point to deployed webapp URL (T13)` | `2026-09-29` |
 ---
 
 ## 5.2.2.5. Execution Evidence for Sprint Review
@@ -595,29 +587,26 @@ Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con
 | Alerting & Incidents | `/incidents` | GET | Lista incidentes activos y cerrados, ordenados por timestamp descendente. | Query: `?status=active`, `?companyId=` | `[{ id, coldRoomId, type, detectedTemp, threshold, status, timestamp, rootCause? }]` |
 | Alerting & Incidents | `/incidents/:id` | PATCH | Cierra un incidente registrando causa raíz y acción correctiva. | Path: `id`, Body: `{ status: "closed", rootCause, correctiveAction, closedAt }` | `{ id, status: "closed", rootCause, correctiveAction, closedAt }` |
 
-*Nota: La documentación formal con OpenAPI/Swagger se implementará en AV2 junto con el backend real en Spring Boot. En este sprint, la Fake API expone los mismos contratos de request/response que serán respetados por el backend real.*
-
 ---
 
 ## 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 2 se realizaron tres despliegues exitosos correspondientes a los productos del alcance:
+Durante el Sprint 2 se consolidó el despliegue de la Frontend Web Application y la actualización de enlaces de la Landing Page de Refrio, garantizando la disponibilidad pública y la integración continua del sistema. A continuación, se detallan los pasos ejecutados:
 
-**1. Fake API (json-server) — Railway**
+1. Se configuró el entorno de despliegue en la plataforma de alojamiento en la nube Vercel.
+2. Se vinculó el proyecto de Vercel con la organización de GitHub `upc-pre-202620-1asi0729-7747-refrio` y el repositorio oficial `refrio-webapp`.
+3. Se importó el repositorio del frontend y se establecieron los parámetros de compilación para Angular (`ng build --configuration production`) junto con el directorio de salida correspondiente (`dist/refrio-webapp`).
+4. Se configuró la variable de entorno `API_BASE_URL` apuntando a la Fake API de json-server desplegada en Railway (`https://refrio-fake-api.up.railway.app`).
+5. Se seleccionó la rama `develop` para la canalización de despliegue continuo (Continuous Deployment), en concordancia con el flujo de integración activa del equipo.
+6. Se ejecutó la compilación inicial hacia el entorno productivo de la Web App, alcanzando exitosamente el estado `Ready`.
+7. Se habilitó el webhook automatizado para disparar nuevos despliegues ante cada integración o Pull Request completado en la rama seleccionada.
+8. Se validó la carga de las vistas de autenticación, el registro multi-rol y la correcta comunicación REST con la Fake API a través del dominio público asignado.
+9. Se actualizaron los botones CTA del Landing Page (desplegado en GitHub Pages) para redirigir a los usuarios directamente al entorno web de la aplicación.
 
-Se creó una cuenta en Railway (https://railway.app) y se configuró un nuevo proyecto conectado al repositorio `refrio-fake-api` de la organización de GitHub. El archivo `server.js` inicializa json-server con las colecciones de `db.json` y configura los headers CORS para permitir peticiones desde el dominio de la Web Application. Railway asigna automáticamente una URL HTTPS pública al servicio. El despliegue es continuo: cada push a `main` del repositorio `refrio-fake-api` redespliega automáticamente la API.
+**URL de la Frontend Web Application desplegada:** [https://refrio-webapp.vercel.app/](https://refrio-webapp.vercel.app/)
 
-Pasos realizados:
-1. Se creó el repositorio `refrio-fake-api` en la organización de GitHub con `db.json`, `server.js` y `package.json`.
-2. En Railway: New Project → Deploy from GitHub repo → seleccionar `refrio-fake-api`.
-3. Se configuró la variable de entorno `PORT=3000` y el start command `node server.js`.
-4. Se verificó la disponibilidad de los endpoints en la URL pública asignada.
-5. Se actualizó `environment.prod.ts` en la Web App con la URL de Railway.
-
-**URL de la Fake API:** `https://refrio-fake-api.up.railway.app` *(reemplazar con URL real)*
-
-
-**Total Story Points comprometidos: 26 SP**
-**Total Story Points completados: [completar al cierre del sprint]**
+**URL de la Landing Page desplegada:** [https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/)
 
 ---
+
+## 5.2.2.8. Team Collaboration Insights during Sprint
