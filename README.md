@@ -104,8 +104,6 @@
 
 ### AV1:
 En está versión del trabajo se realizaron los capítulos I a IV en su totalidad, a la vez que se avanzo el capítulo V hasta el sprint 1 como dispone la rúbrica para el primer entregable, semana 4.
-**Segunda versión de trabajo:**
-En está versión se realizó el sprint 2 que conforma el desarrollo del FrontEnd y del FakiApi del proyecto a la vez que su integración.
 Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-report.git)
 
 <img src="assets/InsightsAV1.png" alt="insights" width="600">
