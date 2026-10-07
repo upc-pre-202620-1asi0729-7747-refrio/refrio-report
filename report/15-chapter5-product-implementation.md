@@ -498,7 +498,6 @@ El objetivo principal de este Sprint es contar con la primera versión de la Ref
 
 | Sprint # | Sprint 2 | | | | | | |
 |---|---|---|---|---|---|---|---|
-
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (h) | Assigned To | Status |
 |---|---|---|---|---|---|---|---|
 | US06 | Registro de Distribuidora Mediana | T01 | Crear componente RegisterCompanyComponent | Implementar formulario de registro B2B con campos: razón social, RUC (11 dígitos), correo corporativo, contraseña, dirección de almacén. Validaciones reactivas con Angular FormBuilder. | 4 | Alca, César | Done |
