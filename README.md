@@ -1,42 +1,63 @@
 <div align="center">
-    <img src="assets/logoUPC.png">
+    <img src="assets/logoUPC.png" alt="logoupc" width="90">
+<div style="font-family: 'Aptos', sans-serif; text-align: center; line-height: 1.5;">
+  <p style="font-size: 12pt; margin: 0;">Universidad Peruana de Ciencias Aplicadas</p>
+  <p style="font-size: 12pt; margin: 0;">Carrera de Ingeniería de Software</p>
+  <br>    
+  <p style="font-size: 14pt; margin: 0;"><b>1ASI0729</b></p>
+  <p style="font-size: 14pt; margin: 0;"><b>Desarrollo de Aplicaciones Open Source</b></p>
+  <p style="font-size: 12pt; margin: 0;">NRC</p>
+  <p style="font-size: 14pt; margin: 0;"><b>7747</b></p>
+  <p style="font-size: 16pt; margin: 0;"><b>Informe del Trabajo Final</b></p>
+  <p style="font-size: 12pt; margin: 0;">Docente</p>
+  <p style="font-size: 14pt; margin: 0;"><b>Robles Fernández, Ivam</b></p>
+  <br>
+  <p style="font-size: 12pt; margin: 0;">Equipo</p>
+  <p style="font-size: 14pt; margin: 0;"><b>MadaGroup</b></p>
+  <br>
+  <p style="font-size: 12pt; margin: 0;">Proyecto</p>
+  <p style="font-size: 14pt; margin: 0;"><b>Refrio</b></p>
+  <br>
+  <p style="font-size: 12pt; margin: 0;"><b>Integrantes</b></p>
 
-# UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+  <table style="font-family: 'Aptos', sans-serif; font-size: 11pt; border-collapse: collapse; border: none; margin: 10px auto;">
+    <thead>
+      <tr>
+        <th style="text-align: left; padding: 2px 15px; border: none;">Código</th>
+        <th style="text-align: left; padding: 2px 15px; border: none;">Apellidos y Nombres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left; padding: 2px 15px; border: none;">U20241F027</td>
+        <td style="text-align: left; padding: 2px 15px; border: none;">Alca Morán, César Alejandro</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 2px 15px; border: none;">U20241D920	</td>
+        <td style="text-align: left; padding: 2px 15px; border: none;">Centeno León, Adriano Samir</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 2px 15px; border: none;">U20241F109	</td>
+        <td style="text-align: left; padding: 2px 15px; border: none;">Rivas Méndez, Bernie Aarón</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 2px 15px; border: none;">U20241D811</td>
+        <td style="text-align: left; padding: 2px 15px; border: none;">Saavedra Flores, Rodrigo Andree</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 2px 15px; border: none;">U202421618	</td>
+        <td style="text-align: left; padding: 2px 15px; border: none;">Tello Lima, José Alejandro</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
 
-**Carrera de Ingeniería de Software**
-
-**1ASI0729** <br>
-**Desarrollo de Aplicaciones Open Source** <br>
-NRC <br>
-**7747**
-
-## **Informe del Trabajo Final**
-Docente <br>
-#### **Robles Fernández, Ivan**
-Equipo <br>
-#### **MadaGroup**
-Proyecto <br>
-#### **Refrio**
-
-**Integrantes**
-
-<div style="text-align: center;">
-    <table style="margin: 0 auto; display: inline-table;">
-        <tr><th>Código</th><th>Apellidos y Nombres</th></tr>
-        <tr><th>U20241F027</th><th>Alca Morán, César Alejandro</th></tr>
-        <tr><th>U20241D920</th><th>Centeno León, Adriano Samir</th></tr>
-        <tr><th>U20241F109</th><th>Rivas Méndez, Bernie Aarón</th></tr>
-        <tr><th>U20241D811</th><th>Saavedra Flores, Rodrigo Andree</th></tr>
-        <tr><th>U202421618</th><th>Tello Lima, Jose Alejandro</th></tr>
-    </table>
+  <p style="font-size: 12pt; margin: 0;"><b>Período 202620</b></p>
+  <br>
+  <p style="font-size: 12pt; margin: 0;"><b>Octubre 2026</b></p>
 </div>
-
-**Periodo 202620**
-
-<strong>Agosto, 2026</strong>
-</div>
-
 <div style="page-break-after: always;"></div>
+</div>
 
 ## Registro de Versiones del Informe
 
@@ -57,32 +78,36 @@ Proyecto <br>
         </tr>
         <tr>
             <td><strong>TB1</strong></td>
+            <td>6/10/2026</td>
             <td>06/10/2026</td>
             <td>- Alca Morán, César Alejandro<br>- Centeno León, Adriano Samir<br>- Rivas Méndez, Bernie Aarón<br>- Saavedra Flores, Rodrigo Andree<br>- Tello Lima, Jose Alejandro</td>
             <td>5.2.2. Sprint 2<br>5.2.2.1. Sprint Planning 2.<br>5.2.2.2. Aspect Leaders and Collaborators.<br>5.2.2.3. Sprint Backlog 2.<br>5.2.2.4. Development Evidence for Sprint Review.<br>5.2.2.5. Execution Evidence for Sprint Review.<br>5.2.2.6. Services Documentation Evidence for Sprint Review.<br>5.2.2.7. Software Deployment Evidence for Sprint Review.<br>5.2.2.8. Team Collaboration Insights during Sprint</td>
+            <td>5.2.2. Sprint 2<br>5.2.2.1. Sprint Planning 2.<br>5.2.2.2. Aspect Leaders and Collaborators.<br>5.2.2.3. Sprint Backlog 1.<br>5.2.2.4. Development Evidence for Sprint Review.<br>5.2.2.5. Execution Evidence for Sprint Review.<br>5.2.2.6. Services Documentation Evidence for Sprint Review.<br>5.2.2.7. Software Deployment Evidence for Sprint Review.<br>5.2.2.8. Team Collaboration Insights during Sprint</td>
         </tr>
         <tr>
             <td><strong>AV2</strong></td>
-            <td>Por definir</td>
+            <td></td>
             <td>- Alca Morán, César Alejandro<br>- Centeno León, Adriano Samir<br>- Rivas Méndez, Bernie Aarón<br>- Saavedra Flores, Rodrigo Andree<br>- Tello Lima, Jose Alejandro</td>
             <td></td>
         </tr>
         <tr>
             <td><strong>TB2</strong></td>
-            <td>Por definir</td>
+            <td></td>
             <td>- Alca Morán, César Alejandro<br>- Centeno León, Adriano Samir<br>- Rivas Méndez, Bernie Aarón<br>- Saavedra Flores, Rodrigo Andree<br>- Tello Lima, Jose Alejandro</td>
             <td></td>
         </tr>
     </table>
 </div>
 </div>
+
 <div align="left">
 
 ## Project Report Collaboration Insights
 
 ### AV1:
 En está versión del trabajo se realizaron los capítulos I a IV en su totalidad, a la vez que se avanzo el capítulo V hasta el sprint 1 como dispone la rúbrica para el primer entregable, semana 4.
-
+**Segunda versión de trabajo:**
+En está versión se realizó el sprint 2 que conforma el desarrollo del FrontEnd y del FakiApi del proyecto a la vez que su integración.
 Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-report.git)
 
 ### TB1:
@@ -177,6 +202,15 @@ Durante el TB1, la colaboración del equipo se extendió a cinco repositorios de
             - [5.2.2.1. Sprint Planning 2](report/15-chapter5-product-implementation.md#5211-sprint-planning-2)
             - [5.2.2.2. Aspect Leaders and Collaborators](report/15-chapter5-product-implementation.md#5212-aspect-leaders-and-collaborators)
             - [5.2.2.3. Sprint Backlog 2](report/15-chapter5-product-implementation.md#5213-sprint-backlog-2)
+            - [5.2.2.4. Development Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5214-development-evidence-for-sprint-review)
+            - [5.2.2.5. Execution Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5215-execution-evidence-for-sprint-review)
+            - [5.2.2.6. Services Documentation Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5216-services-documentation-evidence-for-sprint-review)
+            - [5.2.2.7. Software Deployment Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5217-software-deployment-evidence-for-sprint-review)
+            - [5.2.2.8. Team Collaboration Insights during Sprint](report/15-chapter5-product-implementation.md#5218-team-collaboration-insights-during-sprint)
+        - [5.2.2. Sprint 2](report/15-chapter5-product-implementation.md#521-sprint-2)
+            - [5.2.2.1. Sprint Planning 1](report/15-chapter5-product-implementation.md#5211-sprint-planning-2)
+            - [5.2.2.2. Aspect Leaders and Collaborators](report/15-chapter5-product-implementation.md#5212-aspect-leaders-and-collaborators)
+            - [5.2.2.3. Sprint Backlog 1](report/15-chapter5-product-implementation.md#5213-sprint-backlog-2)
             - [5.2.2.4. Development Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5214-development-evidence-for-sprint-review)
             - [5.2.2.5. Execution Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5215-execution-evidence-for-sprint-review)
             - [5.2.2.6. Services Documentation Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5216-services-documentation-evidence-for-sprint-review)
