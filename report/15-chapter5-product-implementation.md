@@ -667,10 +667,4 @@ Se actualizaron los botones CTA del Landing Page (`refrio-website`) para redirig
 
 Durante el Sprint 2, la colaboración técnica se gestionó mediante GitFlow en el repositorio [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git). Cada integrante desarrolló el módulo asignado en una rama `feature/[descripción]`, la cual fue integrada mediante Pull Request con al menos una aprobación de un compañero diferente al autor antes de mergear a `develop`. Al concluir el sprint se creó la rama `release/v0.2.0` desde `develop`, que fue mergeada a `main` y etiquetada con `v0.2.0`, marcando la versión de entrega para TB1.
 
-
-
-**URL de la Landing Page desplegada:** 
-
----
-
-## 5.2.2.8. Team Collaboration Insights during Sprint
+![Team Collaboration Sprint 2 - PRs and Insights](../assets/TeamCollaborationInsights.png)
