@@ -620,7 +620,7 @@ A continuación se detalla la arquitectura de ingestión paralela del contexto, 
 
 #### BC3 — Inventory & FEFO Dispatch Operations Context
 
-Núcleo operativo encargado de gestionar la vida útil de los productos perecibles[cite: 1]. Los agregados Batch, FoodCategory y PickingPlan procesan comandos como `RegisterBatchIntake`, `AuditExpirationWindows` y `GenerateFEFOPickingPlan`, emitiendo eventos clave como `BatchIntakeRecorded`, `BatchCriticalExpirationDetected` y `BatchDispatched`. El algoritmo FEFO asegura que las órdenes de picking prioricen automáticamente los lotes más antiguos antes de permitir la validación de salida.
+Núcleo operativo encargado de gestionar la vida útil de los productos perecibles. Los agregados Batch, FoodCategory y PickingPlan procesan comandos como `RegisterBatchIntake`, `AuditExpirationWindows` y `GenerateFEFOPickingPlan`, emitiendo eventos clave como `BatchIntakeRecorded`, `BatchCriticalExpirationDetected` y `BatchDispatched`. El algoritmo FEFO asegura que las órdenes de picking prioricen automáticamente los lotes más antiguos antes de permitir la validación de salida.
 
 ![Event Storming Inventory FEFO](../assets/03-inventory-fefo-event-storming.png)
 
@@ -684,7 +684,7 @@ La arquitectura de ejecución se descompone en contenedores especializados:
 1. **Web Application (Static Web Hosting / Web Server):** Responsable de servir el Landing Page corporativo con la presentación de la propuesta de valor, el catálogo de planes de suscripción y entregar los paquetes optimizados de la aplicación cliente hacia los navegadores web.
 2. **Single-Page Application (SPA):** Desarrollada con React y TypeScript, provee una interfaz de usuario reactiva para dashboards de telemetría térmica en vivo, administración del catálogo de lotes perecibles, planificación de despachos FEFO y reportes analíticos de merma en entornos de escritorio y estaciones de supervisión en andén.
 3. **Mobile Web App:** Versión adaptada en formato PWA para dispositivos móviles, optimizada para comerciantes de bodegas y operarios de almacén que requieren escanear rápidamente fechas de caducidad, visualizar el semáforo de frescura de stock y recibir alertas sonoras inmediatas.
-4. **Backend API:** Núcleo desarrollado en ASP.NET Core / Node.js bajo un diseño modular alineado a Domain-Driven Design (DDD), encargado de procesar peticiones RESTful protegidas mediante tokens JWT, ejecutar las políticas de rotación FEFO, evaluar reglas de infracción térmica y orquestar eventos de dominio.
+4. **Backend API:** Núcleo transaccional desarrollado en ASP.NET Core (.NET 8) bajo un diseño modular alineado a Domain-Driven Design (DDD). Se encarga de exponer y procesar peticiones RESTful seguras mediante autenticación JWT, orquestar los eventos de dominio de los 7 Bounded Contexts, ejecutar la lógica algorítmica de rotación de inventarios FEFO, evaluar las reglas de negocio ante infracciones térmicas y gestionar la persistencia relacional de la plataforma.
 5. **Database:** Base de datos relacional y de series temporales sobre PostgreSQL / TimescaleDB, encargada de persistir de forma estructurada los registros de usuarios, empresas, unidades de almacenamiento frigorífico, existencias de lotes y el flujo masivo de mediciones telemétricas bajo garantías de integridad transaccional (ACID).
 
 <p align="center">
@@ -717,7 +717,7 @@ El diseño interno organiza la solución en módulos de dominio cohesivos y desa
 </p>
 
 ## 4.7. Software Object-Oriented Design
-El diseño orientado a objetos de la plataforma **Refrio** aplica las buenas prácticas de la programación orientada a objetos (POO) y los principios SOLID, buscando alta cohesión y bajo acoplamiento entre los componentes del sistema. Con el propósito de asegurar una arquitectura mantenible y escalable para la gestión de productos perecibles y el control de la cadena de frío, el diseño se divide en dos perspectivas:
+El diseño orientado a objetos de la plataforma Refrio aplica las buenas prácticas de la programación orientada a objetos (POO) y los principios SOLID, buscando alta cohesión y bajo acoplamiento entre los componentes del sistema. Con el propósito de asegurar una arquitectura mantenible y escalable para la gestión de productos perecibles y el control de la cadena de frío, el diseño se divide en dos perspectivas:
 
 1. **Diseño de Dominio del Backend (Tactical DDD):** Modela la lógica del negocio mediante un enfoque táctico de Diseño Guiado por el Dominio (*Domain-Driven Design*), delimitando las responsabilidades en *Bounded Contexts* (Contextos Delimitados). Cada contexto agrupa entidades del dominio, raíces agregadas (*Aggregate Roots*), objetos de valor (*Value Objects*), servicios y repositorios.
 2. **Diseño de Arquitectura del Frontend (Component-Based Architecture):** Modela la estructura interna de la aplicación web cliente bajo una arquitectura modular por capas, separando los componentes visuales de presentación, la persistencia y gestión reactiva de estado en memoria (*Stores*), los servicios de comunicación asíncrona con el API REST y los contratos de datos tipados (*DTOs*).
@@ -730,43 +730,68 @@ A continuación, se presentan los diagramas de clases correspondientes a la capa
 
 **Backend Class Diagram**
 
-Este diagrama representa el modelo de dominio del backend de **Refrio**, estructurado a través de los contextos delimitados que resuelven los procesos centrales del negocio.
+Este diagrama representa el diseño táctico orientado a objetos (Tactical DDD) del backend de Refrio. Para responder a la cohesión transaccional y modularidad del monolito modular en ASP.NET Core, los 7 Bounded Contexts identificados en el nivel estratégico (Design-Level EventStorming de la sección 4.6) se consolidan operativamente en módulos de dominio específicos según la siguiente justificación de transformación arquitectónica:
+
+| Módulo Táctico (Class Diagram) | Bounded Contexts Estratégicos Consolidados | Justificación de Diseño y Límites Transaccionales |
+| :--- | :--- | :--- |
+| **Identity & Access Management (IAM)** | `BC 01: IAM` | Mapeo directo 1:1. Resguarda credenciales, claims JWT, perfiles de negocio (RUC/teléfono) y políticas de autorización por roles. |
+| **Inventory & Perishables** | `BC 03: Inventory & FEFO Dispatch`<br>`BC 06: Analytics (parcial)` | Encapsula las entidades `Product`, `Batch` y los algoritmos de caducidad FEFO, computando a nivel de agregado el histórico de mermas directas por expiración. |
+| **Suppliers & Replenishment** | `BC 03: Inventory & FEFO Dispatch (Extensión de Catálogo)` | Desacopla la gestión de proveedores mayoristas y las reglas de reabastecimiento preventivo cuando el inventario entra a niveles mínimos. |
+| **Shipments & Logistics** | `BC 05: Cold Chain Traceability & Certification`<br>`BC 07: Public Portal (Verificación)` | Modela las hojas de ruta, la asignación de despachos y la generación de la Prueba de Entrega Digital (POD) con certificación verificable. |
+| **Cold Chain Telemetry & Alerts** | `BC 02: Storage & Device Telemetry`<br>`BC 04: Alerting & Incident Management` | Agrupa el procesamiento continuo de lecturas térmicas y la evaluación reactiva inmediata de umbrales para el disparo de alertas en un mismo pipeline de baja latencia. |
+
 ![Diagrama de Clases del Backend - Tactical DDD](../assets/backend-diagram.png)
 
-* **Bounded Context: Identity & Access Management (IAM):** Centraliza el registro de empresas distribuidoras y locales comerciales, autenticación de usuarios, gestión de tokens JWT y control de permisos mediante roles asignados.
-* **Bounded Context: Inventory & Perishables:** Modela el catálogo de productos perecibles, la configuración de umbrales de temperatura y stock mínimo, y el control de lotes con fechas de expiración para la aplicación estricta de la política FEFO (*First Expired, First Out*), así como el registro histórico de movimientos y mermas.
-* **Bounded Context: Suppliers & Replenishment:** Gestiona el directorio de proveedores y orquesta las órdenes de reposición que se disparan cuando el inventario alcanza niveles de stock bajo.
-* **Bounded Context: Shipments & Logistics:** Modela el ciclo de vida de los despachos hacia los locales comerciales, la asignación de flota vehicular y conductores, el registro de incidencias/rechazos de mercadería y la captura de la Prueba de Entrega Digital (POD).
-* **Bounded Context: Cold Chain Telemetry & Alerts:** Representa la ingesta de telemetría proveniente de dispositivos y sensores IoT instalados en los transportes (temperatura, humedad y coordenadas GPS), evaluando quiebres térmicos para generar alertas automáticas en tiempo real.
+A nivel de implementación, las responsabilidades de cada módulo del diagrama se distribuyen de la siguiente forma:
+
+- **Bounded Context: Identity & Access Management (IAM):** Centraliza el registro de empresas distribuidoras y locales comerciales, autenticación de usuarios, gestión de tokens JWT y control de permisos mediante roles asignados.
+- **Bounded Context: Inventory & Perishables:** Modela el catálogo de productos perecibles, la configuración de umbrales de temperatura y stock mínimo, y el control de lotes con fechas de expiración para la aplicación estricta de la política FEFO (*First Expired, First Out*), así como el registro histórico de movimientos y mermas.
+- **Bounded Context: Suppliers & Replenishment:** Gestiona el directorio de proveedores y orquesta las órdenes de reposición que se disparan cuando el inventario alcanza niveles de stock bajo.
+- **Bounded Context: Shipments & Logistics:** Modela el ciclo de vida de los despachos hacia los locales comerciales, la asignación de flota vehicular y conductores, el registro de incidencias/rechazos de mercadería y la captura de la Prueba de Entrega Digital (POD).
+- **Bounded Context: Cold Chain Telemetry & Alerts:** Representa la ingesta de telemetría proveniente de dispositivos y sensores IoT instalados en los transportes (temperatura, humedad y coordenadas GPS), evaluando quiebres térmicos para generar alertas automáticas en tiempo real.
 
 **Frontend Class Diagram**
 
-Este diagrama detalla la arquitectura de software del cliente web de **Refrio**, desacoplando la interfaz visual de la capa de comunicación y persistencia reactiva.
+Este diagrama detalla la arquitectura de software del cliente web de Refrio, desacoplando la interfaz visual de la capa de comunicación y persistencia reactiva.
 
 ![Diagrama de Clases del Frontend](../assets/frontend-diagram.png)
 
 El diseño de la aplicación web se estructura mediante los siguientes estereotipos estándar:
 
-* `<<page>>` / `<<component>>`: Componentes visuales que renderizan las vistas y capturan las acciones del usuario.
-* `<<service>>`: Clases cliente que consumen los endpoints del API REST de Refrio mediante peticiones HTTP asíncronas.
-* `<<store>>`: Manejadores de estado reactivo que centralizan los datos en memoria compartidos entre componentes.
-* `<<view-model>>`: Modelos intermedios adaptados a los requerimientos específicos de visualización de cada pantalla.
-* `<<DTO>>`: Objetos de transferencia de datos (*Data Transfer Objects*) que tipan los payloads enviados y recibidos desde el backend.
+- `<<page>>` / `<<component>>`: Componentes visuales que renderizan las vistas y capturan las acciones del usuario.
+- `<<service>>`: Clases cliente que consumen los endpoints del API REST de Refrio mediante peticiones HTTP asíncronas.
+- `<<store>>`: Manejadores de estado reactivo que centralizan los datos en memoria compartidos entre componentes.
+- `<<view-model>>`: Modelos intermedios adaptados a los requerimientos específicos de visualización de cada pantalla.
+- `<<DTO>>`: Objetos de transferencia de datos (*Data Transfer Objects*) que tipan los payloads enviados y recibidos desde el backend.
 
 Esta estructura se implementa de manera homogénea en los 8 módulos de la plataforma:
-* **Auth:** Vistas y servicios de inicio de sesión, registro y recuperación de credenciales.
-* **Dashboard:** Consolidado de métricas operativas, mermas evitadas y estado de rutas activas.
-* **Inventory:** Control de catálogo, visualización de lotes ordenados por vencimiento y registro de stock.
-* **Shipments:** Programación de despachos, asignación de carga y seguimiento en mapa.
-* **Suppliers:** Directorio de proveedores y seguimiento de pedidos de reabastecimiento.
-* **Alerts:** Monitor de incidentes térmicos y pérdidas de señal de telemetría en tiempo real.
-* **Users & Roles:** Administración del personal de almacén, supervisores y transportistas.
-* **Settings:** Configuración del perfil de negocio y canales de notificación.
+- **Auth:** Vistas y servicios de inicio de sesión, registro y recuperación de credenciales.
+- **Dashboard:** Consolidado de métricas operativas, mermas evitadas y estado de rutas activas.
+- **Inventory:** Control de catálogo, visualización de lotes ordenados por vencimiento y registro de stock.
+- **Shipments:** Programación de despachos, asignación de carga y seguimiento en mapa.
+- **Suppliers:** Directorio de proveedores y seguimiento de pedidos de reabastecimiento.
+- **Alerts:** Monitor de incidentes térmicos y pérdidas de señal de telemetría en tiempo real.
+- **Users & Roles:** Administración del personal de almacén, supervisores y transportistas.
+- **Settings:** Configuración del perfil de negocio y canales de notificación.
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
-El diseño de base de datos de Refrio sigue una arquitectura relacional implementada en PostgreSQL a través de Entity Framework Core, organizada en torno a los Bounded Contexts definidos en la arquitectura DDD (IAM y Adquisición, Monitoreo y Almacenamiento IoT, Inventario FEFO y Trazabilidad, y Gestión de Alertas e Incidentes). Cada Bounded Context posee sus propias tablas, generadas a partir de sus Aggregate Roots mediante configuraciones explícitas de entidad que cada contexto registra.
+El diseño de base de datos de Refrio sigue una arquitectura relacional implementada en PostgreSQL, gestionada a través de Entity Framework Core mediante un esquema modular alineado a Domain-Driven Design (DDD).
+
+Para garantizar la coherencia arquitectónica entre el diseño estratégico (Design-Level EventStorming), el diseño táctico  y el modelo de datos físico, cada tabla del esquema relacional deriva formalmente de las entidades y raíces de agregado (*Aggregate Roots*) correspondientes a los 7 Bounded Contexts del sistema:
+
+| Bounded Context Estratégico | Módulo Táctico | Raíz de Agregado (*Aggregate Root*) | Tablas Relacionales (Database Model) | Descripción del Mapeo Relacional |
+| :--- | :--- | :--- | :--- | :--- |
+| **BC 01: IAM (Identity & Access Management)** | Identity & Access Management (IAM) | `User`<br>`Client` | `Usuario`, `Rol`, `Usuario_Rol`, `Cliente`, `Suscripcion` | Gestiona credenciales, control de accesos RBAC, datos fiscales de clientes B2B (RUC) y vigencia de suscripciones SaaS. |
+| **BC 02: Storage & Device Telemetry Context** | Cold Chain Telemetry & Alerts | `StorageUnit`<br>`IoTDevice` | `Ubicacion`, `Almacen_Frio`, `Dispositivo_IoT`, `Telemetria`, `Mantenimiento` | Modela la jerarquía física de almacenamiento, los sensores IoT vinculados, el historial de mantenimiento y la serie temporal telemétrica de temperatura/humedad. |
+| **BC 03: Inventory & FEFO Dispatch Context** | Inventory & Perishables | `PerishableBatch`<br>`Product` | `Producto`, `Lote`, `Movimiento` | Centraliza el catálogo perecible, el control de inventario por lotes con fecha de expiración estricta y el kardex de movimientos de stock. |
+| **BC 04: Alerting & Incident Management Context** | Cold Chain Telemetry & Alerts | `ThermalRule`<br>`Incident` | `Regla_Alerta`, `Alerta_Generada`, `Incidente`, `Notificacion` | Parametriza umbrales térmicos admisibles, registra alertas automáticas ante quiebres de temperatura, incidentes y despacho de notificaciones. |
+| **BC 05: Cold Chain Traceability & Certification Context** | Shipments & Logistics | `TraceabilityRecord`<br>`Certificate` | `Trazabilidad`, `Certificacion` | Registra la cadena de custodia y cambios de ubicación del lote, consolidando la emisión de certificados de frío auditables. |
+| **BC 06: Analytics & Business Impact Context** | Analytics Engine | `AnalyticsReport` | `Reporte_Analitica` | Almacena proyecciones consolidadas de mermas evitadas, métricas de eficiencia FEFO y datasets estructurados en formato `jsonb`. |
+| **BC 07: Customer Acquisition & Public Portal Context** | Public Portal Gateway | *External Read Model* | *Consume vistas de `Suscripcion`, `Producto` y verificación de `Certificacion`* | Resuelve la captación mediante landing page y la consulta pública de certificados vía URL/QR sin requerir almacenamiento transaccional adicional. |
 
 ![Database diagram](../assets/Refrio-DB.png)
+
+A nivel de implementación física, el aislamiento y la integridad de los datos se gobiernan mediante claves primarias tipadas con identificadores únicos universales (`uuid`), seriales incrementales para registros de alta velocidad (`bigserial` en `Telemetria`), restricciones de integridad referencial (`FK`) entre agregados, y marcas de tiempo con soporte de zona horaria (`timestamptz`) para garantizar la auditabilidad y trazabilidad estricta de la cadena de frío.
