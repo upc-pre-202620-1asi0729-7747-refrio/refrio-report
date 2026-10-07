@@ -108,8 +108,12 @@ En está versión del trabajo se realizaron los capítulos I a IV en su totalida
 En está versión se realizó el sprint 2 que conforma el desarrollo del FrontEnd y del FakiApi del proyecto a la vez que su integración.
 Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-report.git)
 
+<img src="assets/insightsAV1.png" alt="insights" width="600">
+
 ### TB1:
 Durante el TB1, la colaboración del equipo se extendió a cinco repositorios de la organización GitHub: el repositorio del informe (refrio-report), el sitio web estático (refrio-website), la aplicación web frontend (refrio-frontend). Cada integrante participó en las correcciones del AV1, el desarrollo de la Landing Page y la implementación del frontend organizado por Bounded Contexts, siguiendo el flujo GitFlow con ramas feature/, develop y main.
+
+<img src="assets/insightsTB1.png" alt="insights" width="600">
 
 <div style="page-break-after: always;"></div>
 
