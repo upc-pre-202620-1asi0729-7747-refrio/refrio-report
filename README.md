@@ -10,7 +10,7 @@
   <p style="font-size: 14pt; margin: 0;"><b>7747</b></p>
   <p style="font-size: 16pt; margin: 0;"><b>Informe del Trabajo Final</b></p>
   <p style="font-size: 12pt; margin: 0;">Docente</p>
-  <p style="font-size: 14pt; margin: 0;"><b>Robles Fernández, Ivam</b></p>
+  <p style="font-size: 14pt; margin: 0;"><b>Robles Fernández, Iván</b></p>
   <br>
   <p style="font-size: 12pt; margin: 0;">Equipo</p>
   <p style="font-size: 14pt; margin: 0;"><b>MadaGroup</b></p>
@@ -79,10 +79,8 @@
         <tr>
             <td><strong>TB1</strong></td>
             <td>6/10/2026</td>
-            <td>06/10/2026</td>
             <td>- Alca Morán, César Alejandro<br>- Centeno León, Adriano Samir<br>- Rivas Méndez, Bernie Aarón<br>- Saavedra Flores, Rodrigo Andree<br>- Tello Lima, Jose Alejandro</td>
             <td>5.2.2. Sprint 2<br>5.2.2.1. Sprint Planning 2.<br>5.2.2.2. Aspect Leaders and Collaborators.<br>5.2.2.3. Sprint Backlog 2.<br>5.2.2.4. Development Evidence for Sprint Review.<br>5.2.2.5. Execution Evidence for Sprint Review.<br>5.2.2.6. Services Documentation Evidence for Sprint Review.<br>5.2.2.7. Software Deployment Evidence for Sprint Review.<br>5.2.2.8. Team Collaboration Insights during Sprint</td>
-            <td>5.2.2. Sprint 2<br>5.2.2.1. Sprint Planning 2.<br>5.2.2.2. Aspect Leaders and Collaborators.<br>5.2.2.3. Sprint Backlog 1.<br>5.2.2.4. Development Evidence for Sprint Review.<br>5.2.2.5. Execution Evidence for Sprint Review.<br>5.2.2.6. Services Documentation Evidence for Sprint Review.<br>5.2.2.7. Software Deployment Evidence for Sprint Review.<br>5.2.2.8. Team Collaboration Insights during Sprint</td>
         </tr>
         <tr>
             <td><strong>AV2</strong></td>
@@ -202,15 +200,6 @@ Durante el TB1, la colaboración del equipo se extendió a cinco repositorios de
             - [5.2.2.1. Sprint Planning 2](report/15-chapter5-product-implementation.md#5211-sprint-planning-2)
             - [5.2.2.2. Aspect Leaders and Collaborators](report/15-chapter5-product-implementation.md#5212-aspect-leaders-and-collaborators)
             - [5.2.2.3. Sprint Backlog 2](report/15-chapter5-product-implementation.md#5213-sprint-backlog-2)
-            - [5.2.2.4. Development Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5214-development-evidence-for-sprint-review)
-            - [5.2.2.5. Execution Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5215-execution-evidence-for-sprint-review)
-            - [5.2.2.6. Services Documentation Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5216-services-documentation-evidence-for-sprint-review)
-            - [5.2.2.7. Software Deployment Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5217-software-deployment-evidence-for-sprint-review)
-            - [5.2.2.8. Team Collaboration Insights during Sprint](report/15-chapter5-product-implementation.md#5218-team-collaboration-insights-during-sprint)
-        - [5.2.2. Sprint 2](report/15-chapter5-product-implementation.md#521-sprint-2)
-            - [5.2.2.1. Sprint Planning 1](report/15-chapter5-product-implementation.md#5211-sprint-planning-2)
-            - [5.2.2.2. Aspect Leaders and Collaborators](report/15-chapter5-product-implementation.md#5212-aspect-leaders-and-collaborators)
-            - [5.2.2.3. Sprint Backlog 1](report/15-chapter5-product-implementation.md#5213-sprint-backlog-2)
             - [5.2.2.4. Development Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5214-development-evidence-for-sprint-review)
             - [5.2.2.5. Execution Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5215-execution-evidence-for-sprint-review)
             - [5.2.2.6. Services Documentation Evidence for Sprint Review](report/15-chapter5-product-implementation.md#5216-services-documentation-evidence-for-sprint-review)
