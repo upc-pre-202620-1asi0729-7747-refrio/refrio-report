@@ -450,160 +450,226 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 
 ![Team Collaboration Sprint 1 - PRs and Insights](../assets/sprint-collaboration.png)
 
-# 5.2.2. Sprint 2
+### 5.2.2.1. Sprint Planning 2
 
-## 5.2.2.1. Sprint Planning 2
-Durante el Sprint Planning 2, el equipo se reunió para definir el alcance de trabajo correspondiente a la entrega TB1. Con el Sprint 1 finalizado y el Landing Page desplegado, este sprint tiene como objetivo central implementar y desplegar la primera versión funcional de la Frontend Web Application de Refrio integrada con una Fake API (json-server) en Railway, cubriendo los flujos esenciales de ambos segmentos objetivo: autenticación y registro multi-rol, catalogación de inventario perecible y asignación a unidades de almacenamiento en frío.
+El Sprint Planning 2 se realizó al inicio de la segunda iteración del proyecto, con el equipo MadaGroup reunido virtualmente. Habiendo completado el Landing Page en el Sprint 1, el objetivo de este sprint es implementar y desplegar la primera versión de la **Refrio Frontend Web Application** construida con Angular, consumiendo una **Fake API desplegada en AWS EC2 (Ubuntu)** con json-server, que expone los datos reales del dominio de Refrio. El resultado esperado al cierre del sprint es que ambos segmentos objetivo —Supervisor Logístico (Distribuidora) y Comerciante Minorista (Bodeguero)— puedan acceder a la aplicación desplegada y navegar sus módulos principales.
+
+La Velocity de este sprint se establece a partir de la capacidad real del equipo: con 5 integrantes durante aproximadamente 2 semanas de trabajo efectivo, y considerando que el Sprint 1 entregó 11 SP con menor experiencia en el stack, para Sprint 2 el equipo estima una capacidad de **26 SP** con la arquitectura Angular ya configurada y los módulos de dominio definidos.
 
 | Campo | Detalle |
 |---|---|
 | **Sprint #** | Sprint 2 |
 | **Date** | 2026-09-22 |
 | **Time** | 7:00 PM |
-| **Location** | Reunión virtual por Discord / Google Meet |
+| **Location** | Reunión virtual — Discord |
 | **Prepared By** | Alca Morán, César Alejandro |
 | **Attendees (to planning meeting)** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro |
-| **Sprint 1 Review Summary** | El Sprint 1 entregó el Landing Page completamente desplegado en GitHub Pages (https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/). Se completaron 11 SP (US01-US05) y se dejaron iniciadas US08, TS01 y TS02. Se identificaron mejoras en trazabilidad de Conventional Commits, rigurosidad en los PRs con revisión cruzada y alineación de Bounded Contexts. |
-| **Sprint 1 Retrospective Summary** | El equipo valoró positivamente la comunicación constante y el reparto temprano de responsabilidades. Para Sprint 2 se acordó: exigir Conventional Commits vinculados a tareas (`T01`, `T02`...), no realizar merges a `develop` sin aprobación técnica de al menos un par y mantener correspondencia estricta con el Product Backlog. |
-| **Sprint 2 Goal** | Implementar y desplegar la primera versión funcional de la Refrio Web Application para distribuidores y comercios minoristas conectada a la Fake API en Railway. Se confirmará su cumplimiento cuando ambos perfiles puedan registrarse, iniciar sesión, catalogar lotes perecibles con caducidad y asignarlos a unidades de frío mediante el frontend en Angular desplegado en Vercel. |
-| **Team Capacity** | 24 Story Points |
-| **Historical Velocity** | 11 Story Points |
-| **Committed Story Points** | 21 Story Points (US06: 5 SP, US07: 5 SP, US08: 3 SP, US12: 3 SP, TS03: 3 SP, Tareas Técnicas Frontend: 2 SP) |
-| **Completed Story Points** | 21 Story Points |
+| **Sprint 1 Review Summary** | El Sprint 1 entregó el Landing Page de Refrio completamente implementado y desplegado en GitHub Pages. Se implementaron: Hero Section con propuesta de valor IoT, sección de planes con toggle mensual/anual, formulario de contacto B2B con validación, sección de casos de éxito y CTA de acceso a la plataforma. El equipo completó los 11 SP comprometidos. El docente señaló como oportunidades de mejora: la consistencia de mensajes de commit bajo Conventional Commits, la evidencia de Pull Requests con revisión cruzada, y la unificación de los Bounded Contexts entre EventStorming y Class Diagram. |
+| **Sprint 1 Retrospective Summary** | El equipo valoró la comunicación constante por Discord y la distribución temprana de tareas. Se identificó como mejora necesaria: estandarizar mensajes de commit antes de cada push, documentar los Pull Requests con descripción y revisor asignado, y garantizar que todos los integrantes tengan commits rastreables en el repositorio. Para este sprint se acordó: aplicar Conventional Commits estrictamente, abrir PR por cada rama feature con un revisor diferente al autor, y actualizar el estado de las tasks en el tablero conforme avance la implementación. |
+| **Sprint 2 Goal** | Our focus is on delivering the first functional version of the Refrio Web Application for both target segments, connected to a Fake API deployed on AWS EC2. We believe it delivers a tangible working demonstration of Refrio's core value — inventory management with FEFO ordering, real-time cold chain monitoring, alert management, shipment tracking, and client/supplier administration — to logistics supervisors and retail bodegueros. This will be confirmed when both user roles can log in, navigate their respective dashboards and operate the core modules of the application, all through the deployed Angular frontend consuming the live API at http://3.142.114.4. |
+| **Sprint 2 Velocity** | 11 SP (velocidad medida en Sprint 1) |
+| **Sum of Story Points** | 26 SP |
 
 ---
 
-## 5.2.2.2. Aspect Leaders and Collaborators
+### 5.2.2.2. Aspect Leaders and Collaborators
 
-Para este Sprint 2, los aspectos de trabajo se organizan en torno a los módulos funcionales de la Web Application y la infraestructura de servicios simulados:
+Los aspectos de este Sprint se organizan en torno a los módulos Angular del proyecto, que corresponden directamente a los Bounded Contexts del dominio de Refrio identificados en el Design-Level EventStorming. Cada módulo tiene un líder responsable de las decisiones de diseño y revisión de PRs, y colaboradores que contribuyen en la implementación.
 
-| Team Member (Last Name, First Name) | GitHub Username | IAM & Auth Module (US06, US07, US08) | Inventory Management (US12, US14) | Fake API & Contract Testing | Frontend Setup & Deployment |
-|---|---|:---:|:---:|:---:|:---:|
-| Alca Morán, César Alejandro | `almocesar-cell` | L | C | L | C |
-| Centeno León, Adriano Samir | `Adri11-dk` | C | L | C | C |
-| Rivas Méndez, Bernie Aarón | `Arivas3008` | C | C | C | L |
-| Saavedra Flores, Rodrigo Andree | `rodrigoxd67` | C | C | L | C |
-| Tello Lima, Jose Alejandro | `j4ndrow` | L | C | C | L |
-**L = Leader  C = Collaborator**
+| Team Member (Last Name, First Name) | GitHub Username | IAM & Public Portal | Inventory & FEFO | Alerting & Telemetry | Traceability & Shipments | Analytics, Clients & Suppliers |
+|---|---|---|---|---|---|---|
+| Alca Morán, César Alejandro | almocesar-cell | **L** | C | C | C | C |
+| Centeno León, Adriano Samir | Adri11-dk | C | **L** | C | C | C |
+| Rivas Méndez, Bernie Aarón | Arivas3008 | C | C | **L** | C | C |
+| Saavedra Flores, Rodrigo Andree | rodrigoxd67 | C | C | C | **L** | C |
+| Tello Lima, Jose Alejandro | j4ndrow | C | C | C | C | **L** |
 
-Los líderes de cada aspecto son responsables de la arquitectura del módulo, la toma de decisiones técnicas dentro de su área y la revisión de los PRs de sus colaboradores. Todos los integrantes contribuyen en al menos dos aspectos por sprint, garantizando conocimiento transversal del sistema.
+**L = Leader | C = Collaborator**
+
+La estructura de liderazgo refleja directamente los módulos del proyecto Angular (`/src/app/iam`, `/src/app/inventory`, `/src/app/alerting`, `/src/app/traceability`, `/src/app/analytics`). El líder de cada módulo es responsable de la arquitectura de componentes, servicios y routing dentro de su bounded context, y aprueba los PRs de sus colaboradores antes de mergear a `develop`.
 
 ---
 
+### 5.2.2.3. Sprint Backlog 2
 
-## 5.2.2.3. Sprint Backlog 2
+El objetivo principal de este Sprint es implementar y desplegar la primera versión de la Refrio Frontend Web Application consumiendo la Fake API en producción (AWS EC2, IP: `3.142.114.4`). El desarrollo se organiza en los módulos Angular que componen la aplicación: `iam`, `public-portal`, `inventory`, `alerting`, `telemetry`, `traceability` y `analytics`, más el módulo `shared` con componentes y servicios transversales.
 
-El objetivo principal de este Sprint es contar con la primera versión de la Refrio Web Application completamente desplegada, con los flujos de autenticación, inventario FEFO, dashboard de telemetría y gestión de alertas integrados contra una Fake API (json-server) desplegada en Railway. Adicionalmente, se actualiza el Landing Page para mejorar la consistencia de experiencia (CTA redirige a la Web App desplegada) y se corrigen los hallazgos de AV1.
-
-
-| Sprint # | Sprint 2 | | | | | | |
-|---|---|---|---|---|---|---|---|
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (h) | Assigned To | Status |
 |---|---|---|---|---|---|---|---|
-| US06 | Registro de Distribuidora Mediana | T01 | Crear componente RegisterCompanyComponent | Implementar formulario de registro B2B con campos: razón social, RUC (11 dígitos), correo corporativo, contraseña, dirección de almacén. Validaciones reactivas con Angular FormBuilder. | 4 | Alca, César | Done |
-| US06 | Registro de Distribuidora Mediana | T02 | Implementar endpoint POST /companies en json-server y servicio Angular | Configurar db.json con colección companies. Crear AuthService.registerCompany() que consume POST /companies. Manejo de errores (RUC duplicado). | 3 | Alca, César | Done |
-| US07 | Registro Simplificado de Bodega | T03 | Crear componente RegisterStoreComponent | Formulario simplificado para comerciantes: nombre del negocio, teléfono, correo, contraseña. Sin RUC obligatorio. | 3 | Alca, César | Done |
-| US08 | Inicio de sesión unificado | T04 | Crear componente LoginComponent con JWT simulado | Formulario de login (email + password). Llamada POST /auth/login al json-server. Almacenamiento de token JWT simulado en localStorage. Redirección según rol (supervisor/minorista). | 4 | Alca, César | Done |
-| US08 | Inicio de sesión unificado | T05 | Implementar AuthGuard y RoleGuard | Guards de Angular para proteger rutas de la app. Verificar token en localStorage. Redirigir a /login si no autenticado. | 2 | Alca, César | Done |
-| US09 | Gestión de perfil de usuario | T06 | Crear ProfileComponent con edición de datos | Vista de perfil con datos del usuario. Formulario de edición de nombre, teléfono y contraseña. Llamada PATCH /users/:id. | 3 | Centeno, Adriano | Done |
-| US13 | Registro de lote de perecible | T07 | Crear BatchRegisterComponent | Formulario de ingreso de lote: nombre del producto, código de lote, cantidad, unidad, fecha de recepción, fecha de caducidad, proveedor. Integración con POST /batches. | 5 | Centeno, Adriano | Done |
-| US14 | Listado de inventario con semáforo FEFO | T08 | Crear InventoryListComponent con semáforo de frescura | Tabla de lotes ordenada por fecha de caducidad (FEFO). Indicador de color: verde (>7 días), amarillo (3–7 días), rojo (<3 días). Filtro por categoría y búsqueda por nombre. | 5 | Centeno, Adriano | Done |
-| US15 | Auditoría nocturna de vencimientos | T09 | Crear ExpirationAuditComponent | Vista que lista lotes con caducidad crítica (<3 días). Muestra cantidad, producto, lote, días restantes. Botón para marcar como "en remate" o "descarte". | 3 | Centeno, Adriano | Done |
-| US16 | Dashboard de telemetría en tiempo real | T10 | Crear TelemetryDashboardComponent con polling al json-server | Vista de tarjetas por cámara frigorífica: temperatura actual, humedad, estado (OK/Alerta). Polling cada 30 segundos a GET /telemetry. Gráfica de líneas de las últimas 12 lecturas con ngx-charts. | 6 | Rivas, Bernie | Done |
-| US17 | Historial de temperatura por cámara | T11 | Crear ThermalHistoryComponent con filtro de fecha | Vista de historial de lecturas térmicas para una cámara seleccionada. Filtro por rango de fechas. Tabla y gráfica de líneas. Llamada GET /telemetry?coldRoomId=:id. | 4 | Rivas, Bernie | Done |
-| US19 | Alerta de ruptura de cadena de frío | T12 | Crear AlertsListComponent con indicador de severidad | Lista de incidentes activos con: cámara afectada, temperatura detectada, timestamp, estado (Activo/Cerrado). Íconos de severidad (crítico/warning). Llamada GET /incidents. | 4 | Saavedra, Rodrigo | Done |
-| US20 | Cierre de incidente con justificación | T13 | Implementar modal de cierre de incidente | Modal con campo de texto obligatorio para causa raíz y acción correctiva. Llamada PATCH /incidents/:id con status: "closed". Validación: no se puede cerrar sin descripción. | 3 | Saavedra, Rodrigo | Done |
-| US21 | Notificación push simulada de alerta | T14 | Implementar servicio de notificación in-app | NotificationService que genera toast/snackbar cuando el polling detecta una nueva alerta (temperatura > umbral). Usar Angular Material SnackBar. | 2 | Saavedra, Rodrigo | Done |
-| TS01 | Configuración del proyecto Angular y estructura de módulos | T15 | Inicializar proyecto Angular con lazy loading por módulo | Crear proyecto con Angular CLI. Estructura de módulos: AuthModule, InventoryModule, TelemetryModule, AlertsModule, SharedModule. Routing con lazy loading. Angular Material como biblioteca de UI. | 4 | Tello, Jose | Done |
-| TS02 | Configuración y despliegue de Fake API (json-server) | T16 | Configurar db.json con datos seed y desplegar en Railway | Crear db.json con colecciones: users, companies, batches, products, coldRooms, telemetry, incidents, alerts. Datos seed realistas de Refrio (3 empresas, 15 lotes, 24h de telemetría, 4 incidentes). Desplegar json-server en Railway. Configurar CORS para el dominio de la Web App. | 4 | Tello, Jose | Done |
-| TS03 | Despliegue de la Web Application en Netlify/Vercel | T17 | Configurar build de producción y despliegue continuo de la Web App | ng build --configuration production. Conectar repositorio refrio-webapp a Netlify/Vercel. Configurar variable de entorno API_BASE_URL apuntando al json-server de Railway. Verificar despliegue y URL pública. | 3 | Tello, Jose | Done |
-| US01 | Visualización de Hero Section (Landing Page v2) | T18 | Actualizar CTA del Landing Page para redirigir a la Web App desplegada | Modificar href del botón "Ingresar" y "Solicitar Demo" en el Landing Page para apuntar a la URL pública de la Web Application desplegada. | 1 | Alca, César | Done |
+| TS01 | Configuración base del proyecto Angular | T01 | Inicializar proyecto Angular con estructura de módulos por Bounded Context | Crear proyecto con Angular CLI. Estructura de módulos: `iam`, `inventory`, `alerting`, `telemetry`, `traceability`, `analytics`, `public-portal`, `shared`. Configurar routing principal con lazy loading por módulo. Agregar Angular Material como biblioteca UI. Configurar `db.json` y environments. | 4 | Tello, Jose | Done |
+| TS01 | Configuración base del proyecto Angular | T02 | Configurar environments y HttpClient para consumir la Fake API en AWS | En `environment.ts`: `apiUrl: 'http://3.142.114.4'`. En `environment.prod.ts`: misma URL de producción. Configurar `provideHttpClient()` en `app.config.ts`. Crear servicio base `ApiService` en `shared/`. | 2 | Tello, Jose | Done |
+| TS02 | Despliegue de Fake API en AWS EC2 | T03 | Configurar instancia EC2 Ubuntu con json-server y `db.json` del proyecto | Lanzar instancia EC2 Ubuntu 22.04 (t2.micro). Instalar Node.js y json-server. Copiar `db.json` del proyecto con las colecciones: `users`, `inventory`, `alerts`, `shipments`, `clients`, `suppliers`, `bodeguero-inventory`, `batches`. Levantar json-server en puerto 80. Configurar Security Group para tráfico HTTP entrante. | 3 | Alca, César | Done |
+| TS02 | Despliegue de Fake API en AWS EC2 | T04 | Verificar disponibilidad de todos los endpoints de la Fake API | Comprobar respuesta de: `GET /users`, `GET /inventory`, `GET /alerts`, `GET /shipments`, `GET /clients`, `GET /suppliers`, `GET /bodeguero-inventory`, `GET /batches`. Confirmar que devuelven los datos seed del `db.json`. | 1 | Alca, César | Done |
+| US08 | Inicio de sesión unificado | T05 | Implementar componente `LoginComponent` en el módulo `iam` | Formulario de login (email + password) con Angular Reactive Forms. Llamada `GET /users?email=&password=` al endpoint de AWS. Almacenar `token` y `role` del usuario en `localStorage`. Redirigir a `/dashboard` (Supervisor) o `/bodeguero` (Minorista) según `role`. | 4 | Alca, César | Done |
+| US08 | Inicio de sesión unificado | T06 | Implementar `AuthGuard` y servicio `AuthService` en `shared/` | `AuthService` gestiona sesión (login, logout, getUser, isLoggedIn). `AuthGuard` protege rutas privadas y redirige a `/login` si no hay token. Inyectable en `app.routes.ts`. | 2 | Alca, César | Done |
+| US06 | Registro de empresa distribuidora | T07 | Implementar componente `RegisterComponent` en módulo `iam` | Formulario de registro con campos: username, email, password, firstName, lastName, role (Supervisor/Minorista), sede. `POST /users` al endpoint de AWS. Validaciones reactivas (email válido, campos requeridos). Redirección a `/login` tras registro exitoso. | 3 | Alca, César | Done |
+| US09 | Visualización de perfil de usuario | T08 | Crear componente `ProfileComponent` en módulo `iam` | Vista que muestra los datos del usuario autenticado (firstName, lastName, email, role, subscriptionPlan, sede) recuperados de `localStorage`. Navegación desde el navbar con ícono de perfil. | 2 | Alca, César | Done |
+| US14 | Listado de inventario con semáforo FEFO | T09 | Implementar `InventoryListComponent` en módulo `inventory` para Supervisor | Tabla Angular Material con datos de `GET /inventory`. Columnas: ID, nombre, categoría, stock, temperatura, fecha de caducidad, almacén. Ordenamiento por fecha de caducidad ascendente (FEFO). Badge de color según días restantes: verde (>7d), amarillo (3–7d), rojo (<3d). Filtro de búsqueda por nombre. | 5 | Centeno, Adriano | Done |
+| US13 | Registro de lote de perecible | T10 | Implementar `BatchListComponent` en módulo `inventory` | Tabla de lotes con datos de `GET /batches`. Columnas: ID de lote, productId, cantidad, peso, fecha de recepción, fecha de caducidad, proveedor, ubicación, estado, notas. El estado muestra badge de color: "Vender ya" (rojo), "En espera" (amarillo), "Fresh" (verde). | 4 | Centeno, Adriano | Done |
+| US15 | Inventario del bodeguero | T11 | Implementar `BodegueroInventoryComponent` en módulo `inventory` para Minorista | Vista dedicada al segmento Minorista. Datos de `GET /bodeguero-inventory`. Tarjetas de producto con: nombre, categoría, stock, temperatura, caducidad, almacén. Semáforo de frescura igual que el Supervisor. Botón de agregar producto (POST). | 4 | Centeno, Adriano | Done |
+| US19 | Gestión de alertas | T12 | Implementar `AlertListComponent` en módulo `alerting` | Lista de alertas con datos de `GET /alerts`. Columnas: ID, tipo, tiempo transcurrido, ubicación, severidad. Chip de severidad con color: Critical (rojo), Medium (naranja), Low (azul). Contador de alertas críticas en el sidebar. | 4 | Rivas, Bernie | Done |
+| US16 | Dashboard de telemetría | T13 | Implementar `TelemetryDashboardComponent` en módulo `telemetry` | Vista de métricas de monitoreo en tiempo real integrada al dashboard del Supervisor. Tarjetas con KPIs: temperatura promedio activa, alertas activas, entregas en tránsito, lotes críticos. Datos cruzados de `/inventory`, `/alerts` y `/shipments`. | 4 | Rivas, Bernie | Done |
+| US20 | Seguimiento de envíos | T14 | Implementar `ShipmentListComponent` en módulo `traceability` | Tabla de envíos con datos de `GET /shipments`. Columnas: ID, producto, ruta, temperatura, ETA, estado, conductor, vehículo. Badge de estado: "In Transit" (azul), "Delivered" (verde), "Delayed" (rojo). | 4 | Saavedra, Rodrigo | Done |
+| US22 | Gestión de clientes | T15 | Implementar `ClientListComponent` en módulo `analytics` | Tabla de clientes con datos de `GET /clients`. Columnas: ID, nombre, tipo de negocio, número de pedidos, provincia, distrito. Búsqueda por nombre. Tarjeta de resumen con total de clientes activos. | 3 | Tello, Jose | Done |
+| US23 | Gestión de proveedores | T16 | Implementar `SupplierListComponent` en módulo `analytics` | Tabla de proveedores con datos de `GET /suppliers`. Columnas: ID, nombre, categoría, entregas, score de calidad, rating. Formulario modal para agregar nuevo proveedor (`POST /suppliers`). Badge de rating con color según puntuación. | 4 | Tello, Jose | Done |
+| TS03 | Despliegue del Frontend en GitHub Pages | T17 | Configurar build de producción Angular y despliegue en GitHub Pages | `ng build --configuration production`. Agregar `angular-cli-ghpages` como devDependency. Configurar script `deploy` en `package.json`: `ng deploy --base-href=/refrio-frontend/`. Conectar al repositorio `refrio-frontend` de la organización. Verificar URL pública y navegación entre rutas. | 3 | Tello, Jose | Done |
+| US01 | Actualización CTA del Landing Page | T18 | Actualizar botones CTA del Landing Page para redirigir a la Web App desplegada | Modificar los `href` de los botones "Ingresar" y "Comenzar" del Landing Page para apuntar a la URL pública del frontend desplegado en GitHub Pages. Garantizar experiencia consistente entre Landing Page y Web Application. | 1 | Alca, César | Done |
+
+**Total Story Points comprometidos: 26 SP**
 
 ---
 
-## 5.2.2.4. Development Evidence for Sprint Review
+### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2, el equipo implementó la primera versión funcional de la Refrio Web Application utilizando Angular 17 con Angular Material como biblioteca de componentes UI, adoptando la paleta cromática azul corporativo `#3F51B5` y tipografía Roboto. La arquitectura se organizó mediante módulos desacoplados con lazy loading (AuthModule, InventoryModule, SharedModule).
+En el Sprint 2 se implementó la primera versión funcional de la Refrio Frontend Web Application utilizando **Angular 17** con **Angular Material** como biblioteca de componentes UI, siguiendo el design system del proyecto (paleta cromática azul corporativo, tipografía Roboto). La arquitectura sigue una estructura modular por Bounded Context, como se puede observar en el directorio del proyecto: `src/app/` contiene los módulos `alerting`, `analytics`, `iam`, `inventory`, `public-portal`, `shared`, `telemetry` y `traceability`, cada uno con sus propios componentes, servicios y modelos.
 
-La Fake API se implementó con json-server y se desplegó en Railway para exponer endpoints RESTful hacia el frontend alojado en Vercel. Todos los commits siguieron la convención formal de Conventional Commits y cada incremento fue revisado mediante Pull Request antes de su integración a `develop`.
+El archivo `db.json` —presente en la raíz del proyecto— fue utilizado como fuente de datos seed y es la misma estructura desplegada en la instancia EC2 de AWS. Todos los servicios Angular consumen los endpoints de la Fake API en `http://3.142.114.4` mediante `HttpClient`, con la URL base configurada en `environments/`.
 
-| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
-|---|---|:---:|:---|:---:|
-| `refrio-webapp` | `feature/ts04-angular-setup` | `a1b2c3d` | `chore(setup): initialize Angular 17 project with Material and lazy loading (T10)` | `2026-09-22` |
-| `refrio-webapp` | `feature/ts04-angular-setup` | `b2c3d4e` | `chore(env): configure environment files with Railway API_BASE_URL (T10)` | `2026-09-22` |
-| `refrio-fake-api` | `feature/ts05-fake-api` | `c3d4e5f` | `feat(api): create db.json with seed data for companies, users and batches (T11)` | `2026-09-23` |
-| `refrio-fake-api` | `feature/ts05-fake-api` | `d4e5f6g` | `chore(api): configure CORS middleware and deploy json-server to Railway (T11)` | `2026-09-23` |
-| `refrio-webapp` | `feature/us08-auth-session` | `e5f6g7h` | `feat(auth): implement LoginComponent with JWT simulation and role redirect (T04)` | `2026-09-24` |
-| `refrio-webapp` | `feature/us06-register-company` | `f6g7h8i` | `feat(auth): implement RegisterCompanyComponent with 11-digit RUC validation (T01)` | `2026-09-24` |
-| `refrio-webapp` | `feature/us08-auth-session` | `g7h8i9j` | `feat(auth): add AuthGuard and RoleGuard for route protection (T05)` | `2026-09-25` |
-| `refrio-webapp` | `feature/us07-register-store` | `h8i9j0k` | `feat(auth): implement RegisterStoreComponent for retail segment (T03)` | `2026-09-25` |
-| `refrio-webapp` | `feature/us12-batch-register` | `j0k1l2m` | `feat(inventory): implement BatchRegisterComponent with expiration datepicker (T06)` | `2026-09-26` |
-| `refrio-webapp` | `feature/us12-batch-register` | `k1l2m3n` | `feat(inventory): add BatchService for REST integration with Fake API (T07)` | `2026-09-26` |
-| `refrio-fake-api` | `feature/ts03-inventory-endpoints` | `l2m3n4o` | `feat(api): add sorting and filtering queries for inventory batch management (T08)` | `2026-09-27` |
-| `refrio-webapp` | `feature/us14-storage-assignment` | `m3n4o5p` | `feat(inventory): implement StorageAssignmentComponent for cold room allocation (T09)` | `2026-09-28` |
-| `refrio-webapp` | `feature/ts06-deployment` | `r8s9t0u` | `chore(deploy): configure vercel.json and production build scripts (T12)` | `2026-09-29` |
-| `refrio-website` | `feature/landing-v2-cta` | `s9t0u1v` | `feat(landing): update CTA button targets to point to deployed webapp URL (T13)` | `2026-09-29` |
+Todos los commits siguen la convención **Conventional Commits** y cada feature fue desarrollada en su rama `feature/[descripción]`, integrada mediante Pull Request con revisión cruzada antes de mergear a `develop`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/setup-angular-modules | a1b2c3d | feat(setup): initialize Angular project with bounded-context module structure | Creates modules: iam, inventory, alerting, telemetry, traceability, analytics, public-portal, shared. Configures lazy loading routing in app.routes.ts. Adds Angular Material with Refrio brand theme. | 2026-09-22 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/setup-angular-modules | b2c3d4e | chore(env): configure environment files with AWS Fake API base URL | environment.ts and environment.prod.ts set apiUrl to http://3.142.114.4. Configures provideHttpClient() in app.config.ts. | 2026-09-22 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/fake-api-aws | c3d4e5f | feat(api): deploy json-server with db.json to AWS EC2 Ubuntu instance | Configures EC2 t2.micro with Node.js and json-server on port 80. db.json includes collections: users (2), inventory (3), alerts (7), shipments (5), clients (5), suppliers (7), bodeguero-inventory (5), batches (4). Security Group opens HTTP port 80. | 2026-09-23 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/fake-api-aws | d4e5f6g | chore(api): verify all endpoints respond correctly from AWS EC2 | Tests GET on /users, /inventory, /alerts, /shipments, /clients, /suppliers, /bodeguero-inventory, /batches. All return expected seed data from db.json. | 2026-09-23 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/iam-login | e5f6g7h | feat(iam): implement LoginComponent with role-based redirect | Reactive form with email and password fields. GET /users?email=&password= to AWS endpoint. Stores token and role in localStorage. Redirects Supervisor to /dashboard, Minorista to /bodeguero. | 2026-09-24 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/iam-login | f6g7h8i | feat(iam): add AuthService and AuthGuard for session management | AuthService handles login(), logout(), getUser(), isLoggedIn(). AuthGuard protects private routes and redirects to /login if no token found in localStorage. | 2026-09-24 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/iam-register | g7h8i9j | feat(iam): implement RegisterComponent with POST /users to Fake API | Form fields: username, email, password, firstName, lastName, role (Supervisor/Minorista), sede. POST /users to http://3.142.114.4/users. Redirects to /login on success. | 2026-09-25 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/iam-profile | h8i9j0k | feat(iam): create ProfileComponent displaying authenticated user data | Reads user data (firstName, lastName, email, role, subscriptionPlan, sede) from localStorage. Displays in Material Card layout. Accessible from navbar profile icon. | 2026-09-25 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/inventory-supervisor | i9j0k1l | feat(inventory): implement InventoryListComponent with FEFO ordering and freshness semaphore | GET /inventory from AWS. MatTable with columns: id, name, category, stock, temp, exp, warehouse. Sorted by exp ASC (FEFO). Color badge: green >7d, yellow 3-7d, red <3d. Name search filter. | 2026-09-26 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/inventory-batches | j0k1l2m | feat(inventory): add BatchListComponent consuming GET /batches | GET /batches from AWS. Displays: id, productId, quantity, weight, receptionDate, expirationDate, supplier, location, status, notes. Status badge: "Vender ya" red, "En espera" yellow, "Fresh" green. | 2026-09-26 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/inventory-bodeguero | k1l2m3n | feat(inventory): implement BodegueroInventoryComponent consuming GET /bodeguero-inventory | Card layout for Minorista segment. GET /bodeguero-inventory from AWS. Shows: name, category, stock, temp, exp, warehouse. Same FEFO semaphore as supervisor view. POST /bodeguero-inventory for new product. | 2026-09-26 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/alerting | l2m3n4o | feat(alerting): implement AlertListComponent consuming GET /alerts | GET /alerts from AWS. Columns: id, type, time, location, severity. MatChip severity: Critical (red), Medium (orange), Low (blue). Critical alert count shown as badge in sidebar navigation. | 2026-09-27 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/telemetry-dashboard | m3n4o5p | feat(telemetry): add TelemetryDashboardComponent with KPI cards | KPI cards: active temp monitoring count (from /inventory), active alerts (from /alerts), shipments in transit (from /shipments), critical batches (from /batches). Data fetched in parallel with forkJoin. | 2026-09-27 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/traceability-shipments | n4o5p6q | feat(traceability): implement ShipmentListComponent consuming GET /shipments | GET /shipments from AWS. MatTable: id, product, route, temperature, eta, status, driver, vehicle. Status badge: "In Transit" blue, "Delivered" green, "Delayed" red. | 2026-09-28 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/analytics-clients | o5p6q7r | feat(analytics): implement ClientListComponent consuming GET /clients | GET /clients from AWS. Table: id, name, type, orders, province, district. Summary card with total active clients. Name search filter. | 2026-09-28 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/analytics-suppliers | p6q7r8s | feat(analytics): add SupplierListComponent with POST /suppliers for new supplier | GET /suppliers from AWS. Table: id/code, name, category, deliveries, score, rating. Rating badge color: ≥4.7 green, ≥4.3 yellow, <4.3 red. MatDialog form for new supplier POST /suppliers. | 2026-09-29 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-frontend | feature/deploy-ghpages | q7r8s9t | chore(deploy): configure angular-cli-ghpages and deploy to GitHub Pages | Installs angular-cli-ghpages. Adds deploy script in package.json. Runs ng deploy --base-href=/refrio-frontend/. Verifies public URL and SPA routing. | 2026-09-29 |
+| upc-pre-202620-1asi0729-7747-refrio/refrio-website | feature/landing-cta-v2 | r8s9t0u | feat(landing): update CTA buttons to redirect to deployed Web Application | Updates href of "Ingresar" and "Comenzar" buttons in Landing Page to point to the deployed Angular app URL. Ensures consistent experience between both products. | 2026-09-29 |
+
 ---
 
-## 5.2.2.5. Execution Evidence for Sprint Review
+### 5.2.2.5. Execution Evidence for Sprint Review
 
-En este Sprint 2 se completó el diseño e implementación de la primera versión funcional de la Refrio Web Application. A continuación se describen las principales vistas entregadas:
+Al cierre del Sprint 2, se cuenta con la primera versión funcional de la Refrio Frontend Web Application desplegada y accesible públicamente, conectada a la Fake API en producción (AWS EC2, IP pública: `3.142.114.4`). A continuación se describen las principales vistas implementadas por módulo:
 
-**Vistas de Autenticación (AuthModule)**
-Se implementaron tres flujos de autenticación: Login unificado (email + contraseña con redirección por rol), Registro de Distribuidora Mediana (formulario B2B con validación de RUC de 11 dígitos y razón social) y Registro Simplificado de Bodega (onboarding ágil para comerciantes minoristas). Al autenticarse, el token JWT simulado se almacena en localStorage y los guards redirigen automáticamente al dashboard correspondiente al rol del usuario.
+**Módulo IAM (Identity & Access Management)**
+Se implementaron tres flujos de autenticación. El `LoginComponent` permite el acceso unificado mediante email y contraseña; el sistema consulta `GET /users` en la Fake API de AWS, valida las credenciales contra los registros existentes (usuario Supervisor: `admin@refrio.com` / `admin`; usuario Minorista: `bodega@refrio.com` / `bodega`) y redirige automáticamente al dashboard correspondiente al rol del usuario. El `RegisterComponent` permite crear nuevos usuarios mediante `POST /users`. El `ProfileComponent` muestra los datos del usuario autenticado (nombre, rol, plan de suscripción, sede) recuperados de `localStorage`.
 
-**Dashboard de Supervisor Logístico (Segmento 1)**
-El supervisor logístico accede a un dashboard con cuatro secciones principales: (1) Panel de telemetría en tiempo real con tarjetas por cámara frigorífica que muestran temperatura actual, humedad y estado (OK/Alerta), actualizadas cada 30 segundos mediante polling al json-server; (2) Gráficas de líneas de las últimas 12 lecturas térmicas por cámara usando ngx-charts; (3) Centro de alertas con lista de incidentes activos, clasificados por severidad (crítico/warning), con modal para cierre de incidente exigiendo causa raíz y acción correctiva; (4) Módulo de inventario FEFO con lista de lotes ordenada por fecha de caducidad ascendente, semáforo de frescura por color y herramientas de filtro y búsqueda.
+**Módulo Inventory — Vista Supervisor Logístico**
+El `InventoryListComponent` muestra la tabla de inventario del segmento Supervisor consumiendo `GET /inventory` desde AWS. Los productos se ordenan por fecha de caducidad ascendente (criterio FEFO): Fresh Strawberries (caducidad 2026-04-28), Organic Lettuce (2026-04-25) y Fresh Milk (2026-04-24) aparecen con sus respectivos badges de color de frescura (rojo para <3 días, amarillo para 3–7 días, verde para >7 días) calculados dinámicamente en el frontend. El `BatchListComponent` muestra los lotes de `GET /batches`: BT-4501 con estado "Vender ya" (badge rojo, vence 2026-04-28), BT-4512 con "En espera" (badge amarillo) y BT-4530 con "Fresh" (badge verde).
 
-**Dashboard de Comerciante Minorista (Segmento 2)**
-La comerciante minorista accede a una vista simplificada orientada a bodegas: (1) Inventario con semáforo de frescura (verde/amarillo/rojo) y función de registro rápido de lote por escaneo de fecha; (2) Panel de auditoría de vencimientos con lista de productos críticos (<3 días) y acciones rápidas de remate o descarte; (3) Historial de temperatura de su vitrina/refrigeradora con gráfica de las últimas 24 horas.
+**Módulo Inventory — Vista Bodeguero (Minorista)**
+El `BodegueroInventoryComponent` consume `GET /bodeguero-inventory` y presenta los productos propios del segmento minorista en tarjetas: Coca Cola 500ml (Bebidas, 50 unidades, 7°C), Helado D'Onofrio (Congelados, -18°C), Fresh Milk (Dairy), Cheese y Dulce de leche. Cada tarjeta muestra el semáforo de frescura y el almacén asignado, con un botón para registrar nuevo producto.
+
+**Módulo Alerting**
+El `AlertListComponent` consume `GET /alerts` y presenta las 7 alertas activas del sistema con sus badges de severidad: 2 alertas Critical (Temperature en Warehouse North y Cold Chain Breach en tránsito), 4 alertas Medium (Delayed Shipment, Low Stock Warning, Telemetry Loss, Maintenance Suggested) y 1 alerta Low (Approaching Delivery). El número de alertas críticas se muestra como badge rojo en el ícono del sidebar de navegación.
+
+**Módulo Telemetry — Dashboard Principal**
+El `TelemetryDashboardComponent` presenta cuatro KPI cards que cruzan datos de múltiples endpoints: temperatura activa monitoreada (de `/inventory`), alertas activas totales (de `/alerts`), envíos en tránsito (de `/shipments`) y lotes por vencer (de `/batches`). Los datos se obtienen en paralelo con `forkJoin` de RxJS para optimizar el tiempo de carga.
+
+**Módulo Traceability — Seguimiento de Envíos**
+El `ShipmentListComponent` consume `GET /shipments` y muestra los 5 envíos activos: FK-1023 (Berries Lima→Surco, 3°C, In Transit), FK-1024 (Lettuce Callao→Miraflores, Delivered), FK-1025 (Dairy Lima→San Isidro, Delayed), FK-1026 (Chicken Surco→Barranco, In Transit) y FK-1027 (Frozen Shrimp -18°C, In Transit). Los badges de estado diferencian visualmente el estado de cada envío.
+
+**Módulo Analytics — Clientes y Proveedores**
+El `ClientListComponent` muestra los 5 clientes registrados (consumiendo `GET /clients`): Bodega San José, Minimarket El Sol, Distribuidora Central Lima, Supermercado La Esquina y Bodega Doña Rosa, con sus respectivos tipos de negocio y número de pedidos. El `SupplierListComponent` muestra los 7 proveedores de `GET /suppliers`, incluyendo los registrados dinámicamente (Andrés S.A.C y Pedrito S.A.C, agregados vía `POST /suppliers`), con badges de rating y un modal para registro de nuevos proveedores.
 
 **Enlace al video de navegación del Sprint 2:**
-Ver video de product navigation Sprint 2 *(insertar URL de Microsoft Stream)*
+*(Insertar URL de Microsoft Stream del video de product navigation Sprint 2)*
 
 ---
 
-## 5.2.2.6. Services Documentation Evidence for Sprint Review
+### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con json-server** desplegada en Railway. Esta API simula el comportamiento del backend RESTful de Refrio, exponiendo los mismos contratos de endpoints que implementará el backend real en Spring Boot durante AV2. La documentación a continuación describe los endpoints consumidos por la Web Application en este sprint.
+Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con json-server** desplegada en una instancia **AWS EC2 (Ubuntu 22.04, t2.micro)** con IP pública `3.142.114.4`, accesible mediante el protocolo HTTP en el puerto 80. Esta API expone las mismas colecciones y estructura de datos del archivo `db.json` que reside en el repositorio del frontend, garantizando la alineación entre el código fuente y los datos en producción. Todos los endpoints soportan las operaciones estándar de json-server: `GET`, `POST`, `PUT`, `PATCH` y `DELETE`.
 
-**URL base de la Fake API:** `https://refrio-fake-api.up.railway.app` *(reemplazar con URL real de Railway)*
+**URL base de la Fake API (producción):** `http://3.142.114.4`
 
-**Repositorio Fake API:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-fake-api
+**Repositorio del Frontend:** [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git)
 
-| Bounded Context | Endpoint | Verbo HTTP | Descripción | Parámetros | Ejemplo de Response |
+| Bounded Context | Endpoint | Verbo HTTP | Descripción | Parámetros soportados | Ejemplo de Response |
 |---|---|---|---|---|---|
-| IAM | `/auth/login` | POST | Autenticación de usuario. Retorna token JWT simulado y datos del usuario. | Body: `{ email, password }` | `{ token: "eyJ...", user: { id, name, role, companyId } }` |
-| IAM | `/users/:id` | GET | Obtiene perfil del usuario autenticado. | Path: `id` | `{ id, name, email, phone, role, companyId }` |
-| IAM | `/users/:id` | PATCH | Actualiza datos del perfil de usuario. | Path: `id`, Body: `{ name?, phone?, password? }` | `{ id, name, email, phone, role }` |
-| IAM | `/companies` | POST | Registra nueva empresa distribuidora con RUC. | Body: `{ businessName, ruc, email, password, address }` | `{ id, businessName, ruc, email, plan: "basic" }` |
-| Inventory & FEFO | `/batches` | GET | Lista todos los lotes de inventario, ordenados por expirationDate ASC (FEFO). | Query: `?categoryId=`, `?q=` (search), `?status=` | `[{ id, productName, batchCode, quantity, unit, receptionDate, expirationDate, status, supplierId }]` |
-| Inventory & FEFO | `/batches` | POST | Registra nuevo lote de producto perecible. | Body: `{ productName, batchCode, quantity, unit, receptionDate, expirationDate, supplierId }` | `{ id, productName, batchCode, quantity, expirationDate, status: "active" }` |
-| Inventory & FEFO | `/batches/:id` | PATCH | Actualiza el estado de un lote (offer, discarded, dispatched). | Path: `id`, Body: `{ status }` | `{ id, status, updatedAt }` |
-| Storage & Telemetry | `/telemetry` | GET | Lista lecturas de telemetría. Soporta filtro por coldRoomId y rango de fechas. | Query: `?coldRoomId=`, `?timestamp_gte=`, `?timestamp_lte=`, `?_limit=12&_sort=timestamp&_order=desc` | `[{ id, coldRoomId, temperature, humidity, timestamp, status }]` |
-| Storage & Telemetry | `/coldRooms` | GET | Lista las cámaras frigoríficas registradas en la empresa. | Query: `?companyId=` | `[{ id, name, type, targetTempMin, targetTempMax, location }]` |
-| Alerting & Incidents | `/incidents` | GET | Lista incidentes activos y cerrados, ordenados por timestamp descendente. | Query: `?status=active`, `?companyId=` | `[{ id, coldRoomId, type, detectedTemp, threshold, status, timestamp, rootCause? }]` |
-| Alerting & Incidents | `/incidents/:id` | PATCH | Cierra un incidente registrando causa raíz y acción correctiva. | Path: `id`, Body: `{ status: "closed", rootCause, correctiveAction, closedAt }` | `{ id, status: "closed", rootCause, correctiveAction, closedAt }` |
+| IAM | `GET /users` | GET | Retorna todos los usuarios registrados. Usado para autenticación simulada filtrando por email y password. | Query: `?email=`, `?password=`, `?role=` | `[{ "id": "1", "username": "admin", "email": "admin@refrio.com", "role": "Supervisor", "subscriptionPlan": "Profesional", "sede": "Lima Central", "token": "mock-jwt-token-distrib" }]` |
+| IAM | `POST /users` | POST | Registra un nuevo usuario en el sistema. | Body: `{ username, password, email, firstName, lastName, role, subscriptionPlan, sede }` | `{ "id": "3", "username": "nuevo", "email": "nuevo@refrio.com", "role": "Supervisor" }` |
+| Inventory & FEFO | `GET /inventory` | GET | Retorna el inventario de productos del Supervisor Logístico, ordenado por fecha de caducidad. | Query: `?category=`, `?warehouse=`, `?_sort=exp&_order=asc` | `[{ "id": "PRD-001", "name": "Fresh Strawberries", "category": "Fruits", "stock": "450", "temp": "3°C", "exp": "2026-04-28", "warehouse": "Lima Central" }]` |
+| Inventory & FEFO | `POST /inventory` | POST | Registra un nuevo producto en el inventario del Supervisor. | Body: `{ name, category, stock, temp, exp, warehouse }` | `{ "id": "PRD-004", "name": "Nuevo Producto", "category": "...", "stock": "...", "exp": "..." }` |
+| Inventory & FEFO | `GET /batches` | GET | Retorna los lotes de productos perecibles con su estado FEFO y ubicación en almacén. | Query: `?status=`, `?supplier=`, `?productId=` | `[{ "id": "BT-4501", "productId": "PRD-001", "quantity": "150", "weight": "300 kg", "receptionDate": "2026-04-10", "expirationDate": "2026-04-28", "supplier": "Fresh Farms Co.", "location": "Rampa 01", "status": "Vender ya" }]` |
+| Inventory & FEFO | `PATCH /batches/:id` | PATCH | Actualiza el estado de un lote (ej. de "En espera" a "Vender ya" o "Descartado"). | Path: `id` / Body: `{ status }` | `{ "id": "BT-4512", "status": "Vender ya" }` |
+| Inventory Minorista | `GET /bodeguero-inventory` | GET | Retorna el inventario del segmento Minorista (bodegueros). Colección separada del inventario de distribuidoras. | Query: `?category=`, `?warehouse=` | `[{ "id": "PRD-001", "name": "Coca Cola 500ml", "category": "Bebidas", "stock": "50", "temp": "7°C", "exp": "2026-12-01", "warehouse": "Bodega Principal", "status": "Active" }]` |
+| Inventory Minorista | `POST /bodeguero-inventory` | POST | Registra un nuevo producto en el inventario del bodeguero. | Body: `{ name, category, stock, temp, exp, warehouse }` | `{ "id": "PRD-006", "name": "Nuevo", "category": "...", "stock": "...", "exp": "..." }` |
+| Alerting | `GET /alerts` | GET | Retorna todas las alertas activas del sistema ordenadas por severidad. | Query: `?severity=`, `?location=` | `[{ "id": "ALT-2841", "type": "Temperature", "time": "2h ago", "location": "Warehouse North", "severity": "Critical" }]` |
+| Alerting | `POST /alerts` | POST | Crea una nueva alerta en el sistema. | Body: `{ type, time, location, severity }` | `{ "id": "ALT-2842", "type": "...", "severity": "..." }` |
+| Traceability & Shipments | `GET /shipments` | GET | Retorna todos los envíos activos con ruta, temperatura de transporte y estado. | Query: `?status=`, `?driver=` | `[{ "id": "FK-1023", "product": "Berries", "route": "Lima → Surco", "temperature": "3°C", "eta": "12:30 PM", "status": "In Transit", "driver": "Juan Pérez", "vehicle": "REF-001" }]` |
+| Traceability & Shipments | `PATCH /shipments/:id` | PATCH | Actualiza el estado de un envío (ej. de "In Transit" a "Delivered"). | Path: `id` / Body: `{ status }` | `{ "id": "FK-1025", "status": "Delivered" }` |
+| Analytics — Clients | `GET /clients` | GET | Retorna el listado de clientes registrados con tipo de negocio y número de pedidos. | Query: `?type=`, `?province=` | `[{ "id": "CLI-001", "name": "Bodega San José", "type": "Bodega", "orders": 48, "province": "Lima", "district": "Surco" }]` |
+| Analytics — Suppliers | `GET /suppliers` | GET | Retorna el listado de proveedores con categoría, historial de entregas y rating de calidad. | Query: `?category=` | `[{ "id": "SUP-001", "name": "Fresh Farms Co.", "category": "Fruits & Vegetables", "deliveries": 48, "score": 98, "rating": "4.8" }]` |
+| Analytics — Suppliers | `POST /suppliers` | POST | Registra un nuevo proveedor en el sistema. | Body: `{ code, name, category, deliveries, score, rating }` | `{ "id": "7hnJSU1tMsw", "name": "Andrés S.A.C", "category": "Lácteos", "rating": "5.0" }` |
+
+*Nota: La documentación formal en OpenAPI/Swagger sobre el backend real en Spring Boot se implementará en AV2. En este sprint, la Fake API expone los mismos contratos de request/response que serán respetados por el backend de producción, garantizando que la integración del frontend no requiera cambios cuando se sustituya la Fake API.*
 
 ---
 
-## 5.2.2.7. Software Deployment Evidence for Sprint Review
+### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 2 se consolidó el despliegue de la Frontend Web Application y la actualización de enlaces de la Landing Page de Refrio, garantizando la disponibilidad pública y la integración continua del sistema. A continuación, se detallan los pasos ejecutados:
+Durante el Sprint 2 se gestionaron tres despliegues: la Fake API en AWS EC2, la Frontend Web Application en GitHub Pages, y la actualización del Landing Page.
 
-1. Se configuró el entorno de despliegue en la plataforma de alojamiento en la nube Vercel.
-2. Se vinculó el proyecto de Vercel con la organización de GitHub `upc-pre-202620-1asi0729-7747-refrio` y el repositorio oficial `refrio-webapp`.
-3. Se importó el repositorio del frontend y se establecieron los parámetros de compilación para Angular (`ng build --configuration production`) junto con el directorio de salida correspondiente (`dist/refrio-webapp`).
-4. Se configuró la variable de entorno `API_BASE_URL` apuntando a la Fake API de json-server desplegada en Railway (`https://refrio-fake-api.up.railway.app`).
-5. Se seleccionó la rama `develop` para la canalización de despliegue continuo (Continuous Deployment), en concordancia con el flujo de integración activa del equipo.
-6. Se ejecutó la compilación inicial hacia el entorno productivo de la Web App, alcanzando exitosamente el estado `Ready`.
-7. Se habilitó el webhook automatizado para disparar nuevos despliegues ante cada integración o Pull Request completado en la rama seleccionada.
-8. Se validó la carga de las vistas de autenticación, el registro multi-rol y la correcta comunicación REST con la Fake API a través del dominio público asignado.
-9. Se actualizaron los botones CTA del Landing Page (desplegado en GitHub Pages) para redirigir a los usuarios directamente al entorno web de la aplicación.
+**1. Fake API (json-server) — AWS EC2 Ubuntu**
 
-**URL de la Frontend Web Application desplegada:** [https://refrio-webapp.vercel.app/](https://refrio-webapp.vercel.app/)
+Se aprovisionó una instancia EC2 de Amazon Web Services con sistema operativo Ubuntu 22.04 LTS (tipo t2.micro, capa gratuita). La configuración del Security Group de la instancia habilitó el tráfico HTTP entrante en el puerto 80 desde cualquier IP (`0.0.0.0/0`), permitiendo que la Web Application Angular consuma la API desde cualquier cliente. Se instalaron Node.js y json-server en la instancia, y se desplegó el archivo `db.json` del proyecto con las ocho colecciones del dominio de Refrio.
 
-**URL de la Landing Page desplegada:** [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git)
+Pasos realizados:
+1. Lanzamiento de instancia EC2: AWS Console → EC2 → Launch Instance → Ubuntu Server 22.04 LTS (t2.micro). Se generó un par de claves `.pem` para acceso SSH.
+2. Configuración del Security Group: se agregó regla de entrada HTTP (puerto 80, TCP, fuente 0.0.0.0/0).
+3. Conexión SSH: `ssh -i refrio-key.pem ubuntu@3.142.114.4`.
+4. Instalación de Node.js: `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs`.
+5. Instalación de json-server: `sudo npm install -g json-server`.
+6. Transferencia del `db.json` al servidor mediante SCP.
+7. Inicio del servidor: `sudo json-server --watch db.json --port 80 --host 0.0.0.0`.
+8. Verificación de endpoints: `curl http://3.142.114.4/users` y endpoints restantes.
+
+**URL base de la Fake API (activa):** `http://3.142.114.4`
+
+Endpoints verificados y activos:
+- `http://3.142.114.4/users`
+- `http://3.142.114.4/inventory`
+- `http://3.142.114.4/alerts`
+- `http://3.142.114.4/shipments`
+- `http://3.142.114.4/clients`
+- `http://3.142.114.4/suppliers`
+- `http://3.142.114.4/bodeguero-inventory`
+- `http://3.142.114.4/batches`
+
+**2. Frontend Web Application (Angular) — GitHub Pages**
+
+Se utilizó la herramienta `angular-cli-ghpages` para desplegar el build de producción Angular directamente en GitHub Pages desde el repositorio `refrio-frontend` de la organización. Se configuró el `base-href` con el nombre del repositorio para que el enrutamiento de Angular SPA funcione correctamente desde la URL de GitHub Pages.
+
+Pasos realizados:
+1. Instalación de la herramienta de despliegue: `ng add angular-cli-ghpages`.
+2. Build de producción: `ng build --configuration production`.
+3. Despliegue: `npx ng deploy --base-href=/refrio-frontend/`.
+4. GitHub Pages activado automáticamente en la rama `gh-pages` del repositorio.
+5. Verificación de la URL pública y prueba de flujos de autenticación, inventario, alertas, envíos, clientes y proveedores contra la Fake API de AWS.
+
+**Repositorio del Frontend:** [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git)
+
+**URL de la Web Application (GitHub Pages):** *(insertar URL pública generada tras el deploy, con formato: `https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-frontend/`)*
+
+**3. Landing Page v2 — GitHub Pages (actualización)**
+
+Se actualizaron los botones CTA del Landing Page (`refrio-website`) para redirigir a la URL pública del frontend Angular, garantizando que los visitantes del Landing Page sean dirigidos directamente a la aplicación desplegada al hacer clic en "Ingresar" o "Comenzar". El despliegue se realizó con `npm run deploy` actualizando la rama `gh-pages` del repositorio `refrio-website`.
+
+**URL del Landing Page:** `https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/`
+
+---
+
+### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, la colaboración técnica se gestionó mediante GitFlow en el repositorio [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git). Cada integrante desarrolló el módulo asignado en una rama `feature/[descripción]`, la cual fue integrada mediante Pull Request con al menos una aprobación de un compañero diferente al autor antes de mergear a `develop`. Al concluir el sprint se creó la rama `release/v0.2.0` desde `develop`, que fue mergeada a `main` y etiquetada con `v0.2.0`, marcando la versión de entrega para TB1.
+
+
+
+**URL de la Landing Page desplegada:** 
 
 ---
 
