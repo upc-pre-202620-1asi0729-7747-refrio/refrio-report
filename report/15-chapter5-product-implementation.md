@@ -661,3 +661,313 @@ Se actualizaron los botones CTA del Landing Page (`refrio-website`) para redirig
 Durante el Sprint 2, la colaboración técnica se gestionó mediante GitFlow en el repositorio [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git). Cada integrante desarrolló el módulo asignado en una rama `feature/[descripción]`, la cual fue integrada mediante Pull Request con al menos una aprobación de un compañero diferente al autor antes de mergear a `develop`. Al concluir el sprint se creó la rama `release/v0.2.0` desde `develop`, que fue mergeada a `main` y etiquetada con `v0.2.0`, marcando la versión de entrega para TB1.
 
 ![Team Collaboration Sprint 2 - PRs and Insights](../assets/TeamCollaborationInsights.png)
+
+
+## 5.2.3. Sprint 3
+
+El Sprint 3 de Refrio propone elevar el alcance de la aplicación hacia flujos centrales de protección de la cadena de frío: respuesta a alertas térmicas, rotación FEFO, preparación de despachos y trazabilidad consultable. La incorporación de la primera versión real de Web Services con Spring Boot permite reemplazar progresivamente la capa de simulación `json-server` utilizada en TB1 por contratos persistentes, autorizados y documentados mediante OpenAPI/Swagger. Debido a la amplitud de historias asignadas originalmente al Sprint 3, el equipo debe registrar explícitamente el alcance comprometido, el alcance despriorizado y la evidencia de cada actividad completada.
+
+### 5.2.3.1. Sprint Planning 3
+
+| Campo | Planificación propuesta / dato pendiente |
+|---|---|
+| Sprint # | Sprint 3 |
+| Date / Time / Location | ⟦POR VERIFICAR: acta de reunión real⟧ |
+| Prepared By | ⟦POR VERIFICAR⟧ |
+| Attendees | Alca Morán, César Alejandro; Centeno León, Adriano Samir; Rivas Méndez, Bernie Aarón; Saavedra Flores, Rodrigo Andree; Tello Lima, Jose Alejandro **(confirmar asistencia real)** |
+| Sprint 2 Review Summary | TB1 describe una Frontend Web Application con alta de usuarios, login, gestión inicial de lotes y asignación de almacenamiento, apoyada en una Fake API `json-server` desplegada en AWS EC2. La API Spring Boot/Swagger se dejó expresamente para AV2. |
+| Sprint 2 Retrospective Summary | **Propuesta para discutir y documentar**: revisar discrepancias entre versiones del frontend y documentación; corregir commits no verificables; comprobar públicamente las URLs y fortalecer la trazabilidad entre Product Backlog, tareas y PRs. |
+| Sprint 3 Goal | **Our focus is on** permitir que los responsables de almacenamiento identifiquen una desviación térmica, gestionen la respuesta a la alerta y prioricen lotes por FEFO mediante servicios internos verificables. **We believe it delivers** decisiones más rápidas y mayor trazabilidad del estado de alimentos perecibles para distribuidoras y bodegas. **This will be confirmed when** al menos los flujos comprometidos se ejecuten en una aplicación desplegada contra endpoints Spring Boot documentados y usuarios de ambos segmentos completen las tareas de validación. |
+| Sprint 3 Velocity | ⟦POR VERIFICAR: capacidad/velocidad aprobada por el equipo⟧ |
+| Sum of Story Points | **58 SP asignados al Sprint 3 en Product Backlog**; **⟦SP realmente comprometidos⟧** y **⟦SP efectivamente completados⟧**, diferenciados |
+
+**Principio de planificación.** El objetivo se centrará en valor de negocio para distribuidores y bodegas, no en el mero despliegue de un framework. Al decidir qué historias implementar, priorizar un flujo vertical demostrable (*alerta térmica → revisión → cierre* o *inventario → FEFO → picking*) antes que comenzar todas las historias sin completarlas.
+
+### 5.2.3.2. Aspect Leaders and Collaborators
+
+La matriz es un **borrador propuesto**, coherente con especialidades indicadas en TB1, que requiere confirmación por los integrantes y cotejo con los PRs de AV2.
+
+| Team Member / GitHub Username | IAM/API | Alertas térmicas | Inventario FEFO | Trazabilidad/picking | Frontend/UX | Docs, validación y despliegue |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Alca Morán, César Alejandro (`almocesar-cell`) | **L** | C | C | C | C | C |
+| Centeno León, Adriano Samir (`Adri11-dk`) | C | C | **L** | C | **L** | C |
+| Rivas Méndez, Bernie Aarón (`Arivas3008`) | C | C | C | **L** | C | **L** |
+| Saavedra Flores, Rodrigo Andree (`rodrigoxd67`) | C | **L** | C | C | C | C |
+| Tello Lima, Jose Alejandro (`j4ndrow`) | C | C | C | C | **L** | **L** |
+
+**L/C:** propuesta por validar; el liderazgo efectivo sobre backend Java debe asignarse según la implementación real, no por continuidad automática del Sprint 2.
+
+### 5.2.3.3. Sprint Backlog 3
+
+**Board Sprint 3:** ⟦URL pública real y captura⟧. Las 13 historias siguientes ya figuran asignadas al Sprint 3 en `report/13-chapter3-requirements-specification.md`. Los **58 SP** son la suma de esas asignaciones y **no** una declaración de entrega completada.
+
+| Story ID | Story Title del Product Backlog | Story Points originales | Work Item / Task a descomponer | Assigned To | Estimación (h) | Status |
+|---|---|---:|---|---|---:|---|
+| US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | AV2-T01: diseñar flujo de alerta, visualización, reglas y pruebas | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| TS07 | Servicio de Notificaciones Multicanal (WhatsApp, SMS, Push) | 5 | AV2-T02: documentar contrato e integrar solo canales realmente habilitados | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US27 | Confirmación y Cierre de Alerta | 3 | AV2-T03: permitir confirmar alerta y registrar cierre auditable | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US29 | Visualización de Inventario Ordenado por FEFO | 3 | AV2-T04: ordenamiento verificable por vencimiento | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | AV2-T05: documentar reglas y exponer consulta de prioridad | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US30 | Generación de Lista de Picking Sugerida | 5 | AV2-T06: mostrar orden propuesto de preparación de pedidos | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US33 | Validación de Lote en Despacho mediante Escaneo | 5 | AV2-T07: comprobar lote durante preparación y despacho | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | AV2-T08: analizar flujo móvil y registrar resultado de lectura | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US31 | Semáforo Visual de Frescura para Bodegas | 3 | AV2-T09: visualizar prioridades por umbral y caducidad | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | AV2-T10: consultar eventos térmicos asociados a un lote | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | AV2-T11: especificar acceso público seguro y datos publicados | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | AV2-T12: enlazar QR a una vista pública verificable | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US35 | Exportación de Certificado de Frío en PDF | 5 | AV2-T13: definir documento y datos de trazabilidad para exportación | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+
+**Trabajo transversal, registrar por separado sin duplicar Story Points:** implementación del primer backend Spring Boot/Spring Data JPA; esquema relacional y migraciones si aplica; documentación OpenAPI; pruebas del flujo vertical; publicación en cloud; revisión de i18n/a11y; cambio de consumo de Fake API a Web Services reales. Se deberán asignar responsables y horas verificables en el Board. Para cualquier historia que no sea comprometida, establecer `Deferred to Sprint 4` con justificación, no `Done`.
+
+### 5.2.3.4. Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+|---|---|---|---|---|---|
+| `refrio-backend` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦feat: / docs: / test:⟧ | ⟦módulo efectivo Spring Boot⟧ | ⟦fecha⟧ |
+| `refrio-frontend` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦Conventional Commit⟧ | ⟦flujo integrado efectivo⟧ | ⟦fecha⟧ |
+| `refrio-website` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦Conventional Commit⟧ | ⟦actualización Landing y CTA⟧ | ⟦fecha⟧ |
+
+Se debe conservar la relación entre historias, tareas, commits, Pull Requests y productos. Los commits que figuran en TB1 con IDs no válidos deben reemplazarse por hashes reales antes de ampliar la evidencia. Incorporar capturas de la actividad durante el Sprint 3, no solo gráficos acumulados desde AV1.
+
+### 5.2.3.5. Execution Evidence for Sprint Review
+
+**Escenarios de prueba propuestos**, sujetos al alcance aprobado: A) Supervisor: inicio de sesión, cámara/unidad de almacenamiento, lectura térmica, alerta crítica y cierre documentado; B) responsable de inventario: consulta ordenada FEFO y generación de picking; C) comerciante minorista: visualización de caducidades por semáforo; D) consulta pública controlada de trazabilidad, **solo si está implementada**. En cada video se debe registrar el resultado observable y la URL real utilizada.
+
+| Evidencia | Pantalla/flujo | Captura / enlace |
+|---|---|---|
+| REF-FE-AV2-01 | Landing Page y CTA para ambos segmentos | ⟦⟧ |
+| REF-FE-AV2-02 | Autenticación y panel según rol | ⟦⟧ |
+| REF-FE-AV2-03 | Lotes perecibles y almacenes en frío | ⟦⟧ |
+| REF-FE-AV2-04 | Alerta térmica y confirmación/cierre | ⟦si implementado⟧ |
+| REF-FE-AV2-05 | FEFO y picking | ⟦si implementado⟧ |
+| REF-FE-AV2-06 | Interfaz responsive y estado de error | ⟦⟧ |
+| REF-VID-AV2-01 | Grabación de navegación, timings y URL privada de Stream | ⟦⟧ |
+
+### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+La documentación requerida debe corresponder a **Spring Boot con Java y Spring Data JPA**, no a endpoints de una Fake API en AWS. Para cada endpoint realmente implementado, incluir URL base y enlace Swagger, método, recurso, parámetros, Request Body, posibles respuestas, validaciones y captura de ejecución.
+
+| Recurso | Acción por comprobar | Ruta / operación OpenAPI real | Respuesta y código | Prueba / captura |
+|---|---|---|---|---|
+| Auth / usuarios | ⟦login, registro, acceso⟧ | ⟦no inventar URI⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
+| Inventario / lotes | ⟦alta, listado, FEFO⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
+| Telemetría / alertas | ⟦registro, consulta, cierre⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
+| Picking / trazabilidad | ⟦solo funcionalidades existentes⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
+
+**Repositorio:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend. **Swagger:** ⟦URL real⟧. **Ambiente:** ⟦dominio, versión, fecha⟧. Documentar controles de autorización, códigos de error y restricciones de datos, sin incluir contraseñas, tokens ni secretos.
+
+### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+| Producto | Referencia existente / pendiente | Evidencia a incorporar |
+|---|---|---|
+| Landing Page | https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/ | CTA, actualización e integración visual |
+| Frontend Web Application | https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-frontend/ | build actual Angular, funcionalidad real, commit |
+| Backend Spring Boot | ⟦POR VERIFICAR: repo `main` sin implementación más allá de README⟧ | URL del servicio, Swagger y respuesta ejecutada |
+| BD relacional | ⟦POR VERIFICAR⟧ | esquema, disponibilidad, procedimiento seguro |
+
+La IP citada en TB1 (`3.142.114.4`) corresponde a la Fake API allí documentada; verificar su vigencia y no presentarla como despliegue de Spring Boot. Documentar el paso a paso de despliegue real en texto, con capturas de plataforma cloud, prueba de conectividad, acceso a la aplicación y URL de documentación.
+
+### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Los resultados deben sustentarse en el repositorio de informe, de frontend, Landing Page y backend, con el período del Sprint 3. Incluir capturas de Insights/Contributors, PRs, comentarios de revisión, commits y Board. Vincular cada contribución al responsable y al aspecto liderado; demostrar participación de todos los integrantes en los productos correspondientes al Sprint, evitando confundir aportes documentales con implementación técnica.
+
+| Integrante | Tareas/PRs AV2 | Qué demuestra | Evidencia |
+|---|---|---|---|
+| Alca Morán, César Alejandro | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| Centeno León, Adriano Samir | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| Rivas Méndez, Bernie Aarón | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| Saavedra Flores, Rodrigo Andree | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| Tello Lima, Jose Alejandro | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+
+## 5.3. Validation Interviews
+
+El objetivo de las validaciones es comprobar que los usuarios de Refrio comprendan la propuesta de valor y puedan interpretar datos de temperatura y caducidad para decidir sobre almacenamiento, despacho o recepción. Las sesiones deben realizarse con **3 a 5 participantes por cada segmento**, mostrando Landing Page y aplicación. Registrar explícitamente qué tareas estaban disponibles en el producto en la fecha de la sesión; las tareas aún no implementadas podrán validarse como prototipo, **pero no deben presentarse como interacción con un módulo operativo**.
+
+### 5.3.1. Diseño de Entrevistas
+
+El diseño de validación de Refrio conserva la amplitud del cuestionario original de la sección 2.2.1 de *Requirements Elicitation & Analysis*: **23 preguntas para las empresas distribuidoras de perecibles y 22 preguntas para tiendas y bodegas**. El enfoque cambia del descubrimiento de problemas a la evaluación de comprensión, usabilidad y pertinencia de una solución que articula inventario, vencimientos, cadena de frío y distribución. Las preguntas están agrupadas según los mismos ámbitos operativos del primer diseño; su redacción privilegia observaciones y experiencias concretas, en lugar de inducir respuestas positivas.
+
+La validación integra el **Landing Page y la Web Application** a través de recorridos identificados por segmento. Antes de cada sesión se debe comprobar qué flujos existen en la versión presentada: una vista implementada podrá probarse como funcionalidad; una vista no implementada solo podrá mostrarse como **prototipo claramente señalado**. Se solicitará consentimiento para grabar y se observarán comprensión, tiempo, errores, retrocesos, solicitudes de ayuda y percepción del usuario. La evaluación heurística complementaria se registrará en el apartado 5.3.3 conforme al Anexo D.
+
+#### Segmento 1: Empresas distribuidoras de productos perecibles
+
+**Objetivo de la entrevista:** Evaluar si responsables de operaciones y logística comprenden la propuesta de Refrio, pueden identificar y gestionar lotes, reconocer las condiciones de conservación, interpretar avisos de riesgo térmico y utilizar la información de prioridad FEFO y trazabilidad en una secuencia coherente de trabajo.
+
+**Perfil del entrevistado:** Supervisor logístico, responsable de distribución, encargado de almacén o profesional de una empresa que comercializa y transporta perecibles. Se buscarán experiencias con distintos métodos de inventario y control térmico, desde sistemas empresariales hasta registros manuales.
+
+**Elementos a validar y user flows:**
+
+- **UF-REF-S1-01 — Descubrimiento y acceso:** Landing Page → beneficios / planes → CTA empresarial → registro de distribuidora o inicio de sesión.
+- **UF-REF-S1-02 — Gestión de lotes:** panel de distribución → inventario → alta o consulta de lote → fecha de vencimiento y unidad de almacenamiento.
+- **UF-REF-S1-03 — Condiciones térmicas:** unidad de almacenamiento → temperatura y estado → interpretación de lectura y desviación → historial, cuando exista.
+- **UF-REF-S1-04 — Preparación de despacho:** inventario → orden FEFO → selección de lote → sugerencia de picking / comprobación de caducidad, cuando esté disponible.
+- **UF-REF-S1-05 — Alertas y trazabilidad:** aviso térmico → revisión y cierre del incidente → ficha de lote → consulta o certificado de trazabilidad, si está implementado.
+
+##### Datos del entrevistado y contexto digital
+
+1. ¿Podría indicar su nombre, edad y el distrito en el que realiza sus actividades dentro de una empresa de distribución de productos perecibles?
+2. ¿Cuál es su cargo o función y qué responsabilidad tiene sobre el inventario, el almacén o las entregas a clientes?
+3. ¿Qué tipos de productos perecibles gestiona y qué exigencias de conservación considera más importantes en su operación?
+4. ¿Con qué frecuencia registra lotes, revisa fechas de caducidad o coordina salidas de productos durante una jornada habitual?
+5. ¿Qué sistemas, dispositivos o registros utiliza actualmente para administrar esas actividades y qué experiencia tiene con aplicaciones web de logística?
+6. ¿Desde qué tipo de dispositivo utilizaría una solución como Refrio y qué limitaciones de conectividad o tiempo suele enfrentar durante el trabajo?
+
+##### Gestión de inventario y navegación
+
+7. Tras revisar la Landing Page, ¿cómo describiría el propósito de Refrio y qué diferencias observa entre la propuesta para distribuidoras y la propuesta para bodegas?
+8. ¿Qué botón elegiría para acceder como empresa distribuidora y qué impresión le produce el recorrido de registro o inicio de sesión?
+9. Al llegar al panel de gestión, ¿cómo localizaría los lotes y qué datos considera necesarios para distinguir productos con diferentes fechas de vencimiento?
+10. Al crear o revisar un lote de ejemplo, ¿qué campos entiende con facilidad y en qué paso requiere aclaraciones sobre cantidades, unidades o ubicaciones de almacenamiento?
+
+##### Control de temperatura y cadena de frío
+
+11. Si necesitara conocer la condición de una cámara de conservación, ¿dónde buscaría la temperatura y cómo interpretaría el valor y su fecha de actualización?
+12. Frente a una lectura que exceda el rango permitido en un escenario de prueba, ¿cómo identificaría la anomalía y qué procedimiento esperaría poder registrar en el sistema?
+13. Al revisar una alerta térmica o un historial de mediciones, ¿qué elementos visuales o mensajes le permiten distinguir un riesgo urgente de una situación normal?
+
+##### Logística, rotación y distribución
+
+14. ¿Cómo intentaría obtener un listado de productos ordenado por proximidad de vencimiento y qué entiende que significa la priorización FEFO mostrada?
+15. Si tuviera que preparar un despacho, ¿qué información comprobaría antes de seleccionar un lote y cómo utilizaría una lista sugerida de picking, de estar disponible?
+16. ¿Cómo consultaría los antecedentes o la trazabilidad de un lote, y qué valor tendrían esos datos al justificar la condición de un producto entregado?
+
+##### Impacto operativo y facilidad de uso
+
+17. ¿En qué parte del recorrido se detuvo, retrocedió o pidió apoyo y qué esperaba que sucediera después de su acción?
+18. ¿Qué consecuencias tendría para su operación interpretar incorrectamente un estado de lote o una alerta, y cómo podría la interfaz ayudarle a evitarlo?
+19. ¿Qué tan viable sería utilizar estas pantallas durante un turno real y qué cambios de legibilidad, navegación o vocabulario serían necesarios?
+
+##### Disposición hacia la solución digital y cierre
+
+20. Tras usar las pantallas disponibles, ¿qué funciones considera útiles para su empresa y cuáles no encajan con el procedimiento que siguen hoy?
+21. ¿Qué datos o comprobaciones adicionales necesitaría antes de confiar en los avisos térmicos, la prioridad de salida de lotes o los certificados de trazabilidad?
+22. ¿Qué mejoras priorizaría en la secuencia de tareas, presentación de información o mensajes para que su equipo opere sin asistencia?
+23. ¿Hay alguna necesidad de la distribución de perecibles o dificultad de uso que no le hayamos preguntado y que debamos tener en cuenta al mejorar Refrio?
+
+---
+
+#### Segmento 2: Tiendas y bodegas con productos perecibles
+
+**Objetivo de la entrevista:** Verificar que propietarios y responsables de bodegas comprendan la propuesta de Refrio y puedan identificar existencias, vencimientos, estados de conservación y prioridades de venta o reposición sin una carga de trabajo excesiva ni necesidad de conocimientos técnicos especializados.
+
+**Perfil del entrevistado:** Propietario, encargado o trabajador que realiza personalmente el control de mercadería perecible en una tienda, bodega o comercio pequeño, mediante teléfono móvil, cuaderno, hojas de cálculo o una aplicación de gestión.
+
+**Elementos a validar y user flows:**
+
+- **UF-REF-S2-01 — Landing Page y registro minorista:** Landing Page → beneficios y planes → CTA de bodega → registro / inicio de sesión.
+- **UF-REF-S2-02 — Inventario del local:** panel minorista → lista de productos → detalle o registro de lote → cantidad y fecha de caducidad.
+- **UF-REF-S2-03 — Prevención de vencimientos:** inventario → filtro / orden por fecha → indicador de frescura → identificación de lote prioritario.
+- **UF-REF-S2-04 — Alertas y conservación:** producto o unidad de frío → condición o alerta → comprensión de acción sugerida, si está disponible.
+- **UF-REF-S2-05 — Consulta de trazabilidad:** lote recibido → QR / ficha pública de cadena de frío → interpretación de datos, solo si el módulo está disponible.
+
+##### Datos del entrevistado y contexto de trabajo
+
+1. ¿Podría indicar su nombre, edad y el distrito donde atiende su tienda o bodega?
+2. ¿Cuánto tiempo lleva administrando el negocio y qué responsabilidades tiene sobre compras, almacenamiento y atención al público?
+3. ¿Cuáles son los principales productos perecibles que comercializa y cómo organiza la mercadería según la rapidez con que se vende?
+4. ¿Cuántas personas intervienen en el control de stock y qué tan frecuente es registrar entradas o salidas durante el día?
+5. ¿Administra un solo local o varios puntos de venta, y qué dificultades le presenta mantener actualizada la información de sus productos?
+6. ¿Qué dispositivo utiliza más para su negocio y qué aplicaciones o formas de registro le resultan familiares?
+
+##### Control de inventario y comprensión de la interfaz
+
+7. Tras observar la Landing Page, ¿qué problema considera que Refrio intenta resolver para una bodega y qué parte de la página lo comunica mejor?
+8. ¿Cómo encontraría el acceso para comerciantes minoristas y qué le resultó sencillo o difícil del registro o inicio de sesión?
+9. Al ingresar al listado de existencias, ¿cómo identificaría la cantidad disponible, el producto y su fecha de vencimiento?
+10. Si necesitara registrar o localizar un nuevo lote, ¿qué pasos seguiría y qué campos o etiquetas deberían explicarse de manera más sencilla?
+
+##### Fechas de vencimiento y pérdidas
+
+11. Si dos lotes del mismo producto tienen fechas diferentes, ¿cómo decidiría cuál vender primero utilizando la información mostrada en Refrio?
+12. Al observar un indicador de frescura o una alerta de vencimiento en un escenario de prueba, ¿qué entiende que significa y qué decisión tomaría sobre ese producto?
+13. ¿Cómo comprobaría en la plataforma que un producto requiere atención sin revisar individualmente todos los registros de inventario?
+
+##### Organización y errores frecuentes durante las tareas
+
+14. ¿Qué parte del recorrido le hizo dudar, retroceder o buscar ayuda, y qué esperaba encontrar en esa pantalla?
+15. ¿Cómo interpreta los colores, iconos, fechas y estados de la aplicación, y cuáles podrían confundirse al consultar rápidamente desde un teléfono?
+16. Cuando intenta registrar o revisar productos mientras atiende clientes, ¿qué pasos le parecen innecesarios y cuáles son imprescindibles para evitar errores?
+
+##### Impacto en ventas y decisiones del negocio
+
+17. ¿Qué información visible en la plataforma le ayudaría a decidir si debe vender, separar, retirar o reponer un producto perecible?
+18. ¿En qué situaciones considera que una alerta o un listado de lotes ordenado podría evitarle una pérdida o una venta fallida, y por qué?
+
+##### Disposición hacia una solución digital y cierre
+
+19. Después de explorar la demostración, ¿qué funcionalidad utilizaría primero en su bodega y qué actividad cotidiana le permitiría realizar de otro modo?
+20. ¿Qué necesita ver o comprobar para confiar en la información sobre vencimientos, stock o conservación que presenta la plataforma?
+21. ¿Qué ajustes recomendaría en tamaño de letra, nombres de opciones, botones o cantidad de pasos para que un comerciante pueda usar Refrio sin ayuda?
+22. ¿Hay algún problema de control de mercadería o alguna recomendación sobre esta experiencia que no hayamos conversado y que le gustaría compartir?
+
+---
+
+**Protocolo y criterios de observación:** La entrevista debe iniciar con consentimiento informado para grabación, datos del entrevistado y contextualización. El moderador solicita completar los recorridos en la Landing Page y en las vistas de la aplicación que efectivamente estén disponibles; durante la interacción observa comprensión de funciones, errores, tiempo, retrocesos, necesidad de asistencia y comentarios espontáneos. En caso de usar prototipos, debe quedar registrado que no constituyen funcionalidades ejecutables. En cada sesión se documentarán tareas realizadas, apreciaciones textuales o paráfrasis fieles, capturas del video, URL de Microsoft Stream, tiempo de inicio, duración y relación con los problemas heurísticos observados. Los resultados y porcentajes solo se redactarán después de ejecutar las entrevistas.
+
+### 5.3.2. Registro de Entrevistas
+
+| Sesión | Segmento | Nombre/apellidos, edad y distrito | Fecha | Stream (URL + hh:mm:ss y duración) | Captura | Síntesis de hallazgos |
+|---|---|---|---|---|---|---|
+| REF-VAL-S1-01 | Distribuidora | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| REF-VAL-S1-02 | Distribuidora | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| REF-VAL-S1-03 | Distribuidora | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| REF-VAL-S2-01 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| REF-VAL-S2-02 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| REF-VAL-S2-03 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+
+**Por cada entrevista redactar:** presentación breve del entrevistado y su rol, contexto, secuencia de tareas efectivamente probadas, apreciaciones textuales o paráfrasis fieles, dificultades, recomendaciones y evidencia de pantalla. No reciclar sin nueva sesión las entrevistas de descubrimiento de AV1.
+
+### 5.3.3. Evaluaciones según heurísticas
+
+**Formato del Anexo D — UX Heuristics & Principles Evaluation.** Carrera: Ingeniería de Software; curso: 1ASI0729 Desarrollo de Aplicaciones Open Source; NRC y profesor: ⟦confirmar⟧; auditor: Equipo Refrio; clientes: ⟦lista real⟧; aplicaciones: Landing Page / Web Application.
+
+**Tareas evaluadas:** acceso por rol, registro/login, alta de lote, revisión de temperatura, priorización FEFO, manejo de alerta, consulta de trazabilidad (si está implementada). **Tareas excluidas:** ⟦indicar cualquier flujo sin implementación verificable⟧.
+
+| Nivel | Interpretación del enunciado |
+|---:|---|
+| 1 | Superficial o fácilmente superable |
+| 2 | Menor; prioridad baja |
+| 3 | Mayor; requiere prioridad alta |
+| 4 | Muy grave; bloquea la utilización y debe corregirse antes del lanzamiento |
+
+| ID | Problema efectivamente observado | Severidad | Principio vulnerado | Captura | Recomendación / estado |
+|---|---|---:|---|---|---|
+| REF-H01 | ⟦⟧ | ⟦⟧ | ⟦Usability: retroalimentación de estado, consistencia, control del usuario, etc.⟧ | ⟦⟧ | ⟦⟧ |
+| REF-H02 | ⟦⟧ | ⟦⟧ | ⟦Information Architecture: encontrabilidad, etiquetado, navegación⟧ | ⟦⟧ | ⟦⟧ |
+| REF-H03 | ⟦⟧ | ⟦⟧ | ⟦Inclusive Design: accesibilidad, alternativas y comprensión⟧ | ⟦⟧ | ⟦⟧ |
+
+**Ficha individual de problema:** ID, tarea y paso observado; severidad con fundamento, heurística específica, screenshot; impacto para distribuidora/bodega; corrección recomendada y prioridad. No reportar problemas hipotéticos como resultados de sesiones.
+
+## 5.4. Video About-the-Product
+
+La primera versión expondrá el problema de pérdidas por manejo de perecibles y la solución Refrio mediante inventario y supervisión de temperatura. Se recomienda orientar la explicación a dos beneficios concretos: visibilidad operativa de una distribuidora y facilidad de interpretación para una bodega. **Duración exigida: 1–3 minutos.** Debe incluir una opinión real por cada segmento, enlaces a Stream y YouTube, captura y video incrustado en la Landing Page.
+
+| Tiempo propuesto | Contenido | Material demostrable |
+|---|---|---|
+| 00:00–00:20 | Problema: control térmico y caducidad | Situación propia / gráfica identificada |
+| 00:20–00:40 | Qué ofrece Refrio para los dos segmentos | Landing Page y CTA |
+| 00:40–01:20 | Distribuidora: lotes, monitoreo, alertas o FEFO según función real | Captura de interfaz operativa |
+| 01:20–01:45 | Bodega: estado de inventario y decisiones de reposición | Captura de interfaz operativa |
+| 01:45–02:10 | Opiniones documentadas de usuarios de ambos segmentos | Clips reales con consentimiento |
+| 02:10–02:25 | Cierre de propuesta de valor | Logo y enlace público |
+
+**Stream:** ⟦URL⟧. **YouTube:** ⟦URL⟧. **Duración efectiva:** ⟦⟧. **Screenshot y evidencia de inserción en Landing Page:** ⟦⟧.
+
+## Conclusiones AV2 — redacción base condicionada a evidencia
+
+1. La investigación inicial de Refrio identificó necesidades de visibilidad de temperaturas y vencimientos en distribuidoras y bodegas. La validación de AV2 debe determinar si los usuarios comprenden de forma autónoma los indicadores y pueden completar flujos prioritarios. ⟦Incorporar resultado real de 3–5 entrevistas por segmento y observaciones principales⟧.
+2. La incorporación de servicios internos a la aplicación debe hacer verificables reglas de negocio como trazabilidad, alertas y priorización FEFO. ⟦Precisar qué operaciones Spring Boot se desplegaron y cuáles quedaron como prototipo o pendientes⟧.
+3. La correcta comunicación de estados, tiempos, avisos y errores resulta fundamental para un sistema utilizado por audiencias con distintas experiencias digitales. ⟦Conectar esta conclusión con el ABET Outcome 3, las observaciones de validación y las mejoras implementadas⟧.
+4. El Roadmap posterior debe priorizar los problemas de severidad mayor o muy grave identificados mediante evaluación heurística, y finalizar los escenarios faltantes sin declarar logros que no hayan sido comprobados. ⟦Incluir problemas reales y acciones priorizadas⟧.
+
+## Video About-the-Team — ampliación de conclusiones
+
+El video recogerá el proceso de diseño, implementación y validación de Refrio y su relación con la **comunicación efectiva (ABET Student Outcome 3)**. Debe incluir escenas reales de coordinación, evolución desde AV1/TB1, decisiones comunicadas a docentes y usuarios, y testimonios individuales ante cámara que diferencien comunicación oral y escrita. Se propone una retrospectiva de alrededor de cinco minutos y testimonios individuales en torno a un minuto por integrante, conforme a la pauta del enunciado; la escaleta definitiva debe llevar `hh:mm:ss` reales después de editar.
+
+| Evidencia | Estado |
+|---|---|
+| Video Stream y YouTube | ⟦URLs reales⟧ |
+| Screenshot ilustrativo del video | ⟦⟧ |
+| Escaleta con timestamps | ⟦⟧ |
+| Testimonios de los cinco integrantes | ⟦⟧ |
+| Video incrustado en Landing Page | ⟦captura y URL⟧ |
