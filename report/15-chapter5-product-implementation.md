@@ -92,6 +92,10 @@ La documentación permitió organizar y explicar el contenido del proyecto de ma
   <img src="../assets/Cap5_Logo_Markdown.png" alt="Markdown" title="Markdown" width="250">
 </p>
 
+## Corrección editorial TB1 — Versiones y evidencias
+
+> Esta revisión no altera las capturas ni los registros históricos. Las afirmaciones de funcionamiento y despliegue deben sustentarse con enlaces y capturas actuales; el texto del Sprint 2 es un registro académico del equipo, no una auditoría de infraestructura. El puntaje oficial comunicado fue 14,75/20. La matriz completa está en [Subsanación de rúbrica](correcciones/01_MATRIZ_CUMPLIMIENTO_RUBRICA.md).
+
 ## 5.1.2. Source Code Management
 
 En esta sección se establecen los medios y esquemas de organización aplicados para el seguimiento de modificaciones del proyecto Refrio. Para ello, se utiliza GitHub como plataforma de alojamiento del repositorio y como sistema de control de versiones distribuido, lo que permite gestionar cambios, mantener trazabilidad y organizar el trabajo colaborativo mediante ramas.
@@ -103,6 +107,8 @@ En esta sección se establecen los medios y esquemas de organización aplicados 
 | Organización en GitHub | https://github.com/upc-pre-202620-1asi0729-7747-refrio |
 | Project Report (Informe) | https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-report|
 | Landing Page | https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website|
+| Frontend Web Application | https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend |
+| Server Side Software (Java/Spring Boot) | https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend |
 
 
 ### GitFlow Workflow
@@ -281,13 +287,13 @@ function calculateTotalItems(currentItems, newItems) {
 **Ejemplo Markdown:**
 
 ``` Markdown
-## 4.1. Style Guidelines
+### Referencia transversal a Style Guidelines (ver Capítulo IV)
 
-### 4.1.1. General Style Guidelines
+#### General Style Guidelines (remisión al Capítulo IV)
 
 En esta sección se presentan las pautas visuales utilizadas en Refrio.
 
-### 4.1.2. Web Style Guide
+#### Web Style Guide (remisión al Capítulo IV)
 
 Se describen los componentes y elementos visuales empleados en la interfaz web.
 ```
@@ -454,7 +460,7 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 
 ### 5.2.2.1. Sprint Planning 2
 
-El Sprint Planning 2 se realizó al inicio de la segunda iteración del proyecto, con el equipo reunido virtualmente. Habiendo completado el Landing Page en el Sprint 1, el objetivo de este sprint es implementar y desplegar la primera versión de la **Refrio Frontend Web Application** construida con Angular 17 y Angular Material, consumiendo una **Fake API desplegada en AWS EC2 (Ubuntu)** con `json-server` (IP: `3.142.114.4`), que expone los datos del dominio de Refrio. El resultado esperado al cierre del sprint es que ambos segmentos objetivo —Supervisor Logístico (Distribuidora) y Comerciante Minorista (Bodeguero)— puedan acceder a la aplicación desplegada y operar los flujos esenciales de autenticación multi-rol, alta de lotes perecibles y asignación a unidades de almacenamiento en frío.
+El Sprint Planning 2 se realizó al inicio de la segunda iteración del proyecto, con el equipo reunido virtualmente. Habiendo completado el Landing Page en el Sprint 1, el objetivo de este sprint es implementar y desplegar la primera versión de la **Refrio Frontend Web Application** construida con Angular 22 (versión declarada en el repositorio actual) y Angular Material, consumiendo una **Fake API desplegada en AWS EC2 (Ubuntu)** con `json-server` (IP: `3.142.114.4`), que expone los datos del dominio de Refrio. El resultado esperado al cierre del sprint es que ambos segmentos objetivo —Supervisor Logístico (Distribuidora) y Comerciante Minorista (Bodeguero)— puedan acceder a la aplicación desplegada y operar los flujos esenciales de autenticación multi-rol, alta de lotes perecibles y asignación a unidades de almacenamiento en frío.
 
 Para garantizar rigor metodológico frente a la velocidad demostrada en el ciclo anterior (11 SP completados en el Sprint 1), el equipo formaliza su capacidad operativa diferenciando los compromisos asumidos:
 
@@ -494,58 +500,82 @@ La estructura de liderazgo define la responsabilidad sobre la arquitectura de co
 
 ---
 
-### 5.2.2.3. Sprint Backlog 2
+### 5.2.2.3. Sprint Backlog 2 — reestructuración y trazabilidad
 
-El objetivo de este Sprint es implementar y desplegar la primera versión de la Refrio Frontend Web Application consumiendo la Fake API en producción (AWS EC2, IP: `3.142.114.4`). El desarrollo se concentra en los módulos de `iam` (autenticación y registro multi-rol), `inventory` (alta de lotes y asignación de frío) y la infraestructura de comunicación REST.
+El Sprint 2 corresponde históricamente a TB1. En la primera versión de la tabla, seis Engineering Tasks figuran estimadas en menos de cuatro horas (T02, T03, T05, T07, T12 y T13). La siguiente versión **normaliza la estimación a intervalos de 4 a 8 horas**, agregando validación y revisión a actividades excesivamente pequeñas. Estas horas son **estimaciones revisadas del paquete de trabajo** y **no acreditan horas efectivamente invertidas**. La declaración histórica “Done” del informe original requiere corroboración con código, tablero y demostración.
 
-URL del Sprint Board (Trello): [https://trello.com/b/refrio-sprint2](https://trello.com/b/refrio-sprint2)
+| Historia | Task | Engineering Task normalizada y resultado verificable | Est. (h) | Estado histórico declarado | Evidencia a vincular |
+|---|---|---|---:|---|---|
+| US06 | T01 | Construir formulario empresarial con validación de campos obligatorios y RUC de 11 dígitos; probar mensajes y diseño en móvil | 4 | Done (por verificar) | PR + captura responsive + formulario |
+| US06 | T02 | Integrar persistencia de empresa, validación de duplicidad y manejo de respuestas 201/400/409, con prueba de registro | 4 | Done (por verificar) | Endpoint, prueba HTTP y PR |
+| US07 | T03 | Implementar alta de usuario minorista y validación accesible de correo, teléfono y contraseña; probar error/éxito | 4 | Done (por verificar) | Capturas y PR |
+| US08 | T04 | Implementar inicio de sesión por rol y redirección, diferenciando token de demostración y JWT real | 4 | Done (por verificar) | Ruta sign-in, respuestas de sesión |
+| US08 | T05 | Implementar guardias y pruebas de acceso permitido, denegado y sesión expirada para los dos roles | 4 | Done (por verificar) | Guardias + pruebas por rol |
+| US12 | T06 | Implementar formulario de lote con identificador, cantidad, unidad, fechas y restricciones de vencimiento | 5 | Done (por verificar) | Vista, pruebas de validación |
+| US12 | T07 | Implementar consulta/alta de lotes, tratamiento de errores HTTP y prueba de actualización de inventario | 4 | Done (por verificar) | Servicio, endpoint y PR |
+| TS03 | T08 | Estructurar datos de lotes y comprobar orden determinista FEFO por vencimiento y disponibilidad | 4 | Done (por verificar) | JSON de prueba, resultado ordenado |
+| US14 | T09 | Implementar asignación de lote a unidad refrigerada con validaciones de capacidad y estado | 5 | Done (por verificar) | Vista, caso válido/inválido |
+| TS01 | T10 | Configurar aplicación Angular, rutas por módulos y resolución de servicios, verificando build de producción | 4 | Done (por verificar) | `angular.json`, rutas, build |
+| TS02 | T11 | Configurar API simulada, variables de entorno y acceso controlado; registrar prueba HTTP desde entorno cliente | 4 | Done (por verificar) | Configuración, endpoint y captura |
+| TS03 | T12 | Preparar build Angular, rutas SPA para GitHub Pages y comprobación responsive de navegación/errores | 4 | Done (por verificar) | Workflow + URL pública + capturas |
+| US01 | T13 | Revisar CTAs de la Landing Page, destinos válidos y navegación en 375/768/1440 px; corregir enlaces y verificar el flujo | 4 | Done (por verificar) | Sitio, tres capturas y PR |
+| | | **Total de esfuerzo REESTIMADO (no ejecutado)** | **54** | | |
 
-| Story ID | Story Title | Task ID | Task Title | Task Description | Estimation (h) | Assigned To | Status |
-|:---:|:---|:---:|:---|:---|:---:|:---:|:---:|
-| **US06** | Registro de Distribuidora Mediana | T01 | Componente `RegisterCompanyComponent` | Formulario reactivo B2B con validación de razón social, RUC (11 dígitos), correo corporativo y dirección de almacén. | 4 | Alca, César | Done |
-| **US06** | Registro de Distribuidora Mediana | T02 | Integración con Fake API (`/companies`) | Configuración en `db.json` y servicio Angular para consumo de `POST /companies` con control de duplicidad. | 3 | Alca, César | Done |
-| **US07** | Registro de Comerciante Minorista | T03 | Componente `RegisterStoreComponent` | Formulario simplificado para comerciantes de bodega: nombre comercial, teléfono de contacto y credenciales sin RUC obligatorio. | 3 | Tello, Jose | Done |
-| **US08** | Inicio de Sesión Multi-rol | T04 | Componente `LoginComponent` y JWT | Formulario de autenticación con guardado de token de sesión simulado en `localStorage` y redirección condicional según rol. | 4 | Alca, César | Done |
-| **US08** | Inicio de Sesión Multi-rol | T05 | Implementación de `AuthGuard` y `RoleGuard` | Guards de Angular para la protección de rutas privadas según el perfil del usuario autenticado (`Supervisor` o `Minorista`). | 2 | Tello, Jose | Done |
-| **US12** | Alta de Lote Perecible (Batch) | T06 | Componente `BatchRegisterComponent` | Formulario de alta de lote: SKU, código de lote, cantidad, unidad de medida, fecha de ingreso y fecha de caducidad. | 5 | Centeno, Adriano | Done |
-| **US12** | Alta de Lote Perecible (Batch) | T07 | Servicio `BatchService` e integración REST | Servicio Angular para consumo de `POST /batches` y `GET /batches` con persistencia en la Fake API de AWS EC2. | 3 | Centeno, Adriano | Done |
-| **TS03** | Endpoint Gestión Inventario Lotes | T08 | Configuración de esquema JSON y ordenamiento | Parametrización en `db.json` y filtros en la Fake API para consulta y ordenamiento de inventario por vencimiento (criterio FEFO). | 4 | Saavedra, Rodrigo | Done |
-| **US14** | Asignación a Unidad de Almacén | T09 | Componente `StorageAssignmentComponent` | Asignación interactiva del lote registrado a cámaras frigoríficas y visicoolers con verificación de volumen disponible. | 5 | Rivas, Bernie | Done |
-| **TS01** | Setup Angular y Arquitectura Modular | T10 | Inicialización del proyecto Web App | Creación del proyecto en Angular 17, configuración de Angular Material y arquitectura modular con ruteo lazy loading. | 4 | Rivas, Bernie | Done |
-| **TS02** | Despliegue de Fake API en AWS EC2 | T11 | Configuración de instancia EC2 Ubuntu con `json-server` | Despliegue de `json-server` en instancia EC2 (Ubuntu 22.04, puerto 80) cargando el `db.json` oficial y configurando CORS y Security Groups. | 4 | Saavedra, Rodrigo | Done |
-| **TS03** | Despliegue del Frontend Web Application | T12 | Configuración de build de producción y hosting | Compilación de producción (`ng build --configuration production`), variables de entorno (`apiUrl: http://3.142.114.4`) y verificación de URL pública. | 3 | Tello, Jose | Done |
-| **US01** | Actualización CTA del Landing Page | T13 | Vinculación de accesos en el Landing Page | Modificación de enlaces en botones "Ingresar" y "Comenzar" de la Landing Page para redirigir a la Web Application desplegada. | 1 | Alca, César | Done |
+### Relación entre estimaciones, Story Points y estados
 
-* **Total de Tareas Ejecutadas:** 13 tareas en Done (100%)
-* **Esfuerzo Técnico Total:** 45 horas
-* **Story Points Completados:** 21 SP
+Las horas se estiman **por Engineering Task** y los Story Points se estiman **por User Story/Technical Story**. No son la misma unidad. El reporte original declara 21 Story Points comprometidos y terminados; esa cifra es histórica, pero debe vincularse con los criterios de aceptación y resultados comprobables. Este reajuste a 54 horas no implica cambio automático de Story Points ni valida retroactivamente el estado Done.
 
----
+### Flujo de tablero requerido por la rúbrica
 
-### 5.2.2.4. Development Evidence for Sprint Review
+| Estado | Regla de entrada | Regla para salir |
+|---|---|---|
+| **To Do** | Historia aceptada, tarea descompuesta y estimada en 4–8 h | Responsable inicia y registra rama |
+| **In Process** | Commit inicial asociado a ID de tarea | Prueba local y PR creado |
+| **To Review** | PR, descripción de cambio y comprobación adjunta | Aprobación o devolución documentada |
+| **Done** | Criterios de aceptación comprobados; PR integrado en develop | Evidencia de funcionamiento y versión |
+| **Blocked** *(estado auxiliar opcional)* | Dependencia o defecto que impide avanzar | Motivo, responsable y próxima acción |
 
-En el Sprint 2 se implementó la primera versión funcional de la Refrio Frontend Web Application utilizando **Angular 17** con **Angular Material** como biblioteca de componentes UI, adoptando la paleta cromática azul corporativo `#3F51B5` y tipografía Roboto. La arquitectura se organiza modularmente con carga perezosa (*lazy loading*) para optimizar el rendimiento.
+**Registros necesarios del tablero:** enlace real, captura de fechas/columnas, historial de movimiento de al menos una tarjeta, responsable, horas, historia vinculada, criterio Gherkin y PR. El enlace `https://trello.com/b/refrio-sprint2` que figura en el reporte no debe considerarse verificado hasta que el equipo pruebe su accesibilidad.
 
-El archivo `db.json` fue desplegado en una instancia **AWS EC2 Ubuntu (IP: `http://3.142.114.4`)** mediante `json-server`, permitiendo que todos los servicios Angular consuman endpoints RESTful en vivo. Las contribuciones técnicas se registraron bajo la convención formal de **Conventional Commits**, trazando cada commit al ID de tarea correspondiente:
+### Aceptación técnica mínima (ejemplos Gherkin)
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|---|---|:---:|:---|:---|:---:|
-| `refrio-frontend` | `feature/ts01-angular-setup` | `a1b2c3d` | `chore(setup): initialize Angular 17 project with Material and lazy loading (T10)` | Configures project layout, routing with loadChildren for modules and brand theme. | `2026-09-22` |
-| `refrio-frontend` | `feature/ts01-angular-setup` | `b2c3d4e` | `chore(env): configure environment files with AWS EC2 API base URL (T10)` | Sets apiUrl to http://3.142.114.4 in environment.ts and configures provideHttpClient(). | `2026-09-22` |
-| `refrio-fake-api` | `feature/ts02-fake-api-aws` | `c3d4e5f` | `feat(api): deploy json-server with db.json to AWS EC2 Ubuntu instance (T11)` | Configures EC2 Ubuntu t2.micro, db.json collections (users, companies, batches, products) and port 80. | `2026-09-23` |
-| `refrio-fake-api` | `feature/ts02-fake-api-aws` | `d4e5f6g` | `chore(api): configure CORS middleware and verify endpoints on AWS (T11)` | Sets CORS headers and tests live response from http://3.142.114.4. | `2026-09-23` |
-| `refrio-frontend` | `feature/us08-auth-session` | `e5f6g7h` | `feat(auth): implement LoginComponent with JWT simulation and role redirect (T04)` | Reactive form with email/password, stores session in localStorage and redirects by role. | `2026-09-24` |
-| `refrio-frontend` | `feature/us06-register-company` | `f6g7h8i` | `feat(auth): implement RegisterCompanyComponent with 11-digit RUC validation (T01)` | Custom RUC validator, B2B company form and error handling for duplicates. | `2026-09-24` |
-| `refrio-frontend` | `feature/us06-register-company` | `g7h8i9j` | `feat(auth): integrate AuthService with POST /companies on AWS EC2 (T02)` | Handles POST /companies payload and error responses against json-server. | `2026-09-25` |
-| `refrio-frontend` | `feature/us08-auth-session` | `h8i9j0k` | `feat(auth): add AuthGuard and RoleGuard for route protection (T05)` | Restricts private views by supervisor/minorista role and unauthenticated access. | `2026-09-25` |
-| `refrio-frontend` | `feature/us07-register-store` | `i9j0k1l` | `feat(auth): implement RegisterStoreComponent for retail bodegas (T03)` | Simplified merchant form: business name, phone, password; POST /stores. | `2026-09-25` |
-| `refrio-frontend` | `feature/us12-batch-register` | `j0k1l2m` | `feat(inventory): implement BatchRegisterComponent with expiration datepicker (T06)` | Form with SKU, batch code, quantity, reception and expiration dates. | `2026-09-26` |
-| `refrio-frontend` | `feature/us12-batch-register` | `k1l2m3n` | `feat(inventory): add BatchService for REST integration with Fake API (T07)` | Consumes POST /batches and GET /batches from AWS endpoint. | `2026-09-26` |
-| `refrio-fake-api` | `feature/ts03-inventory-endpoints` | `l2m3n4o` | `feat(api): configure FEFO sorting and filtering queries for batches (T08)` | Configures query params for expiration date sorting and inventory management. | `2026-09-27` |
-| `refrio-frontend` | `feature/us14-storage-assignment` | `m3n4o5p` | `feat(inventory): implement StorageAssignmentComponent for cold units (T09)` | Allocation interface to bind perishable batches to cold rooms or visicoolers. | `2026-09-28` |
-| `refrio-frontend` | `feature/ts03-deployment` | `r8s9t0u` | `chore(deploy): configure production build scripts and hosting pipeline (T12)` | Production optimizations, base-href configuration and live smoke testing. | `2026-09-29` |
-| `refrio-website` | `feature/landing-v2-cta` | `s9t0u1v` | `feat(landing): update CTA button targets to point to deployed webapp URL (T13)` | Updates href in hero "Ingresar" and "Comenzar" buttons to point to web app. | `2026-09-29` |
+**US12 — Registro de lote:** Given que el supervisor tiene permisos y datos de producto válidos, When registra un lote con cantidad mayor que cero y fecha de caducidad posterior a la recepción, Then el sistema confirma el alta y el lote aparece en el inventario. Given que la caducidad precede al ingreso, When envía el formulario, Then se rechaza con error comprensible sin alterar el stock.
+
+**US08 — Acceso multirrol:** Given un usuario Supervisor autenticado, When ingresa, Then navega al dashboard de supervisión. Given un usuario Minorista autenticado, When accede, Then navega al panel de su rol. Given credenciales inválidas, When intenta ingresar, Then recibe error sin crear sesión.
+
+**TS03 — FEFO:** Given lotes aptos con distinta caducidad, When se solicita un plan para una cantidad disponible, Then se selecciona primero el lote que vence antes y se respeta la cantidad disponible. Given un lote vencido o inmovilizado, When se planifica, Then no se asignan unidades de ese lote.
+
+### Enlace exigido: tareas con evidencia
+
+| Tarea | Owner | Board | Commit real | PR real | Prueba | Resultado |
+|---|---|---|---|---|---|---|
+| T01–T13 | Según la asignación histórica del Sprint 2 | [PENDIENTE: URL/captura] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | **No verificado** |
+
+La documentación anterior debe actualizarse a partir de la herramienta de desarrollo utilizada efectivamente; nunca fabricar IDs de commits, fechas o aprobaciones.
+
+### 5.2.2.4. Development Evidence for Sprint Review — rectificación de evidencias
+
+La aplicación existente se revisó contra los archivos públicos actuales: `refrio-frontend/package.json` declara Angular `^22.2.3`, y `src/app/app.routes.ts` contiene rutas de IAM, inventario, envíos, proveedores, alertas, analítica y eventos. No se encontró la dependencia directa `@angular/material` en dicho `package.json`. Por tanto, las menciones anteriores a "Angular 22 (versión declarada en el repositorio actual) con Angular Material" no describen fielmente la revisión del repositorio actual; deben entenderse como afirmaciones históricas sin soporte de esa versión.
+
+El Sprint 2 documentó una API de demostración basada en `json-server`. La migración a Spring Boot/Java corresponde a una línea de trabajo posterior y no convierte retroactivamente las respuestas de la Fake API en respuestas de una API de producción.
+
+La versión anterior del informe contenía supuestos identificadores de commits que no son SHA hexadecimales válidos. Esa tabla se retira en esta revisión, y se reemplaza por la evidencia verificable siguiente:
+
+| Verificación | Fuente verificable | Resultado documental | Evidencia restante |
+|---|---|---|---|
+| Existencia de frontend | [Repositorio Angular](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend) | Fuente disponible | Build y capturas fechadas |
+| Versión de Angular | `package.json` (dependencias `@angular/*: ^22.2.3`) | Versión declarada en código | Build ejecutado y lockfile |
+| Rutas principales | `src/app/app.routes.ts` | Rutas declaradas | Navegación real por rol |
+| API de datos de TB1 | `db.json` y `json-server` | Demo documentada | URI vigente, HTTPs y smoke test |
+| Commits por Engineering Task | Historia y PR de GitHub | **No verificado desde tabla anterior** | Commit SHA real/URL por tarea |
+| Cobertura de User Flows | [Matriz de flujos](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md) | Mapeo estático | Video de cada recorrido y caso alternativo |
+
+**Registro pendiente por tarea:** T01–T13 → rama real → SHA real → PR real → revisor → prueba → resultado. No se presentan IDs ficticios ni se afirma que todos los PR fueron aprobados sin evidencia.
+
 ### 5.2.2.5. Execution Evidence for Sprint Review
+
+> **Nota de verificación:** las pantallas, enlaces y el video citados son evidencias históricas de TB1. Sin pruebas actuales de navegador no puede afirmarse que cada User Flow esté cubierto de extremo a extremo ni que los datos persistan en servidor real. Consultar [auditoría de frontend](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md).
+
 
 Al cierre del Sprint 2, se cuenta con la primera versión funcional de la Refrio Frontend Web Application desplegada y accesible públicamente, conectada a la Fake API en producción (AWS EC2, IP pública: `3.142.114.4`). A continuación se describen las principales vistas implementadas por módulo:
 
@@ -574,6 +604,9 @@ El `ClientListComponent` muestra los 5 clientes registrados (consumiendo `GET /c
 ---
 
 ### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+> **Alcance del servicio:** esta sección describe exclusivamente la Fake API `json-server` usada para demostración TB1; no equivale al backend Spring Boot/Java, al esquema JPA ni a Swagger de una versión posterior.
+
 
 Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con json-server** desplegada en una instancia **AWS EC2 (Ubuntu 22.04, t2.micro)** con IP pública `3.142.114.4`, accesible mediante el protocolo HTTP en el puerto 80. Esta API expone las mismas colecciones y estructura de datos del archivo `db.json` que reside en el repositorio del frontend, garantizando la alineación entre el código fuente y los datos en producción. Todos los endpoints soportan las operaciones estándar de json-server: `GET`, `POST`, `PUT`, `PATCH` y `DELETE`.
 
@@ -605,6 +638,9 @@ Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con
 
 ### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
+> **Estado histórico:** los pasos y direcciones IP siguientes se reportaron en TB1. La disponibilidad pública vigente y la compatibilidad HTTP/HTTPS exigen nueva comprobación fechada y capturas, según [matriz de evidencias](correcciones/08_EVIDENCIAS_Y_DESPLIEGUE.md).
+
+
 Durante el Sprint 2 se gestionaron tres despliegues: la Fake API en AWS EC2, la Frontend Web Application en GitHub Pages, y la actualización del Landing Page.
 
 **1. Fake API (json-server) — AWS EC2 Ubuntu**
@@ -621,7 +657,7 @@ Pasos realizados:
 7. Inicio del servidor: `sudo json-server --watch db.json --port 80 --host 0.0.0.0`.
 8. Verificación de endpoints: `curl http://3.142.114.4/users` y endpoints restantes.
 
-**URL base de la Fake API (activa):** `http://3.142.114.4`
+**URL histórica declarada para la Fake API (estado actual sin verificar):** `http://3.142.114.4`
 
 Endpoints verificados y activos:
 - `http://3.142.114.4/users`
@@ -658,16 +694,30 @@ Se actualizaron los botones CTA del Landing Page (`refrio-website`) para redirig
 
 ### 5.2.2.8. Team Collaboration Insights during Sprint
 
+> **Precisión editorial:** no es válido dar por probada la aprobación cruzada de todos los Pull Requests sin sus URLs y revisores. En la próxima iteración se registrará cada PR real con autor, revisor, fecha y prueba; la imagen histórica no reemplaza estos identificadores.
+
+
 Durante el Sprint 2, la colaboración técnica se gestionó mediante GitFlow en el repositorio [https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend.git). Cada integrante desarrolló el módulo asignado en una rama `feature/[descripción]`, la cual fue integrada mediante Pull Request con al menos una aprobación de un compañero diferente al autor antes de mergear a `develop`. Al concluir el sprint se creó la rama `release/v0.2.0` desde `develop`, que fue mergeada a `main` y etiquetada con `v0.2.0`, marcando la versión de entrega para TB1.
 
 ![Team Collaboration Sprint 2 - PRs and Insights](../assets/TeamCollaborationInsights.png)
 
 
+## Anexo de subsanaciones TB1 incorporadas
+
+Las correcciones posteriores a la retroalimentación se detallan en: [rúbrica](correcciones/01_MATRIZ_CUMPLIMIENTO_RUBRICA.md), [Sprint Backlog](correcciones/02_SPRINT_BACKLOG_NORMALIZADO.md), [Landing](correcciones/03_LANDING_RESPONSIVE_Y_CONTENIDO.md), [Frontend](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md), [mejora continua](correcciones/05_MEJORA_CONTINUA_TRAZABILIDAD.md), [comunicación](correcciones/06_COMUNICACION_DEMO_Y_OUTCOME.md), [DDD](correcciones/07_ARQUITECTURA_7_A_8_CONTEXTOS.md) y [evidencias](correcciones/08_EVIDENCIAS_Y_DESPLIEGUE.md). Se conserva el relato histórico de TB1 en el resto del capítulo; los resultados posteriores requieren prueba y fecha.
+
+---
+
+> **Entrega 3 (AV2):** el contenido siguiente procede de la rama `feature/chapter5` de `refrio-report` (commit `1e28de56901d8c90c1edcd357db38da3d9cb917f`). Se preservan las secciones de TB1 y sus correcciones. Las tablas con `⟦⟧` son plantillas pendientes de evidencias; no constituyen resultados ejecutados. Los 58 SP reflejan el Product Backlog asignado, no la velocidad ni los SP completados.
+
 ## 5.2.3. Sprint 3
+
 
 El Sprint 3 de Refrio propone elevar el alcance de la aplicación hacia flujos centrales de protección de la cadena de frío: respuesta a alertas térmicas, rotación FEFO, preparación de despachos y trazabilidad consultable. La incorporación de la primera versión real de Web Services con Spring Boot permite reemplazar progresivamente la capa de simulación `json-server` utilizada en TB1 por contratos persistentes, autorizados y documentados mediante OpenAPI/Swagger. Debido a la amplitud de historias asignadas originalmente al Sprint 3, el equipo debe registrar explícitamente el alcance comprometido, el alcance despriorizado y la evidencia de cada actividad completada.
 
+
 ### 5.2.3.1. Sprint Planning 3
+
 
 | Campo | Planificación propuesta / dato pendiente |
 |---|---|
@@ -681,11 +731,15 @@ El Sprint 3 de Refrio propone elevar el alcance de la aplicación hacia flujos c
 | Sprint 3 Velocity | ⟦POR VERIFICAR: capacidad/velocidad aprobada por el equipo⟧ |
 | Sum of Story Points | **58 SP asignados al Sprint 3 en Product Backlog**; **⟦SP realmente comprometidos⟧** y **⟦SP efectivamente completados⟧**, diferenciados |
 
+
 **Principio de planificación.** El objetivo se centrará en valor de negocio para distribuidores y bodegas, no en el mero despliegue de un framework. Al decidir qué historias implementar, priorizar un flujo vertical demostrable (*alerta térmica → revisión → cierre* o *inventario → FEFO → picking*) antes que comenzar todas las historias sin completarlas.
+
 
 ### 5.2.3.2. Aspect Leaders and Collaborators
 
+
 La matriz es un **borrador propuesto**, coherente con especialidades indicadas en TB1, que requiere confirmación por los integrantes y cotejo con los PRs de AV2.
+
 
 | Team Member / GitHub Username | IAM/API | Alertas térmicas | Inventario FEFO | Trazabilidad/picking | Frontend/UX | Docs, validación y despliegue |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -695,31 +749,40 @@ La matriz es un **borrador propuesto**, coherente con especialidades indicadas e
 | Saavedra Flores, Rodrigo Andree (`rodrigoxd67`) | C | **L** | C | C | C | C |
 | Tello Lima, Jose Alejandro (`j4ndrow`) | C | C | C | C | **L** | **L** |
 
+
 **L/C:** propuesta por validar; el liderazgo efectivo sobre backend Java debe asignarse según la implementación real, no por continuidad automática del Sprint 2.
+
 
 ### 5.2.3.3. Sprint Backlog 3
 
+
 **Board Sprint 3:** ⟦URL pública real y captura⟧. Las 13 historias siguientes ya figuran asignadas al Sprint 3 en `report/13-chapter3-requirements-specification.md`. Los **58 SP** son la suma de esas asignaciones y **no** una declaración de entrega completada.
+
 
 | Story ID | Story Title del Product Backlog | Story Points originales | Work Item / Task a descomponer | Assigned To | Estimación (h) | Status |
 |---|---|---:|---|---|---:|---|
-| US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | AV2-T01: diseñar flujo de alerta, visualización, reglas y pruebas | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| TS07 | Servicio de Notificaciones Multicanal (WhatsApp, SMS, Push) | 5 | AV2-T02: documentar contrato e integrar solo canales realmente habilitados | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US27 | Confirmación y Cierre de Alerta | 3 | AV2-T03: permitir confirmar alerta y registrar cierre auditable | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US29 | Visualización de Inventario Ordenado por FEFO | 3 | AV2-T04: ordenamiento verificable por vencimiento | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | AV2-T05: documentar reglas y exponer consulta de prioridad | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US30 | Generación de Lista de Picking Sugerida | 5 | AV2-T06: mostrar orden propuesto de preparación de pedidos | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US33 | Validación de Lote en Despacho mediante Escaneo | 5 | AV2-T07: comprobar lote durante preparación y despacho | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | AV2-T08: analizar flujo móvil y registrar resultado de lectura | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US31 | Semáforo Visual de Frescura para Bodegas | 3 | AV2-T09: visualizar prioridades por umbral y caducidad | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | AV2-T10: consultar eventos térmicos asociados a un lote | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | AV2-T11: especificar acceso público seguro y datos publicados | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | AV2-T12: enlazar QR a una vista pública verificable | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
-| US35 | Exportación de Certificado de Frío en PDF | 5 | AV2-T13: definir documento y datos de trazabilidad para exportación | ⟦⟧ | ⟦⟧ | To Do / ⟦confirmar⟧ |
+| US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | AV2-T01: diseñar flujo de alerta, visualización, reglas y pruebas | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| TS07 | Servicio de Notificaciones Multicanal (WhatsApp, SMS, Push) | 5 | AV2-T02: documentar contrato e integrar solo canales realmente habilitados | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| US27 | Confirmación y Cierre de Alerta | 3 | AV2-T03: permitir confirmar alerta y registrar cierre auditable | ⟦⟧ | 5 (propuesta) | To Do / ⟦confirmar⟧ |
+| US29 | Visualización de Inventario Ordenado por FEFO | 3 | AV2-T04: ordenamiento verificable por vencimiento | ⟦⟧ | 4 (propuesta) | To Do / ⟦confirmar⟧ |
+| TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | AV2-T05: documentar reglas y exponer consulta de prioridad | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| US30 | Generación de Lista de Picking Sugerida | 5 | AV2-T06: mostrar orden propuesto de preparación de pedidos | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| US33 | Validación de Lote en Despacho mediante Escaneo | 5 | AV2-T07: comprobar lote durante preparación y despacho | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | AV2-T08: analizar flujo móvil y registrar resultado de lectura | ⟦⟧ | 5 (propuesta) | To Do / ⟦confirmar⟧ |
+| US31 | Semáforo Visual de Frescura para Bodegas | 3 | AV2-T09: visualizar prioridades por umbral y caducidad | ⟦⟧ | 4 (propuesta) | To Do / ⟦confirmar⟧ |
+| US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | AV2-T10: consultar eventos térmicos asociados a un lote | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | AV2-T11: especificar acceso público seguro y datos publicados | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+| US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | AV2-T12: enlazar QR a una vista pública verificable | ⟦⟧ | 5 (propuesta) | To Do / ⟦confirmar⟧ |
+| US35 | Exportación de Certificado de Frío en PDF | 5 | AV2-T13: definir documento y datos de trazabilidad para exportación | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+
+
+**Estimación preliminar de Engineering Tasks:** 71 horas propuestas para 13 tareas (cada tarea entre 4 y 8 horas). Son estimaciones para refinar y aprobar en el Sprint Planning; no representan horas registradas ni trabajo completado. Los responsables, estados y evidencias deben tomarse del tablero real.
 
 **Trabajo transversal, registrar por separado sin duplicar Story Points:** implementación del primer backend Spring Boot/Spring Data JPA; esquema relacional y migraciones si aplica; documentación OpenAPI; pruebas del flujo vertical; publicación en cloud; revisión de i18n/a11y; cambio de consumo de Fake API a Web Services reales. Se deberán asignar responsables y horas verificables en el Board. Para cualquier historia que no sea comprometida, establecer `Deferred to Sprint 4` con justificación, no `Done`.
 
+
 ### 5.2.3.4. Development Evidence for Sprint Review
+
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
 |---|---|---|---|---|---|
@@ -727,11 +790,15 @@ La matriz es un **borrador propuesto**, coherente con especialidades indicadas e
 | `refrio-frontend` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦Conventional Commit⟧ | ⟦flujo integrado efectivo⟧ | ⟦fecha⟧ |
 | `refrio-website` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦Conventional Commit⟧ | ⟦actualización Landing y CTA⟧ | ⟦fecha⟧ |
 
+
 Se debe conservar la relación entre historias, tareas, commits, Pull Requests y productos. Los commits que figuran en TB1 con IDs no válidos deben reemplazarse por hashes reales antes de ampliar la evidencia. Incorporar capturas de la actividad durante el Sprint 3, no solo gráficos acumulados desde AV1.
+
 
 ### 5.2.3.5. Execution Evidence for Sprint Review
 
+
 **Escenarios de prueba propuestos**, sujetos al alcance aprobado: A) Supervisor: inicio de sesión, cámara/unidad de almacenamiento, lectura térmica, alerta crítica y cierre documentado; B) responsable de inventario: consulta ordenada FEFO y generación de picking; C) comerciante minorista: visualización de caducidades por semáforo; D) consulta pública controlada de trazabilidad, **solo si está implementada**. En cada video se debe registrar el resultado observable y la URL real utilizada.
+
 
 | Evidencia | Pantalla/flujo | Captura / enlace |
 |---|---|---|
@@ -743,9 +810,12 @@ Se debe conservar la relación entre historias, tareas, commits, Pull Requests y
 | REF-FE-AV2-06 | Interfaz responsive y estado de error | ⟦⟧ |
 | REF-VID-AV2-01 | Grabación de navegación, timings y URL privada de Stream | ⟦⟧ |
 
+
 ### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
+
 La documentación requerida debe corresponder a **Spring Boot con Java y Spring Data JPA**, no a endpoints de una Fake API en AWS. Para cada endpoint realmente implementado, incluir URL base y enlace Swagger, método, recurso, parámetros, Request Body, posibles respuestas, validaciones y captura de ejecución.
+
 
 | Recurso | Acción por comprobar | Ruta / operación OpenAPI real | Respuesta y código | Prueba / captura |
 |---|---|---|---|---|
@@ -754,9 +824,12 @@ La documentación requerida debe corresponder a **Spring Boot con Java y Spring 
 | Telemetría / alertas | ⟦registro, consulta, cierre⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
 | Picking / trazabilidad | ⟦solo funcionalidades existentes⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
 
+
 **Repositorio:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend. **Swagger:** ⟦URL real⟧. **Ambiente:** ⟦dominio, versión, fecha⟧. Documentar controles de autorización, códigos de error y restricciones de datos, sin incluir contraseñas, tokens ni secretos.
 
+
 ### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
 
 | Producto | Referencia existente / pendiente | Evidencia a incorporar |
 |---|---|---|
@@ -765,11 +838,15 @@ La documentación requerida debe corresponder a **Spring Boot con Java y Spring 
 | Backend Spring Boot | ⟦POR VERIFICAR: repo `main` sin implementación más allá de README⟧ | URL del servicio, Swagger y respuesta ejecutada |
 | BD relacional | ⟦POR VERIFICAR⟧ | esquema, disponibilidad, procedimiento seguro |
 
+
 La IP citada en TB1 (`3.142.114.4`) corresponde a la Fake API allí documentada; verificar su vigencia y no presentarla como despliegue de Spring Boot. Documentar el paso a paso de despliegue real en texto, con capturas de plataforma cloud, prueba de conectividad, acceso a la aplicación y URL de documentación.
+
 
 ### 5.2.3.8. Team Collaboration Insights during Sprint
 
+
 Los resultados deben sustentarse en el repositorio de informe, de frontend, Landing Page y backend, con el período del Sprint 3. Incluir capturas de Insights/Contributors, PRs, comentarios de revisión, commits y Board. Vincular cada contribución al responsable y al aspecto liderado; demostrar participación de todos los integrantes en los productos correspondientes al Sprint, evitando confundir aportes documentales con implementación técnica.
+
 
 | Integrante | Tareas/PRs AV2 | Qué demuestra | Evidencia |
 |---|---|---|---|
@@ -779,23 +856,33 @@ Los resultados deben sustentarse en el repositorio de informe, de frontend, Land
 | Saavedra Flores, Rodrigo Andree | ⟦⟧ | ⟦⟧ | ⟦⟧ |
 | Tello Lima, Jose Alejandro | ⟦⟧ | ⟦⟧ | ⟦⟧ |
 
+
 ## 5.3. Validation Interviews
+
 
 El objetivo de las validaciones es comprobar que los usuarios de Refrio comprendan la propuesta de valor y puedan interpretar datos de temperatura y caducidad para decidir sobre almacenamiento, despacho o recepción. Las sesiones deben realizarse con **3 a 5 participantes por cada segmento**, mostrando Landing Page y aplicación. Registrar explícitamente qué tareas estaban disponibles en el producto en la fecha de la sesión; las tareas aún no implementadas podrán validarse como prototipo, **pero no deben presentarse como interacción con un módulo operativo**.
 
+
 ### 5.3.1. Diseño de Entrevistas
+
 
 El diseño de validación de Refrio conserva la amplitud del cuestionario original de la sección 2.2.1 de *Requirements Elicitation & Analysis*: **23 preguntas para las empresas distribuidoras de perecibles y 22 preguntas para tiendas y bodegas**. El enfoque cambia del descubrimiento de problemas a la evaluación de comprensión, usabilidad y pertinencia de una solución que articula inventario, vencimientos, cadena de frío y distribución. Las preguntas están agrupadas según los mismos ámbitos operativos del primer diseño; su redacción privilegia observaciones y experiencias concretas, en lugar de inducir respuestas positivas.
 
+
 La validación integra el **Landing Page y la Web Application** a través de recorridos identificados por segmento. Antes de cada sesión se debe comprobar qué flujos existen en la versión presentada: una vista implementada podrá probarse como funcionalidad; una vista no implementada solo podrá mostrarse como **prototipo claramente señalado**. Se solicitará consentimiento para grabar y se observarán comprensión, tiempo, errores, retrocesos, solicitudes de ayuda y percepción del usuario. La evaluación heurística complementaria se registrará en el apartado 5.3.3 conforme al Anexo D.
+
 
 #### Segmento 1: Empresas distribuidoras de productos perecibles
 
+
 **Objetivo de la entrevista:** Evaluar si responsables de operaciones y logística comprenden la propuesta de Refrio, pueden identificar y gestionar lotes, reconocer las condiciones de conservación, interpretar avisos de riesgo térmico y utilizar la información de prioridad FEFO y trazabilidad en una secuencia coherente de trabajo.
+
 
 **Perfil del entrevistado:** Supervisor logístico, responsable de distribución, encargado de almacén o profesional de una empresa que comercializa y transporta perecibles. Se buscarán experiencias con distintos métodos de inventario y control térmico, desde sistemas empresariales hasta registros manuales.
 
+
 **Elementos a validar y user flows:**
+
 
 - **UF-REF-S1-01 — Descubrimiento y acceso:** Landing Page → beneficios / planes → CTA empresarial → registro de distribuidora o inicio de sesión.
 - **UF-REF-S1-02 — Gestión de lotes:** panel de distribución → inventario → alta o consulta de lote → fecha de vencimiento y unidad de almacenamiento.
@@ -803,7 +890,9 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 - **UF-REF-S1-04 — Preparación de despacho:** inventario → orden FEFO → selección de lote → sugerencia de picking / comprobación de caducidad, cuando esté disponible.
 - **UF-REF-S1-05 — Alertas y trazabilidad:** aviso térmico → revisión y cierre del incidente → ficha de lote → consulta o certificado de trazabilidad, si está implementado.
 
+
 ##### Datos del entrevistado y contexto digital
+
 
 1. ¿Podría indicar su nombre, edad y el distrito en el que realiza sus actividades dentro de una empresa de distribución de productos perecibles?
 2. ¿Cuál es su cargo o función y qué responsabilidad tiene sobre el inventario, el almacén o las entregas a clientes?
@@ -812,47 +901,63 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 5. ¿Qué sistemas, dispositivos o registros utiliza actualmente para administrar esas actividades y qué experiencia tiene con aplicaciones web de logística?
 6. ¿Desde qué tipo de dispositivo utilizaría una solución como Refrio y qué limitaciones de conectividad o tiempo suele enfrentar durante el trabajo?
 
+
 ##### Gestión de inventario y navegación
+
 
 7. Tras revisar la Landing Page, ¿cómo describiría el propósito de Refrio y qué diferencias observa entre la propuesta para distribuidoras y la propuesta para bodegas?
 8. ¿Qué botón elegiría para acceder como empresa distribuidora y qué impresión le produce el recorrido de registro o inicio de sesión?
 9. Al llegar al panel de gestión, ¿cómo localizaría los lotes y qué datos considera necesarios para distinguir productos con diferentes fechas de vencimiento?
 10. Al crear o revisar un lote de ejemplo, ¿qué campos entiende con facilidad y en qué paso requiere aclaraciones sobre cantidades, unidades o ubicaciones de almacenamiento?
 
+
 ##### Control de temperatura y cadena de frío
+
 
 11. Si necesitara conocer la condición de una cámara de conservación, ¿dónde buscaría la temperatura y cómo interpretaría el valor y su fecha de actualización?
 12. Frente a una lectura que exceda el rango permitido en un escenario de prueba, ¿cómo identificaría la anomalía y qué procedimiento esperaría poder registrar en el sistema?
 13. Al revisar una alerta térmica o un historial de mediciones, ¿qué elementos visuales o mensajes le permiten distinguir un riesgo urgente de una situación normal?
 
+
 ##### Logística, rotación y distribución
+
 
 14. ¿Cómo intentaría obtener un listado de productos ordenado por proximidad de vencimiento y qué entiende que significa la priorización FEFO mostrada?
 15. Si tuviera que preparar un despacho, ¿qué información comprobaría antes de seleccionar un lote y cómo utilizaría una lista sugerida de picking, de estar disponible?
 16. ¿Cómo consultaría los antecedentes o la trazabilidad de un lote, y qué valor tendrían esos datos al justificar la condición de un producto entregado?
 
+
 ##### Impacto operativo y facilidad de uso
+
 
 17. ¿En qué parte del recorrido se detuvo, retrocedió o pidió apoyo y qué esperaba que sucediera después de su acción?
 18. ¿Qué consecuencias tendría para su operación interpretar incorrectamente un estado de lote o una alerta, y cómo podría la interfaz ayudarle a evitarlo?
 19. ¿Qué tan viable sería utilizar estas pantallas durante un turno real y qué cambios de legibilidad, navegación o vocabulario serían necesarios?
 
+
 ##### Disposición hacia la solución digital y cierre
+
 
 20. Tras usar las pantallas disponibles, ¿qué funciones considera útiles para su empresa y cuáles no encajan con el procedimiento que siguen hoy?
 21. ¿Qué datos o comprobaciones adicionales necesitaría antes de confiar en los avisos térmicos, la prioridad de salida de lotes o los certificados de trazabilidad?
 22. ¿Qué mejoras priorizaría en la secuencia de tareas, presentación de información o mensajes para que su equipo opere sin asistencia?
 23. ¿Hay alguna necesidad de la distribución de perecibles o dificultad de uso que no le hayamos preguntado y que debamos tener en cuenta al mejorar Refrio?
 
+
 ---
+
 
 #### Segmento 2: Tiendas y bodegas con productos perecibles
 
+
 **Objetivo de la entrevista:** Verificar que propietarios y responsables de bodegas comprendan la propuesta de Refrio y puedan identificar existencias, vencimientos, estados de conservación y prioridades de venta o reposición sin una carga de trabajo excesiva ni necesidad de conocimientos técnicos especializados.
+
 
 **Perfil del entrevistado:** Propietario, encargado o trabajador que realiza personalmente el control de mercadería perecible en una tienda, bodega o comercio pequeño, mediante teléfono móvil, cuaderno, hojas de cálculo o una aplicación de gestión.
 
+
 **Elementos a validar y user flows:**
+
 
 - **UF-REF-S2-01 — Landing Page y registro minorista:** Landing Page → beneficios y planes → CTA de bodega → registro / inicio de sesión.
 - **UF-REF-S2-02 — Inventario del local:** panel minorista → lista de productos → detalle o registro de lote → cantidad y fecha de caducidad.
@@ -860,7 +965,9 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 - **UF-REF-S2-04 — Alertas y conservación:** producto o unidad de frío → condición o alerta → comprensión de acción sugerida, si está disponible.
 - **UF-REF-S2-05 — Consulta de trazabilidad:** lote recibido → QR / ficha pública de cadena de frío → interpretación de datos, solo si el módulo está disponible.
 
+
 ##### Datos del entrevistado y contexto de trabajo
+
 
 1. ¿Podría indicar su nombre, edad y el distrito donde atiende su tienda o bodega?
 2. ¿Cuánto tiempo lleva administrando el negocio y qué responsabilidades tiene sobre compras, almacenamiento y atención al público?
@@ -869,42 +976,56 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 5. ¿Administra un solo local o varios puntos de venta, y qué dificultades le presenta mantener actualizada la información de sus productos?
 6. ¿Qué dispositivo utiliza más para su negocio y qué aplicaciones o formas de registro le resultan familiares?
 
+
 ##### Control de inventario y comprensión de la interfaz
+
 
 7. Tras observar la Landing Page, ¿qué problema considera que Refrio intenta resolver para una bodega y qué parte de la página lo comunica mejor?
 8. ¿Cómo encontraría el acceso para comerciantes minoristas y qué le resultó sencillo o difícil del registro o inicio de sesión?
 9. Al ingresar al listado de existencias, ¿cómo identificaría la cantidad disponible, el producto y su fecha de vencimiento?
 10. Si necesitara registrar o localizar un nuevo lote, ¿qué pasos seguiría y qué campos o etiquetas deberían explicarse de manera más sencilla?
 
+
 ##### Fechas de vencimiento y pérdidas
+
 
 11. Si dos lotes del mismo producto tienen fechas diferentes, ¿cómo decidiría cuál vender primero utilizando la información mostrada en Refrio?
 12. Al observar un indicador de frescura o una alerta de vencimiento en un escenario de prueba, ¿qué entiende que significa y qué decisión tomaría sobre ese producto?
 13. ¿Cómo comprobaría en la plataforma que un producto requiere atención sin revisar individualmente todos los registros de inventario?
 
+
 ##### Organización y errores frecuentes durante las tareas
+
 
 14. ¿Qué parte del recorrido le hizo dudar, retroceder o buscar ayuda, y qué esperaba encontrar en esa pantalla?
 15. ¿Cómo interpreta los colores, iconos, fechas y estados de la aplicación, y cuáles podrían confundirse al consultar rápidamente desde un teléfono?
 16. Cuando intenta registrar o revisar productos mientras atiende clientes, ¿qué pasos le parecen innecesarios y cuáles son imprescindibles para evitar errores?
 
+
 ##### Impacto en ventas y decisiones del negocio
+
 
 17. ¿Qué información visible en la plataforma le ayudaría a decidir si debe vender, separar, retirar o reponer un producto perecible?
 18. ¿En qué situaciones considera que una alerta o un listado de lotes ordenado podría evitarle una pérdida o una venta fallida, y por qué?
 
+
 ##### Disposición hacia una solución digital y cierre
+
 
 19. Después de explorar la demostración, ¿qué funcionalidad utilizaría primero en su bodega y qué actividad cotidiana le permitiría realizar de otro modo?
 20. ¿Qué necesita ver o comprobar para confiar en la información sobre vencimientos, stock o conservación que presenta la plataforma?
 21. ¿Qué ajustes recomendaría en tamaño de letra, nombres de opciones, botones o cantidad de pasos para que un comerciante pueda usar Refrio sin ayuda?
 22. ¿Hay algún problema de control de mercadería o alguna recomendación sobre esta experiencia que no hayamos conversado y que le gustaría compartir?
 
+
 ---
+
 
 **Protocolo y criterios de observación:** La entrevista debe iniciar con consentimiento informado para grabación, datos del entrevistado y contextualización. El moderador solicita completar los recorridos en la Landing Page y en las vistas de la aplicación que efectivamente estén disponibles; durante la interacción observa comprensión de funciones, errores, tiempo, retrocesos, necesidad de asistencia y comentarios espontáneos. En caso de usar prototipos, debe quedar registrado que no constituyen funcionalidades ejecutables. En cada sesión se documentarán tareas realizadas, apreciaciones textuales o paráfrasis fieles, capturas del video, URL de Microsoft Stream, tiempo de inicio, duración y relación con los problemas heurísticos observados. Los resultados y porcentajes solo se redactarán después de ejecutar las entrevistas.
 
+
 ### 5.3.2. Registro de Entrevistas
+
 
 | Sesión | Segmento | Nombre/apellidos, edad y distrito | Fecha | Stream (URL + hh:mm:ss y duración) | Captura | Síntesis de hallazgos |
 |---|---|---|---|---|---|---|
@@ -915,13 +1036,18 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 | REF-VAL-S2-02 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
 | REF-VAL-S2-03 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
 
+
 **Por cada entrevista redactar:** presentación breve del entrevistado y su rol, contexto, secuencia de tareas efectivamente probadas, apreciaciones textuales o paráfrasis fieles, dificultades, recomendaciones y evidencia de pantalla. No reciclar sin nueva sesión las entrevistas de descubrimiento de AV1.
+
 
 ### 5.3.3. Evaluaciones según heurísticas
 
+
 **Formato del Anexo D — UX Heuristics & Principles Evaluation.** Carrera: Ingeniería de Software; curso: 1ASI0729 Desarrollo de Aplicaciones Open Source; NRC y profesor: ⟦confirmar⟧; auditor: Equipo Refrio; clientes: ⟦lista real⟧; aplicaciones: Landing Page / Web Application.
 
+
 **Tareas evaluadas:** acceso por rol, registro/login, alta de lote, revisión de temperatura, priorización FEFO, manejo de alerta, consulta de trazabilidad (si está implementada). **Tareas excluidas:** ⟦indicar cualquier flujo sin implementación verificable⟧.
+
 
 | Nivel | Interpretación del enunciado |
 |---:|---|
@@ -930,17 +1056,22 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 | 3 | Mayor; requiere prioridad alta |
 | 4 | Muy grave; bloquea la utilización y debe corregirse antes del lanzamiento |
 
+
 | ID | Problema efectivamente observado | Severidad | Principio vulnerado | Captura | Recomendación / estado |
 |---|---|---:|---|---|---|
 | REF-H01 | ⟦⟧ | ⟦⟧ | ⟦Usability: retroalimentación de estado, consistencia, control del usuario, etc.⟧ | ⟦⟧ | ⟦⟧ |
 | REF-H02 | ⟦⟧ | ⟦⟧ | ⟦Information Architecture: encontrabilidad, etiquetado, navegación⟧ | ⟦⟧ | ⟦⟧ |
 | REF-H03 | ⟦⟧ | ⟦⟧ | ⟦Inclusive Design: accesibilidad, alternativas y comprensión⟧ | ⟦⟧ | ⟦⟧ |
 
+
 **Ficha individual de problema:** ID, tarea y paso observado; severidad con fundamento, heurística específica, screenshot; impacto para distribuidora/bodega; corrección recomendada y prioridad. No reportar problemas hipotéticos como resultados de sesiones.
+
 
 ## 5.4. Video About-the-Product
 
+
 La primera versión expondrá el problema de pérdidas por manejo de perecibles y la solución Refrio mediante inventario y supervisión de temperatura. Se recomienda orientar la explicación a dos beneficios concretos: visibilidad operativa de una distribuidora y facilidad de interpretación para una bodega. **Duración exigida: 1–3 minutos.** Debe incluir una opinión real por cada segmento, enlaces a Stream y YouTube, captura y video incrustado en la Landing Page.
+
 
 | Tiempo propuesto | Contenido | Material demostrable |
 |---|---|---|
@@ -951,23 +1082,5 @@ La primera versión expondrá el problema de pérdidas por manejo de perecibles 
 | 01:45–02:10 | Opiniones documentadas de usuarios de ambos segmentos | Clips reales con consentimiento |
 | 02:10–02:25 | Cierre de propuesta de valor | Logo y enlace público |
 
+
 **Stream:** ⟦URL⟧. **YouTube:** ⟦URL⟧. **Duración efectiva:** ⟦⟧. **Screenshot y evidencia de inserción en Landing Page:** ⟦⟧.
-
-## Conclusiones AV2 — redacción base condicionada a evidencia
-
-1. La investigación inicial de Refrio identificó necesidades de visibilidad de temperaturas y vencimientos en distribuidoras y bodegas. La validación de AV2 debe determinar si los usuarios comprenden de forma autónoma los indicadores y pueden completar flujos prioritarios. ⟦Incorporar resultado real de 3–5 entrevistas por segmento y observaciones principales⟧.
-2. La incorporación de servicios internos a la aplicación debe hacer verificables reglas de negocio como trazabilidad, alertas y priorización FEFO. ⟦Precisar qué operaciones Spring Boot se desplegaron y cuáles quedaron como prototipo o pendientes⟧.
-3. La correcta comunicación de estados, tiempos, avisos y errores resulta fundamental para un sistema utilizado por audiencias con distintas experiencias digitales. ⟦Conectar esta conclusión con el ABET Outcome 3, las observaciones de validación y las mejoras implementadas⟧.
-4. El Roadmap posterior debe priorizar los problemas de severidad mayor o muy grave identificados mediante evaluación heurística, y finalizar los escenarios faltantes sin declarar logros que no hayan sido comprobados. ⟦Incluir problemas reales y acciones priorizadas⟧.
-
-## Video About-the-Team — ampliación de conclusiones
-
-El video recogerá el proceso de diseño, implementación y validación de Refrio y su relación con la **comunicación efectiva (ABET Student Outcome 3)**. Debe incluir escenas reales de coordinación, evolución desde AV1/TB1, decisiones comunicadas a docentes y usuarios, y testimonios individuales ante cámara que diferencien comunicación oral y escrita. Se propone una retrospectiva de alrededor de cinco minutos y testimonios individuales en torno a un minuto por integrante, conforme a la pauta del enunciado; la escaleta definitiva debe llevar `hh:mm:ss` reales después de editar.
-
-| Evidencia | Estado |
-|---|---|
-| Video Stream y YouTube | ⟦URLs reales⟧ |
-| Screenshot ilustrativo del video | ⟦⟧ |
-| Escaleta con timestamps | ⟦⟧ |
-| Testimonios de los cinco integrantes | ⟦⟧ |
-| Video incrustado en Landing Page | ⟦captura y URL⟧ |
