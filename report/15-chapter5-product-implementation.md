@@ -1172,10 +1172,10 @@ Los datos personales, las fechas, los enlaces, los tiempos de grabación, las ca
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** |  |
-| **Edad** |  |
-| **Distrito** |  |
-| **Fecha de entrevista** |  |
+| **Nombres y Apellidos** | Farit Santoyo |
+| **Edad** | 33 |
+| **Distrito** | Surco |
+| **Fecha de entrevista** | 12/11/2026 |
 | **Enlace al video (Microsoft Stream)** |  |
 | **Timing de inicio y duración** |  |
 | **User flows evaluados** |  |
