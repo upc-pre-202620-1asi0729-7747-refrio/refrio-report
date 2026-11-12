@@ -1,6 +1,8 @@
-# Capítulo V: Product Implementation
+# Capítulo V: Product Implementation, Validation & Deployment
 
-## 5.1.1. Software Development Environment Configuration
+## 5.1. Software Configuration Management
+
+### 5.1.1. Software Development Environment Configuration
 
 Para el desarrollo de Refrio se utilizaron distintas herramientas, cada una con una función específica dentro del proyecto. Estas se organizan según las principales disciplinas de trabajo.
 
@@ -11,15 +13,15 @@ Para el desarrollo de Refrio se utilizaron distintas herramientas, cada una con 
 5. Software Testing
 6. Software Documentation
 
-### Project Management
+#### Project Management
 Esta disciplina permitió organizar tareas, distribuir responsabilidades y hacer seguimiento al avance del proyecto.
 
 
-### Requirements Management
+#### Requirements Management
 Esta parte estuvo enfocada en documentar, estructurar y dar seguimiento a los requerimientos del proyecto, asegurando que respondan a las necesidades de los segmentos objetivo.
 
 
-### Product UX/UI Design
+#### Product UX/UI Design
 En esta disciplina se trabajó el diseño de la experiencia de usuario y de la interfaz de la plataforma, especialmente en funciones relacionadas con inventario, trazabilidad y monitoreo de productos perecibles.
 
 1. **UXPressia**: Herramienta utilizada para elaborar User Personas, Empathy Maps y Customer Journey Maps de los segmentos objetivo del proyecto.
@@ -53,7 +55,7 @@ En esta disciplina se trabajó el diseño de la experiencia de usuario y de la i
 </p>
 
 
-### Software Development
+#### Software Development
 Aquí se agrupan las herramientas utilizadas para editar archivos, organizar el proyecto y trabajar el contenido técnico y visual del reporte.
 
 1. **GitHub**: Plataforma utilizada para alojar el repositorio del proyecto, gestionar ramas por capítulo, registrar cambios y mantener el control de versiones del trabajo realizado en Refrio.
@@ -78,14 +80,14 @@ Aquí se agrupan las herramientas utilizadas para editar archivos, organizar el 
 </p>
 
 
-### Software Testing
+#### Software Testing
 Esta parte ayudó a revisar que los entregables y componentes trabajados mantuvieran coherencia y funcionaran correctamente dentro del proyecto.
 
 * **Revisión manual de entregables**: Proceso utilizado para verificar la estructura del documento, la navegación entre secciones, la correcta visualización de imágenes, tablas, enlaces internos y componentes del proyecto, asegurando consistencia en los resultados finales.
   Ruta de referencia: No aplica, ya que se trató de una validación manual realizada por el equipo.
 
 
-### Software Documentation
+#### Software Documentation
 La documentación permitió organizar y explicar el contenido del proyecto de manera clara, facilitando su comprensión y continuidad.
 
 * **Markdown**: Formato principal utilizado para redactar y estructurar el reporte por capítulos.
@@ -98,7 +100,7 @@ La documentación permitió organizar y explicar el contenido del proyecto de ma
 
 > Esta revisión no altera las capturas ni los registros históricos. Las afirmaciones de funcionamiento y despliegue deben sustentarse con enlaces y capturas actuales; el texto del Sprint 2 es un registro académico del equipo, no una auditoría de infraestructura. El puntaje oficial comunicado fue 14,75/20. La matriz completa está en [Subsanación de rúbrica](correcciones/01_MATRIZ_CUMPLIMIENTO_RUBRICA.md).
 
-## 5.1.2. Source Code Management
+### 5.1.2. Source Code Management
 
 En esta sección se establecen los medios y esquemas de organización aplicados para el seguimiento de modificaciones del proyecto Refrio. Para ello, se utiliza GitHub como plataforma de alojamiento del repositorio y como sistema de control de versiones distribuido, lo que permite gestionar cambios, mantener trazabilidad y organizar el trabajo colaborativo mediante ramas.
 
@@ -166,11 +168,11 @@ chore(repo): clean project structure
 4. Manage Remotes > pegar URL del repositorio.
 
 
-## 5.1.3. Source Code Style Guide & Conventions
+### 5.1.3. Source Code Style Guide & Conventions
 
 En esta sección se establecen las convenciones de estilo y nomenclatura adoptadas para los recursos y tecnologías utilizadas en el proyecto Refrio. Estas convenciones permiten mantener orden, coherencia visual y uniformidad en la estructura del reporte, en los archivos del proyecto y en los elementos relacionados con la landing page y los recursos gráficos.
 
-### Referencias de Guías de Estilo Adoptadas
+#### Referencias de Guías de Estilo Adoptadas
 
 | Lenguaje/Tecnología | Guía de Estilo                                                                       |
 |---|--------------------------------------------------------------------------------------|
@@ -181,7 +183,7 @@ En esta sección se establecen las convenciones de estilo y nomenclatura adoptad
 
 
 
-### Nomenclatura General
+#### Nomenclatura General
 Se usará inglés relacionado con la entidad representada, en minúsculas. Ejemplos:
 
 ```css 
@@ -191,7 +193,7 @@ Se usará inglés relacionado con la entidad representada, en minúsculas. Ejemp
 .login-form {}
 ```
 
-### Sangría
+#### Sangría
 
 Se aplica una sangría de **dos espacios** en archivos HTML, CSS y JavaScript para mantener una estructura legible y uniforme. En el caso de Markdown, se respeta una organización limpia del contenido, utilizando niveles de encabezado, listas y bloques de código de manera consistente.
 
@@ -233,7 +235,7 @@ Se aplica una sangría de **dos espacios** en archivos HTML, CSS y JavaScript pa
   </body>
 </html>
 ```
-### CSS
+#### CSS
 - Utilizar shorthand properties cuando sea posible: margin: `10px 20px`;
 - Terminar todas las declaraciones con punto y coma.
 - Mantener un espacio después de los dos puntos en cada propiedad: color: `#333`;
@@ -257,7 +259,7 @@ Se aplica una sangría de **dos espacios** en archivos HTML, CSS y JavaScript pa
   padding: 20px;
 }
 ```
-### JavaScript
+#### JavaScript
 
 - Utilizar `const` y `let` en lugar de `var`.
 - Mantener espacios alrededor de operadores: `const total = a + b`;
@@ -279,7 +281,7 @@ function calculateTotalItems(currentItems, newItems) {
   return currentItems + newItems;
 }
 ```
-### Markdown
+#### Markdown
 - Utilizar encabezados jerárquicos de forma ordenada (`#`, `##`, `###`).
 - Mantener una estructura clara por secciones y subsecciones.
 - Usar listas y tablas solo cuando aporten claridad al contenido.
@@ -289,7 +291,7 @@ function calculateTotalItems(currentItems, newItems) {
 **Ejemplo Markdown:**
 
 ``` Markdown
-### Referencia transversal a Style Guidelines (ver Capítulo IV)
+#### Referencia transversal a Style Guidelines (ver Capítulo IV)
 
 #### General Style Guidelines (remisión al Capítulo IV)
 
@@ -299,7 +301,7 @@ En esta sección se presentan las pautas visuales utilizadas en Refrio.
 
 Se describen los componentes y elementos visuales empleados en la interfaz web.
 ```
-### Gherkin
+#### Gherkin
 - Escribir escenarios en inglés.
   Definir un escenario por comportamiento específico.
 - Mantener pasos claros, breves y reutilizables.
@@ -458,9 +460,9 @@ A continuación, se detalla la matriz de trazabilidad de los Pull Requests ejecu
 
 ![Team Collaboration Sprint 1 - PRs and Insights](../assets/sprint-collaboration.png)
 
-# 5.2.2. Sprint 2
+### 5.2.2. Sprint 2
 
-### 5.2.2.1. Sprint Planning 2
+#### 5.2.2.1. Sprint Planning 2
 
 El Sprint Planning 2 se realizó al inicio de la segunda iteración del proyecto, con el equipo reunido virtualmente. Habiendo completado el Landing Page en el Sprint 1, el objetivo de este sprint es implementar y desplegar la primera versión de la **Refrio Frontend Web Application** construida con Angular 22 (versión declarada en el repositorio actual) y Angular Material, consumiendo una **Fake API desplegada en AWS EC2 (Ubuntu)** con `json-server` (IP: `3.142.114.4`), que expone los datos del dominio de Refrio. El resultado esperado al cierre del sprint es que ambos segmentos objetivo —Supervisor Logístico (Distribuidora) y Comerciante Minorista (Bodeguero)— puedan acceder a la aplicación desplegada y operar los flujos esenciales de autenticación multi-rol, alta de lotes perecibles y asignación a unidades de almacenamiento en frío.
 
@@ -484,7 +486,7 @@ Para garantizar rigor metodológico frente a la velocidad demostrada en el ciclo
 
 ---
 
-### 5.2.2.2. Aspect Leaders and Collaborators
+#### 5.2.2.2. Aspect Leaders and Collaborators
 
 Los aspectos de este Sprint se organizan en torno a los módulos funcionales del proyecto Angular alineados con los Bounded Contexts del dominio de Refrio y la infraestructura de servicios simulados en AWS EC2:
 
@@ -502,7 +504,7 @@ La estructura de liderazgo define la responsabilidad sobre la arquitectura de co
 
 ---
 
-### 5.2.2.3. Sprint Backlog 2 — reestructuración y trazabilidad
+#### 5.2.2.3. Sprint Backlog 2 — reestructuración y trazabilidad
 
 El Sprint 2 corresponde históricamente a TB1. En la primera versión de la tabla, seis Engineering Tasks figuran estimadas en menos de cuatro horas (T02, T03, T05, T07, T12 y T13). La siguiente versión **normaliza la estimación a intervalos de 4 a 8 horas**, agregando validación y revisión a actividades excesivamente pequeñas. Estas horas son **estimaciones revisadas del paquete de trabajo** y **no acreditan horas efectivamente invertidas**. La declaración histórica “Done” del informe original requiere corroboración con código, tablero y demostración.
 
@@ -555,7 +557,7 @@ Las horas se estiman **por Engineering Task** y los Story Points se estiman **po
 
 La documentación anterior debe actualizarse a partir de la herramienta de desarrollo utilizada efectivamente; nunca fabricar IDs de commits, fechas o aprobaciones.
 
-### 5.2.2.4. Development Evidence for Sprint Review — rectificación de evidencias
+#### 5.2.2.4. Development Evidence for Sprint Review — rectificación de evidencias
 
 La aplicación existente se revisó contra los archivos públicos actuales: `refrio-frontend/package.json` declara Angular `^22.2.3`, y `src/app/app.routes.ts` contiene rutas de IAM, inventario, envíos, proveedores, alertas, analítica y eventos. No se encontró la dependencia directa `@angular/material` en dicho `package.json`. Por tanto, las menciones anteriores a "Angular 22 (versión declarada en el repositorio actual) con Angular Material" no describen fielmente la revisión del repositorio actual; deben entenderse como afirmaciones históricas sin soporte de esa versión.
 
@@ -574,7 +576,7 @@ La versión anterior del informe contenía supuestos identificadores de commits 
 
 **Registro pendiente por tarea:** T01–T13 → rama real → SHA real → PR real → revisor → prueba → resultado. No se presentan IDs ficticios ni se afirma que todos los PR fueron aprobados sin evidencia.
 
-### 5.2.2.5. Execution Evidence for Sprint Review
+#### 5.2.2.5. Execution Evidence for Sprint Review
 
 > **Nota de verificación:** las pantallas, enlaces y el video citados son evidencias históricas de TB1. Sin pruebas actuales de navegador no puede afirmarse que cada User Flow esté cubierto de extremo a extremo ni que los datos persistan en servidor real. Consultar [auditoría de frontend](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md).
 
@@ -605,7 +607,7 @@ El `ClientListComponent` muestra los 5 clientes registrados (consumiendo `GET /c
 **Enlace al video de navegación del Sprint 2:** 🎥 [Ver demostración de Refrio — Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQDFS9viyA1ZToIoZGzYmzhOAR4tEmknvDD_W2eJ9p4jrQg?e=Zn1kC3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 ---
 
-### 5.2.2.6. Services Documentation Evidence for Sprint Review
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 > **Alcance del servicio:** esta sección describe exclusivamente la Fake API `json-server` usada para demostración TB1; no equivale al backend Spring Boot/Java, al esquema JPA ni a Swagger de una versión posterior.
 
@@ -638,7 +640,7 @@ Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con
 
 ---
 
-### 5.2.2.7. Software Deployment Evidence for Sprint Review
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
 > **Estado histórico:** los pasos y direcciones IP siguientes se reportaron en TB1. La disponibilidad pública vigente y la compatibilidad HTTP/HTTPS exigen nueva comprobación fechada y capturas, según [matriz de evidencias](correcciones/08_EVIDENCIAS_Y_DESPLIEGUE.md).
 
@@ -694,7 +696,7 @@ Se actualizaron los botones CTA del Landing Page (`refrio-website`) para redirig
 
 ---
 
-### 5.2.2.8. Team Collaboration Insights during Sprint
+#### 5.2.2.8. Team Collaboration Insights during Sprint
 
 > **Precisión editorial:** no es válido dar por probada la aprobación cruzada de todos los Pull Requests sin sus URLs y revisores. En la próxima iteración se registrará cada PR real con autor, revisor, fecha y prueba; la imagen histórica no reemplaza estos identificadores.
 
@@ -704,7 +706,7 @@ Durante el Sprint 2, la colaboración técnica se gestionó mediante GitFlow en 
 ![Team Collaboration Sprint 2 - PRs and Insights](../assets/TeamCollaborationInsights.png)
 
 
-## Anexo de subsanaciones TB1 incorporadas
+#### Nota de subsanaciones TB1 incorporadas
 
 Las correcciones posteriores a la retroalimentación se detallan en: [rúbrica](correcciones/01_MATRIZ_CUMPLIMIENTO_RUBRICA.md), [Sprint Backlog](correcciones/02_SPRINT_BACKLOG_NORMALIZADO.md), [Landing](correcciones/03_LANDING_RESPONSIVE_Y_CONTENIDO.md), [Frontend](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md), [mejora continua](correcciones/05_MEJORA_CONTINUA_TRAZABILIDAD.md), [comunicación](correcciones/06_COMUNICACION_DEMO_Y_OUTCOME.md), [DDD](correcciones/07_ARQUITECTURA_7_A_8_CONTEXTOS.md) y [evidencias](correcciones/08_EVIDENCIAS_Y_DESPLIEGUE.md). Se conserva el relato histórico de TB1 en el resto del capítulo; los resultados posteriores requieren prueba y fecha.
 
@@ -712,13 +714,13 @@ Las correcciones posteriores a la retroalimentación se detallan en: [rúbrica](
 
 > **Entrega 3 (AV2):** el contenido siguiente procede de la rama `feature/chapter5` de `refrio-report` (commit `1e28de56901d8c90c1edcd357db38da3d9cb917f`). Se preservan las secciones de TB1 y sus correcciones. Las tablas con `⟦⟧` son plantillas pendientes de evidencias; no constituyen resultados ejecutados. Los 58 SP reflejan el Product Backlog asignado, no la velocidad ni los SP completados.
 
-## 5.2.3. Sprint 3
+### 5.2.3. Sprint 3
 
 
 El Sprint 3 de Refrio propone elevar el alcance de la aplicación hacia flujos centrales de protección de la cadena de frío: respuesta a alertas térmicas, rotación FEFO, preparación de despachos y trazabilidad consultable. La incorporación de la primera versión real de Web Services con Spring Boot permite reemplazar progresivamente la capa de simulación `json-server` utilizada en TB1 por contratos persistentes, autorizados y documentados mediante OpenAPI/Swagger. Debido a la amplitud de historias asignadas originalmente al Sprint 3, el equipo debe registrar explícitamente el alcance comprometido, el alcance despriorizado y la evidencia de cada actividad completada.
 
 
-### 5.2.3.1. Sprint Planning 3
+#### 5.2.3.1. Sprint Planning 3
 
 
 | Campo | Planificación propuesta / dato pendiente |
@@ -726,64 +728,101 @@ El Sprint 3 de Refrio propone elevar el alcance de la aplicación hacia flujos c
 | Sprint # | Sprint 3 |
 | Date / Time / Location | ⟦POR VERIFICAR: acta de reunión real⟧ |
 | Prepared By | ⟦POR VERIFICAR⟧ |
-| Attendees | Alca Morán, César Alejandro; Centeno León, Adriano Samir; Rivas Méndez, Bernie Aarón; Saavedra Flores, Rodrigo Andree; Tello Lima, Jose Alejandro **(confirmar asistencia real)** |
+| Equipo involucrado | Adriano — Integrante N.º 1; Bernie — N.º 2; José — N.º 3; Rodrigo — N.º 4; César — N.º 5. **La asistencia efectiva al Sprint Planning debe verificarse con acta o grabación.** |
 | Sprint 2 Review Summary | TB1 describe una Frontend Web Application con alta de usuarios, login, gestión inicial de lotes y asignación de almacenamiento, apoyada en una Fake API `json-server` desplegada en AWS EC2. La API Spring Boot/Swagger se dejó expresamente para AV2. |
 | Sprint 2 Retrospective Summary | **Propuesta para discutir y documentar**: revisar discrepancias entre versiones del frontend y documentación; corregir commits no verificables; comprobar públicamente las URLs y fortalecer la trazabilidad entre Product Backlog, tareas y PRs. |
-| Sprint 3 Goal | **Our focus is on** permitir que los responsables de almacenamiento identifiquen una desviación térmica, gestionen la respuesta a la alerta y prioricen lotes por FEFO mediante servicios internos verificables. **We believe it delivers** decisiones más rápidas y mayor trazabilidad del estado de alimentos perecibles para distribuidoras y bodegas. **This will be confirmed when** al menos los flujos comprometidos se ejecuten en una aplicación desplegada contra endpoints Spring Boot documentados y usuarios de ambos segmentos completen las tareas de validación. |
+| Sprint 3 Goal | **Our focus is on** implementar servicios REST documentados para la gestión de incidencias, inventario FEFO, preparación y validación de despachos y trazabilidad térmica. **We believe it delivers** una base operativa modular DDD para Refrio. **This will be confirmed when** los siete ítems seleccionados superen pruebas Maven/HTTP, integración Angular, revisión de código y comprobación en el despliegue, documentadas en la Sprint Review. |
 | Sprint 3 Velocity | ⟦POR VERIFICAR: capacidad/velocidad aprobada por el equipo⟧ |
-| Sum of Story Points | **58 SP asignados al Sprint 3 en Product Backlog**; **⟦SP realmente comprometidos⟧** y **⟦SP efectivamente completados⟧**, diferenciados |
+| Sum of Story Points | **58 SP** en las 13 historias originalmente asignadas al Sprint 3; **31 SP** correspondientes a las 7 historias seleccionadas según el backend DDD v4, y **27 SP replanificados**. Los SP completados están **pendientes de verificar** mediante criterios de aceptación, PR y ejecución. |
 
 
 **Principio de planificación.** El objetivo se centrará en valor de negocio para distribuidores y bodegas, no en el mero despliegue de un framework. Al decidir qué historias implementar, priorizar un flujo vertical demostrable (*alerta térmica → revisión → cierre* o *inventario → FEFO → picking*) antes que comenzar todas las historias sin completarlas.
 
 
-### 5.2.3.2. Aspect Leaders and Collaborators
+#### 5.2.3.2. Aspect Leaders and Collaborators
 
+La asignación de la tercera entrega toma como fuente la **separación equilibrada del backend DDD v4 en cinco archivos RAR**. Cada paquete reúne archivos originales distintos y el equipo debe integrarlos mediante GitFlow. Los nombres se asignan a los números establecidos por el equipo; esta matriz identifica **responsabilidad sobre archivos asignados**, no autoría comprobada en GitHub ni asistencia confirmada a reuniones.
 
-La matriz es un **borrador propuesto**, coherente con especialidades indicadas en TB1, que requiere confirmación por los integrantes y cotejo con los PRs de AV2.
+| Integrante | Responsable | Paquete original | Archivos asignados (sin README) | Tareas del Sprint 3 | Horas propuestas |
+|:---:|---|---|---:|---|---:|
+| **1** | **Adriano** | `Refrio_Integrante_1_Todos_los_8_Bounded_Contexts.rar` | **42** | T01, T05, T09 | **15 h** |
+| **2** | **Bernie** | `Refrio_Integrante_2_Todos_los_8_Bounded_Contexts.rar` | **42** | T02, T07, T12 | **14 h** |
+| **3** | **José** | `Refrio_Integrante_3_Todos_los_8_Bounded_Contexts.rar` | **42** | T06, T10, T14 | **15 h** |
+| **4** | **Rodrigo** | `Refrio_Integrante_4_Todos_los_8_Bounded_Contexts.rar` | **43** | T08, T11, T15 | **16 h** |
+| **5** | **César** | `Refrio_Integrante_5_Todos_los_8_Bounded_Contexts.rar` | **43** | T03, T04, T13 | **14 h** |
+| | **Total** | **5 paquetes** | **212** | **15 Engineering Tasks** | **74 h** |
 
+El único `README.md` del backend corresponde a **Rodrigo (Integrante N.º 4)** como responsable de su incorporación a `develop` y **no se cuenta** entre los 43 archivos. El material original suma **213 archivos únicos** (212 distribuidos + README).
 
-| Team Member / GitHub Username | IAM/API | Alertas térmicas | Inventario FEFO | Trazabilidad/picking | Frontend/UX | Docs, validación y despliegue |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Alca Morán, César Alejandro (`almocesar-cell`) | **L** | C | C | C | C | C |
-| Centeno León, Adriano Samir (`Adri11-dk`) | C | C | **L** | C | **L** | C |
-| Rivas Méndez, Bernie Aarón (`Arivas3008`) | C | C | C | **L** | C | **L** |
-| Saavedra Flores, Rodrigo Andree (`rodrigoxd67`) | C | **L** | C | C | C | C |
-| Tello Lima, Jose Alejandro (`j4ndrow`) | C | C | C | C | **L** | **L** |
+**Participación planificada por rama:** los cinco integrantes tienen archivos de código o pruebas en cada uno de los ocho *bounded contexts*. La cantidad de archivos permite explicar la distribución técnica del trabajo; no equivale a commits o PR completados.
 
+| Rama / destino | Adriano (1) | Bernie (2) | José (3) | Rodrigo (4) | César (5) | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| `feature/iam` | 5 | 5 | 4 | 4 | 4 | 22 |
+| `feature/inventory` | 5 | 5 | 5 | 6 | 6 | 27 |
+| `feature/operations` | 7 | 6 | 6 | 7 | 7 | 33 |
+| `feature/alerting` | 3 | 3 | 3 | 3 | 2 | 14 |
+| `feature/traceability` | 3 | 3 | 4 | 3 | 3 | 16 |
+| `feature/analytics` | 2 | 2 | 2 | 2 | 3 | 11 |
+| `feature/public-portal` | 2 | 2 | 3 | 2 | 3 | 12 |
+| `feature/events` | 2 | 3 | 2 | 2 | 2 | 11 |
+| `develop` (base compartida) | 13 | 13 | 13 | 14 | 13 | 66 |
+| **Total sin README** | **42** | **42** | **42** | **43** | **43** | **212** |
 
-**L/C:** propuesta por validar; el liderazgo efectivo sobre backend Java debe asignarse según la implementación real, no por continuidad automática del Sprint 2.
+**Ejemplos comprobables de archivos distribuidos:** Adriano: `inventory/domain/services/FefoPolicy.java`, `alerting/application/commands/ManageIncidentCommand.java` y `operations/interfaces/rest/ShipmentCommandController.java`; Bernie: `alerting/interfaces/rest/AlertingV1Controller.java`, `operations/OperationsIntegrationTest.java` y `traceability/domain/model/TemperatureEvidence.java`; José: `inventory/application/InventoryCommandService.java`, `operations/domain/model/aggregates/ShipmentAggregate.java` y `traceability/interfaces/rest/TraceabilityV1Controller.java`; Rodrigo: `operations/application/OperationsApplicationService.java`, `traceability/application/CertificationService.java` y `shared/interfaces/OpenApiConfiguration.java`; César: `alerting/application/AlertingApplicationService.java`, `inventory/interfaces/rest/InventoryV1Controller.java` y `traceability/domain/services/ShipmentTemperaturePolicy.java`. Las rutas Java indicadas son relativas a `src/main/java/com/refrio/platform/`, salvo las clases de prueba de `src/test/java/com/refrio/platform/`.
 
+**Colaboración y control de versiones:** crear las ocho ramas `feature/*` desde `develop`; integrar la base común y el README una sola vez en `develop`; cada integrante revisa y confirma exclusivamente sus propios archivos mediante su cuenta; abrir PRs y realizar revisión cruzada antes de fusionar en `develop` y posteriormente en `main`. No se atribuyen commits, implementaciones o revisiones no acreditadas por el historial real.
 
-### 5.2.3.3. Sprint Backlog 3
+#### 5.2.3.3. Sprint Backlog 3
 
+**Sprint:** N.º 3 (tercera entrega, AV2). **Sprint Goal:** desarrollar y documentar el backend REST de Refrio con Java, Spring Boot y DDD, priorizando incidencias, rotación FEFO, preparación/validación de despachos y trazabilidad térmica. La integración con Angular, los tests integrales, el despliegue y las evidencias de GitFlow deben verificarse antes del cierre.
 
-**Board Sprint 3:** ⟦URL pública real y captura⟧. Las 13 historias siguientes ya figuran asignadas al Sprint 3 en `report/13-chapter3-requirements-specification.md`. Los **58 SP** son la suma de esas asignaciones y **no** una declaración de entrega completada.
+Las **siete User Stories/Technical Stories** se seleccionaron del Product Backlog por su correspondencia con el código de Refrio backend DDD v4. Suman **31 SP** de los **58 SP** originalmente asignados al Sprint 3; los **27 SP** restantes no se consideran terminados.
 
+| Story ID | User Story / Technical Story | SP | Correspondencia con backend v4 |
+|:---:|---|---:|---|
+| **US27** | Confirmación y Cierre de Alerta | 3 | Servicios, comandos, repositorios y controladores de incidentes. |
+| **US29** | Visualización de Inventario Ordenado por FEFO | 3 | API de consulta FEFO; la visualización efectiva en Angular debe comprobarse. |
+| **TS04** | Algoritmo y Endpoint de Priorización FEFO | 5 | `FefoPolicy`, servicios de inventario y validación de despacho. |
+| **US30** | Generación de Lista de Picking Sugerida | 5 | Asignación FEFO durante la creación de despachos; lista independiente pendiente. |
+| **US33** | Validación de Lote en Despacho mediante Escaneo | 5 | Validaciones de códigos y lotes en backend; cámara/lector móvil no verificado. |
+| **US34** | Hoja de Ruta Térmica de Lote Despachado | 5 | Evidencias de temperatura, políticas de certificación y trazabilidad. |
+| **TS08** | Endpoint Público de Certificado de Trazabilidad | 5 | Consulta de certificados por QR con JWT; falta comprobar acceso público sin autenticación. |
+| **Total** | **7 historias seleccionadas** | **31** | **No equivale a 31 SP completados**. |
 
-| Story ID | Story Title del Product Backlog | Story Points originales | Work Item / Task a descomponer | Assigned To | Estimación (h) | Status |
-|---|---|---:|---|---|---:|---|
-| US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | AV2-T01: diseñar flujo de alerta, visualización, reglas y pruebas | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| TS07 | Servicio de Notificaciones Multicanal (WhatsApp, SMS, Push) | 5 | AV2-T02: documentar contrato e integrar solo canales realmente habilitados | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| US27 | Confirmación y Cierre de Alerta | 3 | AV2-T03: permitir confirmar alerta y registrar cierre auditable | ⟦⟧ | 5 (propuesta) | To Do / ⟦confirmar⟧ |
-| US29 | Visualización de Inventario Ordenado por FEFO | 3 | AV2-T04: ordenamiento verificable por vencimiento | ⟦⟧ | 4 (propuesta) | To Do / ⟦confirmar⟧ |
-| TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | AV2-T05: documentar reglas y exponer consulta de prioridad | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| US30 | Generación de Lista de Picking Sugerida | 5 | AV2-T06: mostrar orden propuesto de preparación de pedidos | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| US33 | Validación de Lote en Despacho mediante Escaneo | 5 | AV2-T07: comprobar lote durante preparación y despacho | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | AV2-T08: analizar flujo móvil y registrar resultado de lectura | ⟦⟧ | 5 (propuesta) | To Do / ⟦confirmar⟧ |
-| US31 | Semáforo Visual de Frescura para Bodegas | 3 | AV2-T09: visualizar prioridades por umbral y caducidad | ⟦⟧ | 4 (propuesta) | To Do / ⟦confirmar⟧ |
-| US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | AV2-T10: consultar eventos térmicos asociados a un lote | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | AV2-T11: especificar acceso público seguro y datos publicados | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
-| US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | AV2-T12: enlazar QR a una vista pública verificable | ⟦⟧ | 5 (propuesta) | To Do / ⟦confirmar⟧ |
-| US35 | Exportación de Certificado de Frío en PDF | 5 | AV2-T13: definir documento y datos de trazabilidad para exportación | ⟦⟧ | 6 (propuesta) | To Do / ⟦confirmar⟧ |
+**Engineering Tasks:** estimadas entre **4 y 6 horas** conforme a la observación de la rúbrica. Cada responsable coincide con el paquete RAR que contiene los archivos citados. Los estados son **propuestos según la presencia de código en el ZIP**, no extraídos de un tablero real.
 
+| Task ID | Story ID | Engineering Task y archivos asignados | BC / rama | Est. (h) | Responsable | Estado documental |
+|:---:|:---:|---|---|---:|---|---|
+| T01 | US27 | Preparar comando de gestión de incidentes y adaptadores de persistencia (`ManageIncidentCommand`, `IncidentRepositoryAdapter`). | Alerting | 5 | **Adriano (1)** | To Review |
+| T02 | US27 | Exponer API de alertas e implementar pruebas del servicio (`AlertingV1Controller`, `AlertingApplicationServiceTest`). | Alerting | 4 | **Bernie (2)** | To Review |
+| T03 | US27 | Aplicar cambios de estado y reglas del agregado de incidente (`AlertingApplicationService`, `IncidentAggregate`). | Alerting | 5 | **César (5)** | To Review |
+| T04 | US29 | Exponer la consulta de inventario priorizado por vencimiento mediante controlador REST (`InventoryV1Controller`). | Inventory | 4 | **César (5)** | To Review |
+| T05 | TS04 | Definir política FEFO y distribución de existencias por vencimiento (`FefoPolicy`, `Allocation`). | Inventory | 6 | **Adriano (1)** | To Review |
+| T06 | TS04 | Implementar comandos y validaciones de stock/lote que alimentan la priorización FEFO (`InventoryCommandService`, `StockQuantity`). | Inventory | 5 | **José (3)** | To Review |
+| T07 | TS04 | Probar integración de reglas FEFO en operaciones y comportamiento HTTP de despachos (`OperationsIntegrationTest`, `ShipmentRestIntegrationTest`). | Operations / Inventory | 4 | **Bernie (2)** | To Review |
+| T08 | US30 | Orquestar selección FEFO y preparación del despacho (`OperationsApplicationService`, `OperationsQueryService`); precisar lista de picking independiente. | Operations | 6 | **Rodrigo (4)** | In Process |
+| T09 | US30 | Exponer contratos REST de creación del despacho y resultados para Angular (`ShipmentCommandController`, `OperationsV1Controller`). | Operations | 4 | **Adriano (1)** | In Process |
+| T10 | US33 | Validar identidad y orden de lotes en el agregado y las reglas de despacho (`ShipmentAggregate`, `ShipmentPolicy`). | Operations | 5 | **José (3)** | To Review |
+| T11 | US33 | Gestionar transacciones, estados y errores HTTP del despacho (`OperationsApplicationService`, `ApiErrorHandler`). | Operations / Shared | 4 | **Rodrigo (4)** | To Review |
+| T12 | US34 | Modelar evidencia térmica y su persistencia en certificados (`TemperatureEvidence`, `CertificateRepositoryAdapter`). | Traceability | 6 | **Bernie (2)** | To Review |
+| T13 | US34 | Aplicar reglas de elegibilidad térmica y asegurar integridad del certificado (`ShipmentTemperaturePolicy`, `ColdChainCertificateAggregate`). | Traceability | 5 | **César (5)** | To Review |
+| T14 | TS08 | Exponer consulta de certificados por QR (`CertificatesController`, `TraceabilityV1Controller`) y documentar la brecha de acceso público. | Traceability | 5 | **José (3)** | In Process |
+| T15 | TS08 | Orquestar certificación y describir su contrato Swagger/OpenAPI (`CertificationService`, `OpenApiConfiguration`, `pom.xml`). | Traceability / Shared | 6 | **Rodrigo (4)** | To Review |
 
-**Estimación preliminar de Engineering Tasks:** 71 horas propuestas para 13 tareas (cada tarea entre 4 y 8 horas). Son estimaciones para refinar y aprobar en el Sprint Planning; no representan horas registradas ni trabajo completado. Los responsables, estados y evidencias deben tomarse del tablero real.
+**Resumen de planificación:** **15 Engineering Tasks / 74 horas**. Distribución: **Adriano: 3 tareas, 15 h; Bernie: 3 tareas, 14 h; José: 3 tareas, 15 h; Rodrigo: 3 tareas, 16 h; César: 3 tareas, 14 h**. Las **31 SP** corresponden al alcance seleccionado, no a trabajo validado como `Done`.
 
-**Trabajo transversal, registrar por separado sin duplicar Story Points:** implementación del primer backend Spring Boot/Spring Data JPA; esquema relacional y migraciones si aplica; documentación OpenAPI; pruebas del flujo vertical; publicación en cloud; revisión de i18n/a11y; cambio de consumo de Fake API a Web Services reales. Se deberán asignar responsables y horas verificables en el Board. Para cualquier historia que no sea comprometida, establecer `Deferred to Sprint 4` con justificación, no `Done`.
+El reparto de los ocho contextos incluye contribuciones adicionales a IAM, Analytics, Public Portal y Events, así como infraestructura `shared`, tests, OpenAPI, Maven, Docker y CI. Esas piezas forman parte del soporte transversal y del trabajo de integración **sin duplicar Story Points** ni convertir artificialmente cada archivo en una historia adicional. La distribución completa figura en 5.2.3.2.
 
+**Historias originalmente previstas que siguen sin cierre verificable en v4:** **US23** (activación automática de alerta térmica), **TS07** (notificaciones WhatsApp/SMS/Push), **US13** (lector móvil), **US31** (semáforo visual frontend), **US36** (consulta QR anónima) y **US35** (exportación PDF). Son **27 SP pendientes de replanificación**. El código parcial que pudiera existir no acredita la aceptación íntegra.
 
-### 5.2.3.4. Development Evidence for Sprint Review
+**Estados y condiciones de cierre:** `To Review` = archivos del alcance preparados, todavía sin revisión/PR/prueba integral demostrada; `In Process` = código disponible parcialmente, pero falta parte del criterio de aceptación. `Done` solo procede con prueba de aceptación, integración, captura, commit/PR y registro de cierre verificables. **La copia o distribución de archivos no acredita autoría ni ejecución individual.**
+
+**Sprint Board:** ⟦URL real de Trello/Jira/YouTrack y captura con evolución `To Do → In Process → To Review → Done`⟧. Los responsables deberán actualizar su estado real conforme a la evidencia, manteniendo el ID de cada tarea asociado a su User Story.
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+En el backend DDD v4 se prepararon ocho contextos (`iam`, `inventory`, `operations`, `alerting`, `traceability`, `analytics`, `publicportal`, `events`), sus capas de dominio y casos de uso, persistencia PostgreSQL/JPA mediante Flyway, autenticación JWT y configuración Docker/CI. Las verificaciones disponibles en su entrega fueron: **58 archivos de dominio compilados con Java 21 y 27 verificaciones de reglas superadas**. **Maven, integración HTTP, Docker y despliegue público no se comprobaron**. Las contribuciones por integrante y los commits reales deberán incorporarse desde las ramas publicadas, sin sustituirlos por hashes ficticios.
 
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
@@ -795,8 +834,21 @@ La matriz es un **borrador propuesto**, coherente con especialidades indicadas e
 
 Se debe conservar la relación entre historias, tareas, commits, Pull Requests y productos. Los commits que figuran en TB1 con IDs no válidos deben reemplazarse por hashes reales antes de ampliar la evidencia. Incorporar capturas de la actividad durante el Sprint 3, no solo gráficos acumulados desde AV1.
 
+**Trazabilidad de la distribución v4:** la asignación verificada en los cinco RAR es Adriano (I1: 42 archivos), Bernie (I2: 42), José (I3: 42), Rodrigo (I4: 43 + README único), César (I5: 43). Cada integrante tiene archivos en las ocho ramas de contexto. Para acreditar su trabajo técnico, se debe agregar la URL del PR o commit **publicado por cada integrante**, no un nombre de archivo aislado.
 
-### 5.2.3.5. Execution Evidence for Sprint Review
+| Integrante / paquete | Ramas en que tiene archivos | Evidencia de aporte asignado a comprobar en GitHub |
+|---|---|---|
+| **Adriano / I1** | Las 8 ramas `feature/*` | T01, T05, T09; código `FefoPolicy` y controladores Operations; SHA/PR ⟦⟧ |
+| **Bernie / I2** | Las 8 ramas `feature/*` | T02, T07, T12; API Alerting, tests Operations y certificados; SHA/PR ⟦⟧ |
+| **José / I3** | Las 8 ramas `feature/*` | T06, T10, T14; `ShipmentAggregate`, `InventoryCommandService`, controladores de trazabilidad; SHA/PR ⟦⟧ |
+| **Rodrigo / I4** | Las 8 ramas `feature/*` + base `develop` | T08, T11, T15; `OperationsApplicationService`, `CertificationService`, `pom.xml`, `README.md` único; SHA/PR ⟦⟧ |
+| **César / I5** | Las 8 ramas `feature/*` | T03, T04, T13; servicio Alerting, controlador Inventory y política térmica; SHA/PR ⟦⟧ |
+
+**Evidencias pendientes:** ejecución de `mvn clean verify`, capturas de Swagger en ejecución, pruebas de integración Spring Boot–PostgreSQL–Angular, historial de commits por autor y ocho PRs fusionados a `develop`. Los archivos del ZIP son una base de implementación, no pruebas de esas actividades.
+
+
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
 
 
 **Escenarios de prueba propuestos**, sujetos al alcance aprobado: A) Supervisor: inicio de sesión, cámara/unidad de almacenamiento, lectura térmica, alerta crítica y cierre documentado; B) responsable de inventario: consulta ordenada FEFO y generación de picking; C) comerciante minorista: visualización de caducidades por semáforo; D) consulta pública controlada de trazabilidad, **solo si está implementada**. En cada video se debe registrar el resultado observable y la URL real utilizada.
@@ -813,24 +865,29 @@ Se debe conservar la relación entre historias, tareas, commits, Pull Requests y
 | REF-VID-AV2-01 | Grabación de navegación, timings y URL privada de Stream | ⟦⟧ |
 
 
-### 5.2.3.6. Services Documentation Evidence for Sprint Review
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
+La versión DDD v4 conserva la API compatible que utiliza Angular (`/api/operations`) y define rutas REST tipadas por contexto (`/api/v1/...`). La documentación técnica se produce mediante **Springdoc OpenAPI y Swagger UI**, que es lo solicitado por el curso; **Scalar no forma parte de la versión entregada**. Las rutas siguientes se tomaron de `docs/API_CONTRACT.md` del backend v4. **Están definidas en el código; sus respuestas reales, capturas, pruebas completas y URL desplegada siguen sin verificar.**
 
-La documentación requerida debe corresponder a **Spring Boot con Java y Spring Data JPA**, no a endpoints de una Fake API en AWS. Para cada endpoint realmente implementado, incluir URL base y enlace Swagger, método, recurso, parámetros, Request Body, posibles respuestas, validaciones y captura de ejecución.
+| Contexto / Story | HTTP | Ruta del backend v4 | Acción y evidencia por documentar |
+|---|---|---|---|
+| IAM (transversal) | POST | `/api/session` | Autenticación JWT; request y response con datos de prueba |
+| Inventory (US29, TS04) | GET | `/api/v1/inventory/batches/fefo` | Prioridad FEFO y manejo de lotes vencidos |
+| Alerting (US27) | PATCH | `/api/v1/alerting/incidents/{id}` | Transición y cierre de incidencias; permisos y errores |
+| Operations (US30, US33) | POST | `/api/v1/operations/shipments` | Creación con FEFO y códigos escaneados; `201` según contrato |
+| Operations (US33) | POST | `/api/v1/operations/shipments/{id}/advance` | Cambio de estado autorizado |
+| Operations (US30) | POST | `/api/v1/operations/shipments/{id}/receipt` | Recepción con cantidad aceptada, observada o rechazada |
+| Traceability (US34, TS08) | GET | `/api/v1/traceability/certificates` | Consulta de certificados térmicos |
+| Traceability (TS08) | GET | `/api/v1/traceability/certificates/qr/{code}` | Consulta por código con JWT; **aún no es acceso público** |
+| API compatible con Angular | GET | `/api/operations` | Snapshot filtrado para roles; contrato legado |
+| API compatible con Angular | POST | `/api/operations/updateIncident` | Comando de incidencia con `{ "args": [...] }` |
+| API compatible con Angular | POST | `/api/operations/createShipment` | Creación de despacho con `{ "args": [...] }` |
 
+**URLs de documentación previstas al ejecutar localmente:** `http://localhost:8080/swagger-ui.html` y `http://localhost:8080/v3/api-docs`. Para cada endpoint efectivamente probado adjuntar método HTTP, URL real, parámetros, body, código de estado, ejemplo de JSON, captura de Swagger y referencia al commit/PR. No utilizar tokens reales en las capturas.
 
-| Recurso | Acción por comprobar | Ruta / operación OpenAPI real | Respuesta y código | Prueba / captura |
-|---|---|---|---|---|
-| Auth / usuarios | ⟦login, registro, acceso⟧ | ⟦no inventar URI⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
-| Inventario / lotes | ⟦alta, listado, FEFO⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
-| Telemetría / alertas | ⟦registro, consulta, cierre⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
-| Picking / trazabilidad | ⟦solo funcionalidades existentes⟧ | ⟦URI real⟧ | ⟦HTTP + JSON⟧ | ⟦⟧ |
+**Repositorio de servicios:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend. **Despliegue verificable:** [agregar URL pública HTTPS del servicio, Swagger, versión y captura una vez publicado]. No confundir la Fake API del TB1 con el backend Java. La compilación de clases puras de dominio y las pruebas locales incluidas en el ZIP no sustituyen `mvn verify`, integración y despliegue.
 
-
-**Repositorio:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend. **Swagger:** ⟦URL real⟧. **Ambiente:** ⟦dominio, versión, fecha⟧. Documentar controles de autorización, códigos de error y restricciones de datos, sin incluir contraseñas, tokens ni secretos.
-
-
-### 5.2.3.7. Software Deployment Evidence for Sprint Review
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 
 | Producto | Referencia existente / pendiente | Evidencia a incorporar |
@@ -844,20 +901,19 @@ La documentación requerida debe corresponder a **Spring Boot con Java y Spring 
 La IP citada en TB1 (`3.142.114.4`) corresponde a la Fake API allí documentada; verificar su vigencia y no presentarla como despliegue de Spring Boot. Documentar el paso a paso de despliegue real en texto, con capturas de plataforma cloud, prueba de conectividad, acceso a la aplicación y URL de documentación.
 
 
-### 5.2.3.8. Team Collaboration Insights during Sprint
+#### 5.2.3.8. Team Collaboration Insights during Sprint
 
+La organización del Sprint 3 se basó en un reparto equilibrado del backend DDD v4 en **cinco RAR**, con trabajo asignado en los **ocho bounded contexts** a cada integrante. La matriz refleja **archivos atribuidos por el reparto**, mientras que la colaboración realmente ejecutada requiere capturas de GitHub Insights, tablero, revisión cruzada y PRs. El orden es el acordado por el equipo: **Adriano 1, Bernie 2, José 3, Rodrigo 4 y César 5**.
 
-Los resultados deben sustentarse en el repositorio de informe, de frontend, Landing Page y backend, con el período del Sprint 3. Incluir capturas de Insights/Contributors, PRs, comentarios de revisión, commits y Board. Vincular cada contribución al responsable y al aspecto liderado; demostrar participación de todos los integrantes en los productos correspondientes al Sprint, evitando confundir aportes documentales con implementación técnica.
-
-
-| Integrante | Tareas/PRs AV2 | Qué demuestra | Evidencia |
+| Integrante | Paquete y alcance asignado | Tareas Sprint 3 | Evidencia de colaboración real |
 |---|---|---|---|
-| Alca Morán, César Alejandro | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| Centeno León, Adriano Samir | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| Rivas Méndez, Bernie Aarón | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| Saavedra Flores, Rodrigo Andree | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| Tello Lima, Jose Alejandro | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+| **Adriano (1)** | 42 archivos; FEFO, comando de incidentes y controladores de Operations | T01, T05, T09 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
+| **Bernie (2)** | 42 archivos; controladores Alerting, pruebas Operations, evidencia térmica y repositorio de certificados | T02, T07, T12 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
+| **José (3)** | 42 archivos; comandos Inventory, agregados y políticas Shipment, API de certificados, CI y contratos | T06, T10, T14 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
+| **Rodrigo (4)** | 43 archivos + README único no contabilizado; servicios Operations/Certification, configuración OpenAPI, Maven e integración | T08, T11, T15 | ⟦Commits propios, README en develop, PRs y revisiones⟧ |
+| **César (5)** | 43 archivos; servicio de incidencias, Inventory REST, política térmica, pruebas y diagramas | T03, T04, T13 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
 
+**Comprobación sugerida para la Sprint Review:** presentar la captura de colaboradores y commits de `refrio-backend`, el historial de cada `feature/*`, ocho PRs orientados a `develop`, las revisiones cruzadas y los resultados del tablero por tarea. Solo después de comprobar esos registros se describirá la participación como efectivamente realizada. La asignación de 212 archivos y un README no demuestra por sí misma aportes individuales ni el despliegue del servidor.
 
 ## 5.3. Validation Interviews
 
@@ -1028,19 +1084,129 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 
 ### 5.3.2. Registro de Entrevistas
 
+A continuación, se presenta el registro de las entrevistas de validación de Refrio, organizado de la misma manera que el apartado 2.2.2 de las entrevistas iniciales: primero tres entrevistas del **Segmento 1 (empresas distribuidoras)** y, a continuación, tres del **Segmento 2 (tiendas y bodegas)**. En esta etapa se evalúa la interacción de los participantes con la Landing Page y con las funcionalidades disponibles de la Web Application.
 
-| Sesión | Segmento | Nombre/apellidos, edad y distrito | Fecha | Stream (URL + hh:mm:ss y duración) | Captura | Síntesis de hallazgos |
-|---|---|---|---|---|---|---|
-| REF-VAL-S1-01 | Distribuidora | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| REF-VAL-S1-02 | Distribuidora | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| REF-VAL-S1-03 | Distribuidora | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| REF-VAL-S2-01 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| REF-VAL-S2-02 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
-| REF-VAL-S2-03 | Bodega | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ | ⟦⟧ |
+Los datos personales, las fechas, los enlaces, los tiempos de grabación, las capturas y los resultados se mantienen **sin completar** hasta realizar las sesiones y reunir sus evidencias. Los resúmenes deben explicar los recorridos probados, la comprensión de la interfaz, las dificultades observadas y las recomendaciones aportadas por cada participante; no deben reutilizarse como si fueran resultados nuevos los hallazgos de las entrevistas exploratorias de AV1.
+
+#### Entrevista 1: Segmento 1 - Empresas distribuidoras de productos perecibles
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** |  |
+| **Edad** |  |
+| **Distrito** |  |
+| **Fecha de entrevista** |  |
+| **Enlace al video (Microsoft Stream)** |  |
+| **Timing de inicio y duración** |  |
+| **User flows evaluados** |  |
+| **Evidencia fotográfica** |  |
+
+**Resumen de la entrevista:**
+
+<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
 
 
-**Por cada entrevista redactar:** presentación breve del entrevistado y su rol, contexto, secuencia de tareas efectivamente probadas, apreciaciones textuales o paráfrasis fieles, dificultades, recomendaciones y evidencia de pantalla. No reciclar sin nueva sesión las entrevistas de descubrimiento de AV1.
+---
 
+#### Entrevista 2: Segmento 1
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** |  |
+| **Edad** |  |
+| **Distrito** |  |
+| **Fecha de entrevista** |  |
+| **Enlace al video (Microsoft Stream)** |  |
+| **Timing de inicio y duración** |  |
+| **User flows evaluados** |  |
+| **Evidencia fotográfica** |  |
+
+**Resumen de la entrevista:**
+
+<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+
+
+---
+
+#### Entrevista 3: Segmento 1
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** |  |
+| **Edad** |  |
+| **Distrito** |  |
+| **Fecha de entrevista** |  |
+| **Enlace al video (Microsoft Stream)** |  |
+| **Timing de inicio y duración** |  |
+| **User flows evaluados** |  |
+| **Evidencia fotográfica** |  |
+
+**Resumen de la entrevista:**
+
+<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+
+
+---
+
+#### Entrevista 1: Segmento 2 - Tiendas y bodegas con productos perecibles
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** |  |
+| **Edad** |  |
+| **Distrito** |  |
+| **Fecha de entrevista** |  |
+| **Enlace al video (Microsoft Stream)** |  |
+| **Timing de inicio y duración** |  |
+| **User flows evaluados** |  |
+| **Evidencia fotográfica** |  |
+
+**Resumen de la entrevista:**
+
+<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+
+
+---
+
+#### Entrevista 2: Segmento 2
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** |  |
+| **Edad** |  |
+| **Distrito** |  |
+| **Fecha de entrevista** |  |
+| **Enlace al video (Microsoft Stream)** |  |
+| **Timing de inicio y duración** |  |
+| **User flows evaluados** |  |
+| **Evidencia fotográfica** |  |
+
+**Resumen de la entrevista:**
+
+<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+
+
+---
+
+#### Entrevista 3: Segmento 2
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** |  |
+| **Edad** |  |
+| **Distrito** |  |
+| **Fecha de entrevista** |  |
+| **Enlace al video (Microsoft Stream)** |  |
+| **Timing de inicio y duración** |  |
+| **User flows evaluados** |  |
+| **Evidencia fotográfica** |  |
+
+**Resumen de la entrevista:**
+
+<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+
+
+---
 
 ### 5.3.3. Evaluaciones según heurísticas
 
