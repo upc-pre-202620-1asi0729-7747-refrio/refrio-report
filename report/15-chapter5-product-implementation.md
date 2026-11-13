@@ -604,7 +604,7 @@ El `ShipmentListComponent` consume `GET /shipments` y muestra los 5 envíos acti
 **Módulo Analytics — Clientes y Proveedores**
 El `ClientListComponent` muestra los 5 clientes registrados (consumiendo `GET /clients`): Bodega San José, Minimarket El Sol, Distribuidora Central Lima, Supermercado La Esquina y Bodega Doña Rosa, con sus respectivos tipos de negocio y número de pedidos. El `SupplierListComponent` muestra los 7 proveedores de `GET /suppliers`, incluyendo los registrados dinámicamente (Andrés S.A.C y Pedrito S.A.C, agregados vía `POST /suppliers`), con badges de rating y un modal para registro de nuevos proveedores.
 
-**Enlace al video de navegación del Sprint 2:** 🎥 [Ver demostración de Refrio — Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQDFS9viyA1ZToIoZGzYmzhOAR4tEmknvDD_W2eJ9p4jrQg?e=Zn1kC3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+**Enlace al video de navegación del Sprint 2:** [Ver demostración de Refrio — Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d811_upc_edu_pe/IQDFS9viyA1ZToIoZGzYmzhOAR4tEmknvDD_W2eJ9p4jrQg?e=Zn1kC3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 ---
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
@@ -769,7 +769,19 @@ El único `README.md` del backend corresponde a **Rodrigo (Integrante N.º 4)** 
 | `develop` (base compartida) | 13 | 13 | 13 | 14 | 13 | 66 |
 | **Total sin README** | **42** | **42** | **42** | **43** | **43** | **212** |
 
-**Ejemplos comprobables de archivos distribuidos:** Adriano: `inventory/domain/services/FefoPolicy.java`, `alerting/application/commands/ManageIncidentCommand.java` y `operations/interfaces/rest/ShipmentCommandController.java`; Bernie: `alerting/interfaces/rest/AlertingV1Controller.java`, `operations/OperationsIntegrationTest.java` y `traceability/domain/model/TemperatureEvidence.java`; José: `inventory/application/InventoryCommandService.java`, `operations/domain/model/aggregates/ShipmentAggregate.java` y `traceability/interfaces/rest/TraceabilityV1Controller.java`; Rodrigo: `operations/application/OperationsApplicationService.java`, `traceability/application/CertificationService.java` y `shared/interfaces/OpenApiConfiguration.java`; César: `alerting/application/AlertingApplicationService.java`, `inventory/interfaces/rest/InventoryV1Controller.java` y `traceability/domain/services/ShipmentTemperaturePolicy.java`. Las rutas Java indicadas son relativas a `src/main/java/com/refrio/platform/`, salvo las clases de prueba de `src/test/java/com/refrio/platform/`.
+**Ejemplos comprobables de archivos distribuidos:** 
+
+Adriano: `inventory/domain/services/FefoPolicy.java`, `alerting/application/commands/ManageIncidentCommand.java` y `operations/interfaces/rest/ShipmentCommandController.java` 
+
+Bernie: `alerting/interfaces/rest/AlertingV1Controller.java`, `operations/OperationsIntegrationTest.java` y `traceability/domain/model/TemperatureEvidence.java`
+
+José: `inventory/application/InventoryCommandService.java`, `operations/domain/model/aggregates/ShipmentAggregate.java` y `traceability/interfaces/rest/TraceabilityV1Controller.java` 
+
+Rodrigo: `operations/application/OperationsApplicationService.java`, `traceability/application/CertificationService.java` y `shared/interfaces/OpenApiConfiguration.java`
+
+César: `alerting/application/AlertingApplicationService.java`, `inventory/interfaces/rest/InventoryV1Controller.java` y `traceability/domain/services/ShipmentTemperaturePolicy.java`. 
+
+Las rutas Java indicadas son relativas a `src/main/java/com/refrio/platform/`, salvo las clases de prueba de `src/test/java/com/refrio/platform/`.
 
 **Colaboración y control de versiones:** crear las ocho ramas `feature/*` desde `develop`; integrar la base común y el README una sola vez en `develop`; cada integrante revisa y confirma exclusivamente sus propios archivos mediante su cuenta; abrir PRs y realizar revisión cruzada antes de fusionar en `develop` y posteriormente en `main`. No se atribuyen commits, implementaciones o revisiones no acreditadas por el historial real.
 
@@ -949,7 +961,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 - **UF-REF-S1-05 — Alertas y trazabilidad:** aviso térmico → revisión y cierre del incidente → ficha de lote → consulta o certificado de trazabilidad, si está implementado.
 
 
-##### Datos del entrevistado y contexto digital
+#### Datos del entrevistado y contexto digital
 
 
 1. ¿Podría indicar su nombre, edad y el distrito en el que realiza sus actividades dentro de una empresa de distribución de productos perecibles?
@@ -960,7 +972,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 6. ¿Desde qué tipo de dispositivo utilizaría una solución como Refrio y qué limitaciones de conectividad o tiempo suele enfrentar durante el trabajo?
 
 
-##### Gestión de inventario y navegación
+#### Gestión de inventario y navegación
 
 
 7. Tras revisar la Landing Page, ¿cómo describiría el propósito de Refrio y qué diferencias observa entre la propuesta para distribuidoras y la propuesta para bodegas?
@@ -969,7 +981,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 10. Al crear o revisar un lote de ejemplo, ¿qué campos entiende con facilidad y en qué paso requiere aclaraciones sobre cantidades, unidades o ubicaciones de almacenamiento?
 
 
-##### Control de temperatura y cadena de frío
+#### Control de temperatura y cadena de frío
 
 
 11. Si necesitara conocer la condición de una cámara de conservación, ¿dónde buscaría la temperatura y cómo interpretaría el valor y su fecha de actualización?
@@ -977,7 +989,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 13. Al revisar una alerta térmica o un historial de mediciones, ¿qué elementos visuales o mensajes le permiten distinguir un riesgo urgente de una situación normal?
 
 
-##### Logística, rotación y distribución
+#### Logística, rotación y distribución
 
 
 14. ¿Cómo intentaría obtener un listado de productos ordenado por proximidad de vencimiento y qué entiende que significa la priorización FEFO mostrada?
@@ -985,7 +997,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 16. ¿Cómo consultaría los antecedentes o la trazabilidad de un lote, y qué valor tendrían esos datos al justificar la condición de un producto entregado?
 
 
-##### Impacto operativo y facilidad de uso
+#### Impacto operativo y facilidad de uso
 
 
 17. ¿En qué parte del recorrido se detuvo, retrocedió o pidió apoyo y qué esperaba que sucediera después de su acción?
@@ -993,7 +1005,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 19. ¿Qué tan viable sería utilizar estas pantallas durante un turno real y qué cambios de legibilidad, navegación o vocabulario serían necesarios?
 
 
-##### Disposición hacia la solución digital y cierre
+#### Disposición hacia la solución digital y cierre
 
 
 20. Tras usar las pantallas disponibles, ¿qué funciones considera útiles para su empresa y cuáles no encajan con el procedimiento que siguen hoy?
@@ -1024,7 +1036,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 - **UF-REF-S2-05 — Consulta de trazabilidad:** lote recibido → QR / ficha pública de cadena de frío → interpretación de datos, solo si el módulo está disponible.
 
 
-##### Datos del entrevistado y contexto de trabajo
+#### Datos del entrevistado y contexto de trabajo
 
 
 1. ¿Podría indicar su nombre, edad y el distrito donde atiende su tienda o bodega?
@@ -1035,7 +1047,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 6. ¿Qué dispositivo utiliza más para su negocio y qué aplicaciones o formas de registro le resultan familiares?
 
 
-##### Control de inventario y comprensión de la interfaz
+#### Control de inventario y comprensión de la interfaz
 
 
 7. Tras observar la Landing Page, ¿qué problema considera que Refrio intenta resolver para una bodega y qué parte de la página lo comunica mejor?
@@ -1044,7 +1056,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 10. Si necesitara registrar o localizar un nuevo lote, ¿qué pasos seguiría y qué campos o etiquetas deberían explicarse de manera más sencilla?
 
 
-##### Fechas de vencimiento y pérdidas
+#### Fechas de vencimiento y pérdidas
 
 
 11. Si dos lotes del mismo producto tienen fechas diferentes, ¿cómo decidiría cuál vender primero utilizando la información mostrada en Refrio?
@@ -1052,7 +1064,7 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 13. ¿Cómo comprobaría en la plataforma que un producto requiere atención sin revisar individualmente todos los registros de inventario?
 
 
-##### Organización y errores frecuentes durante las tareas
+#### Organización y errores frecuentes durante las tareas
 
 
 14. ¿Qué parte del recorrido le hizo dudar, retroceder o buscar ayuda, y qué esperaba encontrar en esa pantalla?
@@ -1060,14 +1072,14 @@ La validación integra el **Landing Page y la Web Application** a través de rec
 16. Cuando intenta registrar o revisar productos mientras atiende clientes, ¿qué pasos le parecen innecesarios y cuáles son imprescindibles para evitar errores?
 
 
-##### Impacto en ventas y decisiones del negocio
+#### Impacto en ventas y decisiones del negocio
 
 
 17. ¿Qué información visible en la plataforma le ayudaría a decidir si debe vender, separar, retirar o reponer un producto perecible?
 18. ¿En qué situaciones considera que una alerta o un listado de lotes ordenado podría evitarle una pérdida o una venta fallida, y por qué?
 
 
-##### Disposición hacia una solución digital y cierre
+#### Disposición hacia una solución digital y cierre
 
 
 19. Después de explorar la demostración, ¿qué funcionalidad utilizaría primero en su bodega y qué actividad cotidiana le permitiría realizar de otro modo?
@@ -1152,14 +1164,14 @@ Los datos personales, las fechas, los enlaces, los tiempos de grabación, las ca
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** |  |
-| **Edad** |  |
-| **Distrito** |  |
-| **Fecha de entrevista** |  |
-| **Enlace al video (Microsoft Stream)** |  |
-| **Timing de inicio y duración** |  |
-| **User flows evaluados** |  |
-| **Evidencia fotográfica** |  |
+| **Nombres y Apellidos** | Ariel León |
+| **Edad** | 27 |
+| **Distrito** | Santa Anita |
+| **Fecha de entrevista** | 11/11/26 |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQBATIr98SteSLouikfXF4L1AVA6AZ_sjA225ytD1ulcEFE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QV4v0h |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 20:56 minutos |
+| **User flows evaluados** | • Exploración de Landing Page y propuesta de valor<br>• Registro e Inicio de Sesión (IAM)<br>• Visualización del Panel de Control (Dashboard)<br>• Gestión de Inventario y Registro de Productos<br>• Flujo Completo de Pedido y Despacho<br>• Gestión de Mermas / Baja por Vencimiento<br>• Monitoreo de Alertas y Registro de Proveedores |
+| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Ariel.png" width="600" alt="Logo AgroFlet"> </p> |
 
 **Resumen de la entrevista:**
 
