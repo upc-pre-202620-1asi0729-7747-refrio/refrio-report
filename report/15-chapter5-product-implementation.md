@@ -1171,7 +1171,7 @@ Los datos personales, las fechas, los enlaces, los tiempos de grabación, las ca
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQBATIr98SteSLouikfXF4L1AVA6AZ_sjA225ytD1ulcEFE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QV4v0h |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 20:56 minutos |
 | **User flows evaluados** | • Exploración de Landing Page y propuesta de valor<br>• Registro e Inicio de Sesión (IAM)<br>• Visualización del Panel de Control (Dashboard)<br>• Gestión de Inventario y Registro de Productos<br>• Flujo Completo de Pedido y Despacho<br>• Gestión de Mermas / Baja por Vencimiento<br>• Monitoreo de Alertas y Registro de Proveedores |
-| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Ariel.png" width="600" alt="Logo AgroFlet"> </p> |
+| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Ariel.png" width="600" alt="EntrevistaValidacion_Ariel"> </p> |
 
 **Resumen de la entrevista:**
 
@@ -1190,8 +1190,8 @@ Los datos personales, las fechas, los enlaces, los tiempos de grabación, las ca
 | **Fecha de entrevista** | 12/11/2026 |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f109_upc_edu_pe/IQCtjoimP7EGRJ0goFpz9NxtAfL0G8yIkZRU-fqumIfDKbE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=2WFy21 |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 8:36 minutos |
-| **User flows evaluados** |  |
-| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Farit.png" width="600" alt="Logo AgroFlet"> </p> |
+| **User flows evaluados** | • Exploración de Landing Page y Propuesta de Valor<br>• Registro e Inicio de Sesión (IAM)<br>• Visualización del Panel de Control (Dashboard)<br>• Consulta de Inventario y Disponibilidad de Productos<br>• Registro y Consulta de Lotes<br>• Consulta de Fechas de Vencimiento<br>• Monitoreo de Alertas de Vencimiento y Bajo Stock<br>• Navegación de la Plataforma desde Dispositivos Móviles |
+| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Farit.png" width="600" alt="EntrevistaValidacion_Farit"> </p> |
 
 **Resumen de la entrevista:**
 
