@@ -1178,18 +1178,28 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 
 ## 5.4. Video About-the-Product
 
+El Video About-the-Product presenta la propuesta de valor de Refrio a visitantes del Landing Page y usuarios potenciales (bodegas, almacenes y distribuidoras de perecibles). El video sigue la siguiente secuencia de escenas:   
 
-La primera versión expondrá el problema de pérdidas por manejo de perecibles y la solución Refrio mediante inventario y supervisión de temperatura. Se recomienda orientar la explicación a dos beneficios concretos: visibilidad operativa de una distribuidora y facilidad de interpretación para una bodega. **Duración exigida: 1–3 minutos.** Debe incluir una opinión real por cada segmento, enlaces a Stream y YouTube, captura y video incrustado en la Landing Page.
+1. Problema y contexto (0:00 – 0:18): Introducción animada del logotipo de Refrio seguida de una narración en off sobre las pérdidas económicas que sufren los comercios debido al vencimiento de mercadería y fallas en la refrigeración. Se muestran escenas de encargados de almacén preocupados revisando productos vencidos, notas de prensa sobre el desperdicio del 48 % de alimentos en el Perú y el día a día en bodegas minoristas.   
 
+2. Propuesta de solución (0:18 – 0:35): Presentación de Refrio por parte del equipo Mada Group como un asistente inteligente diseñado para distribuidoras y bodegas. Se ilustran operaciones de carga, descarga y despacho en almacén acompañadas de la explicación sobre el registro por eventos y la aplicación automática de rotación por orden de vencimiento (FEFO/FIFO) para evitar que los lotes caduquen.   
 
-| Tiempo propuesto | Contenido | Material demostrable |
-|---|---|---|
-| 00:00–00:20 | Problema: control térmico y caducidad | Situación propia / gráfica identificada |
-| 00:20–00:40 | Qué ofrece Refrio para los dos segmentos | Landing Page y CTA |
-| 00:40–01:20 | Distribuidora: lotes, monitoreo, alertas o FEFO según función real | Captura de interfaz operativa |
-| 01:20–01:45 | Bodega: estado de inventario y decisiones de reposición | Captura de interfaz operativa |
-| 01:45–02:10 | Opiniones documentadas de usuarios de ambos segmentos | Clips reales con consentimiento |
-| 02:10–02:25 | Cierre de propuesta de valor | Logo y enlace público |
+3. Demostración de funcionalidades de la plataforma (0:35 – 1:32):
 
+   - Panel de control y eventos del dominio (0:35 – 0:46): Recorrido por la vista de Control de distribución, indicadores de unidades en almacén e incidentes activos, y la pestaña Eventos del dominio, donde se audita cada lote vencido o despacho con su responsable y regla aplicada.   
+   
+   - Gestión para bodegas y alertas tempranas (0:46 – 0:59): Vista operativa del minorista (Tu operación de hoy) con el sistema de alertas por semaforización (ej. Stock bajo, Lote vencido o próximo a vencer) que permite identificar qué productos requieren atención o remate inmediato.   
+   
+   - Registro y confirmación de merma justificada (0:59 – 1:17): Demostración paso a paso dentro del detalle de un producto (Helado D'Onofrio) y su lote (BT-R-PRD-002), ingresando la cantidad de unidades a retirar, la causa ("Vencimiento") y confirmando la baja para actualizar automáticamente el saldo disponible en inventario.   
+   
+   - Exploración del Landing Page y planes (1:17 – 1:32): Recorrido por la página principal de Refrio, presentando los planes de suscripción (Básico, Profesional y Empresarial) y el acceso directo al registro.   
+   
+4. Cierre y CTA (1:32 – 1:37): Pantalla final con la animación del logotipo oficial de Refrio y el branding de la startup.   
 
-**Stream:** ⟦URL⟧. **YouTube:** ⟦URL⟧. **Duración efectiva:** ⟦⟧. **Screenshot y evidencia de inserción en Landing Page:** ⟦⟧.
+El video incluye narración en off continua, música de fondo instrumental dinámica, tomas reales de apoyo en almacenes y comercios, grabación de pantalla fluida sobre la interfaz web y transiciones limpias entre cada bloque.
+
+<img src="../assets/portada_Refrio.png" width="600" alt="portada_Refrio">
+
+**URL Microsoft Stream:** [Ver Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d920_upc_edu_pe/IQDIBCyT0Y7DRLZHObNRDgzlAdqVKSo6hEhle61PbqDMfLg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=aVF07l) 
+
+**URL YouTube:** [Ver Video](https://youtu.be/XbwEG11q1ys)
