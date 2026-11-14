@@ -855,18 +855,13 @@ La ejecución del Sprint 3 destacó por un enfoque altamente colaborativo apoyad
 
 ## 5.3. Validation Interviews
 
-
-El objetivo de las validaciones es comprobar que los usuarios de Refrio comprendan la propuesta de valor y puedan interpretar datos de temperatura y caducidad para decidir sobre almacenamiento, despacho o recepción. Las sesiones deben realizarse con **3 a 5 participantes por cada segmento**, mostrando Landing Page y aplicación. Registrar explícitamente qué tareas estaban disponibles en el producto en la fecha de la sesión; las tareas aún no implementadas podrán validarse como prototipo, **pero no deben presentarse como interacción con un módulo operativo**.
-
+El objetivo principal de las validaciones es comprobar que los usuarios objetivo de Refrio comprendan la propuesta de valor de la plataforma y puedan interpretar eficazmente los datos de temperatura y caducidad para la toma de decisiones sobre el almacenamiento, despacho y recepción de mercadería. Las sesiones de validación se realizarán con una muestra de 3 a 5 participantes por cada segmento, a quienes se les presentará tanto el Landing Page como la aplicación web. Durante estas sesiones, se registrará explícitamente el alcance de las tareas y módulos disponibles en el producto en la fecha de la evaluación. Aquellas funcionalidades que aún no se encuentren implementadas en código serán validadas bajo la modalidad de prototipo, asegurando que no se presenten ni evalúen como interacciones operativas finalizadas.
 
 ### 5.3.1. Diseño de Entrevistas
 
+En esta etapa, el enfoque evoluciona desde el descubrimiento de la problemática hacia la evaluación de la comprensión, usabilidad y pertinencia de la solución de software, la cual articula el control de inventario, la gestión de vencimientos, el monitoreo de la cadena de frío y la logística de distribución. Las interrogantes se agrupan en los mismos ámbitos operativos de la fase inicial, priorizando una redacción basada en observaciones operativas y experiencias concretas del usuario para evitar inducir respuestas positivas o sesgadas.
 
-El diseño de validación de Refrio conserva la amplitud del cuestionario original de la sección 2.2.1 de *Requirements Elicitation & Analysis*: **23 preguntas para las empresas distribuidoras de perecibles y 22 preguntas para tiendas y bodegas**. El enfoque cambia del descubrimiento de problemas a la evaluación de comprensión, usabilidad y pertinencia de una solución que articula inventario, vencimientos, cadena de frío y distribución. Las preguntas están agrupadas según los mismos ámbitos operativos del primer diseño; su redacción privilegia observaciones y experiencias concretas, en lugar de inducir respuestas positivas.
-
-
-La validación integra el **Landing Page y la Web Application** a través de recorridos identificados por segmento. Antes de cada sesión se debe comprobar qué flujos existen en la versión presentada: una vista implementada podrá probarse como funcionalidad; una vista no implementada solo podrá mostrarse como **prototipo claramente señalado**. Se solicitará consentimiento para grabar y se observarán comprensión, tiempo, errores, retrocesos, solicitudes de ayuda y percepción del usuario. La evaluación heurística complementaria se registrará en el apartado 5.3.3 conforme al Anexo D.
-
+La dinámica de validación integra el Landing Page y la Web Application mediante recorridos de usuario estructurados y personalizados por segmento. Previo al inicio de cada sesión, el equipo verificará los flujos interactivos disponibles en la versión del software presentada: las vistas completamente implementadas se probarán como funcionalidades operativas, mientras que las vistas en desarrollo se mostrarán exclusivamente como prototipos referenciales. Para respaldar la evidencia técnica, se solicitará el consentimiento informado para grabar las sesiones, lo que permitirá al equipo observar y documentar los niveles de comprensión, tiempos de ejecución, tasas de error, retrocesos en la navegación, solicitudes de asistencia y la percepción general del usuario.
 
 #### Segmento 1: Empresas distribuidoras de productos perecibles
 
