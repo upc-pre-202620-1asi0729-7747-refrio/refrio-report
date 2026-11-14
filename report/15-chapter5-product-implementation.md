@@ -1017,9 +1017,7 @@ La dinámica de validación integra el Landing Page y la Web Application mediant
 
 ### 5.3.2. Registro de Entrevistas
 
-A continuación, se presenta el registro de las entrevistas de validación de Refrio, organizado de la misma manera que el apartado 2.2.2 de las entrevistas iniciales: primero tres entrevistas del **Segmento 1 (empresas distribuidoras)** y, a continuación, tres del **Segmento 2 (tiendas y bodegas)**. En esta etapa se evalúa la interacción de los participantes con la Landing Page y con las funcionalidades disponibles de la Web Application.
-
-Los datos personales, las fechas, los enlaces, los tiempos de grabación, las capturas y los resultados se mantienen **sin completar** hasta realizar las sesiones y reunir sus evidencias. Los resúmenes deben explicar los recorridos probados, la comprensión de la interfaz, las dificultades observadas y las recomendaciones aportadas por cada participante; no deben reutilizarse como si fueran resultados nuevos los hallazgos de las entrevistas exploratorias de AV1.
+A continuación, se presenta el registro de las entrevistas de validación de Refrio. En esta etapa se evalúa la interacción de los participantes con la Landing Page y con las funcionalidades disponibles de la Web Application.
 
 #### Entrevista 1: Segmento 1 - Empresas distribuidoras de productos perecibles
 
@@ -1045,18 +1043,26 @@ Los datos personales, las fechas, los enlaces, los tiempos de grabación, las ca
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** |  |
-| **Edad** |  |
-| **Distrito** |  |
-| **Fecha de entrevista** |  |
-| **Enlace al video (Microsoft Stream)** |  |
-| **Timing de inicio y duración** |  |
-| **User flows evaluados** |  |
-| **Evidencia fotográfica** |  |
+| **Nombres y Apellidos** | Andrea Villanueva |
+| **Edad** | 28 años |
+| **Distrito** | Ate, Lima |
+| **Fecha de entrevista** | 12/11/2026 |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f027_upc_edu_pe/IQDjlwL1A04tQqLVnE6zGqUIAWIqA0vndOa7kH_-vIvFIek?e=dpdUHe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Timing de inicio y duración** |Inicio: 00:00 - Duración: 8:56 minutos |
+| **User flows evaluados** | Navegación en Landing Page, Inicio de sesión (Perfil Supervisor), Dashboard de Torre de Control, Gestión de Inventario (semáforo FEFO), Seguimiento de Despachos y Centro de Alertas térmicas. |
+| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Andrea.png" width="600" alt="EntrevistaValidacion_Andrea"> </p> |
 
 **Resumen de la entrevista:**
 
-<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+
+Andrea es supervisora de almacén y cadena de frío en una distribuidora mediana de embutidos y lácteos, con 5 años de experiencia y un equipo de 8 operarios a cargo. Actualmente, controla sus cámaras y despachos de forma semimanual, lo que dificulta la rotación FEFO y genera pérdidas mensuales de entre S/ 6,000 y S/ 9,000 por mermas y devoluciones de clientes por fechas cortas. 
+
+Durante el recorrido por la plataforma Refrio, Andrea validó positivamente la propuesta. Destacó que la vista de inventario ordenada automáticamente por fecha de caducidad es la funcionalidad que mayor valor inmediato le genera, ya que evitaría errores de picking en su equipo. Encontró el panel muy intuitivo y directo para tomar decisiones rápidas. 
+
+Como retroalimentación y condiciones para adoptar el sistema al 100%, Andrea indicó que es indispensable: 
+1) Recibir alertas inmediatas al celular ante fallas térmicas imprevistas.
+2) Poder descargar reportes de trazabilidad en formato PDF para presentarlos en auditorías sanitarias o ante reclamos.
+3) Contar con un indicador claro del retorno de inversión para poder justificar la adopción del software ante la gerencia.
 
 
 ---
