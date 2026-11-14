@@ -1020,19 +1020,18 @@ A continuación, se presenta el registro de las entrevistas de validación de Re
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** |  |
-| **Edad** |  |
-| **Distrito** |  |
-| **Fecha de entrevista** |  |
-| **Enlace al video (Microsoft Stream)** |  |
-| **Timing de inicio y duración** |  |
-| **User flows evaluados** |  |
-| **Evidencia fotográfica** |  |
+| **Nombres y Apellidos** | Carmen Lara |
+| **Edad** | 28 años |
+| **Distrito** | Ate, Lima |
+| **Fecha de entrevista** | Por confirmar |
+| **Enlace al video (Microsoft Stream)** | [Ver entrevista de validación de Carmen Lara](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQAt8YEaxtPbTInpdk8eOzcAAfGE8cRfZdZZ_YXnXx_4ofg?e=JynLy5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| **Timing de inicio y duración** | Por confirmar |
+| **User flows evaluados** | Por confirmar con la grabación |
+| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Carmen.png" width="600" alt="Entrevista de validación de Carmen Lara"> </p> |
 
 **Resumen de la entrevista:**
 
-<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
-
+Carmen Lara es supervisora logística y de almacén en una distribuidora de alimentos perecibles de Ate. En su entrevista inicial señaló dificultades en el control manual del inventario, la rotación FEFO y el monitoreo de temperatura. Estos antecedentes sirven de referencia para la validación de Refrio registrada en el video adjunto; las observaciones específicas de esta sesión quedan por confirmar con la grabación.
 
 ---
 
