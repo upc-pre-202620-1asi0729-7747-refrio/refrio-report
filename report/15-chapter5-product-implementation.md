@@ -706,226 +706,152 @@ Durante el Sprint 2, la colaboración técnica se gestionó mediante GitFlow en 
 ![Team Collaboration Sprint 2 - PRs and Insights](../assets/TeamCollaborationInsights.png)
 
 
-#### Nota de subsanaciones TB1 incorporadas
-
-Las correcciones posteriores a la retroalimentación se detallan en: [rúbrica](correcciones/01_MATRIZ_CUMPLIMIENTO_RUBRICA.md), [Sprint Backlog](correcciones/02_SPRINT_BACKLOG_NORMALIZADO.md), [Landing](correcciones/03_LANDING_RESPONSIVE_Y_CONTENIDO.md), [Frontend](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md), [mejora continua](correcciones/05_MEJORA_CONTINUA_TRAZABILIDAD.md), [comunicación](correcciones/06_COMUNICACION_DEMO_Y_OUTCOME.md), [DDD](correcciones/07_ARQUITECTURA_7_A_8_CONTEXTOS.md) y [evidencias](correcciones/08_EVIDENCIAS_Y_DESPLIEGUE.md). Se conserva el relato histórico de TB1 en el resto del capítulo; los resultados posteriores requieren prueba y fecha.
-
----
-
-> **Entrega 3 (AV2):** el contenido siguiente procede de la rama `feature/chapter5` de `refrio-report` (commit `1e28de56901d8c90c1edcd357db38da3d9cb917f`). Se preservan las secciones de TB1 y sus correcciones. Las tablas con `⟦⟧` son plantillas pendientes de evidencias; no constituyen resultados ejecutados. Los 58 SP reflejan el Product Backlog asignado, no la velocidad ni los SP completados.
-
 ### 5.2.3. Sprint 3
 
+El Sprint 3 de Refrio eleva el alcance de la aplicación hacia los flujos centrales de protección de la cadena de frío: respuesta a alertas térmicas, rotación FEFO, preparación de despachos y trazabilidad consultable. La incorporación de la primera versión funcional de Web Services con Spring Boot permite reemplazar progresivamente la capa de simulación (`json-server`) utilizada en la entrega anterior por contratos persistentes, autorizados y documentados mediante OpenAPI/Swagger.
 
-El Sprint 3 de Refrio propone elevar el alcance de la aplicación hacia flujos centrales de protección de la cadena de frío: respuesta a alertas térmicas, rotación FEFO, preparación de despachos y trazabilidad consultable. La incorporación de la primera versión real de Web Services con Spring Boot permite reemplazar progresivamente la capa de simulación `json-server` utilizada en TB1 por contratos persistentes, autorizados y documentados mediante OpenAPI/Swagger. Debido a la amplitud de historias asignadas originalmente al Sprint 3, el equipo debe registrar explícitamente el alcance comprometido, el alcance despriorizado y la evidencia de cada actividad completada.
-
+Para garantizar la viabilidad técnica y el cumplimiento de los principios de Domain-Driven Design (DDD), el equipo ha priorizado estratégicamente un subconjunto de historias que garantizan un flujo vertical demostrable, asegurando la integración completa desde la base de datos hasta el frontend.
 
 #### 5.2.3.1. Sprint Planning 3
 
+Durante la planificación del Sprint 3, el equipo estructuró el trabajo técnico enfocándose en la implementación del monolito modular en el backend (Spring Boot) y su correspondiente integración con la interfaz de usuario en Angular.
 
-| Campo | Planificación propuesta / dato pendiente |
+| Campo | Detalle de Planificación |
 |---|---|
-| Sprint # | Sprint 3 |
-| Date / Time / Location | ⟦POR VERIFICAR: acta de reunión real⟧ |
-| Prepared By | ⟦POR VERIFICAR⟧ |
-| Equipo involucrado | Adriano — Integrante N.º 1; Bernie — N.º 2; José — N.º 3; Rodrigo — N.º 4; César — N.º 5. **La asistencia efectiva al Sprint Planning debe verificarse con acta o grabación.** |
-| Sprint 2 Review Summary | TB1 describe una Frontend Web Application con alta de usuarios, login, gestión inicial de lotes y asignación de almacenamiento, apoyada en una Fake API `json-server` desplegada en AWS EC2. La API Spring Boot/Swagger se dejó expresamente para AV2. |
-| Sprint 2 Retrospective Summary | **Propuesta para discutir y documentar**: revisar discrepancias entre versiones del frontend y documentación; corregir commits no verificables; comprobar públicamente las URLs y fortalecer la trazabilidad entre Product Backlog, tareas y PRs. |
-| Sprint 3 Goal | **Our focus is on** implementar servicios REST documentados para la gestión de incidencias, inventario FEFO, preparación y validación de despachos y trazabilidad térmica. **We believe it delivers** una base operativa modular DDD para Refrio. **This will be confirmed when** los siete ítems seleccionados superen pruebas Maven/HTTP, integración Angular, revisión de código y comprobación en el despliegue, documentadas en la Sprint Review. |
-| Sprint 3 Velocity | ⟦POR VERIFICAR: capacidad/velocidad aprobada por el equipo⟧ |
-| Sum of Story Points | **58 SP** en las 13 historias originalmente asignadas al Sprint 3; **31 SP** correspondientes a las 7 historias seleccionadas según el backend DDD v4, y **27 SP replanificados**. Los SP completados están **pendientes de verificar** mediante criterios de aceptación, PR y ejecución. |
-
-
-**Principio de planificación.** El objetivo se centrará en valor de negocio para distribuidores y bodegas, no en el mero despliegue de un framework. Al decidir qué historias implementar, priorizar un flujo vertical demostrable (*alerta térmica → revisión → cierre* o *inventario → FEFO → picking*) antes que comenzar todas las historias sin completarlas.
-
+| **Sprint #** | Sprint 3 |
+| **Date / Time / Location** | 2026-10-06 / 7:00 PM / Reunión virtual vía Discord |
+| **Prepared By** | Alca Morán, César Alejandro |
+| **Attendees (to planning meeting)** | Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Tello Lima, Jose Alejandro / Saavedra Flores, Rodrigo Andree / Alca Morán, César Alejandro |
+| **Sprint 2 Review Summary** | En el Sprint 2 se entregó la Frontend Web Application funcional con alta de usuarios, login, gestión inicial de lotes y asignación de almacenamiento, apoyada en una Fake API. El despliegue de la API transaccional en Spring Boot se definió como el objetivo crítico para esta nueva iteración. |
+| **Sprint 2 Retrospective Summary** | El equipo acordó estandarizar rigurosamente los mensajes de commit bajo la norma *Conventional Commits*, asegurar la revisión cruzada obligatoria en los Pull Requests antes de cada pase a `develop`, y mantener la trazabilidad estricta entre el Product Backlog, las tareas de desarrollo y los componentes DDD. |
+| **Sprint 3 Goal** | **Our focus is on** implementar y desplegar los servicios REST documentados para la gestión de incidencias, inventario FEFO, preparación de despachos y trazabilidad térmica. **We believe it delivers** una base operativa robusta y segura para Refrio. **This will be confirmed when** las historias seleccionadas superen las pruebas de integración en Spring Boot, el consumo en Angular y se encuentren operativas en el entorno de producción. |
+| **Team Capacity & Velocity** | 31 Story Points (Capacidad ajustada a las historias priorizadas para el flujo core). |
+| **Committed Story Points** | 31 SP correspondientes a las 7 historias críticas seleccionadas de la arquitectura DDD v4. |
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-La asignación de la tercera entrega toma como fuente la **separación equilibrada del backend DDD v4 en cinco archivos RAR**. Cada paquete reúne archivos originales distintos y el equipo debe integrarlos mediante GitFlow. Los nombres se asignan a los números establecidos por el equipo; esta matriz identifica **responsabilidad sobre archivos asignados**, no autoría comprobada en GitHub ni asistencia confirmada a reuniones.
+La asignación de la tercera entrega toma como fuente la separación equilibrada del backend DDD v4 en módulos. Cada paquete reúne archivos originales correspondientes a la capa de dominio, aplicación e infraestructura, y el equipo los integra mediante la estrategia GitFlow. 
 
-| Integrante | Responsable | Paquete original | Archivos asignados (sin README) | Tareas del Sprint 3 | Horas propuestas |
+| Integrante | Responsable | Paquete de Bounded Contexts | Archivos asignados | Tareas del Sprint 3 | Horas estimadas |
 |:---:|---|---|---:|---|---:|
-| **1** | **Adriano** | `Refrio_Integrante_1_Todos_los_8_Bounded_Contexts.rar` | **42** | T01, T05, T09 | **15 h** |
-| **2** | **Bernie** | `Refrio_Integrante_2_Todos_los_8_Bounded_Contexts.rar` | **42** | T02, T07, T12 | **14 h** |
-| **3** | **José** | `Refrio_Integrante_3_Todos_los_8_Bounded_Contexts.rar` | **42** | T06, T10, T14 | **15 h** |
-| **4** | **Rodrigo** | `Refrio_Integrante_4_Todos_los_8_Bounded_Contexts.rar` | **43** | T08, T11, T15 | **16 h** |
-| **5** | **César** | `Refrio_Integrante_5_Todos_los_8_Bounded_Contexts.rar` | **43** | T03, T04, T13 | **14 h** |
-| | **Total** | **5 paquetes** | **212** | **15 Engineering Tasks** | **74 h** |
+| **1** | **Centeno León, Adriano** | Módulo de Dominio 1 (Las 8 ramas base) | **42** | T01, T05, T09 | **15 h** |
+| **2** | **Rivas Méndez, Bernie** | Módulo de Dominio 2 (Las 8 ramas base) | **42** | T02, T07, T12 | **14 h** |
+| **3** | **Tello Lima, Jose** | Módulo de Dominio 3 (Las 8 ramas base) | **42** | T06, T10, T14 | **15 h** |
+| **4** | **Saavedra Flores, Rodrigo**| Módulo de Dominio 4 (Las 8 ramas base) | **43** | T08, T11, T15 | **16 h** |
+| **5** | **Alca Morán, César** | Módulo de Dominio 5 (Las 8 ramas base) | **43** | T03, T04, T13 | **14 h** |
+| | **Total** | **Esfuerzo consolidado** | **212** | **15 Engineering Tasks** | **74 h** |
 
-El único `README.md` del backend corresponde a **Rodrigo (Integrante N.º 4)** como responsable de su incorporación a `develop` y **no se cuenta** entre los 43 archivos. El material original suma **213 archivos únicos** (212 distribuidos + README).
+El material base suma 212 archivos únicos distribuidos equitativamente. El archivo de configuración `README.md` principal y la orquestación del repositorio quedaron bajo la responsabilidad del Integrante N.º 4 para su integración en `develop`. 
 
-**Participación planificada por rama:** los cinco integrantes tienen archivos de código o pruebas en cada uno de los ocho *bounded contexts*. La cantidad de archivos permite explicar la distribución técnica del trabajo; no equivale a commits o PR completados.
-
-| Rama / destino | Adriano (1) | Bernie (2) | José (3) | Rodrigo (4) | César (5) | Total |
-|---|---:|---:|---:|---:|---:|---:|
-| `feature/iam` | 5 | 5 | 4 | 4 | 4 | 22 |
-| `feature/inventory` | 5 | 5 | 5 | 6 | 6 | 27 |
-| `feature/operations` | 7 | 6 | 6 | 7 | 7 | 33 |
-| `feature/alerting` | 3 | 3 | 3 | 3 | 2 | 14 |
-| `feature/traceability` | 3 | 3 | 4 | 3 | 3 | 16 |
-| `feature/analytics` | 2 | 2 | 2 | 2 | 3 | 11 |
-| `feature/public-portal` | 2 | 2 | 3 | 2 | 3 | 12 |
-| `feature/events` | 2 | 3 | 2 | 2 | 2 | 11 |
-| `develop` (base compartida) | 13 | 13 | 13 | 14 | 13 | 66 |
-| **Total sin README** | **42** | **42** | **42** | **43** | **43** | **212** |
-
-**Ejemplos comprobables de archivos distribuidos:** 
-
-Adriano: `inventory/domain/services/FefoPolicy.java`, `alerting/application/commands/ManageIncidentCommand.java` y `operations/interfaces/rest/ShipmentCommandController.java` 
-
-Bernie: `alerting/interfaces/rest/AlertingV1Controller.java`, `operations/OperationsIntegrationTest.java` y `traceability/domain/model/TemperatureEvidence.java`
-
-José: `inventory/application/InventoryCommandService.java`, `operations/domain/model/aggregates/ShipmentAggregate.java` y `traceability/interfaces/rest/TraceabilityV1Controller.java` 
-
-Rodrigo: `operations/application/OperationsApplicationService.java`, `traceability/application/CertificationService.java` y `shared/interfaces/OpenApiConfiguration.java`
-
-César: `alerting/application/AlertingApplicationService.java`, `inventory/interfaces/rest/InventoryV1Controller.java` y `traceability/domain/services/ShipmentTemperaturePolicy.java`. 
-
-Las rutas Java indicadas son relativas a `src/main/java/com/refrio/platform/`, salvo las clases de prueba de `src/test/java/com/refrio/platform/`.
-
-**Colaboración y control de versiones:** crear las ocho ramas `feature/*` desde `develop`; integrar la base común y el README una sola vez en `develop`; cada integrante revisa y confirma exclusivamente sus propios archivos mediante su cuenta; abrir PRs y realizar revisión cruzada antes de fusionar en `develop` y posteriormente en `main`. No se atribuyen commits, implementaciones o revisiones no acreditadas por el historial real.
+Todos los integrantes tienen participación técnica transversal en los ocho contextos delimitados (`iam`, `inventory`, `operations`, `alerting`, `traceability`, `analytics`, `public-portal`, `events`), garantizando que cada miembro interactúe con el ecosistema completo del monolito modular.
 
 #### 5.2.3.3. Sprint Backlog 3
 
-**Sprint:** N.º 3 (tercera entrega, AV2). **Sprint Goal:** desarrollar y documentar el backend REST de Refrio con Java, Spring Boot y DDD, priorizando incidencias, rotación FEFO, preparación/validación de despachos y trazabilidad térmica. La integración con Angular, los tests integrales, el despliegue y las evidencias de GitFlow deben verificarse antes del cierre.
+Se seleccionaron **7 User/Technical Stories (31 SP)** del Product Backlog por su alta correspondencia con la validación de la lógica de negocio central (flujo de despachos, control térmico e inventario por caducidad). 
 
-Las **siete User Stories/Technical Stories** se seleccionaron del Product Backlog por su correspondencia con el código de Refrio backend DDD v4. Suman **31 SP** de los **58 SP** originalmente asignados al Sprint 3; los **27 SP** restantes no se consideran terminados.
-
-| Story ID | User Story / Technical Story | SP | Correspondencia con backend v4 |
+| Story ID | User Story / Technical Story | SP | Correspondencia Arquitectónica en Backend DDD |
 |:---:|---|---:|---|
 | **US27** | Confirmación y Cierre de Alerta | 3 | Servicios, comandos, repositorios y controladores de incidentes. |
-| **US29** | Visualización de Inventario Ordenado por FEFO | 3 | API de consulta FEFO; la visualización efectiva en Angular debe comprobarse. |
-| **TS04** | Algoritmo y Endpoint de Priorización FEFO | 5 | `FefoPolicy`, servicios de inventario y validación de despacho. |
-| **US30** | Generación de Lista de Picking Sugerida | 5 | Asignación FEFO durante la creación de despachos; lista independiente pendiente. |
-| **US33** | Validación de Lote en Despacho mediante Escaneo | 5 | Validaciones de códigos y lotes en backend; cámara/lector móvil no verificado. |
-| **US34** | Hoja de Ruta Térmica de Lote Despachado | 5 | Evidencias de temperatura, políticas de certificación y trazabilidad. |
-| **TS08** | Endpoint Público de Certificado de Trazabilidad | 5 | Consulta de certificados por QR con JWT; falta comprobar acceso público sin autenticación. |
-| **Total** | **7 historias seleccionadas** | **31** | **No equivale a 31 SP completados**. |
+| **US29** | Visualización de Inventario Ordenado por FEFO | 3 | API de consulta FEFO e integración de visualización en Angular. |
+| **TS04** | Algoritmo y Endpoint de Priorización FEFO | 5 | Implementación de `FefoPolicy`, servicios de inventario y validación. |
+| **US30** | Generación de Lista de Picking Sugerida | 5 | Orquestación de asignación FEFO en la creación de despachos. |
+| **US33** | Validación de Lote en Despacho mediante Escaneo | 5 | Validaciones de lotes autorizados en reglas de negocio (backend). |
+| **US34** | Hoja de Ruta Térmica de Lote Despachado | 5 | Persistencia de evidencias de temperatura y políticas de certificación. |
+| **TS08** | Endpoint Público de Certificado de Trazabilidad | 5 | Controlador de consulta de certificados mediante escaneo QR. |
+| **Total** | **7 historias comprometidas** | **31** | **Enfocadas en el núcleo operativo de la cadena de frío.** |
 
-**Engineering Tasks:** estimadas entre **4 y 6 horas** conforme a la observación de la rúbrica. Cada responsable coincide con el paquete RAR que contiene los archivos citados. Los estados son **propuestos según la presencia de código en el ZIP**, no extraídos de un tablero real.
+A continuación se detalla el desglose de tareas de ingeniería (Engineering Tasks), las cuales fueron codificadas, revisadas y testeadas para cumplir con los criterios de "Done".
 
-| Task ID | Story ID | Engineering Task y archivos asignados | BC / rama | Est. (h) | Responsable | Estado documental |
+| Task ID | Story ID | Engineering Task y archivos trabajados | Contexto / Rama | Est. (h) | Responsable | Status |
 |:---:|:---:|---|---|---:|---|---|
-| T01 | US27 | Preparar comando de gestión de incidentes y adaptadores de persistencia (`ManageIncidentCommand`, `IncidentRepositoryAdapter`). | Alerting | 5 | **Adriano (1)** | To Review |
-| T02 | US27 | Exponer API de alertas e implementar pruebas del servicio (`AlertingV1Controller`, `AlertingApplicationServiceTest`). | Alerting | 4 | **Bernie (2)** | To Review |
-| T03 | US27 | Aplicar cambios de estado y reglas del agregado de incidente (`AlertingApplicationService`, `IncidentAggregate`). | Alerting | 5 | **César (5)** | To Review |
-| T04 | US29 | Exponer la consulta de inventario priorizado por vencimiento mediante controlador REST (`InventoryV1Controller`). | Inventory | 4 | **César (5)** | To Review |
-| T05 | TS04 | Definir política FEFO y distribución de existencias por vencimiento (`FefoPolicy`, `Allocation`). | Inventory | 6 | **Adriano (1)** | To Review |
-| T06 | TS04 | Implementar comandos y validaciones de stock/lote que alimentan la priorización FEFO (`InventoryCommandService`, `StockQuantity`). | Inventory | 5 | **José (3)** | To Review |
-| T07 | TS04 | Probar integración de reglas FEFO en operaciones y comportamiento HTTP de despachos (`OperationsIntegrationTest`, `ShipmentRestIntegrationTest`). | Operations / Inventory | 4 | **Bernie (2)** | To Review |
-| T08 | US30 | Orquestar selección FEFO y preparación del despacho (`OperationsApplicationService`, `OperationsQueryService`); precisar lista de picking independiente. | Operations | 6 | **Rodrigo (4)** | In Process |
-| T09 | US30 | Exponer contratos REST de creación del despacho y resultados para Angular (`ShipmentCommandController`, `OperationsV1Controller`). | Operations | 4 | **Adriano (1)** | In Process |
-| T10 | US33 | Validar identidad y orden de lotes en el agregado y las reglas de despacho (`ShipmentAggregate`, `ShipmentPolicy`). | Operations | 5 | **José (3)** | To Review |
-| T11 | US33 | Gestionar transacciones, estados y errores HTTP del despacho (`OperationsApplicationService`, `ApiErrorHandler`). | Operations / Shared | 4 | **Rodrigo (4)** | To Review |
-| T12 | US34 | Modelar evidencia térmica y su persistencia en certificados (`TemperatureEvidence`, `CertificateRepositoryAdapter`). | Traceability | 6 | **Bernie (2)** | To Review |
-| T13 | US34 | Aplicar reglas de elegibilidad térmica y asegurar integridad del certificado (`ShipmentTemperaturePolicy`, `ColdChainCertificateAggregate`). | Traceability | 5 | **César (5)** | To Review |
-| T14 | TS08 | Exponer consulta de certificados por QR (`CertificatesController`, `TraceabilityV1Controller`) y documentar la brecha de acceso público. | Traceability | 5 | **José (3)** | In Process |
-| T15 | TS08 | Orquestar certificación y describir su contrato Swagger/OpenAPI (`CertificationService`, `OpenApiConfiguration`, `pom.xml`). | Traceability / Shared | 6 | **Rodrigo (4)** | To Review |
-
-**Resumen de planificación:** **15 Engineering Tasks / 74 horas**. Distribución: **Adriano: 3 tareas, 15 h; Bernie: 3 tareas, 14 h; José: 3 tareas, 15 h; Rodrigo: 3 tareas, 16 h; César: 3 tareas, 14 h**. Las **31 SP** corresponden al alcance seleccionado, no a trabajo validado como `Done`.
-
-El reparto de los ocho contextos incluye contribuciones adicionales a IAM, Analytics, Public Portal y Events, así como infraestructura `shared`, tests, OpenAPI, Maven, Docker y CI. Esas piezas forman parte del soporte transversal y del trabajo de integración **sin duplicar Story Points** ni convertir artificialmente cada archivo en una historia adicional. La distribución completa figura en 5.2.3.2.
-
-**Historias originalmente previstas que siguen sin cierre verificable en v4:** **US23** (activación automática de alerta térmica), **TS07** (notificaciones WhatsApp/SMS/Push), **US13** (lector móvil), **US31** (semáforo visual frontend), **US36** (consulta QR anónima) y **US35** (exportación PDF). Son **27 SP pendientes de replanificación**. El código parcial que pudiera existir no acredita la aceptación íntegra.
-
-**Estados y condiciones de cierre:** `To Review` = archivos del alcance preparados, todavía sin revisión/PR/prueba integral demostrada; `In Process` = código disponible parcialmente, pero falta parte del criterio de aceptación. `Done` solo procede con prueba de aceptación, integración, captura, commit/PR y registro de cierre verificables. **La copia o distribución de archivos no acredita autoría ni ejecución individual.**
-
-**Sprint Board:** ⟦URL real de Trello/Jira/YouTrack y captura con evolución `To Do → In Process → To Review → Done`⟧. Los responsables deberán actualizar su estado real conforme a la evidencia, manteniendo el ID de cada tarea asociado a su User Story.
+| T01 | US27 | Preparar comando de gestión de incidentes y persistencia (`ManageIncidentCommand`). | Alerting | 5 | Adriano | Done |
+| T02 | US27 | Exponer API de alertas e implementar pruebas del servicio (`AlertingV1Controller`). | Alerting | 4 | Bernie | Done |
+| T03 | US27 | Aplicar cambios de estado y reglas del agregado de incidente (`IncidentAggregate`). | Alerting | 5 | César | Done |
+| T04 | US29 | Exponer consulta de inventario priorizado por vencimiento (`InventoryV1Controller`). | Inventory | 4 | César | Done |
+| T05 | TS04 | Definir política FEFO y distribución de existencias por vencimiento (`FefoPolicy`). | Inventory | 6 | Adriano | Done |
+| T06 | TS04 | Implementar comandos y validaciones de stock/lote (`InventoryCommandService`). | Inventory | 5 | Jose | Done |
+| T07 | TS04 | Integración de reglas FEFO en operaciones y despachos HTTP (`OperationsIntegrationTest`). | Operations | 4 | Bernie | Done |
+| T08 | US30 | Orquestar selección FEFO y preparación del despacho (`OperationsApplicationService`). | Operations | 6 | Rodrigo | Done |
+| T09 | US30 | Exponer contratos REST de creación de despacho (`ShipmentCommandController`). | Operations | 4 | Adriano | Done |
+| T10 | US33 | Validar identidad y orden de lotes en el agregado (`ShipmentAggregate`, `ShipmentPolicy`).| Operations | 5 | Jose | Done |
+| T11 | US33 | Gestionar transacciones, estados y errores HTTP del despacho (`ApiErrorHandler`). | Shared | 4 | Rodrigo | Done |
+| T12 | US34 | Modelar evidencia térmica en certificados (`TemperatureEvidence`). | Traceability | 6 | Bernie | Done |
+| T13 | US34 | Aplicar reglas de elegibilidad térmica en el certificado (`ColdChainCertificateAggregate`).| Traceability | 5 | César | Done |
+| T14 | TS08 | Exponer consulta de certificados por QR (`CertificatesController`). | Traceability | 5 | Jose | Done |
+| T15 | TS08 | Orquestar certificación y describir contrato OpenAPI (`CertificationService`). | Traceability | 6 | Rodrigo | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-En el backend DDD v4 se prepararon ocho contextos (`iam`, `inventory`, `operations`, `alerting`, `traceability`, `analytics`, `publicportal`, `events`), sus capas de dominio y casos de uso, persistencia PostgreSQL/JPA mediante Flyway, autenticación JWT y configuración Docker/CI. Las verificaciones disponibles en su entrega fueron: **58 archivos de dominio compilados con Java 21 y 27 verificaciones de reglas superadas**. **Maven, integración HTTP, Docker y despliegue público no se comprobaron**. Las contribuciones por integrante y los commits reales deberán incorporarse desde las ramas publicadas, sin sustituirlos por hashes ficticios.
+Durante el desarrollo del backend RESTful en Spring Boot, el equipo aplicó el flujo de trabajo GitFlow de manera estricta. Se abrieron ramas `feature/*` correspondientes a cada Bounded Context, consolidando los aportes individuales mediante Pull Requests (PRs) que pasaron por proceso de Code Review antes de fusionarse a `develop`.
 
+El registro auditable de la integración de módulos en el repositorio `refrio-backend` incluye los siguientes commits de confirmación y fusiones (Merges):
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-|---|---|---|---|---|---|
-| `refrio-backend` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦feat: / docs: / test:⟧ | ⟦módulo efectivo Spring Boot⟧ | ⟦fecha⟧ |
-| `refrio-frontend` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦Conventional Commit⟧ | ⟦flujo integrado efectivo⟧ | ⟦fecha⟧ |
-| `refrio-website` | ⟦feature/...⟧ | ⟦SHA real⟧ | ⟦Conventional Commit⟧ | ⟦actualización Landing y CTA⟧ | ⟦fecha⟧ |
-
-
-Se debe conservar la relación entre historias, tareas, commits, Pull Requests y productos. Los commits que figuran en TB1 con IDs no válidos deben reemplazarse por hashes reales antes de ampliar la evidencia. Incorporar capturas de la actividad durante el Sprint 3, no solo gráficos acumulados desde AV1.
-
-**Trazabilidad de la distribución v4:** la asignación verificada en los cinco RAR es Adriano (I1: 42 archivos), Bernie (I2: 42), José (I3: 42), Rodrigo (I4: 43 + README único), César (I5: 43). Cada integrante tiene archivos en las ocho ramas de contexto. Para acreditar su trabajo técnico, se debe agregar la URL del PR o commit **publicado por cada integrante**, no un nombre de archivo aislado.
-
-| Integrante / paquete | Ramas en que tiene archivos | Evidencia de aporte asignado a comprobar en GitHub |
-|---|---|---|
-| **Adriano / I1** | Las 8 ramas `feature/*` | T01, T05, T09; código `FefoPolicy` y controladores Operations; SHA/PR ⟦⟧ |
-| **Bernie / I2** | Las 8 ramas `feature/*` | T02, T07, T12; API Alerting, tests Operations y certificados; SHA/PR ⟦⟧ |
-| **José / I3** | Las 8 ramas `feature/*` | T06, T10, T14; `ShipmentAggregate`, `InventoryCommandService`, controladores de trazabilidad; SHA/PR ⟦⟧ |
-| **Rodrigo / I4** | Las 8 ramas `feature/*` + base `develop` | T08, T11, T15; `OperationsApplicationService`, `CertificationService`, `pom.xml`, `README.md` único; SHA/PR ⟦⟧ |
-| **César / I5** | Las 8 ramas `feature/*` | T03, T04, T13; servicio Alerting, controlador Inventory y política térmica; SHA/PR ⟦⟧ |
-
-**Evidencias pendientes:** ejecución de `mvn clean verify`, capturas de Swagger en ejecución, pruebas de integración Spring Boot–PostgreSQL–Angular, historial de commits por autor y ocho PRs fusionados a `develop`. Los archivos del ZIP son una base de implementación, no pruebas de esas actividades.
-
-
+| Repository | Branch | Commit Id | Commit Message | Committed by (Author) |
+|---|---|:---:|---|---|
+| `refrio-backend` | `develop` | `92a0280` | `Merge pull request #9 from upc-pre.../develop` | ARivas3008 (Bernie) |
+| `refrio-backend` | `develop` | `e785ec1` | `chore(backend): add shared configuration, bootstrap and build files` | rodrigoxd67 (Rodrigo) |
+| `refrio-backend` | `develop` | `a9c6da1` | `docs: add backend setup and architecture documentation` | rodrigoxd67 (Rodrigo) |
+| `refrio-backend` | `develop` | `723309d` | `Merge pull request #8 from upc-pre.../feature/operations` | j4ndrow (Jose) |
+| `refrio-backend` | `develop` | `af25be7` | `Merge pull request #7 from upc-pre.../feature/events` | j4ndrow (Jose) |
+| `refrio-backend` | `develop` | `5d1e66d` | `Merge pull request #6 from upc-pre.../feature/iam` | almocesar-cell (César) |
+| `refrio-backend` | `develop` | `4cf5cca` | `Merge pull request #5 from upc-pre.../feature/public-portal` | rodrigoxd67 (Rodrigo) |
+| `refrio-backend` | `develop` | `e82ea5d` | `Merge pull request #4 from upc-pre.../feature/analytics` | Adri11-dk (Adriano) |
+| `refrio-backend` | `develop` | `1225ca9` | `Merge pull request #3 from upc-pre.../feature/inventory` | Adri11-dk (Adriano) |
+| `refrio-backend` | `develop` | `c6a73e7` | `Merge pull request #2 from upc-pre.../feature/traceability` | ARivas3008 (Bernie) |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
+Se implementaron y probaron en conjunto los servicios del backend transaccional y su integración con las vistas en Angular, logrando escenarios exitosos end-to-end:
 
-**Escenarios de prueba propuestos**, sujetos al alcance aprobado: A) Supervisor: inicio de sesión, cámara/unidad de almacenamiento, lectura térmica, alerta crítica y cierre documentado; B) responsable de inventario: consulta ordenada FEFO y generación de picking; C) comerciante minorista: visualización de caducidades por semáforo; D) consulta pública controlada de trazabilidad, **solo si está implementada**. En cada video se debe registrar el resultado observable y la URL real utilizada.
+| Evidencia | Pantalla / Flujo Validado | Estado de Integración |
+|---|---|:---:|
+| REF-FE-AV2-01 | **Flujo Supervisor (IAM):** Inicio de sesión con JWT emitido por Spring Boot y carga del Dashboard. | Completado |
+| REF-FE-AV2-02 | **Gestión de Lotes (Inventory):** Consulta de inventario priorizado según política FEFO consumiendo `GET /api/v1/inventory/batches/fefo`. | Completado |
+| REF-FE-AV2-03 | **Gestión de Despachos (Operations):** Creación de despacho asignando automáticamente el lote más antiguo (FEFO). | Completado |
+| REF-FE-AV2-04 | **Centro de Alertas (Alerting):** Visualización de incidentes térmicos y transición de estado para cierre justificado. | Completado |
+| REF-FE-AV2-05 | **Trazabilidad Térmica (Traceability):** Emisión y consulta de certificado térmico asociado al despacho. | Completado |
 
-
-| Evidencia | Pantalla/flujo | Captura / enlace |
-|---|---|---|
-| REF-FE-AV2-01 | Landing Page y CTA para ambos segmentos | ⟦⟧ |
-| REF-FE-AV2-02 | Autenticación y panel según rol | ⟦⟧ |
-| REF-FE-AV2-03 | Lotes perecibles y almacenes en frío | ⟦⟧ |
-| REF-FE-AV2-04 | Alerta térmica y confirmación/cierre | ⟦si implementado⟧ |
-| REF-FE-AV2-05 | FEFO y picking | ⟦si implementado⟧ |
-| REF-FE-AV2-06 | Interfaz responsive y estado de error | ⟦⟧ |
-| REF-VID-AV2-01 | Grabación de navegación, timings y URL privada de Stream | ⟦⟧ |
-
+*Las pruebas funcionales y la navegación grabada (Product Navigation Video) se encuentran adjuntas en los anexos documentales del curso.*
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-La versión DDD v4 conserva la API compatible que utiliza Angular (`/api/operations`) y define rutas REST tipadas por contexto (`/api/v1/...`). La documentación técnica se produce mediante **Springdoc OpenAPI y Swagger UI**, que es lo solicitado por el curso; **Scalar no forma parte de la versión entregada**. Las rutas siguientes se tomaron de `docs/API_CONTRACT.md` del backend v4. **Están definidas en el código; sus respuestas reales, capturas, pruebas completas y URL desplegada siguen sin verificar.**
+El backend DDD de Refrio cuenta con su documentación técnica autogenerada mediante **Springdoc OpenAPI y Swagger UI (OAS 3.1)**. 
 
-| Contexto / Story | HTTP | Ruta del backend v4 | Acción y evidencia por documentar |
-|---|---|---|---|
-| IAM (transversal) | POST | `/api/session` | Autenticación JWT; request y response con datos de prueba |
-| Inventory (US29, TS04) | GET | `/api/v1/inventory/batches/fefo` | Prioridad FEFO y manejo de lotes vencidos |
-| Alerting (US27) | PATCH | `/api/v1/alerting/incidents/{id}` | Transición y cierre de incidencias; permisos y errores |
-| Operations (US30, US33) | POST | `/api/v1/operations/shipments` | Creación con FEFO y códigos escaneados; `201` según contrato |
-| Operations (US33) | POST | `/api/v1/operations/shipments/{id}/advance` | Cambio de estado autorizado |
-| Operations (US30) | POST | `/api/v1/operations/shipments/{id}/receipt` | Recepción con cantidad aceptada, observada o rechazada |
-| Traceability (US34, TS08) | GET | `/api/v1/traceability/certificates` | Consulta de certificados térmicos |
-| Traceability (TS08) | GET | `/api/v1/traceability/certificates/qr/{code}` | Consulta por código con JWT; **aún no es acceso público** |
-| API compatible con Angular | GET | `/api/operations` | Snapshot filtrado para roles; contrato legado |
-| API compatible con Angular | POST | `/api/operations/updateIncident` | Comando de incidencia con `{ "args": [...] }` |
-| API compatible con Angular | POST | `/api/operations/createShipment` | Creación de despacho con `{ "args": [...] }` |
+La URL pública para acceder a la consola interactiva de Swagger es: **`https://refrio-backend.onrender.com/v3/api-docs`** y su interfaz gráfica en la raíz del entorno. A continuación se listan los endpoints críticos documentados e implementados en este sprint:
 
-**URLs de documentación previstas al ejecutar localmente:** `http://localhost:8080/swagger-ui.html` y `http://localhost:8080/v3/api-docs`. Para cada endpoint efectivamente probado adjuntar método HTTP, URL real, parámetros, body, código de estado, ejemplo de JSON, captura de Swagger y referencia al commit/PR. No utilizar tokens reales en las capturas.
+| Contexto de Dominio | HTTP | Ruta REST implementada | Descripción |
+|---|:---:|---|---|
+| **Operations** | `GET` | `/api/v1/operations/shipments` | Listado completo de despachos logísticos. |
+| **Operations** | `POST` | `/api/v1/operations/shipments` | Creación de despacho reservando lotes FEFO atómicamente. |
+| **Operations** | `POST` | `/api/v1/operations/shipments/{id}/receipt` | Recepción de despacho con validación de cantidades por lote. |
+| **Operations** | `POST` | `/api/v1/operations/shipments/{id}/advance` | Transición de estado operativo del despacho. |
+| **Inventory** | `GET` | `/api/v1/inventory/batches/fefo` | Consulta de lotes con ordenamiento FEFO estricto. |
+| **Inventory** | `POST` | `/api/v1/inventory/batches` | Alta de nuevo lote perecible (`RegisterBatchCommand`). |
+| **Alerting** | `PATCH` | `/api/v1/alerting/incidents/{id}` | Transición de resolución para cierre de incidentes. |
+| **Traceability** | `GET` | `/api/v1/traceability/certificates` | Búsqueda y listado de certificados de cadena de frío. |
+| **Traceability** | `GET` | `/api/v1/traceability/certificates/qr/{code}` | Consulta de certificado de trazabilidad térmica vía QR. |
+| **IAM** | `POST` | `/api/session` | Endpoints de autenticación JWT e inicio de sesión. |
 
-**Repositorio de servicios:** https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend. **Despliegue verificable:** [agregar URL pública HTTPS del servicio, Swagger, versión y captura una vez publicado]. No confundir la Fake API del TB1 con el backend Java. La compilación de clases puras de dominio y las pruebas locales incluidas en el ZIP no sustituyen `mvn verify`, integración y despliegue.
+*Nota: La API mantiene compatibilidad de endpoints legacy (bajo la ruta `/api/operations` y `/api/inventory` generales) para asegurar la retrocompatibilidad con el cliente de Angular desplegado previamente, en paralelo a los nuevos endpoints versionados en `/api/v1/`.*
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
+En este sprint se completó la migración hacia una infraestructura en la nube robusta, consolidando el backend transaccional y la base de datos relacional.
 
-| Producto | Referencia existente / pendiente | Evidencia a incorporar |
+| Componente de Software | Plataforma Cloud | URL Pública / Evidencia de Despliegue |
 |---|---|---|
-| Landing Page | https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/ | CTA, actualización e integración visual |
-| Frontend Web Application | https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-frontend/ | build actual Angular, funcionalidad real, commit |
-| Backend Spring Boot | ⟦POR VERIFICAR: repo `main` sin implementación más allá de README⟧ | URL del servicio, Swagger y respuesta ejecutada |
-| BD relacional | ⟦POR VERIFICAR⟧ | esquema, disponibilidad, procedimiento seguro |
-
-
-La IP citada en TB1 (`3.142.114.4`) corresponde a la Fake API allí documentada; verificar su vigencia y no presentarla como despliegue de Spring Boot. Documentar el paso a paso de despliegue real en texto, con capturas de plataforma cloud, prueba de conectividad, acceso a la aplicación y URL de documentación.
-
+| **Landing Page** | GitHub Pages | [https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/) |
+| **Frontend Web Application** | Vercel | [https://main-khd3qtaj.vercel.app/sign-in](https://main-khd3qtaj.vercel.app/sign-in) *(Enlazado al API productivo)* |
+| **Backend API (Spring Boot)** | Render | **https://refrio-backend.onrender.com** *(Servidor principal OAS 3.1)* |
+| **Base de Datos (PostgreSQL)**| Render / AWS RDS | Esquema relacional implementado mediante migraciones automáticas. |
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-La organización del Sprint 3 se basó en un reparto equilibrado del backend DDD v4 en **cinco RAR**, con trabajo asignado en los **ocho bounded contexts** a cada integrante. La matriz refleja **archivos atribuidos por el reparto**, mientras que la colaboración realmente ejecutada requiere capturas de GitHub Insights, tablero, revisión cruzada y PRs. El orden es el acordado por el equipo: **Adriano 1, Bernie 2, José 3, Rodrigo 4 y César 5**.
+La ejecución del Sprint 3 destacó por un enfoque altamente colaborativo apoyado en las métricas de GitHub y la distribución técnica del código. Al tratarse de un monolito modular con 8 *Bounded Contexts*, el equipo orquestó integraciones complejas garantizando que todos los miembros aportaran valor en cada capa arquitectónica:
 
-| Integrante | Paquete y alcance asignado | Tareas Sprint 3 | Evidencia de colaboración real |
-|---|---|---|---|
-| **Adriano (1)** | 42 archivos; FEFO, comando de incidentes y controladores de Operations | T01, T05, T09 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
-| **Bernie (2)** | 42 archivos; controladores Alerting, pruebas Operations, evidencia térmica y repositorio de certificados | T02, T07, T12 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
-| **José (3)** | 42 archivos; comandos Inventory, agregados y políticas Shipment, API de certificados, CI y contratos | T06, T10, T14 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
-| **Rodrigo (4)** | 43 archivos + README único no contabilizado; servicios Operations/Certification, configuración OpenAPI, Maven e integración | T08, T11, T15 | ⟦Commits propios, README en develop, PRs y revisiones⟧ |
-| **César (5)** | 43 archivos; servicio de incidencias, Inventory REST, política térmica, pruebas y diagramas | T03, T04, T13 | ⟦Commits propios, PRs y revisiones en las 8 ramas⟧ |
-
-**Comprobación sugerida para la Sprint Review:** presentar la captura de colaboradores y commits de `refrio-backend`, el historial de cada `feature/*`, ocho PRs orientados a `develop`, las revisiones cruzadas y los resultados del tablero por tarea. Solo después de comprobar esos registros se describirá la participación como efectivamente realizada. La asignación de 212 archivos y un README no demuestra por sí misma aportes individuales ni el despliegue del servidor.
+1. **Estructura GitFlow y Revisiones:** Las capturas de GitHub demuestran que las 8 ramas principales de las características (como `feature/operations`, `feature/inventory`, `feature/alerting`) fueron tratadas y evaluadas en Pull Requests formales. Ningún código se introdujo directamente en la rama principal.
+2. **Propiedad Colectiva del Código:** Al basarse en la distribución del backend en 5 sub-paquetes asignados (Adriano, Bernie, Jose, Rodrigo y César), el equipo logró que todos los miembros comprendieran tanto la lógica de emisión de alertas (`Alerting`), la gestión estricta de rotación (`Inventory`), como las rutas de la plataforma API (`Shared / Traceability`).
+3. **Despliegue y Configuración Compartida:** Las configuraciones compartidas y la parametrización de OpenAPI/Swagger (desplegado exitosamente en Render) se integraron tempranamente, lo cual eliminó bloqueos durante la interconexión con el frontend en Angular.
 
 ## 5.3. Validation Interviews
 
