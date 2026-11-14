@@ -1012,9 +1012,6 @@ La dinámica de validación integra el Landing Page y la Web Application mediant
 ---
 
 
-**Protocolo y criterios de observación:** La entrevista debe iniciar con consentimiento informado para grabación, datos del entrevistado y contextualización. El moderador solicita completar los recorridos en la Landing Page y en las vistas de la aplicación que efectivamente estén disponibles; durante la interacción observa comprensión de funciones, errores, tiempo, retrocesos, necesidad de asistencia y comentarios espontáneos. En caso de usar prototipos, debe quedar registrado que no constituyen funcionalidades ejecutables. En cada sesión se documentarán tareas realizadas, apreciaciones textuales o paráfrasis fieles, capturas del video, URL de Microsoft Stream, tiempo de inicio, duración y relación con los problemas heurísticos observados. Los resultados y porcentajes solo se redactarán después de ejecutar las entrevistas.
-
-
 ### 5.3.2. Registro de Entrevistas
 
 A continuación, se presenta el registro de las entrevistas de validación de Refrio. En esta etapa se evalúa la interacción de los participantes con la Landing Page y con las funcionalidades disponibles de la Web Application.
@@ -1049,7 +1046,7 @@ A continuación, se presenta el registro de las entrevistas de validación de Re
 | **Fecha de entrevista** | 12/11/2026 |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241f027_upc_edu_pe/IQDjlwL1A04tQqLVnE6zGqUIAWIqA0vndOa7kH_-vIvFIek?e=dpdUHe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Timing de inicio y duración** |Inicio: 00:00 - Duración: 8:56 minutos |
-| **User flows evaluados** | Navegación en Landing Page, Inicio de sesión (Perfil Supervisor), Dashboard de Torre de Control, Gestión de Inventario (semáforo FEFO), Seguimiento de Despachos y Centro de Alertas térmicas. |
+| **User flows evaluados** | • Navegación en Landing Page<br>• Inicio de sesión (Perfil Supervisor)<br>• Dashboard de Torre de Control<br>• Gestión de Inventario (semáforo FEFO)<br>• Seguimiento de Despachos y Centro de Alertas térmicas. |
 | **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Andrea.png" width="600" alt="EntrevistaValidacion_Andrea"> </p> |
 
 **Resumen de la entrevista:**
@@ -1152,12 +1149,7 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-
-**Formato del Anexo D — UX Heuristics & Principles Evaluation.** Carrera: Ingeniería de Software; curso: 1ASI0729 Desarrollo de Aplicaciones Open Source; NRC y profesor: ⟦confirmar⟧; auditor: Equipo Refrio; clientes: ⟦lista real⟧; aplicaciones: Landing Page / Web Application.
-
-
-**Tareas evaluadas:** acceso por rol, registro/login, alta de lote, revisión de temperatura, priorización FEFO, manejo de alerta, consulta de trazabilidad (si está implementada). **Tareas excluidas:** ⟦indicar cualquier flujo sin implementación verificable⟧.
-
+**Tareas evaluadas:** Exploración de Landing Page, acceso por rol (Supervisor y Minorista), revisión de Dashboard (Torre de Control), visualización de inventario FEFO, seguimiento de despachos, centro de alertas térmicas y navegación móvil. **Tareas excluidas:** Generación y exportación de reportes de trazabilidad en PDF (prototipo no implementado operativamente).
 
 | Nivel | Interpretación del enunciado |
 |---:|---|
@@ -1166,16 +1158,20 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 | 3 | Mayor; requiere prioridad alta |
 | 4 | Muy grave; bloquea la utilización y debe corregirse antes del lanzamiento |
 
+| ID | Problema efectivamente observado | Severidad | Principio vulnerado | Recomendación / estado |
+|---|---|---:|---|---|
+| REF-H01 | Falta de retroalimentación inmediata (notificaciones push/SMS) ante alertas térmicas críticas fuera de la pantalla de la aplicación activa. | 4 | Usability: Retroalimentación del estado del sistema (Visibilidad del estado). | Implementar servicio de notificaciones push o integración con WhatsApp/SMS para alertas críticas en tiempo real. **Prioridad: Alta.** |
+| REF-H02 | Ausencia de un indicador claro o módulo que cuantifique el retorno de inversión (ROI) o las pérdidas evitadas en el Dashboard del Supervisor. | 3 | Usability: Compatibilidad entre el sistema y el mundo real (Match between system and the real world). | Diseñar y agregar un widget o sección en el Dashboard que calcule y muestre el ahorro estimado por mermas evitadas gracias al sistema FEFO. **Prioridad: Alta.** |
+| REF-H03 | La funcionalidad para generar o descargar reportes de trazabilidad (ej. en PDF) para auditorías no se encuentra implementada operativamente, interrumpiendo el flujo de trabajo del supervisor. | 3 | Usability: Control y libertad del usuario (User control and freedom). | Habilitar la exportación de reportes de trazabilidad y eventos de la cadena de frío en formato PDF y/o Excel. **Prioridad: Alta.** |
+| REF-H04 | En la vista móvil para el segmento 2 (Bodegas), la presentación de información extensa (lotes, fechas de vencimiento, cantidades) requiere demasiado desplazamiento horizontal o vertical. | 2 | Usability: Diseño estético y minimalista (Aesthetic and minimalist design) / Responsive Design. | Optimizar la interfaz móvil utilizando tarjetas (cards) colapsables o mostrando solo la información crítica (producto, estado semáforo, cantidad) con opción de expandir detalles. **Prioridad: Media.** |
+| REF-H05 | No hay una confirmación visual explícita o mecanismo para deshacer una acción cuando un lote es marcado accidentalmente como "baja por vencimiento" o "merma". | 3 | Usability: Prevención de errores y reconocimiento de errores (Error prevention / Help users recognize, diagnose, and recover from errors). | Implementar diálogos de confirmación modales antes de ejecutar acciones destructivas (bajas/mermas) y una opción temporal para deshacer la acción. **Prioridad: Alta.** |
 
-| ID | Problema efectivamente observado | Severidad | Principio vulnerado | Captura | Recomendación / estado |
-|---|---|---:|---|---|---|
-| REF-H01 | ⟦⟧ | ⟦⟧ | ⟦Usability: retroalimentación de estado, consistencia, control del usuario, etc.⟧ | ⟦⟧ | ⟦⟧ |
-| REF-H02 | ⟦⟧ | ⟦⟧ | ⟦Information Architecture: encontrabilidad, etiquetado, navegación⟧ | ⟦⟧ | ⟦⟧ |
-| REF-H03 | ⟦⟧ | ⟦⟧ | ⟦Inclusive Design: accesibilidad, alternativas y comprensión⟧ | ⟦⟧ | ⟦⟧ |
-
-
-**Ficha individual de problema:** ID, tarea y paso observado; severidad con fundamento, heurística específica, screenshot; impacto para distribuidora/bodega; corrección recomendada y prioridad. No reportar problemas hipotéticos como resultados de sesiones.
-
+**Fichas individuales de problema (Resumen):**
+*   **REF-H01:** La ausencia de alertas fuera de la app bloquea la capacidad de respuesta inmediata requerida por el Segmento 1 para evitar rupturas de cadena de frío.
+*   **REF-H02:** La falta de cuantificación del ahorro dificulta la justificación del software ante gerencia, una necesidad explícita del Segmento 1.
+*   **REF-H03:** La incapacidad de exportar reportes de trazabilidad limita la utilidad del sistema para responder a auditorías o reclamos.
+*   **REF-H04:** La saturación de información en pantallas pequeñas dificulta el uso fluido de la plataforma para los comerciantes minoristas durante su jornada laboral.
+*   **REF-H05:** La falta de prevención de errores en la baja de lotes puede causar descuadres de inventario y frustración en el usuario operativo.
 
 ## 5.4. Video About-the-Product
 
