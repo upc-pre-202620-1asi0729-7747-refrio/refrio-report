@@ -1099,7 +1099,11 @@ Como retroalimentación y condiciones para adoptar el sistema al 100%, Andrea in
 
 **Resumen de la entrevista:**
 
-<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+Ariel León (27 años) es dueño de un local minorista donde lleva 11 meses administrando productos perecibles como fiambres, helados, embutidos, yogures y lácteos. Cuenta con el apoyo de sus padres en el control operativo cuando no está presente y realiza revisiones de inventario aproximadamente dos veces al mes.   Durante el recorrido por la plataforma Refrio, Ariel validó positivamente la propuesta. Destacó que el sistema de alertas con semaforización (colores para indicar productos vigentes, próximos a vencer o vencidos/sin stock) y el seguimiento de pedidos son las funcionalidades que mayor valor le aportan. Asimismo, consideró que la plataforma es bastante fácil de manejar, intuitiva y comprensible como para operarla sin necesidad de capacitaciones largas.   
+
+Como retroalimentación y mejora clave para ajustar el sistema a la realidad operativa de su negocio, Ariel recomendó:
+
+1. Reemplazar la hora exacta estimada de llegada de los envíos por rangos o turnos del día (por ejemplo, "turno mañana" o "turno tarde"), manteniendo únicamente la fecha fija, ya que los factores externos como el tráfico o demoras en entregas previas de la ruta hacen que el horario exacto varíe y pueda generar falsas expectativas en el cliente.   
 
 
 ---
