@@ -1067,18 +1067,22 @@ Como retroalimentación y condiciones para adoptar el sistema al 100%, Andrea in
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** |  |
-| **Edad** |  |
-| **Distrito** |  |
-| **Fecha de entrevista** |  |
-| **Enlace al video (Microsoft Stream)** |  |
-| **Timing de inicio y duración** |  |
-| **User flows evaluados** |  |
-| **Evidencia fotográfica** |  |
+| **Nombres y Apellidos** | Jari Hassan Syeda |
+| **Edad** | 25 años |
+| **Distrito** | Santiago de Surco, Lima |
+| **Fecha de entrevista** | 14/11/2026 |
+| **Enlace al video (Microsoft Stream)** | [Ver entrevista de validación](https://upcedupe-my.sharepoint.com/personal/u20241d811_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20241d811%5Fupc%5Fedu%5Fpe%2FDocuments%2FEntrevista%5Fvalidacion%5Fcompleta%2Emp4) |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 08:34 minutos. Presentación y contexto: 00:00–02:11; recorrido guiado: 02:11–06:52; preguntas de validación y cierre: 06:52–08:34. |
+| **User flows evaluados** | • Comprensión de la propuesta en la Landing Page<br>• Observación del acceso con perfil Supervisor y del panel principal<br>• Consulta de productos, stock y lotes en inventario<br>• Interpretación de vencimientos y priorización de lotes<br>• Interpretación de alertas y detalle de incidencias<br>• Revisión guiada de envíos, clientes, analítica e historial de eventos. |
+| **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_JariHassanSyeda.png" width="600" alt="Jari Hassan Syeda durante la entrevista de validación"> </p> |
 
 **Resumen de la entrevista:**
 
-<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
+Jari Hassan Syeda tiene 25 años y administra un negocio de productos perecibles en Santiago de Surco. Cuenta con aproximadamente cinco años de experiencia y se encarga de las compras a proveedores, la organización de los productos y la supervisión de la atención al cliente. Indica que administra dos locales y que tres personas participan en el control de stock. Utiliza una computadora, el celular y registros en Excel; una de sus dificultades es mantener actualizadas y sincronizadas las cantidades entre los locales.
+
+Durante la validación, conducida por Rodrigo Andree Saavedra Flores, observó un recorrido guiado por la Landing Page y la aplicación. Interpretó que la propuesta permite organizar la información de los productos, conocer las existencias y revisar sus vencimientos. Para localizar un producto, buscaría su nombre en inventario y esperaría encontrar la cantidad disponible y la fecha de vencimiento juntas. Ante dos lotes con fechas distintas, daría prioridad al que vence primero, siempre que conserve condiciones adecuadas para su venta.
+
+Respecto a las alertas, señaló que las entiende como avisos para revisar pronto el producto y comprobar su cantidad, fecha y estado antes de decidir qué hacer. Identificó dudas con algunos botones y recomendó nombres más sencillos o explicaciones breves. Utilizaría primero la consulta de stock y vencimientos; para confiar en la herramienta, comprobaría que los datos coincidan con sus productos y se actualicen al registrar movimientos. Estas respuestas recogen su comprensión y expectativas tras la demostración, sin acreditar la ejecución autónoma de los flujos por parte del entrevistado.
 
 
 ---
