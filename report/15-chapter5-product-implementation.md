@@ -1023,8 +1023,8 @@ A continuación, se presenta el registro de las entrevistas de validación de Re
 | **Nombres y Apellidos** | Carmen Lara |
 | **Edad** | 28 años |
 | **Distrito** | Ate, Lima |
-| **Fecha de entrevista** | Por confirmar |
-| **Enlace al video (Microsoft Stream)** | [Ver entrevista de validación de Carmen Lara](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQAt8YEaxtPbTInpdk8eOzcAAfGE8cRfZdZZ_YXnXx_4ofg?e=JynLy5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| **Fecha de entrevista** | 13/11/2026 |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202421618_upc_edu_pe/IQAt8YEaxtPbTInpdk8eOzcAAfGE8cRfZdZZ_YXnXx_4ofg?e=JynLy5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Timing de inicio y duración** | Por confirmar |
 | **User flows evaluados** | Por confirmar con la grabación |
 | **Evidencia fotográfica** | <p><img src="../assets/EntrevistaValidacion_Carmen.png" width="600" alt="Entrevista de validación de Carmen Lara"> </p> |
