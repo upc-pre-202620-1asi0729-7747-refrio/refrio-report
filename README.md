@@ -54,7 +54,7 @@
 
   <p style="font-size: 12pt; margin: 0;"><b>Período 202620</b></p>
   <br>
-  <p style="font-size: 12pt; margin: 0;"><b>Octubre 2026</b></p>
+  <p style="font-size: 12pt; margin: 0;"><b>Noviembre 2026</b></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
