@@ -853,6 +853,8 @@ La ejecución del Sprint 3 destacó por un enfoque altamente colaborativo apoyad
 2. **Propiedad Colectiva del Código:** Al basarse en la distribución del backend en 5 sub-paquetes asignados (Adriano, Bernie, Jose, Rodrigo y César), el equipo logró que todos los miembros comprendieran tanto la lógica de emisión de alertas (`Alerting`), la gestión estricta de rotación (`Inventory`), como las rutas de la plataforma API (`Shared / Traceability`).
 3. **Despliegue y Configuración Compartida:** Las configuraciones compartidas y la parametrización de OpenAPI/Swagger (desplegado exitosamente en Render) se integraron tempranamente, lo cual eliminó bloqueos durante la interconexión con el frontend en Angular.
 
+![Team Collaboration Sprint 3 - PRs and Insights](../assets/team_collab_3.png)
+
 ## 5.3. Validation Interviews
 
 El objetivo principal de las validaciones es comprobar que los usuarios objetivo de Refrio comprendan la propuesta de valor de la plataforma y puedan interpretar eficazmente los datos de temperatura y caducidad para la toma de decisiones sobre el almacenamiento, despacho y recepción de mercadería. Las sesiones de validación se realizarán con una muestra de 3 a 5 participantes por cada segmento, a quienes se les presentará tanto el Landing Page como la aplicación web. Durante estas sesiones, se registrará explícitamente el alcance de las tareas y módulos disponibles en el producto en la fecha de la evaluación. Aquellas funcionalidades que aún no se encuentren implementadas en código serán validadas bajo la modalidad de prototipo, asegurando que no se presenten ni evalúen como interacciones operativas finalizadas.
