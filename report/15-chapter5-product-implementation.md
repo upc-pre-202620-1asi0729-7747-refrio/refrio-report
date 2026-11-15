@@ -1134,26 +1134,6 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 
 ---
 
-#### Entrevista 3: Segmento 2
-
-| Campo | Detalle |
-| :--- | :--- |
-| **Nombres y Apellidos** |  |
-| **Edad** |  |
-| **Distrito** |  |
-| **Fecha de entrevista** |  |
-| **Enlace al video (Microsoft Stream)** |  |
-| **Timing de inicio y duración** |  |
-| **User flows evaluados** |  |
-| **Evidencia fotográfica** |  |
-
-**Resumen de la entrevista:**
-
-<!-- Completar solo después de la sesión: perfil y rol; recorrido por Landing Page y Web Application; funciones probadas; opiniones; problemas de usabilidad; recomendaciones; evidencias. -->
-
-
----
-
 ### 5.3.3. Evaluaciones según heurísticas
 
 **Tareas evaluadas:** Exploración de Landing Page, acceso por rol (Supervisor y Minorista), revisión de Dashboard (Torre de Control), visualización de inventario FEFO, seguimiento de despachos, centro de alertas térmicas y navegación móvil. **Tareas excluidas:** Generación y exportación de reportes de trazabilidad en PDF (prototipo no implementado operativamente).
