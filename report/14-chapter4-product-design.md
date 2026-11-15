@@ -371,6 +371,12 @@ El Mock-up de alta fidelidad integra el isotipo de Refrio, la paleta de colores 
 
 **Link de figma:** [Ver en Figma](https://www.figma.com/design/Lwm01etaYmdrIBXZvc4gdc/Landing-Page---Refrio?node-id=0-1&t=2zBsZuwWfCntnQbN-1)
 
+
+
+### 4.3.3. Auditoría responsive y contenido verificable
+
+Se revisó el código del sitio público y se identificaron metadatos de viewport, puntos de quiebre CSS y secciones funcionales, pero también enlaces de footer sin destino, material audiovisual por comprobar y afirmaciones comerciales que requieren sustento. La auditoría y criterios de aceptación en 375/768/1024/1440 px se documentan en [Landing: responsive y contenido](correcciones/03_LANDING_RESPONSIVE_Y_CONTENIDO.md). No se atribuyen capturas ni correcciones de código todavía no aportadas.
+
 ## 4.4. Web Applications UX/UI Design
 
 El diseño de la aplicacion web de Refrio organiza las experiencias de los dos roles principales: Empresa distribuidora, encargado de gestionar los envíos, y bodeguero, responsable de la gestión de inventario y recepción de productos.
@@ -546,6 +552,12 @@ La diferenciación entre roles constituye un criterio central de revisión: la e
 
 ![Unhappy Path](../assets/UserFlows4.png)
 
+
+
+### 4.4.5. Auditoría de flujos implementados y responsive
+
+Se establece trazabilidad entre las cuatro historias de recorrido del diseño —agregar proveedor, agregar lote, registrar envío y rechazar un lote por incidencia— y las rutas de la aplicación Angular. La presencia del componente no constituye una prueba de que el flujo completo esté ejecutado. La matriz de casos felices, alternativos y cuatro anchos de viewport está en [Frontend: flujos y responsive](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md), con estado de verificación diferenciado.
+
 ## 4.5. Web Applications Prototyping
 
 El prototipo interactivo de Refrio reúne las interfaces y conexiones de navegación para validar la experiencia de usuario antes de su desarrollo. El registro de trabajo incluye modales conectados y transiciones de estado que representan con fidelidad la navegación entre vistas, la apertura de formularios contextuales y la respuesta inmediata ante acciones operativas.
@@ -715,6 +727,16 @@ El diseño interno organiza la solución en módulos de dominio cohesivos y desa
 <p align="center">
   <em>Nota.</em> Diagrama de Componentes del Backend API elaborado con Structurizr aplicando el Modelo C4 y Domain-Driven Design.
 </p>
+
+
+
+### 4.6.5. Evolución controlada de bounded contexts (7 → 8)
+
+El EventStorming original de AV1/TB1 delimitó **siete** contextos, mientras que el backend posterior se organizó en **ocho** módulos de negocio: IAM, Inventory, Operations, Alerting, Traceability, Analytics, Public Portal y Events, más `shared` (infraestructura, **no** bounded context). La evolución no se considera un cambio de nombres: se separaron las reglas de lotes y FEFO del proceso de despachos, y el tratamiento de incidentes del registro histórico de eventos. La tabla de responsabilidades, el glosario y los escenarios se explican en [Reconciliación 7→8](correcciones/07_ARQUITECTURA_7_A_8_CONTEXTOS.md). Los diagramas heredados de siete BC conservan valor histórico y deberán actualizarse para expresar el refinamiento posterior, sin presentar imágenes antiguas como arquitectura final.
+
+### 4.6.6. Verificación del diseño contra la implementación
+
+Antes de marcar los diagramas como definitivos se debe comprobar una correspondencia entre: (a) aggregate roots y entidades, (b) repositorios de dominio e infraestructura JPA, (c) comandos y consultas REST, (d) eventos e invariantes y (e) tablas, restricciones y relaciones persistidas. Las imágenes de C4, UML y base de datos existentes se mantienen como fuentes históricas, pero la revisión debe incorporar explícitamente la trazabilidad al modelo de ocho módulos y distinguir los componentes implementados de los planificados.
 
 ## 4.7. Software Object-Oriented Design
 El diseño orientado a objetos de la plataforma Refrio aplica las buenas prácticas de la programación orientada a objetos (POO) y los principios SOLID, buscando alta cohesión y bajo acoplamiento entre los componentes del sistema. Con el propósito de asegurar una arquitectura mantenible y escalable para la gestión de productos perecibles y el control de la cadena de frío, el diseño se divide en dos perspectivas:

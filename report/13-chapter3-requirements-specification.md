@@ -1,7 +1,5 @@
 # Capítulo III: Requirements Specification
 
-</div>
-
 ---
 
 ### 3.1. User Stories

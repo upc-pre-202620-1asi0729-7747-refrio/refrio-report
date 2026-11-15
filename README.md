@@ -86,7 +86,8 @@
             <td><strong>AV2</strong></td>
             <td></td>
             <td>- Alca Morán, César Alejandro<br>- Centeno León, Adriano Samir<br>- Rivas Méndez, Bernie Aarón<br>- Saavedra Flores, Rodrigo Andree<br>- Tello Lima, Jose Alejandro</td>
-            <td></td>
+            <td>5.2.3. Sprint 3.<br>5.2.3.1. Sprint Planning 3.<br>5.2.3.2. Aspect Leaders and Collaborators.<br>5.2.3.3. Sprint Backlog 3.<br>5.2.3.4. Development Evidence for Sprint Review.<br>5.2.3.5. Execution Evidence for Sprint Review.<br>5.2.3.6. Services Documentation Evidence for Sprint Review.<br>5.2.3.7. Software Deployment Evidence for Sprint Review.<br>5.2.3.8. Team Collaboration Insights during Sprint.
+            <br>5.3. Validation Interviews <br>5.3.1. Diseño de entrevistas <br> 5.3.2. Registro de entrevistas <br> 5.3.3. Evaluaciones heurísticas.<br>5.4. Video About-the-Product</td>
         </tr>
         <tr>
             <td><strong>TB2</strong></td>
@@ -112,6 +113,11 @@ Repositorio de GitHub: [Proyecto](https://github.com/upc-pre-202620-1asi0729-774
 Durante el TB1, la colaboración del equipo se extendió a tres repositorios de la organización GitHub: el repositorio del informe (refrio-report), el sitio web estático (refrio-website), la aplicación web frontend (refrio-frontend). Cada integrante participó en las correcciones del AV1, el desarrollo de la Landing Page y la implementación del frontend organizado por Bounded Contexts, siguiendo el flujo GitFlow con ramas feature/, develop y main.
 
 <img src="assets/insightsTB1.png" alt="insights" width="600">
+
+### AV2:
+Durante el AV2, la colaboración del equipo se amplió incorporando el repositorio del servidor (refrio-backend) junto con los repositorios existentes en la organización GitHub (refrio-report, refrio-website y refrio-frontend). En esta etapa, cada integrante participó en el diseño e implementación de la arquitectura backend bajo el enfoque Domain-Driven Design (DDD) en Spring Boot con persistencia en base de datos relacional, cubriendo los distintos Bounded Contexts (IAM, Inventory, Operations, Events, Analytics, Alerting, Traceability y Public Portal).
+
+<img src="assets/insightsAV2.png" alt="insights" width="600">
 
 <div style="page-break-after: always;"></div>
 
