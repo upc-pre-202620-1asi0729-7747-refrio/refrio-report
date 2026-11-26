@@ -732,7 +732,22 @@ El diseño interno organiza la solución en módulos de dominio cohesivos y desa
 
 ### 4.6.5. Evolución controlada de bounded contexts (7 → 8)
 
-El EventStorming original de AV1/TB1 delimitó **siete** contextos, mientras que el backend posterior se organizó en **ocho** módulos de negocio: IAM, Inventory, Operations, Alerting, Traceability, Analytics, Public Portal y Events, más `shared` (infraestructura, **no** bounded context). La evolución no se considera un cambio de nombres: se separaron las reglas de lotes y FEFO del proceso de despachos, y el tratamiento de incidentes del registro histórico de eventos. La tabla de responsabilidades, el glosario y los escenarios se explican en [Reconciliación 7→8](correcciones/07_ARQUITECTURA_7_A_8_CONTEXTOS.md). Los diagramas heredados de siete BC conservan valor histórico y deberán actualizarse para expresar el refinamiento posterior, sin presentar imágenes antiguas como arquitectura final.
+El EventStorming original de AV1/TB1 delimitó **siete** contextos, mientras que el backend posterior se organizó en **ocho** módulos de negocio: IAM, Inventory, Operations, Alerting, Traceability, Analytics, Public Portal y Events, más `shared` (infraestructura, **no** bounded context). La evolución no se considera un cambio de nombres: se separaron las reglas de lotes y FEFO del proceso de despachos, y el tratamiento de incidentes del registro histórico de eventos. Los diagramas heredados de siete BC conservan valor histórico y deberán actualizarse para expresar el refinamiento posterior, sin presentar imágenes antiguas como arquitectura final.
+
+#### Matriz de Unificación Arquitectónica DDD (Del Diseño Estratégico a la Implementación)
+
+*Nota de evolución tecnológica:* Durante la fase inicial de diseño (AV1) se plantearon borradores conceptuales sobre React y ASP.NET Core; para la fase de implementación (TB1 y AV2) el equipo estandarizó el stack definitivo en **Angular 17** (Frontend) y **Java 21 / Spring Boot 3** (Backend) con **PostgreSQL**, consolidando la separación de los 7 contextos estratégicos iniciales en los 8 Bounded Contexts ejecutables del monolito modular:
+
+| Contexto Estratégico (AV1 - 7 BCs) | Bounded Context Implementado (AV2 - 8 BCs) | Paquete Java (`com.refrio.platform.*`) | Agregados Principales | Tablas PostgreSQL (Flyway) |
+|---|---|---|---|---|
+| BC 01: IAM | **1. IAM** | `.iam` | `UserAggregate`, `Session` | `users`, `user_roles` |
+| BC 02: Storage & Telemetry + BC 03: Inventory | **2. Inventory** | `.inventory` | `Product`, `StockBatch`, `InventoryLoss` | `products`, `stock_batches`, `temperature_readings`, `inventory_losses` |
+| BC 03: FEFO Dispatch (Desacoplado) | **3. Operations** | `.operations` | `ShipmentAggregate`, `Allocation`, `Receipt` | `shipments`, `shipment_allocations`, `clients`, `suppliers` |
+| BC 04: Alerting & Incident Management | **4. Alerting** | `.alerting` | `IncidentAggregate`, `AlertAggregate` | `incidents`, `alerts` |
+| BC 05: Cold Chain Traceability | **5. Traceability** | `.traceability` | `ColdChainCertificateAggregate` | `cold_chain_certificates`, `temperature_evidences` |
+| BC 06: Analytics & Business Impact | **6. Analytics** | `.analytics` | `AnalyticsReportAggregate` | `analytics_reports` |
+| BC 07: Public Portal | **7. Public Portal** | `.publicportal` | `LeadAggregate` | `leads` |
+| Transversal (Auditoria de Dominio) | **8. Events** | `.events` | `OperationalEventAggregate` | `operational_events` |
 
 ### 4.6.6. Verificación del diseño contra la implementación
 
