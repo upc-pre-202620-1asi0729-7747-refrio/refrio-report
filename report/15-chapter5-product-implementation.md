@@ -724,9 +724,10 @@ Durante la planificación del Sprint 3, el equipo estructuró el trabajo técnic
 | **Attendees (to planning meeting)** | Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Tello Lima, Jose Alejandro / Saavedra Flores, Rodrigo Andree / Alca Morán, César Alejandro |
 | **Sprint 2 Review Summary** | En el Sprint 2 se entregó la Frontend Web Application funcional con alta de usuarios, login, gestión inicial de lotes y asignación de almacenamiento, apoyada en una Fake API. El despliegue de la API transaccional en Spring Boot se definió como el objetivo crítico para esta nueva iteración. |
 | **Sprint 2 Retrospective Summary** | El equipo acordó estandarizar rigurosamente los mensajes de commit bajo la norma *Conventional Commits*, asegurar la revisión cruzada obligatoria en los Pull Requests antes de cada pase a `develop`, y mantener la trazabilidad estricta entre el Product Backlog, las tareas de desarrollo y los componentes DDD. |
-| **Sprint 3 Goal** | **Our focus is on** implementar y desplegar los servicios REST documentados para la gestión de incidencias, inventario FEFO, preparación de despachos y trazabilidad térmica. **We believe it delivers** una base operativa robusta y segura para Refrio. **This will be confirmed when** las historias seleccionadas superen las pruebas de integración en Spring Boot, el consumo en Angular y se encuentren operativas en el entorno de producción. |
-| **Team Capacity & Velocity** | 31 Story Points (Capacidad ajustada a las historias priorizadas para el flujo core). |
-| **Committed Story Points** | 31 SP correspondientes a las 7 historias críticas seleccionadas de la arquitectura DDD v4. |
+| **Sprint 3 Goal** | Nuestro enfoque se centra en implementar, documentar y desplegar los servicios RESTful transaccionales en Spring Boot para la gestión de incidencias térmicas, rotación de inventario FEFO, preparación y validación de despachos, y trazabilidad térmica. Esto entregará una base operativa modular bajo Domain-Driven Design (DDD) integrada con el cliente Angular. El cumplimiento se confirmará cuando las siete historias seleccionadas superen las pruebas de integración con PostgreSQL, validen sus contratos HTTP en Swagger UI y operen en el entorno desplegado. |
+| **Historical Velocity** | 11 SP (Sprint 1) y 21 SP (Sprint 2). Nota de conciliación: en el reporte inicial de TB1 figuraron 18 tareas técnicas de apoyo frente a 11 SP base; tras la normalización del backlog, la velocidad efectiva consolidada previa al Sprint 3 es de 21 SP. |
+| **Committed Story Points** | 31 SP correspondientes a las 7 historias críticas priorizadas para el núcleo operativo (de un bloque inicial de 58 SP en el Product Backlog, quedando 27 SP replanificados para el Sprint 4). |
+| **Accepted Story Points** | 31 SP (sujetos a validación de criterios de aceptación y pruebas de integración documentadas en la sección 5.2.3.3). |
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
@@ -748,6 +749,20 @@ Todos los integrantes tienen participación técnica transversal en los ocho con
 #### 5.2.3.3. Sprint Backlog 3
 
 Se seleccionaron **7 User/Technical Stories (31 SP)** del Product Backlog por su alta correspondencia con la validación de la lógica de negocio central (flujo de despachos, control térmico e inventario por caducidad). 
+
+#### Matriz de Conciliación y Aceptación del Sprint Backlog 3
+
+| Story ID | Historia / Technical Story | SP Comp. | Tareas | Responsables | PR Vinculado | Criterio de Aceptación Verificado | Evidencia de Prueba | SP Acept. | Estado Final |
+|:---:|---|:---:|---|---|---|---|---|:---:|:---:|
+| **US27** | Confirmación y Cierre de Alerta | 3 | T01, T02, T03 | Adriano, Bernie, César | PR #2 / `develop` | Al atender una alerta activa con acción correctiva obligatoria, cambia a estado resuelto y detiene el escalamiento. | `AlertingApplicationServiceTest` + `PATCH /api/v1/alerting/incidents/{id}` (HTTP 200). | 3 | Done |
+| **US29** | Visualización de Inventario Ordenado por FEFO | 3 | T04 | César | PR #3 (`feature/inventory`) | El listado de productos perecibles retorna ordenado ascendentemente por fecha de caducidad más próxima. | `GET /api/v1/inventory/batches/fefo` (HTTP 200) + vista en Angular. | 3 | Done |
+| **TS04** | Algoritmo y Endpoint de Priorización FEFO | 5 | T05, T06, T07 | Adriano, Jose, Bernie | PR #3 (`feature/inventory`) | El motor `FefoPolicy` selecciona lotes según menor vida útil remanente y bloquea asignaciones con stock insuficiente. | `OperationsIntegrationTest` + `ShipmentRestIntegrationTest`. | 5 | Done |
+| **US30** | Generación de Lista de Picking Sugerida | 5 | T08, T09 | Rodrigo, Adriano | PR #8 (`feature/operations`) | Al crear un despacho, se reservan atómicamente las unidades de los lotes más próximos a vencer. | `POST /api/v1/operations/shipments` (HTTP 201 Created). | 5 | Done |
+| **US33** | Validación de Lote en Despacho mediante Escaneo | 5 | T10, T11 | Jose, Rodrigo | PR #8 (`feature/operations`) | El despacho valida la identidad del lote asignado por FEFO y gestiona transiciones de avance y recepción. | `POST /api/v1/operations/shipments/{id}/advance` y `/receipt` (HTTP 200). | 5 | Done |
+| **US34** | Hoja de Ruta Térmica de Lote Despachado | 5 | T12, T13 | Bernie, César | PR #2 (`feature/traceability`) | Consolida las evidencias de temperatura del lote y evalúa su elegibilidad térmica en el certificado. | `POST /api/v1/traceability/certificates/shipment/{shipmentId}` (HTTP 201). | 5 | Done |
+| **TS08** | Endpoint Público de Certificado de Trazabilidad | 5 | T14, T15 | Jose, Rodrigo | PR #2 (`feature/traceability`) | Permite consultar el certificado de cadena de frío mediante su código/token QR y retorna 404 si no existe. | `GET /api/v1/traceability/certificates/qr/{code}` (HTTP 200 / 404). | 5 | Done |
+| **Total** | **7 historias seleccionadas** | **31** | **15 Tasks** | **Todo el equipo** | **PR #2, #3, #8** | **100% de criterios funcionales core cubiertos** | **Pruebas unitarias, integración y Swagger UI** | **31** | **Done** |
+
 
 | Story ID | User Story / Technical Story | SP | Correspondencia Arquitectónica en Backend DDD |
 |:---:|---|---:|---|
@@ -784,20 +799,24 @@ A continuación se detalla el desglose de tareas de ingeniería (Engineering Tas
 
 Durante el desarrollo del backend RESTful en Spring Boot, el equipo aplicó el flujo de trabajo GitFlow de manera estricta. Se abrieron ramas `feature/*` correspondientes a cada Bounded Context, consolidando los aportes individuales mediante Pull Requests (PRs) que pasaron por proceso de Code Review antes de fusionarse a `develop`.
 
-El registro auditable de la integración de módulos en el repositorio `refrio-backend` incluye los siguientes commits de confirmación y fusiones (Merges):
+#### Matriz de Trazabilidad SCM (Tarea – Autor – Commit – PR – Revisor – Merge)
 
-| Repository | Branch | Commit Id | Commit Message | Committed by (Author) |
-|---|---|:---:|---|---|
-| `refrio-backend` | `develop` | `92a0280` | `Merge pull request #9 from upc-pre.../develop` | ARivas3008 (Bernie) |
-| `refrio-backend` | `develop` | `e785ec1` | `chore(backend): add shared configuration, bootstrap and build files` | rodrigoxd67 (Rodrigo) |
-| `refrio-backend` | `develop` | `a9c6da1` | `docs: add backend setup and architecture documentation` | rodrigoxd67 (Rodrigo) |
-| `refrio-backend` | `develop` | `723309d` | `Merge pull request #8 from upc-pre.../feature/operations` | j4ndrow (Jose) |
-| `refrio-backend` | `develop` | `af25be7` | `Merge pull request #7 from upc-pre.../feature/events` | j4ndrow (Jose) |
-| `refrio-backend` | `develop` | `5d1e66d` | `Merge pull request #6 from upc-pre.../feature/iam` | almocesar-cell (César) |
-| `refrio-backend` | `develop` | `4cf5cca` | `Merge pull request #5 from upc-pre.../feature/public-portal` | rodrigoxd67 (Rodrigo) |
-| `refrio-backend` | `develop` | `e82ea5d` | `Merge pull request #4 from upc-pre.../feature/analytics` | Adri11-dk (Adriano) |
-| `refrio-backend` | `develop` | `1225ca9` | `Merge pull request #3 from upc-pre.../feature/inventory` | Adri11-dk (Adriano) |
-| `refrio-backend` | `develop` | `c6a73e7` | `Merge pull request #2 from upc-pre.../feature/traceability` | ARivas3008 (Bernie) |
+Repositorio: `https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend`
+
+| Task ID | Contexto / Rama | Autor (GitHub) | Commit SHA | Pull Request | Revisor | Merge Destino | Fecha |
+|:---:|---|---|:---:|:---:|---|:---:|:---:|
+| T01, T02, T03 | `feature/alerting` | `ARivas3008` / `almocesar-cell` | `92a0280` | [PR #9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/9) | `Adri11-dk` | `main` | 2026-11-13 |
+| T04, T05, T06 | `feature/inventory` | `Adri11-dk` (Adriano) | `1225ca9` | [PR #3](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/3) | `almocesar-cell` | `develop` | 2026-11-13 |
+| T07, T08, T09, T10 | `feature/operations` | `j4ndrow` (Jose) | `723309d` | [PR #8](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/8) | `ARivas3008` | `develop` | 2026-11-13 |
+| T11, Config Shared | `develop` (Base & OpenAPI) | `rodrigoxd67` (Rodrigo) | `e785ec1` / `a9c6da1` | Integración base | `Adri11-dk` | `develop` | 2026-11-13 |
+| T12, T13, T14, T15 | `feature/traceability` | `ARivas3008` (Bernie) | `c6a73e7` | [PR #2](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/2) |`j4ndrow` | `develop` | 2026-11-13 |
+| Soporte IAM | `feature/iam` | `almocesar-cell` (César) | `5d1e66d` | [PR #6](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/6) |`rodrigoxd67` | `develop` | 2026-11-13 |
+| Soporte Analytics | `feature/analytics` | `Adri11-dk` (Adriano) | `e82ea5d` | [PR #4](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/4) | `j4ndrow` | `develop` | 2026-11-13 |
+| Soporte Public Portal | `feature/public-portal` | `rodrigoxd67` (Rodrigo) | `4cf5cca` | [PR #5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/5) | `almocesar-cell` | `develop` | 2026-11-13 |
+| Soporte Events | `feature/events` | `j4ndrow` (Jose) | `af25be7` | [PR #7](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/7) | `ARivas3008` | `develop` | 2026-11-13 |
+
+**Explicación de cambios transversales entre Bounded Contexts:**
+La integración de los ocho contextos delimitados se articuló mediante contratos de dominio desacoplados y un paquete transversal (`shared`) que centraliza el manejo global de excepciones (`ApiErrorHandler`), la configuración de seguridad JWT y la especificación OpenAPI (`OpenApiConfiguration`). Funcionalmente, `Operations` consulta el dominio de `Inventory` mediante `FefoPolicy` para reservar lotes atómicamente al crear un despacho; al confirmarse la entrega, `Traceability` consume las lecturas térmicas registradas en `Inventory` para emitir el `ColdChainCertificateAggregate`; y las anomalías térmicas detectadas disparan incidentes en `Alerting` que quedan auditados en el bus interno de `Events`.
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
