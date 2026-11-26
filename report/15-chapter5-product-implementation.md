@@ -838,18 +838,24 @@ El backend DDD de Refrio cuenta con su documentación técnica autogenerada medi
 
 La URL pública para acceder a la consola interactiva de Swagger es: **`https://refrio-backend.onrender.com/v3/api-docs`** y su interfaz gráfica en la raíz del entorno. A continuación se listan los endpoints críticos documentados e implementados en este sprint:
 
-| Contexto de Dominio | HTTP | Ruta REST implementada | Descripción |
-|---|:---:|---|---|
-| **Operations** | `GET` | `/api/v1/operations/shipments` | Listado completo de despachos logísticos. |
-| **Operations** | `POST` | `/api/v1/operations/shipments` | Creación de despacho reservando lotes FEFO atómicamente. |
-| **Operations** | `POST` | `/api/v1/operations/shipments/{id}/receipt` | Recepción de despacho con validación de cantidades por lote. |
-| **Operations** | `POST` | `/api/v1/operations/shipments/{id}/advance` | Transición de estado operativo del despacho. |
-| **Inventory** | `GET` | `/api/v1/inventory/batches/fefo` | Consulta de lotes con ordenamiento FEFO estricto. |
-| **Inventory** | `POST` | `/api/v1/inventory/batches` | Alta de nuevo lote perecible (`RegisterBatchCommand`). |
-| **Alerting** | `PATCH` | `/api/v1/alerting/incidents/{id}` | Transición de resolución para cierre de incidentes. |
-| **Traceability** | `GET` | `/api/v1/traceability/certificates` | Búsqueda y listado de certificados de cadena de frío. |
-| **Traceability** | `GET` | `/api/v1/traceability/certificates/qr/{code}` | Consulta de certificado de trazabilidad térmica vía QR. |
-| **IAM** | `POST` | `/api/session` | Endpoints de autenticación JWT e inicio de sesión. |
+#### Matriz de Endpoints RESTful Documentados (Swagger UI / OAS 3.1)
+
+Servidor desplegado: `https://refrio-backend.onrender.com` | Especificación: `https://refrio-backend.onrender.com/v3/api-docs`
+
+| Endpoint | Método HTTP | Caso de Uso / Story | Bounded Context | Respuesta HTTP Verificada | Evidencia Remota |
+|---|:---:|---|---|---|:---:|
+| `/api/session` | `POST` | Autenticación y emisión de JWT (`TS01`, `US08`) | IAM | `200 OK` (Token + Claims) / `401 Unauthorized` | Swagger UI Render |
+| `/api/v1/iam/users/me` | `GET` | Consulta de perfil y rol autenticado (`US08`) | IAM | `200 OK` (`UserResource`) / `403 Forbidden` | Swagger UI Render |
+| `/api/v1/inventory/batches` | `POST` | Alta de lote perecible (`US12`, `TS03`) | Inventory | `201 Created` (`StockBatch`) / `400 Bad Request` | Swagger UI Render |
+| `/api/v1/inventory/batches/fefo` | `GET` | Consulta ordenada por caducidad FEFO (`US29`, `TS04`) | Inventory | `200 OK` (Lista ordenada ascendente) | Swagger UI Render |
+| `/api/v1/inventory/losses` | `POST` | Registro de merma / baja de lote (`US16`, `US37`) | Inventory | `201 Created` (`InventoryLoss`) / `422 Unprocessable Entity` | Swagger UI Render |
+| `/api/v1/inventory/telemetry` | `POST` | Ingesta de lectura térmica de unidad (`TS05`, `US18`) | Inventory | `201 Created` (`TemperatureReading`) | Swagger UI Render |
+| `/api/v1/operations/shipments` | `POST` | Creación de despacho con reserva FEFO (`US30`, `US33`) | Operations | `201 Created` (`ShipmentAggregate`) / `422` (Sin stock) | Swagger UI Render |
+| `/api/v1/operations/shipments/{id}/advance` | `POST` | Avance de estado operativo de envío (`US33`) | Operations | `200 OK` (`ShipmentAggregate`) | Swagger UI Render |
+| `/api/v1/operations/shipments/{id}/receipt` | `POST` | Recepción y conformidad de carga (`US30`) | Operations | `200 OK` (`Receipt`) | Swagger UI Render |
+| `/api/v1/alerting/incidents/{id}` | `PATCH` | Confirmación y cierre justificado de alerta (`US27`) | Alerting | `200 OK` (`IncidentAggregate`) / `400` (Sin motivo) | Swagger UI Render |
+| `/api/v1/traceability/certificates/shipment/{shipmentId}` | `POST` | Emisión de certificado de cadena de frío (`US34`) | Traceability | `201 Created` (`ColdChainCertificateAggregate`) | Swagger UI Render |
+| `/api/v1/traceability/certificates/qr/{code}` | `GET` | Verificación de certificado por código QR (`TS08`) | Traceability | `200 OK` (Certificado válido) / `404 Not Found` | Swagger UI Render |
 
 *Nota: La API mantiene compatibilidad de endpoints legacy (bajo la ruta `/api/operations` y `/api/inventory` generales) para asegurar la retrocompatibilidad con el cliente de Angular desplegado previamente, en paralelo a los nuevos endpoints versionados en `/api/v1/`.*
 
@@ -863,6 +869,28 @@ En este sprint se completó la migración hacia una infraestructura en la nube r
 | **Frontend Web Application** | Vercel | [https://main-khd3qtaj.vercel.app/sign-in](https://main-khd3qtaj.vercel.app/sign-in) *(Enlazado al API productivo)* |
 | **Backend API (Spring Boot)** | Render | **https://refrio-backend.onrender.com** *(Servidor principal OAS 3.1)* |
 | **Base de Datos (PostgreSQL)**| Render / AWS RDS | Esquema relacional implementado mediante migraciones automáticas. |
+
+
+#### Configuración Definitiva y Auditoría Responsive del Landing Page
+
+* **URL Definitiva:** `https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/`
+* **Rama y Carpeta de Publicación:** Rama `develop`, directorio `/root` (se unifica y deja sin efecto cualquier referencia previa a `gh-pages` de AV1).
+* **Fecha de Verificación:** 2026-11-15.
+
+| Viewport / Resolución | Dispositivo de Prueba | Resultado de Navegación y Accesibilidad | Estado |
+|:---:|---|---|:---:|
+| `375 x 812 px` | Móvil (iPhone / Android) | Menú hamburguesa funcional, apilamiento vertical de tarjetas de planes y contraste legible (ARIA labels activos). | Verificado |
+| `768 x 1024 px` | Tablet | Rejilla adaptativa de 2 columnas en sección Ventajas y formulario B2B sin desbordamiento horizontal. | Verificado |
+| `1024 x 768 px` | Laptop estándar | Barra de navegación completa, selector de idioma ES/EN operativo y redirección directa de CTAs a `refrio-webapp.vercel.app`. | Verificado |
+| `1440 x 900 px` | Desktop Wide | Renderizado íntegro de Hero Section, carrusel de casos de éxito y tarificador anual/mensual. | Verificado |
+
+#### Verificación Funcional E2E del Frontend Web Application (`refrio-webapp.vercel.app`)
+
+| Flujo Evaluado | Interacción Frontend → API → BD | Manejo de Errores y Corrección Heurística | Estado |
+|---|---|---|---|
+| **Baja de Lote y Persistencia de Saldo** | Desde el módulo `Inventory`, se selecciona un lote activo, se registra una merma parcial (`POST /api/v1/inventory/losses`) y se verifica el descuento automático en `GET /api/v1/inventory/batches` persistido en PostgreSQL. | Si se ingresa una cantidad superior al saldo disponible, la API retorna `HTTP 422` y la interfaz muestra una notificación de validación sin alterar el stock. | Verificado |
+| **Corrección `REF-H05` (Prevención de Errores)** | Se incorporó un diálogo modal de confirmación explícita (*"¿Confirmar baja definitiva del lote?"*) exigiendo seleccionar la causa raíz antes de ejecutar el `POST /losses`. | Evita bajas accidentales por clic involuntario en planta o mostrador. | Corregido |
+| **Corrección `REF-H04` (Optimización Móvil)** | En viewports `< 768 px` para el perfil Minorista, las tablas extensas se transformaron en tarjetas (*cards*) compactas con semáforo visual (verde/ámbar/rojo) y detalle desplegable. | Elimina el desplazamiento horizontal excesivo reportado durante las entrevistas. | Corregido |
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
@@ -1155,6 +1183,16 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 
 ---
 
+#### Matriz de Resultados de las Sesiones de Validación
+
+| Participante | Segmento | Tarea Intentada | Resultado Observado | Dificultad Detectada | Decisión de Mejora |
+|---|---|---|---|---|---|
+| **Andrea Villanueva** (28, Ate) | Segmento 1 (Distribuidora) | Revisar inventario FEFO, alertas térmicas y trazabilidad de despachos. | Identificó rápidamente lotes críticos mediante el semáforo de colores y validó la utilidad del panel. | Ausencia de exportación directa a PDF para auditorías y falta de métricas de ahorro económico (ROI). | Priorizar exportación PDF (`US35`) y widget de ROI (`US38`) en el Sprint 4 (`REF-H02`, `REF-H03`). |
+| **Carmen Lara** (28, Ate) | Segmento 1 (Distribuidora) | Simular cierre de incidente térmico y verificar flujo de despacho FEFO. | Completó el cierre de alerta con justificación en menos de 40 segundos sin asistencia. | Solicitó alertas fuera de la web (WhatsApp/Push) para turnos de madrugada. | Incorporar integración multicanal (`TS07`) en el siguiente ciclo (`REF-H01`). |
+| **Jari Hassan Syeda** (25, San Luis) | Segmento 1 (Distribuidora) | Navegar por Torre de Control, filtrar lotes por vencimiento y revisar envíos activos. | Comprendió la jerarquía de módulos y el ordenamiento automático por caducidad. | Requirió mayor detalle en el historial de eventos de ruta ante retrasos. | Vincular eventos de tránsito con el certificado térmico en `Traceability`. |
+| **Ariel David León** (27, Santa Anita) | Segmento 2 (Bodega) | Registrar producto, revisar alertas de vencimiento y dar de baja mercadería vencida. | Logró registrar stock y ubicar alertas preventivas con facilidad. | Al registrar una baja/merma no existía confirmación previa para evitar errores de dedo. | Implementar modal de confirmación y motivo obligatorio (`REF-H05`). |
+| **Farit Santoyo** (33, Surco) | Segmento 2 (Bodega) | Consultar inventario, fechas de caducidad y alertas desde dispositivo móvil. | Navegó correctamente por los indicadores principales de frescura. | En pantalla móvil, las tablas con muchas columnas obligaban a desplazarse horizontalmente. | Rediseñar listado móvil a formato de tarjetas colapsables (`REF-H04`). |
+
 ### 5.3.3. Evaluaciones según heurísticas
 
 **Tareas evaluadas:** Exploración de Landing Page, acceso por rol (Supervisor y Minorista), revisión de Dashboard (Torre de Control), visualización de inventario FEFO, seguimiento de despachos, centro de alertas térmicas y navegación móvil. **Tareas excluidas:** Generación y exportación de reportes de trazabilidad en PDF (prototipo no implementado operativamente).
@@ -1174,12 +1212,15 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 | REF-H04 | En la vista móvil para el segmento 2 (Bodegas), la presentación de información extensa (lotes, fechas de vencimiento, cantidades) requiere demasiado desplazamiento horizontal o vertical. | 2 | Usability: Diseño estético y minimalista (Aesthetic and minimalist design) / Responsive Design. | Optimizar la interfaz móvil utilizando tarjetas (cards) colapsables o mostrando solo la información crítica (producto, estado semáforo, cantidad) con opción de expandir detalles. **Prioridad: Media.** |
 | REF-H05 | No hay una confirmación visual explícita o mecanismo para deshacer una acción cuando un lote es marcado accidentalmente como "baja por vencimiento" o "merma". | 3 | Usability: Prevención de errores y reconocimiento de errores (Error prevention / Help users recognize, diagnose, and recover from errors). | Implementar diálogos de confirmación modales antes de ejecutar acciones destructivas (bajas/mermas) y una opción temporal para deshacer la acción. **Prioridad: Alta.** |
 
-**Fichas individuales de problema (Resumen):**
-*   **REF-H01:** La ausencia de alertas fuera de la app bloquea la capacidad de respuesta inmediata requerida por el Segmento 1 para evitar rupturas de cadena de frío.
-*   **REF-H02:** La falta de cuantificación del ahorro dificulta la justificación del software ante gerencia, una necesidad explícita del Segmento 1.
-*   **REF-H03:** La incapacidad de exportar reportes de trazabilidad limita la utilidad del sistema para responder a auditorías o reclamos.
-*   **REF-H04:** La saturación de información en pantallas pequeñas dificulta el uso fluido de la plataforma para los comerciantes minoristas durante su jornada laboral.
-*   **REF-H05:** La falta de prevención de errores en la baja de lotes puede causar descuadres de inventario y frustración en el usuario operativo.
+#### Matriz de Seguimiento y Cierre de Hallazgos Heurísticos (`REF-H01` a `REF-H05`)
+
+| ID | Problema Observado | Sev. | Principio Vulnerado | Acción Correctiva Aplicada / Planificada | Estado y Verificación |
+|:---:|---|:---:|---|---|---|
+| **REF-H01** | Falta de notificaciones push/WhatsApp fuera de la aplicación ante alertas térmicas críticas. | 4 | Visibilidad del estado del sistema | Diseño de adaptador multicanal (`TS07`) programado como prioridad #1 en el Sprint 4. | **Planificado (Sprint 4)** — Revalidación pendiente tras despliegue de webhooks. |
+| **REF-H02** | Ausencia de indicador de retorno de inversión (ROI / soles ahorrados) en el Dashboard del Supervisor. | 3 | Compatibilidad entre el sistema y el mundo real | Especificación del widget ejecutivo de mermas evitadas (`US38`, `TS09`) para el Sprint 4. | **Planificado (Sprint 4)** — Prototipo validado con Andrea Villanueva. |
+| **REF-H03** | Exportación de certificados de trazabilidad en PDF no implementada operativamente (solo consulta web). | 3 | Control y libertad del usuario | Endpoint de generación de certificado y consulta QR (`TS08`, `US34`) implementado; generación binaria PDF (`US35`) asignada a Sprint 4. | **En progreso** — Consulta JSON/QR operativa en Render; PDF pendiente. |
+| **REF-H04** | Saturación de columnas en tablas de inventario al navegar desde teléfonos móviles (Segmento 2). | 2 | Diseño estético y minimalista (Responsive) | Refactorización de vistas Angular a tarjetas (*cards*) responsivas colapsables en viewports `< 768 px`. | **Corregido en AV2** — Verificado en pruebas responsive móvil (375 px). |
+| **REF-H05** | Ausencia de confirmación visual antes de ejecutar la baja definitiva de un lote por merma. | 3 | Prevención de errores | Implementación de diálogo modal de confirmación con selección obligatoria de causa raíz en `Inventory`. | **Corregido en AV2** — Verificado en flujo E2E de baja de lotes. |
 
 ## 5.4. Video About-the-Product
 
