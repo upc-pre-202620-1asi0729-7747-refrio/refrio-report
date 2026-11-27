@@ -96,10 +96,6 @@ La documentación permitió organizar y explicar el contenido del proyecto de ma
   <img src="../assets/Cap5_Logo_Markdown.png" alt="Markdown" title="Markdown" width="250">
 </p>
 
-## Corrección editorial TB1 — Versiones y evidencias
-
-> Esta revisión no altera las capturas ni los registros históricos. Las afirmaciones de funcionamiento y despliegue deben sustentarse con enlaces y capturas actuales; el texto del Sprint 2 es un registro académico del equipo, no una auditoría de infraestructura. El puntaje oficial comunicado fue 14,75/20. La matriz completa está en [Subsanación de rúbrica](correcciones/01_MATRIZ_CUMPLIMIENTO_RUBRICA.md).
-
 ### 5.1.2. Source Code Management
 
 En esta sección se establecen los medios y esquemas de organización aplicados para el seguimiento de modificaciones del proyecto Refrio. Para ello, se utiliza GitHub como plataforma de alojamiento del repositorio y como sistema de control de versiones distribuido, lo que permite gestionar cambios, mantener trazabilidad y organizar el trabajo colaborativo mediante ramas.
@@ -341,6 +337,14 @@ El despliegue continuo del sitio web de Refrio se gestiona a través de GitHub P
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
+### Criterios de cierre y trazabilidad del Product Backlog (TB2)
+
+El cierre de Refrio se documenta manteniendo los cuatro sprints originales y reconciliando los identificadores del Product Backlog. El total de las 50 historias (40 User Stories y 10 Technical Stories) es **184 Story Points** según la suma de sus estimaciones individuales: 20 + 59 + 58 + 47. La cifra de 185 SP de la introducción del Product Backlog debe corregirse en el Capítulo III. La planificación original asignaba 8, 16, 13 y 13 historias; la conciliación retrospectiva distingue esa distribución del trabajo realmente desarrollado. Los Story Points se contabilizan una sola vez por historia.
+
+Se toman como referencia las versiones finales de [Landing Page](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/tree/378e4ece344769c73b5259eee7851088dc114ba1), [Frontend Web Application](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/tree/7fae0efb35b8d050ff9102534a5656bc0bb2050d) y [RESTful API](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/tree/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d), consultadas el 27/11/2026. W = Website, F = Frontend, B = Backend. El despliegue final de los tres productos y su integración están confirmados por el equipo.
+
+Para el cierre documental TB2 se registra el estado **Done** de las 50 historias, por indicación del responsable del informe. Este estado declarado se distingue de la verificación técnica independiente de los criterios originales del Capítulo III, que se conserva en una columna separada. Los estados de planificación de cada sprint son históricos y no se sustituyen retroactivamente por los del cierre final.
+
 ### 5.2.1. Sprint 1
 
 #### 5.2.1.1. Sprint Planning 1
@@ -380,21 +384,31 @@ Para este primer Sprint enfocado en el Landing Page y la configuración inicial 
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint Backlog 1 consolida las tareas técnicas y de desarrollo para el despliegue del Landing Page público (US01-US05) y el inicio de la arquitectura base del módulo de identidad (TS01, TS02, US08):
+La reconstrucción del trabajo ejecutado se basa en las versiones, Pull Requests y commits de la iteración. Los identificadores S1-T son referencias documentales de esta conciliación; las horas son estimaciones de esfuerzo, no horas registradas. Los nombres de autores o integradores se consignan conforme a los commits/PR o las asignaciones previas del informe; la autoría de un PR no demuestra autoría exclusiva de sus archivos. Se marca **Done** únicamente el work-item delimitado que está implementado o cuyo resultado de automatización está acreditado.
 
-| **Sprint 1** | **User / Tech Story** | | **Work-Item / Task** | | | | |
-|:--------:|---|---|---|---|---|---|---|
-| | **ID** | **Título** | **ID** | **Título** | **Descripción** | **Estimación (h)** | **Asignado a** | **Estado** |
-| | US01 | Visualización de Hero Section | T01 | Diseñar UI en Figma | Diseñar el Hero section con propuesta de valor y llamadas a la acción (CTA). | 4 | Centeno, Adriano | Done |
-| | US01 | Visualización de Hero Section | T02 | Maquetar estructura base | Maquetar en HTML5 semántico y CSS3 responsive la cabecera y el hero principal. | 5 | Alca, César | Done |
-| | US02 | Visualización de Planes y Tarifas | T03 | Programar tarificador interactivo | Implementar tarjetas de planes (Básico, Pro, Empresarial) y toggle de facturación con JS. | 4 | Rivas, Bernie | Done |
-| | US03 | Formulario de Demostración B2B | T04 | Maquetar y validar formulario B2B | Construir formulario corporativo con validación de RUC (11 dígitos) y correo corporativo. | 3 | Tello, Jose | Done |
-| | US04 | Visualización de Casos de Éxito | T05 | Maquetar carrusel de testimonios | Desarrollar componente responsivo de testimonios y métricas de merma evitada. | 3 | Centeno, Adriano | Done |
-| | US05 | Acceso a Plataforma Web / Móvil | T06 | Integrar enlaces de autenticación | Conectar botones de acceso hacia el portal de login y configurar redirección. | 2 | Alca, César | Done |
-| | *Task* | Configuración de Repositorios | T07 | Setup GitHub y CI/CD | Estructurar ramas GitFlow y pipeline de despliegue automatizado en GitHub Pages. | 2 | Saavedra, Rodrigo | Done |
-| | TS01 | Endpoint Autenticación JWT | T08 | Configurar emisor de tokens JWT | Implementar generación y firma de tokens JWT junto con middleware de autorización. | 6 | Saavedra, Rodrigo | In Progress |
-| | TS02 | Endpoint Registro Unificado | T09 | Diseñar endpoints de sign-up | Implementar controladores y validaciones de esquema para registro B2B y B2C. | 5 | Rivas, Bernie | In Progress |
-| | US08 | Inicio de Sesión Multi-rol | T10 | Maquetar interfaz base de Login | Diseñar y codificar la vista inicial de login conectada al flujo de sesión por roles. | 4 | Tello, Jose | In Progress |
+| Story ID(s) | Work-Item ID | Título | Descripción del resultado | Est. (h) | Responsable / referencia | Estado | Evidencia |
+|---|---|---|---|---:|---|---|---|
+| US01 | S1-T01 | Hero y estructura de la Landing Page | Maquetación HTML, propuesta de valor y navegación principal | 5 | Rivas / Centeno / Alca | Done | [b180d31](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/b180d31) · [PR #1](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/pull/1) |
+| US01, US05 | S1-T02 | Estilos y adaptación responsive | Integrar estilos de la página y navegación de escritorio/móvil | 5 | Rivas / Centeno | Done | [f3124db](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/f3124db) · [PR #2](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/pull/2) |
+| US02 | S1-T03 | Planes y periodicidad | Implementar tarjetas y alternancia de precios mensual/anual | 4 | Equipo Website (asignación histórica: Rivas) | Done | [35e2b29](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/35e2b29) |
+| US03 | S1-T04 | Formulario comercial | Maquetar campos de contacto, correo y teléfono; sin afirmar persistencia de leads en esta etapa | 4 | Equipo Website (asignación histórica: Tello) | Done | [35e2b29](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/35e2b29) |
+| US04 | S1-T05 | Carrusel de testimonios | Implementar presentación y navegación del carrusel | 4 | Equipo Website (asignación histórica: Centeno) | Done | [35e2b29](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/35e2b29) |
+| US01–US05 | S1-T06 | Internacionalización y términos | Integrar recursos de idioma y página de términos | 5 | Rivas / Alca / Centeno | Done | [150398b](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/150398b) · [PR #3](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/pull/3) · [PR #4](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/pull/4) |
+| US05 | S1-T07 | Publicación inicial | Integración de ramas y publicación GitHub Pages | 4 | Centeno (integración PR) | Done | [PR #5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/pull/5) · [GitHub Actions #35298538151](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/actions/runs/35298538151) |
+
+**Resultado del trabajo identificado:** 7 paquetes de trabajo Done; 31 horas estimadas. No se suman Story Points por tarea ni se duplica una historia por haber tenido una fase de diseño, implementación e integración.
+
+**Trazabilidad de historias originales.** La asignación primaria se establece retrospectivamente según la etapa en que se materializó su alcance principal; el sprint del Product Backlog inicial se conserva para que no se confunda la planificación histórica con la ejecución. Las historias cuya implementación específica no pudo localizarse permanecen en la etapa de referencia original. El estado al cierre es el declarado para TB2; la columna de verificación registra por separado el alcance respaldado por las fuentes.
+
+| ID | Historia original | SP | Sprint original | Alcance observado en la release / diferencia | Estado TB2 (declarado) | Verificación de criterios originales | Fuente |
+|---|---|---:|---:|---|---|---|---|
+| US01 | Visualización de Hero Section | 2 | 1 | Maquetar hero responsive, propuesta y CTA — CTA actual «Prueba ahora» dirige al registro, no necesariamente al formulario B2B original; contrastar destino del criterio. | Done | Cobertura parcial | [W: index.html](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/index.html)<br>[W: app.js](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/assets/js/app.js) |
+| US02 | Visualización de Planes y Tarifas | 3 | 1 | Mostrar tres planes y cambiar periodicidad — Tarifas y selector mensual/anual presentes; planes Básico, Profesional y Empresarial. | Done | Correspondencia sustantiva | [W: index.html](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/index.html)<br>[W: app.js](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/assets/js/app.js) (updatePricing) |
+| US03 | Formulario de Demostración B2B | 3 | 1 | Construir formulario de contacto y contrato de leads — Formulario y API presentes; falta acreditar RUC, envío integrado y persistencia desde la Landing Page. | Done | Cobertura parcial | [W: index.html](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/index.html) (#contactForm)<br>[B: LeadsController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/publicportal/interfaces/rest/LeadsController.java)<br>[B: LeadsControllerValidationTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/publicportal/LeadsControllerValidationTest.java) |
+| US04 | Visualización de Casos de Éxito y Ahorro | 2 | 1 | Mostrar carrusel y contenido de testimonios — Carrusel presente; autenticidad de testimonios y métricas no acreditada por código. | Done | Cobertura parcial | [W: index.html](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/index.html) (#testimonials)<br>[W: app.js](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/assets/js/app.js) (updateSlider) |
+| US05 | Acceso a Plataforma Web / Móvil | 1 | 1 | Conectar CTA de acceso y registro con rutas Angular — Enlaces presentes; confirmar acceso a despliegue definitivo y redirección automática con sesión válida. | Done | Cobertura parcial | [W: index.html](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/blob/378e4ece344769c73b5259eee7851088dc114ba1/index.html)<br>[F: iam.routes.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/presentation/iam.routes.ts)<br>[F: iam.store.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/application/iam.store.ts) |
+
+**Trazabilidad primaria:** 5 historias; 11 SP del alcance original, no velocidad ejecutada.
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
@@ -504,58 +518,46 @@ La estructura de liderazgo define la responsabilidad sobre la arquitectura de co
 
 ---
 
-#### 5.2.2.3. Sprint Backlog 2 — reestructuración y trazabilidad
+#### 5.2.2.3. Sprint Backlog 2
 
-El Sprint 2 corresponde históricamente a TB1. En la primera versión de la tabla, seis Engineering Tasks figuran estimadas en menos de cuatro horas (T02, T03, T05, T07, T12 y T13). La siguiente versión **normaliza la estimación a intervalos de 4 a 8 horas**, agregando validación y revisión a actividades excesivamente pequeñas. Estas horas son **estimaciones revisadas del paquete de trabajo** y **no acreditan horas efectivamente invertidas**. La declaración histórica “Done” del informe original requiere corroboración con código, tablero y demostración.
+La reconstrucción del trabajo ejecutado se basa en las versiones, Pull Requests y commits de la iteración. Los identificadores S2-T son referencias documentales de esta conciliación; las horas son estimaciones de esfuerzo, no horas registradas. Los nombres de autores o integradores se consignan conforme a los commits/PR o las asignaciones previas del informe; la autoría de un PR no demuestra autoría exclusiva de sus archivos. Se marca **Done** únicamente el work-item delimitado que está implementado o cuyo resultado de automatización está acreditado.
 
-| Historia | Task | Engineering Task normalizada y resultado verificable | Est. (h) | Estado histórico declarado | Evidencia a vincular |
-|---|---|---|---:|---|---|
-| US06 | T01 | Construir formulario empresarial con validación de campos obligatorios y RUC de 11 dígitos; probar mensajes y diseño en móvil | 4 | Done (por verificar) | PR + captura responsive + formulario |
-| US06 | T02 | Integrar persistencia de empresa, validación de duplicidad y manejo de respuestas 201/400/409, con prueba de registro | 4 | Done (por verificar) | Endpoint, prueba HTTP y PR |
-| US07 | T03 | Implementar alta de usuario minorista y validación accesible de correo, teléfono y contraseña; probar error/éxito | 4 | Done (por verificar) | Capturas y PR |
-| US08 | T04 | Implementar inicio de sesión por rol y redirección, diferenciando token de demostración y JWT real | 4 | Done (por verificar) | Ruta sign-in, respuestas de sesión |
-| US08 | T05 | Implementar guardias y pruebas de acceso permitido, denegado y sesión expirada para los dos roles | 4 | Done (por verificar) | Guardias + pruebas por rol |
-| US12 | T06 | Implementar formulario de lote con identificador, cantidad, unidad, fechas y restricciones de vencimiento | 5 | Done (por verificar) | Vista, pruebas de validación |
-| US12 | T07 | Implementar consulta/alta de lotes, tratamiento de errores HTTP y prueba de actualización de inventario | 4 | Done (por verificar) | Servicio, endpoint y PR |
-| TS03 | T08 | Estructurar datos de lotes y comprobar orden determinista FEFO por vencimiento y disponibilidad | 4 | Done (por verificar) | JSON de prueba, resultado ordenado |
-| US14 | T09 | Implementar asignación de lote a unidad refrigerada con validaciones de capacidad y estado | 5 | Done (por verificar) | Vista, caso válido/inválido |
-| TS01 | T10 | Configurar aplicación Angular, rutas por módulos y resolución de servicios, verificando build de producción | 4 | Done (por verificar) | `angular.json`, rutas, build |
-| TS02 | T11 | Configurar API simulada, variables de entorno y acceso controlado; registrar prueba HTTP desde entorno cliente | 4 | Done (por verificar) | Configuración, endpoint y captura |
-| TS03 | T12 | Preparar build Angular, rutas SPA para GitHub Pages y comprobación responsive de navegación/errores | 4 | Done (por verificar) | Workflow + URL pública + capturas |
-| US01 | T13 | Revisar CTAs de la Landing Page, destinos válidos y navegación en 375/768/1440 px; corregir enlaces y verificar el flujo | 4 | Done (por verificar) | Sitio, tres capturas y PR |
-| | | **Total de esfuerzo REESTIMADO (no ejecutado)** | **54** | | |
+| Story ID(s) | Work-Item ID | Título | Descripción del resultado | Est. (h) | Responsable / referencia | Estado | Evidencia |
+|---|---|---|---|---:|---|---|---|
+| US06, US07, US08, US09 | S2-T01 | IAM frontend | Formularios de registro, acceso, recuperación inicial, estado de sesión y guardias | 6 | Equipo IAM; integración Centeno | Done | [PR #6](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/6) · [804312d](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/804312d) |
+| US11, US12, US14, US15, US16, US29, US37 | S2-T02 | Inventory frontend | Vistas de inventario, registro de productos y lotes, detalle y mermas; alcance de interfaz | 8 | Equipo Inventory; integración Centeno | Done | [PR #7](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/7) · [804312d](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/804312d) |
+| US17, US18, US19, US20, US21 | S2-T03 | Telemetría de prototipo | Modelos y store con lecturas de demostración y corrección; rama histórica, no sensor real | 5 | Rivas (PR) | Done | [PR #1](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/1) · [PR #2](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/2) |
+| US23, US24, US25, US27, US28, US31 | S2-T04 | Alerting frontend | Construcción de vistas y modelos de alertas e incidentes | 6 | Equipo Alerting; integración Centeno | Done | [PR #9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/9) · [804312d](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/804312d) |
+| US38, US39, TS09 | S2-T05 | Analytics frontend | Vistas y modelos de métricas operativas | 5 | Equipo Analytics; integración Centeno | Done | [PR #10](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/10) · [804312d](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/804312d) |
+| US34, US36, TS08 | S2-T06 | Traceability frontend | Modelo de certificado y store de consulta de trazabilidad inicial | 5 | Equipo Traceability; integración Centeno | Done | [PR #11](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/11) |
+| US30, US33, US05 | S2-T07 | Shared y navegación operativa | Construir layout y vistas de envíos, proveedores, historial y dashboards | 8 | Tello / equipo Shared | Done | [PR #5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/5) · [804312d](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/804312d) |
+| US03 | S2-T08 | Public Portal frontend | Modelo de lead y store inicial | 4 | Tello / Rivas | Done | [PR #4](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/4) · [6ad12eb](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/6ad12eb) |
+| TS01, TS02, TS03 | S2-T09 | Configuración inicial de servicios | Entorno, contrato simulado y despliegue SPA; no equivale a backend Spring Boot | 5 | Tello / Rivas | Done | [804312d](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/804312d) · [00b716b](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/00b716b) · [PR #17](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/17) |
+| US05 | S2-T10 | Build y despliegue frontend | Integración de ramas y workflow GitHub Pages | 4 | Rivas / Centeno (integración) | Done | [PR #13](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/13) · [PR #17](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/17) · [GitHub Actions #37583830389](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/actions/runs/37583830389) |
 
-### Relación entre estimaciones, Story Points y estados
+**Resultado del trabajo identificado:** 10 paquetes de trabajo Done; 56 horas estimadas. No se suman Story Points por tarea ni se duplica una historia por haber tenido una fase de diseño, implementación e integración.
 
-Las horas se estiman **por Engineering Task** y los Story Points se estiman **por User Story/Technical Story**. No son la misma unidad. El reporte original declara 21 Story Points comprometidos y terminados; esa cifra es histórica, pero debe vincularse con los criterios de aceptación y resultados comprobables. Este reajuste a 54 horas no implica cambio automático de Story Points ni valida retroactivamente el estado Done.
+**Trazabilidad de historias originales.** La asignación primaria se establece retrospectivamente según la etapa en que se materializó su alcance principal; el sprint del Product Backlog inicial se conserva para que no se confunda la planificación histórica con la ejecución. Las historias cuya implementación específica no pudo localizarse permanecen en la etapa de referencia original. El estado al cierre es el declarado para TB2; la columna de verificación registra por separado el alcance respaldado por las fuentes.
 
-### Flujo de tablero requerido por la rúbrica
+| ID | Historia original | SP | Sprint original | Alcance observado en la release / diferencia | Estado TB2 (declarado) | Verificación de criterios originales | Fuente |
+|---|---|---:|---:|---|---|---|---|
+| US08 | Inicio de Sesión Multi-rol | 3 | 1 | Autenticar usuarios, proteger rutas y emitir sesión JWT — Código acredita autenticación, roles y respuesta 401; conservar prueba de ejecución final. | Done | Correspondencia sustantiva | [F: iam.store.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/application/iam.store.ts)<br>[F: iam.guard.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/infrastructure/iam.guard.ts)<br>[B: IamController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/interfaces/rest/IamController.java)<br>[B: AuthenticationIntegrationTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/iam/AuthenticationIntegrationTest.java) |
+| US06 | Registro de Distribuidora Mediana | 5 | 2 | Implementar registro de usuario Supervisor y datos de sede — Registro por rol y sede; no se acredita RUC único, razón social ni correo de bienvenida. | Done | Cobertura parcial | [F: sign-up-form.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/presentation/views/sign-up-form/sign-up-form.ts)<br>[B: IamController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/interfaces/rest/IamController.java) |
+| US07 | Registro de Comerciante Minorista (Bodega) | 5 | 2 | Habilitar registro Minorista con usuario, correo y contraseña — Registro Minorista presente; no se acredita verificación mediante código SMS. | Done | Cobertura parcial | [F: sign-up-form.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/presentation/views/sign-up-form/sign-up-form.ts)<br>[B: IamApplicationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/application/IamApplicationService.java) |
+| US12 | Alta de Lote Perecible (Batch) | 3 | 2 | Registrar lote con cantidad, fechas, ubicación y actualización de stock — Alta y stock transaccional presentes; verificar rechazo de vencidos en todos los contratos (el servicio tipado no comprueba explícitamente fecha actual). | Done | Cobertura parcial | [F: inventory-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-detail/inventory-detail.ts)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java) |
+| US14 | Asignación de Lote a Unidad de Almacenamiento | 5 | 2 | Registrar ubicación de lote y sede en inventario — Campo location presente; capacidad física, mantenimiento y asociación a cámara no acreditados. | Done | Cobertura parcial | [F: operations.rules.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/operations/domain/operations.rules.ts)<br>[B: StockBatch.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/model/aggregates/StockBatch.java) |
+| US11 | Registro de Categoría de Alimento | 2 | 2 | Registrar categoría al crear/editar producto — Categoría presente; catálogo corporativo con límites configurables y validación de mínimo/máximo no acreditado. | Done | Cobertura parcial | [F: inventory-list.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-list/inventory-list.ts)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java) |
+| US17 | Vinculación de Nodo Sensor IoT | 3 | 2 | Lectura por producto no equivale a emparejamiento de sensor; no se encontró implementación específica. Existe un modelo de demostración en feature/telemetry, pero no emparejamiento operativo. | Done | No incorporado / no acreditado | [B: TemperatureReading.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/model/aggregates/TemperatureReading.java) · [PR #2](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/2) |
+| US15 | Parametrización de Ventana Crítica de Expiración | 2 | 2 | Calcular vencimiento próximo y alertas por fechas — Ventanas fijas de 3/7 días; no se acredita edición persistente por categoría ni validación de días positivos. | Done | Cobertura parcial | [F: inventory-list.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-list/inventory-list.ts)<br>[F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts) |
+| US16 | Ajuste Manual de Inventario por Daño Físico | 2 | 2 | Descontar unidades por merma justificada y validar saldo — Débito de lote, causa, persistencia y control de cantidad; escenario de saldo insuficiente comprobable con pruebas de dominio. | Done | Correspondencia sustantiva | [F: inventory-batch-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-batch-detail/inventory-batch-detail.ts)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java)<br>[B: StockBatch.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/model/aggregates/StockBatch.java) |
+| US18 | Ingesta y Monitoreo de Temperatura en Vivo | 5 | 2 | Actualizar datos periódicamente y mostrar alertas térmicas — Polling HTTP cada 5 s y lecturas manuales; no se acredita sensor MQTT ni desconexión a los diez minutos. | Done | Cobertura parcial | [F: operations-api.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/operations/application/operations-api.service.ts)<br>[F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java) |
+| US19 | Configuración de Umbrales Térmicos por Cámara | 3 | 2 | Aplicar límites de temperatura por categoría — Reglas por categoría en código; no se acredita edición por cámara ni persistencia del rango personalizado. | Done | Cobertura parcial | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts) (temperatureRange) |
+| US20 | Historial Gráfico de Telemetría | 5 | 2 | Conservar lecturas con fecha, producto y valor — Persistencia de lecturas; gráfico por cámara de 24 h con zona segura y discontinuidades no acreditado. | Done | Cobertura parcial | [B: TemperatureReading.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/model/aggregates/TemperatureReading.java)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java) |
+| US21 | Calibración de Sensores Térmicos | 3 | 2 | No se encontró modelo de sensor ni aplicación de offset ±5 °C. El prototipo histórico usa offset en lecturas mock; no persiste calibraciones reales. | Done | No incorporado / no acreditado | [B: TemperatureReading.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/model/aggregates/TemperatureReading.java) · [PR #2](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/2) |
+| US31 | Semáforo Visual de Frescura para Bodegas | 3 | 3 | Clasificar riesgo por caducidad y presentar avisos visuales — Alertas por vencimiento y prioridad presentes; comprobar semáforo exacto, navegación y recomendación de oferta. | Done | Cobertura parcial | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts)<br>[F: dashboard.html](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/dashboard/dashboard.html) |
+| US25 | Alerta Sonora en Teléfono Móvil de Bodega | 3 | 4 | Mostrar aviso de vencimiento en dashboard Minorista — Aviso visual presente; no se acredita sonido ni cola de modo no molestar. | Done | Cobertura parcial | [F: dashboard.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/dashboard/dashboard.ts)<br>[F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts) |
 
-| Estado | Regla de entrada | Regla para salir |
-|---|---|---|
-| **To Do** | Historia aceptada, tarea descompuesta y estimada en 4–8 h | Responsable inicia y registra rama |
-| **In Process** | Commit inicial asociado a ID de tarea | Prueba local y PR creado |
-| **To Review** | PR, descripción de cambio y comprobación adjunta | Aprobación o devolución documentada |
-| **Done** | Criterios de aceptación comprobados; PR integrado en develop | Evidencia de funcionamiento y versión |
-| **Blocked** *(estado auxiliar opcional)* | Dependencia o defecto que impide avanzar | Motivo, responsable y próxima acción |
-
-**Registros necesarios del tablero:** enlace real, captura de fechas/columnas, historial de movimiento de al menos una tarjeta, responsable, horas, historia vinculada, criterio Gherkin y PR. El enlace `https://trello.com/b/refrio-sprint2` que figura en el reporte no debe considerarse verificado hasta que el equipo pruebe su accesibilidad.
-
-### Aceptación técnica mínima (ejemplos Gherkin)
-
-**US12 — Registro de lote:** Given que el supervisor tiene permisos y datos de producto válidos, When registra un lote con cantidad mayor que cero y fecha de caducidad posterior a la recepción, Then el sistema confirma el alta y el lote aparece en el inventario. Given que la caducidad precede al ingreso, When envía el formulario, Then se rechaza con error comprensible sin alterar el stock.
-
-**US08 — Acceso multirrol:** Given un usuario Supervisor autenticado, When ingresa, Then navega al dashboard de supervisión. Given un usuario Minorista autenticado, When accede, Then navega al panel de su rol. Given credenciales inválidas, When intenta ingresar, Then recibe error sin crear sesión.
-
-**TS03 — FEFO:** Given lotes aptos con distinta caducidad, When se solicita un plan para una cantidad disponible, Then se selecciona primero el lote que vence antes y se respeta la cantidad disponible. Given un lote vencido o inmovilizado, When se planifica, Then no se asignan unidades de ese lote.
-
-### Enlace exigido: tareas con evidencia
-
-| Tarea | Owner | Board | Commit real | PR real | Prueba | Resultado |
-|---|---|---|---|---|---|---|
-| T01–T13 | Según la asignación histórica del Sprint 2 | [PENDIENTE: URL/captura] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | **No verificado** |
-
-La documentación anterior debe actualizarse a partir de la herramienta de desarrollo utilizada efectivamente; nunca fabricar IDs de commits, fechas o aprobaciones.
+**Trazabilidad primaria:** 15 historias; 52 SP del alcance original, no velocidad ejecutada.
 
 #### 5.2.2.4. Development Evidence for Sprint Review — rectificación de evidencias
 
@@ -572,13 +574,11 @@ La versión anterior del informe contenía supuestos identificadores de commits 
 | Rutas principales | `src/app/app.routes.ts` | Rutas declaradas | Navegación real por rol |
 | API de datos de TB1 | `db.json` y `json-server` | Demo documentada | URI vigente, HTTPs y smoke test |
 | Commits por Engineering Task | Historia y PR de GitHub | **No verificado desde tabla anterior** | Commit SHA real/URL por tarea |
-| Cobertura de User Flows | [Matriz de flujos](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md) | Mapeo estático | Video de cada recorrido y caso alternativo |
+| Cobertura de User Flows | User Flows documentados en el informe | Mapeo estático | Video de cada recorrido y caso alternativo |
 
 **Registro pendiente por tarea:** T01–T13 → rama real → SHA real → PR real → revisor → prueba → resultado. No se presentan IDs ficticios ni se afirma que todos los PR fueron aprobados sin evidencia.
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
-
-> **Nota de verificación:** las pantallas, enlaces y el video citados son evidencias históricas de TB1. Sin pruebas actuales de navegador no puede afirmarse que cada User Flow esté cubierto de extremo a extremo ni que los datos persistan en servidor real. Consultar [auditoría de frontend](correcciones/04_FRONTEND_FLUJOS_Y_RESPONSIVE.md).
 
 
 Al cierre del Sprint 2, se cuenta con la primera versión funcional de la Refrio Frontend Web Application desplegada y accesible públicamente, conectada a la Fake API en producción (AWS EC2, IP pública: `3.142.114.4`). A continuación se describen las principales vistas implementadas por módulo:
@@ -641,8 +641,6 @@ Para el Sprint 2, los Web Services corresponden a la **Fake API implementada con
 ---
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
-
-> **Estado histórico:** los pasos y direcciones IP siguientes se reportaron en TB1. La disponibilidad pública vigente y la compatibilidad HTTP/HTTPS exigen nueva comprobación fechada y capturas, según [matriz de evidencias](correcciones/08_EVIDENCIAS_Y_DESPLIEGUE.md).
 
 
 Durante el Sprint 2 se gestionaron tres despliegues: la Fake API en AWS EC2, la Frontend Web Application en GitHub Pages, y la actualización del Landing Page.
@@ -729,6 +727,8 @@ Durante la planificación del Sprint 3, el equipo estructuró el trabajo técnic
 | **Committed Story Points** | 31 SP correspondientes a las 7 historias críticas priorizadas para el núcleo operativo (de un bloque inicial de 58 SP en el Product Backlog, quedando 27 SP replanificados para el Sprint 4). |
 | **Accepted Story Points** | 31 SP (sujetos a validación de criterios de aceptación y pruebas de integración documentadas en la sección 5.2.3.3). |
 
+Los valores anteriores corresponden al registro histórico de AV2 de la rama `feature/chapter5`. La matriz acumulativa TB2 utiliza una asignación primaria retrospectiva de 23 historias (98 SP de referencia) en Sprint 3; no constituye una medición de velocidad ni reemplaza el compromiso histórico de 31 SP.
+
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
 La asignación de la tercera entrega toma como fuente la separación equilibrada del backend DDD v4 en módulos. Cada paquete reúne archivos originales correspondientes a la capa de dominio, aplicación e infraestructura, y el equipo los integra mediante la estrategia GitFlow. 
@@ -748,21 +748,68 @@ Todos los integrantes tienen participación técnica transversal en los ocho con
 
 #### 5.2.3.3. Sprint Backlog 3
 
-Se seleccionaron **7 User/Technical Stories (31 SP)** del Product Backlog por su alta correspondencia con la validación de la lógica de negocio central (flujo de despachos, control térmico e inventario por caducidad). 
+La reconstrucción del trabajo ejecutado se basa en las versiones, Pull Requests y commits de la iteración. Los identificadores S3-T son referencias documentales de esta conciliación; las horas son estimaciones de esfuerzo, no horas registradas. Los nombres de autores o integradores se consignan conforme a los commits/PR o las asignaciones previas del informe; la autoría de un PR no demuestra autoría exclusiva de sus archivos. Se marca **Done** únicamente el work-item delimitado que está implementado o cuyo resultado de automatización está acreditado.
 
-#### Matriz de Conciliación y Aceptación del Sprint Backlog 3
+| Story ID(s) | Work-Item ID | Título | Descripción del resultado | Est. (h) | Responsable / referencia | Estado | Evidencia |
+|---|---|---|---|---:|---|---|---|
+| US06, US07, US08, TS01, TS02 | S3-T01 | IAM REST | Autenticación JWT, registro de cuentas, filtrado y contratos REST | 8 | Alca (PR IAM) | Done | [PR #6](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/6) |
+| US11, US12, US14, US15, US16, US18, US19, US20, US29, US37, TS03, TS04, TS05 | S3-T02 | Inventory REST | Agregados de producto/lote, persistencia, política FEFO, lecturas manuales y registro de merma | 8 | Centeno (PR Inventory) | Done | [PR #3](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/3) |
+| US30, US33, US34, TS04 | S3-T03 | Operations REST | Creación/recepción de despachos, asignación FEFO, validación de códigos y reglas de estado | 8 | Tello (PR Operations) | Done | [PR #8](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/8) |
+| US23, US27, US28, TS06 | S3-T04 | Alerting REST | Modelo de incidente, revisión, acción correctiva y resolución | 6 | Rivas (PR Alerting) | Done | [PR #1](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/1) |
+| US23, US24, US25, US31, TS06, TS10 | S3-T05 | Monitoreo y eventos | Evaluación de reglas operativas y avisos visuales en Angular; publicación y consulta de eventos en backend | 6 | Centeno / Tello | Done | [daa961b](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/daa961b) · [PR #7](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/7) |
+| US34, US36, TS08 | S3-T06 | Traceability REST | Certificación por intervalo de envío y consulta de código autenticada | 6 | Rivas (PR Traceability) | Done | [PR #2](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/2) |
+| US38, US39, TS09 | S3-T07 | Analytics REST | Métricas de operación y merma derivadas de datos persistidos | 5 | Centeno (PR Analytics) | Done | [PR #4](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/4) |
+| US03 | S3-T08 | Public Portal REST | Agregado de lead, servicio de aplicación y controladores de contacto | 5 | Saavedra (PR Public Portal) | Done | [PR #5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/5) |
+| US18, US34 | S3-T09 | Servicio externo | Adaptador Open-Meteo y controlador de clima ambiente; no mide temperatura interna de carga | 5 | Equipo Operations; integración Tello | Done | [PR #8](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/8) |
+| TS01, TS03, TS04 | S3-T10 | Integración técnica | Configuración compartida, OpenAPI, Maven, pruebas y migración del backend; integración Angular con contrato operativo | 8 | Saavedra / Rivas / Centeno | Done | [e785ec1](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/e785ec1) · [a9c6da1](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/a9c6da1) · [PR #9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/9) · [3ae3510](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/3ae3510) |
+
+**Resultado del trabajo identificado:** 10 paquetes de trabajo Done; 65 horas estimadas. No se suman Story Points por tarea ni se duplica una historia por haber tenido una fase de diseño, implementación e integración.
+
+**Trazabilidad de historias originales.** La asignación primaria se establece retrospectivamente según la etapa en que se materializó su alcance principal; el sprint del Product Backlog inicial se conserva para que no se confunda la planificación histórica con la ejecución. Las historias cuya implementación específica no pudo localizarse permanecen en la etapa de referencia original. El estado al cierre es el declarado para TB2; la columna de verificación registra por separado el alcance respaldado por las fuentes.
+
+| ID | Historia original | SP | Sprint original | Alcance observado en la release / diferencia | Estado TB2 (declarado) | Verificación de criterios originales | Fuente |
+|---|---|---:|---:|---|---|---|---|
+| TS01 | Endpoint de Autenticación y Emisión de JWT | 3 | 1 | Implementar contrato de sesión, emisión JWT y filtros — POST /api/session implementado; no se acredita ruta /api/v1/auth/sign-in, refresh token o bloqueo por intentos del criterio original. | Done | Cobertura parcial | [B: IamController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/interfaces/rest/IamController.java)<br>[B: TokenService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/infrastructure/security/TokenService.java)<br>[B: AuthenticationIntegrationTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/iam/AuthenticationIntegrationTest.java) |
+| TS02 | Endpoint de Registro Unificado de Cuentas | 3 | 1 | Registrar cuentas con validación de credenciales y persistencia — POST /api/users implementado; RUC, SMS y ruta contractual /api/v1/auth/sign-up no acreditados. | Done | Cobertura parcial | [B: IamController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/interfaces/rest/IamController.java)<br>[B: IamApplicationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/application/IamApplicationService.java) |
+| TS03 | Endpoint de Gestión de Inventario de Lotes | 3 | 2 | Exponer GET/POST de lotes y persistencia de stock — GET/POST /api/v1/inventory/batches y 201 presentes; validar fecha anterior a producción/recepción de manera uniforme. | Done | Cobertura parcial | [B: InventoryV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/interfaces/rest/InventoryV1Controller.java)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java) |
+| TS05 | Ingesta Telemétrica vía Broker MQTT / HTTP Gateway | 5 | 2 | Persistir lecturas de temperatura vía REST — POST /api/v1/inventory/telemetry registra lectura manual; falta broker MQTT, worker asíncrono, payload MAC/humedad y 202. | Done | Cobertura parcial | [B: InventoryV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/interfaces/rest/InventoryV1Controller.java)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java) |
+| TS06 | Pipeline de Detección de Desviación Térmica (Cold Breach) | 5 | 2 | Detectar lecturas fuera de rango y generar alertas operativas — Detección operativa presente; no se acredita pipeline en segundo plano, tolerancia sostenida de 15 minutos ni evento contractual exacto. | Done | Cobertura parcial | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts)<br>[B: OperationalEventPublisher.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/events/application/OperationalEventPublisher.java) |
+| US23 | Alerta Crítica por Ruptura Térmica (Cold Breach) | 8 | 3 | Generar alerta por lectura fuera de límites y mostrarla en centro de alertas — Alerta interna presente; no se acredita tolerancia de 15/5 minutos ni envío push/correo/SMS. | Done | Cobertura parcial | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts)<br>[F: alerts-view.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/alerting/presentation/views/alerts-view/alerts-view.ts) |
+| TS07 | Servicio de Notificaciones Multicanal | 5 | 3 | No se encontraron proveedores multicanal ni política de conmutación; REF-H01 del informe reconoce la carencia. | Done | No incorporado / no acreditado | [B: AlertingApplicationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/alerting/application/AlertingApplicationService.java) |
+| US27 | Confirmación y Cierre de Alerta | 3 | 3 | Registrar revisión, acción correctiva y resolución de incidencia — Cierre y justificación implementados; detener escalamiento automático presupone mecanismo no acreditado. | Done | Cobertura parcial | [F: alert-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/alerting/presentation/views/alert-detail/alert-detail.ts)<br>[B: IncidentAggregate.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/alerting/domain/model/aggregates/IncidentAggregate.java)<br>[B: IncidentAggregateTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/alerting/IncidentAggregateTest.java) |
+| US29 | Visualización de Inventario Ordenado por FEFO | 3 | 3 | Ordenar lotes por fecha e identificar lotes elegibles — Orden FEFO disponible; filtro por categoría exacto y presentación de todos los criterios requieren comprobarse. | Done | Cobertura parcial | [F: operations.store.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/operations/application/operations.store.ts)<br>[B: InventoryV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/interfaces/rest/InventoryV1Controller.java) |
+| TS04 | Algoritmo y Endpoint de Priorización FEFO | 5 | 3 | Calcular asignación de lotes, excluir vencidos y gestionar stock insuficiente — Algoritmo FEFO y GET /api/v1/inventory/batches/fefo presentes; no se acredita ruta /fefo-picking-plan, 422 ni rendimiento <200 ms. | Done | Cobertura parcial | [F: operations.rules.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/operations/domain/operations.rules.ts)<br>[B: FefoPolicy.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/services/FefoPolicy.java)<br>[B: FefoPolicyTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/inventory/FefoPolicyTest.java) |
+| US30 | Generación de Lista de Picking Sugerida | 5 | 3 | Generar picking por vencimiento y combinar cantidades de múltiples lotes — Plan FEFO multi-lote, consulta de ubicación y rechazo de stock insuficiente implementados; conservar demostración final. | Done | Correspondencia sustantiva | [F: shipments.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/shipments/shipments.ts)<br>[F: operations.rules.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/operations/domain/operations.rules.ts)<br>[B: OperationsApplicationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/operations/application/OperationsApplicationService.java) |
+| US33 | Validación de Lote en Despacho mediante Escaneo | 5 | 3 | Comparar códigos de lote y bloquear secuencia incorrecta — Ingreso y validación de códigos, no se acredita lector de cámara, vibración y feedback verde del criterio original. | Done | Cobertura parcial | [F: shipments.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/shipments/shipments.ts)<br>[B: ShipmentPolicy.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/operations/domain/services/ShipmentPolicy.java) |
+| US13 | Escaneo Rápido de Caducidad (Móvil) | 3 | 3 | Registro manual de lote no acredita OCR/cámara ni prellenado por lectura de etiqueta. | Done | No incorporado / no acreditado | [F: inventory-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-detail/inventory-detail.ts) |
+| US34 | Hoja de Ruta Térmica de Lote Despachado | 5 | 3 | Consolidar evidencia térmica y reglas de certificación de despacho — Certificación de lecturas en intervalo del envío; duración exacta de anomalías y dictamen completo no acreditados. | Done | Cobertura parcial | [B: CertificationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/traceability/application/CertificationService.java)<br>[B: ShipmentTemperaturePolicy.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/traceability/domain/services/ShipmentTemperaturePolicy.java) |
+| TS08 | Endpoint Público de Certificado de Trazabilidad | 5 | 3 | Consultar certificados por QR y código — GET /api/v1/traceability/certificates/qr/{code} requiere JWT; endpoint público sin autenticación del requisito no acreditado. | Done | Cobertura parcial | [B: TraceabilityV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/traceability/interfaces/rest/TraceabilityV1Controller.java)<br>[B: SecurityConfiguration.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/infrastructure/security/SecurityConfiguration.java) |
+| US36 | Consulta Pública de Cadena de Frío mediante QR | 3 | 3 | Habilitar resolución de código de certificado — Consulta de API presente, sin prueba de página pública, escaneo móvil o acceso anónimo. | Done | Cobertura parcial | [B: TraceabilityV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/traceability/interfaces/rest/TraceabilityV1Controller.java)<br>[F: traceability.store.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/traceability/application/traceability.store.ts) |
+| US35 | Exportación de Certificado de Frío en PDF | 5 | 3 | Certificación estructurada no equivale a PDF firmado; el informe 5.3.3 registra exportación no operativa. | Done | No incorporado / no acreditado | [B: CertificationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/traceability/application/CertificationService.java) |
+| US24 | Notificación de Lotes Próximos a Vencer | 3 | 4 | Generar avisos internos de lotes críticos por fecha — Alertas visuales presentes; correo/móvil mediante rutina de medianoche no acreditado. | Done | Cobertura parcial | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts)<br>[F: dashboard.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/dashboard/dashboard.ts) |
+| US28 | Escalamiento Automático de Incidentes Térmicos | 5 | 4 | Gestionar estados de incidentes y acciones correctivas — Gestión de incidentes presente; temporizador y escalamiento automático a gerencia no acreditados. | Done | Cobertura parcial | [B: AlertingApplicationService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/alerting/application/AlertingApplicationService.java)<br>[F: alert-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/alerting/presentation/views/alert-detail/alert-detail.ts) |
+| US37 | Registro Formal de Merma Justificada | 3 | 4 | Retirar stock con causa, persistir pérdida y publicar evento — Merma por cantidad/causa y evento presentes; costo financiero mensual del criterio no acreditado. | Done | Cobertura parcial | [F: inventory-batch-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-batch-detail/inventory-batch-detail.ts)<br>[B: InventoryCommandService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/application/InventoryCommandService.java)<br>[B: InventoryLoss.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/inventory/domain/model/aggregates/InventoryLoss.java) |
+| US38 | Dashboard Ejecutivo de Mermas Evitadas | 5 | 4 | Mostrar indicadores operativos por periodo y unidades mermadas — Métricas de unidades y operaciones; ROI en soles, comparación con histórico y filtro multisede no acreditados. | Done | Cobertura parcial | [F: dashboard.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/dashboard/dashboard.ts)<br>[F: analytics-view.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/analytics/presentation/views/analytics-view/analytics-view.ts)<br>[B: AnalyticsReportService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/analytics/application/AnalyticsReportService.java) |
+| US39 | Resumen Simplificado de Ganancia Ahorrada para Bodegas | 3 | 4 | Mostrar métricas operativas del perfil Minorista — Dashboard diferenciado con mermas y alertas; ahorro monetario mensual y felicitación específica no acreditados. | Done | Cobertura parcial | [F: dashboard.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/dashboard/dashboard.ts)<br>[F: bodeguero-dashboard.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/bodeguero-dashboard/bodeguero-dashboard.ts) |
+| TS09 | Endpoints para Dashboards Analíticos y KPIs de Merma | 5 | 4 | Exponer métricas operativas derivadas de persistencia — GET /api/v1/analytics/reports/operational implementado; no se acreditan endpoints shrinkage-summary/fefo-efficiency, caché, soles y filtros mes/sede. | Done | Cobertura parcial | [B: AnalyticsV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/analytics/interfaces/rest/AnalyticsV1Controller.java)<br>[B: OperationalMetrics.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/analytics/domain/model/OperationalMetrics.java)<br>[B: AnalyticsApplicationServiceTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/analytics/AnalyticsApplicationServiceTest.java) |
+
+**Trazabilidad primaria:** 23 historias; 98 SP del alcance original, no velocidad ejecutada.
+
+
+#### Matriz de Conciliación y Aceptación del Sprint Backlog 3 (registro histórico AV2)
+
+Se conserva el registro original de aceptación de la rama `feature/chapter5`, correspondiente a las siete historias comprometidas (31 SP). Sus resultados son los declarados en AV2 y no se suman nuevamente a la conciliación TB2. Las referencias de tarea T01–T15 pertenecen al registro histórico; S3-T01–S3-T10 identifican los paquetes retrospectivos de cierre.
 
 | Story ID | Historia / Technical Story | SP Comp. | Tareas | Responsables | PR Vinculado | Criterio de Aceptación Verificado | Evidencia de Prueba | SP Acept. | Estado Final |
 |:---:|---|:---:|---|---|---|---|---|:---:|:---:|
-| **US27** | Confirmación y Cierre de Alerta | 3 | T01, T02, T03 | Adriano, Bernie, César | PR #2 / `develop` | Al atender una alerta activa con acción correctiva obligatoria, cambia a estado resuelto y detiene el escalamiento. | `AlertingApplicationServiceTest` + `PATCH /api/v1/alerting/incidents/{id}` (HTTP 200). | 3 | Done |
-| **US29** | Visualización de Inventario Ordenado por FEFO | 3 | T04 | César | PR #3 (`feature/inventory`) | El listado de productos perecibles retorna ordenado ascendentemente por fecha de caducidad más próxima. | `GET /api/v1/inventory/batches/fefo` (HTTP 200) + vista en Angular. | 3 | Done |
+| **US27** | Confirmación y Cierre de Alerta | 3 | T01, T02, T03 | Adriano, Bernie, César | PR #1 (`feature/alerting`) | Al atender una alerta activa con acción correctiva obligatoria, cambia a estado resuelto; el escalamiento automático no se acredita en la revisión TB2. | `AlertingApplicationServiceTest` + `PATCH /api/v1/alerting/incidents/{id}` (HTTP 200). | 3 | Done |
+| **US29** | Visualización de Inventario Ordenado por FEFO | 3 | T04 | César | PR #3 (`feature/inventory`) | El listado de productos perecederos retorna ordenado ascendentemente por fecha de caducidad más próxima. | `GET /api/v1/inventory/batches/fefo` (HTTP 200) + vista en Angular. | 3 | Done |
 | **TS04** | Algoritmo y Endpoint de Priorización FEFO | 5 | T05, T06, T07 | Adriano, Jose, Bernie | PR #3 (`feature/inventory`) | El motor `FefoPolicy` selecciona lotes según menor vida útil remanente y bloquea asignaciones con stock insuficiente. | `OperationsIntegrationTest` + `ShipmentRestIntegrationTest`. | 5 | Done |
 | **US30** | Generación de Lista de Picking Sugerida | 5 | T08, T09 | Rodrigo, Adriano | PR #8 (`feature/operations`) | Al crear un despacho, se reservan atómicamente las unidades de los lotes más próximos a vencer. | `POST /api/v1/operations/shipments` (HTTP 201 Created). | 5 | Done |
 | **US33** | Validación de Lote en Despacho mediante Escaneo | 5 | T10, T11 | Jose, Rodrigo | PR #8 (`feature/operations`) | El despacho valida la identidad del lote asignado por FEFO y gestiona transiciones de avance y recepción. | `POST /api/v1/operations/shipments/{id}/advance` y `/receipt` (HTTP 200). | 5 | Done |
 | **US34** | Hoja de Ruta Térmica de Lote Despachado | 5 | T12, T13 | Bernie, César | PR #2 (`feature/traceability`) | Consolida las evidencias de temperatura del lote y evalúa su elegibilidad térmica en el certificado. | `POST /api/v1/traceability/certificates/shipment/{shipmentId}` (HTTP 201). | 5 | Done |
-| **TS08** | Endpoint Público de Certificado de Trazabilidad | 5 | T14, T15 | Jose, Rodrigo | PR #2 (`feature/traceability`) | Permite consultar el certificado de cadena de frío mediante su código/token QR y retorna 404 si no existe. | `GET /api/v1/traceability/certificates/qr/{code}` (HTTP 200 / 404). | 5 | Done |
-| **Total** | **7 historias seleccionadas** | **31** | **15 Tasks** | **Todo el equipo** | **PR #2, #3, #8** | **100% de criterios funcionales core cubiertos** | **Pruebas unitarias, integración y Swagger UI** | **31** | **Done** |
-
+| **TS08** | Endpoint Público de Certificado de Trazabilidad | 5 | T14, T15 | Jose, Rodrigo | PR #2 (`feature/traceability`) | Permite consultar el certificado de cadena de frío mediante su código/token QR y retorna 404 si no existe; la ruta localizada exige autenticación. | `GET /api/v1/traceability/certificates/qr/{code}` (HTTP 200 / 404). | 5 | Done |
+| **Total histórico declarado** | **7 historias seleccionadas** | **31** | **15 Tasks** | **Todo el equipo** | **PR #1, #2, #3, #8** | **Núcleo operativo** | **Pruebas unitarias, integración y Swagger UI** | **31** | **Done** |
 
 | Story ID | User Story / Technical Story | SP | Correspondencia Arquitectónica en Backend DDD |
 |:---:|---|---:|---|
@@ -803,6 +850,8 @@ Durante el desarrollo del backend RESTful en Spring Boot, el equipo aplicó el f
 
 Repositorio: `https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend`
 
+Registro histórico de `feature/chapter5`. Los revisores son los consignados por el equipo en AV2; no se han verificado individualmente sus aprobaciones.
+
 | Task ID | Contexto / Rama | Autor (GitHub) | Commit SHA | Pull Request | Revisor | Merge Destino | Fecha |
 |:---:|---|---|:---:|:---:|---|:---:|:---:|
 | T01, T02, T03 | `feature/alerting` | `ARivas3008` / `almocesar-cell` | `92a0280` | [PR #9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/9) | `Adri11-dk` | `main` | 2026-11-13 |
@@ -842,7 +891,9 @@ La URL pública para acceder a la consola interactiva de Swagger es: **`https://
 
 Servidor desplegado: `https://refrio-backend.onrender.com` | Especificación: `https://refrio-backend.onrender.com/v3/api-docs`
 
-| Endpoint | Método HTTP | Caso de Uso / Story | Bounded Context | Respuesta HTTP Verificada | Evidencia Remota |
+La siguiente matriz recoge los resultados registrados en AV2 por el equipo; se conserva como evidencia histórica, sin afirmar una nueva ejecución remota de cada solicitud.
+
+| Endpoint | Método HTTP | Caso de Uso / Story | Bounded Context | Respuesta HTTP registrada | Evidencia Remota |
 |---|:---:|---|---|---|:---:|
 | `/api/session` | `POST` | Autenticación y emisión de JWT (`TS01`, `US08`) | IAM | `200 OK` (Token + Claims) / `401 Unauthorized` | Swagger UI Render |
 | `/api/v1/iam/users/me` | `GET` | Consulta de perfil y rol autenticado (`US08`) | IAM | `200 OK` (`UserResource`) / `403 Forbidden` | Swagger UI Render |
@@ -871,10 +922,10 @@ En este sprint se completó la migración hacia una infraestructura en la nube r
 | **Base de Datos (PostgreSQL)**| Render / AWS RDS | Esquema relacional implementado mediante migraciones automáticas. |
 
 
-#### Configuración Definitiva y Auditoría Responsive del Landing Page
+#### Configuración Definitiva y Auditoría Responsive del Landing Page (registro AV2)
 
 * **URL Definitiva:** `https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/`
-* **Rama y Carpeta de Publicación:** Rama `develop`, directorio `/root` (se unifica y deja sin efecto cualquier referencia previa a `gh-pages` de AV1).
+* **Rama y Carpeta de Publicación:** Rama `develop`, directorio `/root` (se unifica y deja sin efecto cualquier referencia previa a `gh-pages` de AV1). Configuración histórica consignada en AV2; para TB2 véase la evidencia de publicación de `main` en 5.2.4.7.
 * **Fecha de Verificación:** 2026-11-15.
 
 | Viewport / Resolución | Dispositivo de Prueba | Resultado de Navegación y Accesibilidad | Estado |
@@ -885,6 +936,8 @@ En este sprint se completó la migración hacia una infraestructura en la nube r
 | `1440 x 900 px` | Desktop Wide | Renderizado íntegro de Hero Section, carrusel de casos de éxito y tarificador anual/mensual. | Verificado |
 
 #### Verificación Funcional E2E del Frontend Web Application (`refrio-webapp.vercel.app`)
+
+Se mantienen las comprobaciones consignadas en la rama del capítulo para AV2. Los estados de la tabla son históricos, no una nueva prueba de producción.
 
 | Flujo Evaluado | Interacción Frontend → API → BD | Manejo de Errores y Corrección Heurística | Estado |
 |---|---|---|---|
@@ -901,6 +954,199 @@ La ejecución del Sprint 3 destacó por un enfoque altamente colaborativo apoyad
 3. **Despliegue y Configuración Compartida:** Las configuraciones compartidas y la parametrización de OpenAPI/Swagger (desplegado exitosamente en Render) se integraron tempranamente, lo cual eliminó bloqueos durante la interconexión con el frontend en Angular.
 
 ![Team Collaboration Sprint 3 - PRs and Insights](../assets/team_collab_3.png)
+
+### 5.2.4. Sprint 4
+
+El Sprint 4 corresponde a TB2 (Release Review) y se centra en consolidar la versión de entrega de Refrio: integración de la Landing Page, la aplicación web Angular y la API REST Spring Boot con persistencia, revisión de los flujos por segmento, mejoras de IAM, perfiles, destinatarios de despachos, contacto comercial, trazabilidad y analítica. La iteración conserva las 13 historias asignadas al Sprint 4 en el Product Backlog original (47 SP), y registra los ajustes de historias anteriores como trabajo de continuidad sin duplicar su estimación. Las diferencias entre las historias originales y el alcance efectivamente implementado quedan explícitas para evitar confundir el cierre del producto con el cierre de todos sus criterios.
+
+#### 5.2.4.1. Sprint Planning 4
+
+La planificación documental de cierre se reconstruye con el alcance del Product Backlog, la revisión AV2 y los cambios de la versión final. No se atribuyen datos de una reunión que no estén acreditados por acta o tablero.
+
+| Campo | Detalle de Planificación |
+|---|---|
+| **Sprint #** | Sprint 4 |
+| **Date / Time / Location** | Fecha de corte de evidencia: 2026-11-27. Fecha, hora y lugar de la reunión: completar con acta del equipo. |
+| **Prepared By** | Equipo MadaGroup; confirmar autor del acta. |
+| **Attendees (to planning meeting)** | Alca Morán, César Alejandro / Centeno León, Adriano Samir / Rivas Méndez, Bernie Aarón / Saavedra Flores, Rodrigo Andree / Tello Lima, Jose Alejandro (integrantes del equipo; confirmar asistencia efectiva). |
+| **Sprint 3 Review Summary** | El Sprint 3 consolidó servicios de IAM, Inventory, Operations, Alerting, Traceability, Analytics, Events y Public Portal. Se registraron siete historias críticas comprometidas (31 SP) y se estableció el flujo de autenticación, inventario FEFO, despacho, incidencias y certificación. La validación identificó necesidades de notificaciones, indicadores económicos, exportación y mejoras de interacción. |
+| **Sprint 3 Retrospective Summary** | La revisión documental propone preservar la separación DDD y el contrato REST, comprobar la integración con Angular, vincular commits con tareas y distinguir el alcance operativo de las funciones aún no acreditadas. Los acuerdos efectivos del equipo se incorporan con su acta real. |
+| **Sprint 4 Goal** | **Our focus is on** consolidar el producto integrado y desplegado, cerrar los flujos críticos de inventario, mermas, despachos, alertas, identidad, trazabilidad y analítica, y comprobar la correspondencia entre código y criterios de aceptación. **We believe it delivers** una solución operativa para distribuidoras y bodegas. **This will be confirmed when** las funcionalidades implementadas se demuestren en el despliegue final y el equipo documente el resultado de los escenarios de aceptación. |
+| **Sprint 4 Velocity / Team Capacity** | 47 SP asignados originalmente a la iteración. Capacidad y velocity reales: registrar conforme a la planificación y al cierre efectivo del tablero. No se igualan SP asignados con SP completados. |
+| **Committed Story Points** | 47 SP de referencia (13 historias asignadas por el Product Backlog original); confirmar compromiso efectivo con tablero/acta. En la conciliación acumulativa TB2 de 5.2.4.3 se asignan primariamente al Sprint 4 siete historias (23 SP de referencia); esa distribución retrospectiva no sustituye la planificación original ni los 27 SP que la revisión histórica de AV2 propuso replanificar. |
+| **Release Review** | Landing Page y frontend publicados en GitHub Pages con ejecuciones exitosas; backend con quality gates, PostgreSQL y smoke HTTP exitosos. La integración y el despliegue productivo final están confirmados por el equipo. Los cambios de cierre se relacionan con las historias originales sin atribuir funciones que no constan en los repositorios. |
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+La siguiente matriz identifica responsables de referencia según los archivos y commits efectivamente localizados el 26 y 27 de noviembre. L indica contribución principal constatada en ese aspecto; C indica colaboración de referencia para la integración, no una aprobación de Pull Request. La matriz no atribuye horas realizadas ni acuerdos no documentados.
+
+| Team Member | GitHub Username | IAM & Profile | Operations | Public Portal | Testing | Release & UI |
+|---|---|:---:|:---:|:---:|:---:|:---:|
+| Alca Morán, César Alejandro | `almocesar-cell` | C | L | C | L | C |
+| Centeno León, Adriano Samir | `Adri11-dk` | L | C | C | C | L |
+| Rivas Méndez, Bernie Aarón | `ARivas3008` | L | C | C | L | C |
+| Saavedra Flores, Rodrigo Andree | `rodrigoxd67` | C | C | C | L | C |
+| Tello Lima, Jose Alejandro | `j4ndrow` | C | C | L | C | C |
+
+**Base de la asignación:** César: `RecipientAccountsController` y su prueba; Adriano: recuperación de contraseña, migración Flyway, consulta de certificados por envío y release frontend/website; Bernie: `ProfileController`, `ProfileUpdateService` y prueba; Rodrigo: prueba de validación de leads; José: `SubmitLeadCommand`, `LeadsController` y `PublicPortalV1Controller`. La confirmación de las tareas por persona para el tablero de Sprint 4 debe realizarse con las tarjetas y el historial efectivo.
+
+#### 5.2.4.3. Sprint Backlog 4
+
+La reconstrucción del trabajo ejecutado se basa en las versiones, Pull Requests y commits de la iteración. Los identificadores S4-T son referencias documentales de esta conciliación; las horas son estimaciones de esfuerzo, no horas registradas. Los nombres de autores o integradores se consignan conforme a los commits/PR o las asignaciones previas del informe; la autoría de un PR no demuestra autoría exclusiva de sus archivos. Se marca **Done** únicamente el work-item delimitado que está implementado o cuyo resultado de automatización está acreditado.
+
+| Story ID(s) | Work-Item ID | Título | Descripción del resultado | Est. (h) | Responsable / referencia | Estado | Evidencia |
+|---|---|---|---|---:|---|---|---|
+| US10 | S4-T01 | Perfil y sede | Implementar servicio de actualización, controlador PATCH y prueba de perfil | 6 | Rivas | Done | [abfb6f3](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/abfb6f3) · [7d9c81c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7d9c81c) · [439c64a](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/439c64a) |
+| US09 | S4-T02 | Recuperación de contraseña | Incorporar servicio, token temporal persistido, controlador, migración V3 y formularios Angular; cierre de código, no entrega SMTP probada | 8 | Centeno | Done | [5b73a0c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/5b73a0c) · [7fae0ef](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/7fae0ef) |
+| US30, US33 | S4-T03 | Cuentas receptoras | Añadir controlador de cuentas receptoras y prueba de Operations | 5 | Alca | Done | [53b965b](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/53b965b) · [43e96b0](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/43e96b0) |
+| US03 | S4-T04 | Contratos del portal público | Actualizar SubmitLeadCommand, LeadsController y PublicPortalV1Controller | 5 | Tello | Done | [7486634](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7486634) · [bc39de5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/bc39de5) · [7023de9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7023de9) |
+| US03 | S4-T05 | Pruebas del portal público | Agregar validación de solicitudes comerciales | 4 | Saavedra | Done | [aacb3bf](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/aacb3bf) |
+| US34, US36, TS08 | S4-T06 | Certificado por envío | Incorporar lookup de certificado por envío y prueba del controlador, sin atribuir PDF ni firma digital | 5 | Centeno | Done | [5b73a0c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/5b73a0c) |
+| US01–US05 | S4-T07 | Landing Page final | Actualizar contenido, estilos, idiomas, videos, imágenes y navegación | 6 | Centeno | Done | [e4f9e99](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/e4f9e99) · [378e4ec](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/378e4ec) |
+| US05, US08, US09, US10, US03, US34 | S4-T08 | Angular final | Actualizar rutas, formularios, perfil, proveedores, stores y archivos de configuración | 6 | Centeno | Done | [7fae0ef](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/7fae0ef) |
+| Transversal | S4-T09 | Quality gates y publicación | Acreditar build/deploy Pages en sitio y Angular; JUnit/H2, estructura DDD, Docker, PostgreSQL y smoke HTTP en backend | 4 | Equipo; ejecución automatizada | Done | [GitHub Actions #45915193197](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/actions/runs/45915193197) · [GitHub Actions #45877597775](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/actions/runs/45877597775) · [GitHub Actions #45898129506](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/actions/runs/45898129506) |
+
+**Resultado del trabajo identificado:** 9 paquetes de trabajo Done; 49 horas estimadas. No se suman Story Points por tarea ni se duplica una historia por haber tenido una fase de diseño, implementación e integración.
+
+**Trazabilidad de historias originales.** La asignación primaria se establece retrospectivamente según la etapa en que se materializó su alcance principal; el sprint del Product Backlog inicial se conserva para que no se confunda la planificación histórica con la ejecución. Las historias cuya implementación específica no pudo localizarse permanecen en la etapa de referencia original. El estado al cierre es el declarado para TB2; la columna de verificación registra por separado el alcance respaldado por las fuentes.
+
+| ID | Historia original | SP | Sprint original | Alcance observado en la release / diferencia | Estado TB2 (declarado) | Verificación de criterios originales | Fuente |
+|---|---|---:|---:|---|---|---|---|
+| US09 | Recuperación de Contraseña | 3 | 2 | Crear formulario, token temporal y endpoints de recuperación — Token de 15 min y respuesta genérica implementados; configuración de correo real y autorización pública de /api/password-reset/** requieren comprobarse (SecurityConfiguration no los incluye). | Done | Cobertura parcial | [F: forgot-password-form.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/iam/presentation/views/forgot-password-form/forgot-password-form.ts)<br>[B: PasswordResetService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/application/PasswordResetService.java)<br>[B: PasswordResetController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/interfaces/rest/PasswordResetController.java) |
+| TS10 | Microservicio / Rutina Cron de Auditoría Diaria de Caducidades | 3 | 4 | Cálculo en cliente no equivale a cron backend; no se encontró tarea @Scheduled de auditoría. | Done | No incorporado / no acreditado | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts) |
+| US32 | Registro de Oferta de Remate Rápido | 3 | 4 | No se encontró comando para actualizar precio/estado de remate ni contrato REST específico. | Done | No incorporado / no acreditado | [F: inventory-batch-detail.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/inventory/presentation/views/inventory-batch-detail/inventory-batch-detail.ts) |
+| US22 | Detección de Desconexión Nocturna en Bodegas | 5 | 4 | No se acredita detección nocturna por sensor ni notificación sonora/restablecimiento. | Done | No incorporado / no acreditado | [F: operational-monitoring.service.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/events/application/operational-monitoring.service.ts) |
+| US26 | Configuración de Canales de Notificación | 3 | 4 | Settings solo edita perfil/sede; canales WhatsApp/Push/SMS no acreditados. | Done | No incorporado / no acreditado | [F: settings.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/settings/settings.ts) |
+| US10 | Configuración de Perfil y Almacén | 3 | 4 | Actualizar perfil personal y sede vía API autenticada — PATCH /api/v1/iam/users/me implementado; gestión multisede, cámaras y duplicados de sede no acreditados. | Done | Cobertura parcial | [F: settings.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/shared/presentation/views/settings/settings.ts)<br>[B: ProfileController.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/interfaces/rest/ProfileController.java)<br>[B: ProfileUpdateService.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/iam/application/ProfileUpdateService.java)<br>[B: ProfileUpdateServiceTest.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/iam/ProfileUpdateServiceTest.java) |
+| US40 | Exportación de Data Histórica en Excel/CSV | 3 | 4 | No se encontró exportación CSV/Excel ni cola asíncrona con enlace por correo. | Done | No incorporado / no acreditado | [F: analytics-view.ts](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/blob/7fae0efb35b8d050ff9102534a5656bc0bb2050d/src/app/analytics/presentation/views/analytics-view/analytics-view.ts)<br>[B: AnalyticsV1Controller.java](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/java/com/refrio/platform/analytics/interfaces/rest/AnalyticsV1Controller.java) |
+
+**Trazabilidad primaria:** 7 historias; 23 SP del alcance original, no velocidad ejecutada.
+
+**Resumen acumulativo de la conciliación**
+
+| Sprint | Historias (asignación primaria) | SP de referencia | Work-items ejecutados identificados | Estado de work-items | Historias Done (declaración TB2) |
+|---|---:|---:|---:|---|---:|
+| 1 | 5 | 11 | 7 | Done | 5/5 |
+| 2 | 15 | 52 | 10 | Done | 15/15 |
+| 3 | 23 | 98 | 10 | Done | 23/23 |
+| 4 | 7 | 23 | 9 | Done | 7/7 |
+| **Total** | **50** | **184** | **36** | **Done** | **50/50** |
+
+El cierre documental registra 50/50 historias Done y 184/184 SP de referencia, sin omisión ni doble contabilización, según la instrucción del responsable del informe. La comprobación independiente del alcance original identificó 4 historias con correspondencia sustantiva, 36 con cobertura parcial y 10 sin implementación específica acreditada; por ello, el estado declarado no certifica el cumplimiento íntegro de los criterios de aceptación ni sustituye la conciliación formal del Capítulo III. No es necesario repetir los despliegues finalizados.
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+Durante el cierre se observan cambios en los tres repositorios. La siguiente tabla registra los commits reales de la rama principal, con su mensaje original y el aporte que puede vincularse a los archivos modificados. Los mensajes originales se mantienen aunque no todos siguen Conventional Commits; no se presume una revisión o merge inexistente.
+
+| Repository | Branch / historial consultado | Commit Id | Fecha (UTC) | Commit Message (original) | Committed by | Evidencia de desarrollo |
+|---|---|---|---|---|---|---|
+| `refrio-website` | `main` | [378e4ec](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/378e4ec) | 2026-11-27 | `Add images` | Adri11-dk | Actualización de recursos visuales. |
+| `refrio-website` | `main` | [e4f9e99](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/e4f9e99) | 2026-11-26 | `Final Changes` | Adri11-dk | index.html, styles.css, app.js e i18n. |
+| `refrio-frontend` | `main` | [7fae0ef](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/7fae0ef) | 2026-11-26 | `Final changes` | Adri11-dk | Rutas, perfil, recuperación, servicios y configuración de API. |
+| `refrio-backend` | `main` | [5b73a0c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/5b73a0c) | 2026-11-26 | `Final version` | Adri11-dk | Recuperación, Flyway V3 y consulta de certificado por envío. |
+| `refrio-backend` | `main` | [e0e3c9e](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/e0e3c9e) | 2026-11-26 | `fix: delete txt` | Adri11-dk | Limpieza final de repositorio. |
+| `refrio-backend` | `main` | [7023de9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7023de9) | 2026-11-26 | `nuevo` | j4ndrow | LeadsController. |
+| `refrio-backend` | `main` | [bc39de5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/bc39de5) | 2026-11-26 | `nuevo` | j4ndrow | PublicPortalV1Controller. |
+| `refrio-backend` | `main` | [7486634](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7486634) | 2026-11-26 | `nuevo` | j4ndrow | SubmitLeadCommand. |
+| `refrio-backend` | `main` | [aacb3bf](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/aacb3bf) | 2026-11-26 | `test: add validation coverage for lead requests` | rodrigoxd67 | LeadsControllerValidationTest. |
+| `refrio-backend` | `main` | [43e96b0](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/43e96b0) | 2026-11-26 | `Add Operations interfaces` | almocesar-cell | RecipientAccountsControllerTest. |
+| `refrio-backend` | `main` | [53b965b](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/53b965b) | 2026-11-26 | `Add Operations interfaces` | almocesar-cell | RecipientAccountsController. |
+| `refrio-backend` | `main` | [439c64a](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/439c64a) | 2026-11-26 | `Add files via upload` | ARivas3008 | ProfileUpdateServiceTest. |
+| `refrio-backend` | `main` | [7d9c81c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7d9c81c) | 2026-11-26 | `Add files via upload` | ARivas3008 | ProfileController. |
+| `refrio-backend` | `main` | [abfb6f3](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/abfb6f3) | 2026-11-26 | `Add files via upload` | ARivas3008 | ProfileUpdateService. |
+
+La evidencia de código se complementa con los archivos de pruebas incluidos en el repositorio backend: [AuthenticationIntegrationTest](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/iam/AuthenticationIntegrationTest.java), [FefoPolicyTest](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/inventory/FefoPolicyTest.java), [OperationsIntegrationTest](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/operations/OperationsIntegrationTest.java), [ProfileUpdateServiceTest](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/iam/ProfileUpdateServiceTest.java) y [LeadsControllerValidationTest](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/test/java/com/refrio/platform/publicportal/LeadsControllerValidationTest.java). La ejecución final de CI acredita resultados satisfactorios, como se detalla en la tabla siguiente. La cobertura de la suite no equivale a la aceptación de todos los criterios de las 50 historias.
+
+
+**Evidencia de automatización del cierre (27/11/2026).**
+
+| Producto | Ejecución final | Resultado comprobado |
+|---|---|---|
+| Website | [GitHub Actions #45915193197](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/actions/runs/45915193197) | Success: build Jekyll, upload y deploy GitHub Pages. |
+| Frontend | [GitHub Actions #45877597775](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/actions/runs/45877597775) | Success: Node.js, dependencias, compilación Angular, generación de 404 SPA y publicación GitHub Pages. |
+| Backend | [GitHub Actions #45898129506](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/actions/runs/45898129506) | Success: ocho bounded contexts, invariantes de dominio, `./mvnw -B clean verify` (JUnit/H2), Docker, PostgreSQL 16/Flyway y pruebas HTTP. |
+
+El job PostgreSQL del backend comprueba `health.status = UP`, OpenAPI con rutas de Operations y clima, autenticación JWT de dos usuarios, rol Minorista y vinculación del cliente receptor. El workflow desactiva el proveedor meteorológico externo para esa prueba; no acredita una llamada real a Open-Meteo. Los artefactos de ejecución se encuentran en el run enlazado (`refrio-surefire-reports` y `postgres-and-openapi-evidence`). El build de Angular y el deploy Pages no comprueban por sí solos todas las peticiones al backend de producción.
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+El equipo confirma que la versión definitiva del Landing Page, frontend y backend está desplegada e integrada. La siguiente relación identifica escenarios de ejecución que se deben mostrar en la Release Review y la fuente de su implementación. Las capturas, resultados HTTP y video de navegación final deben proceder de las ejecuciones reales; esta tabla no sustituye tales evidencias.
+
+| Evidence ID | Historia / flujo | Escenario y resultado esperado de la implementación localizada | Evidencia de código | Evidencia de ejecución |
+|---|---|---|---|---|
+| REF-TB2-EX01 | US01–US05 / Landing Page | Navegar hero, planes y CTA; cambiar periodicidad y abrir autenticación. | `index.html`, `app.js` | Despliegue confirmado; adjuntar captura y video. |
+| REF-TB2-EX02 | US08 / IAM | Ingresar con Supervisor y Minorista; rechazar credenciales erróneas; comprobar rutas por rol. | `IamController`, `IamStore`, guard e interceptor | Adjuntar capturas y respuestas HTTP sin exponer tokens. |
+| REF-TB2-EX03 | US09 / recuperación | Solicitar token con correo registrado y no registrado; comprobar expiración, entrega y reset en sesión anónima. | `PasswordResetService`, `PasswordResetController` | Código localizado; comprobar permisos de endpoints y SMTP real. |
+| REF-TB2-EX04 | US10 / perfil | Actualizar nombre, correo y sede; recargar y comprobar persistencia. | `ProfileController`, `ProfileUpdateService`, `settings.ts` | Adjuntar vista antes/después y PATCH. |
+| REF-TB2-EX05 | US12, US16, TS03, US37 / Inventory | Crear producto/lote; registrar merma con causa; comprobar saldo; rechazar cantidad excesiva. | `InventoryCommandService`, `InventoryV1Controller`, `inventory-batch-detail.ts` | Adjuntar capturas de alta, débito y rechazo. |
+| REF-TB2-EX06 | US29, US30, US33, TS04 / Operations | Generar plan FEFO, comprobar orden y cantidad; bloquear código incorrecto; crear despacho y recibirlo. | `FefoPolicy`, `OperationsApplicationService`, `shipments.ts` | Adjuntar secuencia y estado final. |
+| REF-TB2-EX07 | US23, US24, US27 / Alerting | Registrar lectura manual, mostrar aviso de riesgo en la aplicación y resolver incidencia con acción y causa. | `operational-monitoring.service.ts`, `AlertingApplicationService` | Adjuntar captura de alerta y cierre; no declarar mensajería externa. |
+| REF-TB2-EX08 | US34, US36, TS08 / Traceability | Consultar certificado asociado al envío y comprobar código válido/inexistente con autenticación. | `CertificationService`, `TraceabilityV1Controller`, `ShipmentCertificateLookupController` | Adjuntar respuesta real; no declarar acceso anónimo o PDF si no están implementados. |
+| REF-TB2-EX09 | US38, US39, TS09 / Analytics | Consultar métricas de operación y merma por rol; verificar cifras con datos persistidos. | `AnalyticsReportService`, `OperationalMetrics`, `dashboard.ts` | Adjuntar dashboard y respuesta de API. No confundir unidades con ahorro en soles. |
+| REF-TB2-EX10 | US03 / Public Portal | Enviar solicitud de contacto y probar correo inválido; consultar registro desde el backend autorizado. | `LeadsController`, `LeadsControllerValidationTest` | Adjuntar evidencia de envío desde sitio y persistencia; no presumir conexión desde HTML. |
+| REF-TB2-EX11 | Servicio externo | Consultar clima ambiente mediante Open-Meteo; distinguirlo de la lectura interna de carga. | `WeatherController`, `OpenMeteoWeatherProvider`, `docs/EXTERNAL_SERVICE.md` | Adjuntar llamada real y uso en vista Angular si está integrado; no se acredita una llamada externa en esta revisión. |
+
+**Product Navigation Video — Sprint 4:** incorporar el enlace privado real en Microsoft Stream, con una captura y duración de la navegación final. Se deben presentar los recorridos de los dos segmentos desde la Landing Page, sin sustituir las capturas con mockups. No se ha generado una URL ni una captura artificial.
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+La API REST del backend se documenta mediante Springdoc OpenAPI. La especificación se declara en [OpenAPI JSON](https://refrio-backend.onrender.com/v3/api-docs), la interfaz en [Swagger UI](https://refrio-backend.onrender.com/swagger-ui.html) y la comprobación de salud en [Actuator](https://refrio-backend.onrender.com/actuator/health). Se conserva el contrato operativo de compatibilidad utilizado por Angular y se documentan los recursos versionados. Fuente: [API_CONTRACT.md](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/blob/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/docs/API_CONTRACT.md).
+
+| Contexto | Método | Ruta | Contrato / resultado esperado |
+|---|---|---|---|
+| IAM | POST | `/api/session` | Credenciales; 200 con sesión/token o 401 por credenciales inválidas. |
+| IAM | POST | `/api/users` | Datos de usuario y rol; 201 en alta válida. |
+| IAM | GET / PATCH | `/api/v1/iam/users/me` | Bearer; consulta y actualización de perfil. |
+| IAM | POST | `/api/password-reset/request` | Correo; 202 con respuesta genérica. Comprobar autorización pública y SMTP. |
+| IAM | POST | `/api/password-reset/confirm` | Token y nueva contraseña; 200 o error de validación. |
+| Inventory | GET / POST | `/api/v1/inventory/batches` | Consulta y alta (201) de lote. |
+| Inventory | GET | `/api/v1/inventory/batches/fefo` | Lotes elegibles ordenados por caducidad. |
+| Inventory | POST | `/api/v1/inventory/losses` | Merma por lote, cantidad y causa; 201 o error de negocio. |
+| Inventory | POST | `/api/v1/inventory/telemetry` | Registro manual de lectura por producto; 201. |
+| Operations | GET | `/api/operations` | Snapshot de datos filtrado por rol, consumido por Angular. |
+| Operations | POST | `/api/operations/createShipment` | `args` con pedido y códigos; creación y actualización de datos. |
+| Operations | POST | `/api/v1/operations/shipments` | Creación tipada del despacho; 201. |
+| Operations | POST | `/api/v1/operations/shipments/{id}/receipt` | Decisión, cantidades por lote y observación; 200 o validación. |
+| Operations | GET | `/api/v1/operations/weather` | Latitude/longitude; datos de clima ambiente, 503 si no disponible. |
+| Alerting | GET / PATCH | `/api/v1/alerting/incidents` / `/api/v1/alerting/incidents/{id}` | Consultar incidentes y actualizar transición autorizada. |
+| Traceability | POST | `/api/v1/traceability/certificates/shipment/{shipmentId}` | Generación de certificado (201) con reglas de elegibilidad. |
+| Traceability | GET | `/api/v1/traceability/certificates/qr/{code}` | Consulta de certificado con autenticación. |
+| Analytics | GET | `/api/v1/analytics/reports/operational` | Métricas operativas persistidas; Bearer. |
+| Events | GET | `/api/v1/events` | Eventos de dominio. |
+| Public Portal | POST | `/api/leads` | Registro de solicitud comercial; 201 / validación. |
+
+Los contratos indicados son referencias de código y documentación, no capturas de respuestas ejecutadas. En Swagger se debe mostrar la autorización Bearer, request, respuesta positiva y un escenario negativo por grupo de operaciones, incluyendo los errores de validación, 401/403 y la persistencia verificada. Las rutas diferentes de las historias técnicas originales se registran en el Sprint Backlog correspondiente.
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+El equipo confirma la publicación de los tres productos digitales y su integración. Se verificaron además los despliegues Pages de [Website](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/actions/runs/45915193197) y [Angular](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/actions/runs/45877597775), y los quality gates del [backend](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/actions/runs/45898129506). El alcance de la release comprende los repositorios y URLs declarados en el informe. La verificación documental se debe complementar con las capturas de los paneles de despliegue, la revisión del commit publicado y la navegación final; no se requiere volver a desplegar los productos si ya se encuentran operativos.
+
+| Producto | Plataforma declarada | Repositorio / revisión final | URL declarada | Estado |
+|---|---|---|---|---|
+| Landing Page | GitHub Pages | [refrio-website](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/tree/378e4ece344769c73b5259eee7851088dc114ba1) | [Landing Page](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-website/) | Done — despliegue confirmado por el equipo. |
+| Frontend Web Application | Vercel (según Sprint 3); GitHub Pages consta en CTA y anexos | [refrio-frontend](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/tree/7fae0efb35b8d050ff9102534a5656bc0bb2050d) | [Vercel](https://main-khd3qtaj.vercel.app/sign-in) / [GitHub Pages](https://upc-pre-202620-1asi0729-7747-refrio.github.io/refrio-frontend/) | Done — despliegue e integración confirmados; fijar URL canónica en el informe. |
+| Backend RESTful API | Render | [refrio-backend](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/tree/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d) | [Backend](https://refrio-backend.onrender.com) | Done — despliegue confirmado por el equipo. |
+| Persistencia | PostgreSQL / Flyway | [Migraciones](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/tree/e0e3c9eadc70d27922ccc5b26cd163ecd3622c2d/src/main/resources/db/migration) | Servicio privado; no publicar credenciales | Done — migración y arranque PostgreSQL verificados en CI; añadir captura del entorno productivo. |
+
+La configuración frontend de `environment.ts` usa `/api`. Existe `scripts/configure-api.mjs` para generar una URL HTTPS de producción, pero el workflow Pages revisado no invoca ese script. La publicación Pages está acreditada; la integración efectiva en producción está confirmada por el equipo y debe demostrarse en Network o mediante la configuración de la plataforma utilizada. Verificar en Network la URL efectiva de las solicitudes y la respuesta del backend, manteniendo ocultos tokens y contraseñas. El sitio público contiene enlaces al frontend de GitHub Pages; se debe verificar que corresponda al despliegue definitivo elegido por el equipo.
+
+#### 5.2.4.8. Team Collaboration Insights during Sprint
+
+Los commits de la versión final acreditan contribuciones de los cinco integrantes. La colaboración se registra mediante enlaces de historial y cambios de archivos reales, sin asignar porcentajes de participación a partir del número de commits ni afirmar que todos los cambios pasaron por Pull Request. Los mensajes de commit originales se conservan para permitir su comprobación.
+
+| Integrante | Aporte localizado | Evidencia de colaboración |
+|---|---|---|
+| César Alca | Endpoint de cuentas receptoras y prueba de Operations. | [53b965b](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/53b965b) / [43e96b0](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/43e96b0) |
+| Adriano Centeno | Consolidación de frontend y sitio; recuperación de contraseña, migración y consulta de certificado por envío. | [7fae0ef](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commit/7fae0ef) / [e4f9e99](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commit/e4f9e99) / [5b73a0c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/5b73a0c) |
+| Bernie Rivas | Actualización de perfil, controlador y cobertura de prueba. | [abfb6f3](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/abfb6f3) / [7d9c81c](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7d9c81c) / [439c64a](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/439c64a) |
+| Rodrigo Saavedra | Validación de solicitudes del portal público. | [aacb3bf](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/aacb3bf) |
+| José Tello | Comando y controladores de solicitudes comerciales. | [7486634](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7486634) / [bc39de5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/bc39de5) / [7023de9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commit/7023de9) |
+
+Los PR de integración de las etapas iniciales pueden consultarse en [Website PR #5](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/pull/5), [Frontend PR #17](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/pull/17) y [Backend PR #9](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/pull/9). Los commits finales del 26–27/11 constan en `main`. La rama histórica `feature/telemetry` de Angular contiene datos mock; no debe presentarse como integración IoT productiva.
+
+Historial de los repositorios: [Landing Page](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-website/commits/main/), [Frontend](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-frontend/commits/main/), [Backend](https://github.com/upc-pre-202620-1asi0729-7747-refrio/refrio-backend/commits/main/). Incorporar las capturas auténticas de Insights, Contributors y del tablero, junto con URLs de PR efectivamente utilizados en la iteración. Esta revisión no atribuye revisores ni fechas de aprobación no comprobadas.
+
+---
 
 ## 5.3. Validation Interviews
 
@@ -1183,7 +1429,10 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 
 ---
 
+
 #### Matriz de Resultados de las Sesiones de Validación
+
+Registro de la rama `feature/chapter5`; se conserva lo reportado por el equipo en AV2. La grabación individual no se ha vuelto a revisar. En caso de diferencias con los resúmenes de entrevista, corresponde contrastar el dato con el video original.
 
 | Participante | Segmento | Tarea Intentada | Resultado Observado | Dificultad Detectada | Decisión de Mejora |
 |---|---|---|---|---|---|
@@ -1214,13 +1463,15 @@ Los aspectos centrales de la validación comprenden la consulta de productos y c
 
 #### Matriz de Seguimiento y Cierre de Hallazgos Heurísticos (`REF-H01` a `REF-H05`)
 
+Estados registrados en AV2, según la rama `feature/chapter5`. La conciliación declarada de los Sprint Backlogs TB2 no sustituye la revalidación específica de los hallazgos.
+
 | ID | Problema Observado | Sev. | Principio Vulnerado | Acción Correctiva Aplicada / Planificada | Estado y Verificación |
 |:---:|---|:---:|---|---|---|
 | **REF-H01** | Falta de notificaciones push/WhatsApp fuera de la aplicación ante alertas térmicas críticas. | 4 | Visibilidad del estado del sistema | Diseño de adaptador multicanal (`TS07`) programado como prioridad #1 en el Sprint 4. | **Planificado (Sprint 4)** — Revalidación pendiente tras despliegue de webhooks. |
 | **REF-H02** | Ausencia de indicador de retorno de inversión (ROI / soles ahorrados) en el Dashboard del Supervisor. | 3 | Compatibilidad entre el sistema y el mundo real | Especificación del widget ejecutivo de mermas evitadas (`US38`, `TS09`) para el Sprint 4. | **Planificado (Sprint 4)** — Prototipo validado con Andrea Villanueva. |
 | **REF-H03** | Exportación de certificados de trazabilidad en PDF no implementada operativamente (solo consulta web). | 3 | Control y libertad del usuario | Endpoint de generación de certificado y consulta QR (`TS08`, `US34`) implementado; generación binaria PDF (`US35`) asignada a Sprint 4. | **En progreso** — Consulta JSON/QR operativa en Render; PDF pendiente. |
 | **REF-H04** | Saturación de columnas en tablas de inventario al navegar desde teléfonos móviles (Segmento 2). | 2 | Diseño estético y minimalista (Responsive) | Refactorización de vistas Angular a tarjetas (*cards*) responsivas colapsables en viewports `< 768 px`. | **Corregido en AV2** — Verificado en pruebas responsive móvil (375 px). |
-| **REF-H05** | Ausencia de confirmación visual antes de ejecutar la baja definitiva de un lote por merma. | 3 | Prevención de errores | Implementación de diálogo modal de confirmación con selección obligatoria de causa raíz en `Inventory`. | **Corregido en AV2** — Verificado en flujo E2E de baja de lotes. |
+| **REF-H05** | Ausencia de confirmación visual antes de ejecutar la baja definitiva de un lote por merma. | 3 | Prevención de errores y reconocimiento de errores | Implementación de diálogo modal de confirmación con selección obligatoria de causa raíz en `Inventory`. | **Corregido en AV2** — Verificado en flujo E2E de baja de lotes. |
 
 ## 5.4. Video About-the-Product
 
